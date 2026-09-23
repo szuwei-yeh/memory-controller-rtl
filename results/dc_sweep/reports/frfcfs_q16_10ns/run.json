@@ -1,0 +1,32 @@
+{
+  "action": "dc",
+  "policy": "frfcfs",
+  "queue_depth": 16,
+  "clock_ns": 10,
+  "rtl_revision": "uncommitted",
+  "rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+    "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+    "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+  },
+  "command": [
+    "dc_shell",
+    "-f",
+    "synth/dc/run.tcl"
+  ],
+  "status": "PASS",
+  "start_unix": 1790125421.7796216,
+  "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+  "flow_sha256": {
+    "scripts/synth.py": "f52c647f53f44fd865b9032106430ae5bc723729dad91ba21416069d62001db6",
+    "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+    "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418",
+    "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6"
+  },
+  "hostname": "redacted-lab-host",
+  "elapsed_s": 133.41537261009216
+}

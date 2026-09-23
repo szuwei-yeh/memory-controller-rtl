@@ -1,0 +1,43 @@
+**Policy cost at Q=16 and 5 ns is modest compared with queue-capacity cost.**
+Strict Request FCFS maps to 76,533.91 µm², FR-FCFS to 78,519.52 µm² (+2.59%),
+and FR-FCFS with aging to 80,975.37 µm² (another +3.13%, or +5.80% versus Strict
+Request FCFS). Aging's area increment at this point is combinational; the two
+FR-FCFS runs have the same reported sequential area. These are the costs of the
+existing hierarchical implementation under this compile flow, not isolated ideal
+scheduler circuits. Their bank-parallelism and fairness behavior is documented
+separately in the architecture and performance reports.
+
+**The scheduling flexibility has a timing cost.** At Q=16, Strict Request FCFS
+passes the tested 3 ns point but fails 2 ns. Both FR-FCFS variants pass 4 ns but
+fail 3 ns and 2 ns. Their tight passing paths traverse address/dependency and bank
+candidate selection, global arbitration, and command payload selection. Strict
+Request FCFS instead encounters transaction admission/free-slot selection as its
+critical path at 3 ns. Raising mapping area at 3 ns does not close the FR-FCFS
+paths: area rises to 87,495.82 / 90,281.59 µm² without / with aging, while WNS is
+−0.297604 / −0.375142 ns. The fastest tested targets are not exact maximum
+frequencies, and this experiment does not rescale abstract DRAM workloads into
+validated physical DDR bandwidth.
+
+**Increasing Q from 16 to 32 roughly triples area while doubling capacity.**
+At 5 ns, Q=32 areas are 227,142.13 / 237,259.30 / 241,478.78 µm² for
+strict_fcfs / frfcfs / frfcfs_aging: 2.97× / 3.02× / 2.98× their respective
+Q=16 totals. Across Q=4 to Q=32, area grows about 17.0–17.4× for 8× capacity.
+The growth is predominantly combinational; for Strict Request FCFS, Q16→Q32
+combinational area grows 60,825.03→192,477.29 µm² while sequential area grows
+15,708.88→34,664.84 µm². The exact ordering matrix, pairwise dependencies and
+response eligibility, arbitration, and wider payload selection explain this
+superlinear growth. This sweep measures their cost; it does not measure additional
+workload benefit from deeper queues.
+
+**A setup pass here can have effectively no implementation margin.** The Q=32
+5 ns worst setup slacks are +0.007261 / +0.000025 / +0.000001 ns. The latter two
+are especially close to zero at the report precision. No physical parasitics are
+included, and hold/electrical constraints remain violated. Also, Strict Request
+FCFS's 2 ns critical path is reset masking to rsp_valid: fixed 1 ns input delay,
+1 ns output delay, and 0.1 ns uncertainty already exceed 2 ns before logic delay.
+That is an I/O-budget limit in this experiment, not a reason to relax the frozen
+constraints or infer a different untested clock result.
+
+The fresh Q16/5 ns FR-FCFS-with-aging run exactly reproduces the accepted
+baseline's mapped area, worst setup slack, and worst hold slack. No RTL,
+architecture, library limit, or SDC was changed to obtain any result.

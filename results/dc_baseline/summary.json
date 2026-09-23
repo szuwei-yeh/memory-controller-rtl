@@ -1,0 +1,99 @@
+{
+  "flow_status": "PASS",
+  "all_constraints_clean": false,
+  "rtl_unchanged": true,
+  "hostname": "redacted-lab-host",
+  "tool_version": "R-2020.09-SP4",
+  "tool_build_date": "2021-03-02",
+  "policy": "frfcfs_aging",
+  "queue_depth": 16,
+  "clock_ns": 5,
+  "library": "gscl45nm",
+  "library_path": "${TECH_LIBRARY_DIR}/gscl45nm.db",
+  "library_db_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+  "library_liberty_sha256": "69c0641df1dc737e5c8dbd3950f2daf3b52c6e7767aa081e35e9b0739bf62d6f",
+  "corner": {
+    "name": "typical",
+    "process": 1,
+    "voltage_V": 1.1,
+    "temperature_C": 27
+  },
+  "units": {
+    "time_ns": 1,
+    "capacitance_fF": 1000,
+    "area": "um^2; INVX1 area cross-checked against companion LEF"
+  },
+  "compile": "compile -map_effort medium",
+  "area_um2": 80975.366581,
+  "combinational_area_um2": 65226.597531,
+  "sequential_area_um2": 15748.769051,
+  "leaf_cells": 26798,
+  "sequential_cells": 1974,
+  "macros_blackboxes": 0,
+  "setup_worst_slack_ns": 0.001615,
+  "setup_wns_ns": 0,
+  "setup_violating_paths": 0,
+  "hold_worst_slack_ns": -0.002538,
+  "hold_violating_endpoints": 14,
+  "max_capacitance_violations": 5556,
+  "max_transition_violations": 0,
+  "max_capacitance_note": "All 5556 reported limits are 0 pF; example NAND2X1/Y has max_capacitance=0 in the loaded database and companion Liberty. Not waived or modified.",
+  "unconstrained_endpoints": "None reported by check_timing; no missing input delays or loops reported",
+  "critical_path": {
+    "startpoint": "table_i/addresses_reg[80]",
+    "endpoint": "cmd_wdata[9]",
+    "description": "stored address -> row-hit/bank candidate selection -> FR-FCFS selected slot -> command write-data mux",
+    "arrival_ns": 3.898385,
+    "required_ns": 3.9
+  },
+  "warnings": {
+    "tool.log": {
+      "VER-318": 17,
+      "LINT-1": 38,
+      "LINT-2": 53,
+      "TIM-134": 1
+    },
+    "check_design.rpt": {
+      "LINT-28": 224
+    },
+    "check_timing.rpt": {
+      "TIM-134": 1
+    }
+  },
+  "interconnect": "No wire-load model or extracted parasitics; ideal clocks; pre-layout only",
+  "run_metadata": "run.json",
+  "remote_workspace": "${LAB_BASELINE_DIR}",
+  "rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+    "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+    "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+  },
+  "source_flow_sha256": {
+    "scripts/synth.py": "75467d7bcd7dbe5b430a24d486143867e9381dd9850ebe8e8e8f923b3709413d",
+    "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+    "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418",
+    "synth/dc/run.tcl": "0a08d28038e8c55de428f259f12154fe2ce7f9b84865cd79179333083bd2d93b"
+  },
+  "report_sha256": {
+    "run.json": "db8b692c435c9ca9fc7a4a383e7d24d6b2383a1c60e1eaa6961acc6b1c3bb05f",
+    "area.rpt": "eecb26fc63ecbdb76053c806c6f24989803f314a7da923d3b20f9783c138490f",
+    "timing.rpt": "b3b0f28cf74fd8e16b5e4d4bb1495519b79151d73153d5c3808016a10bb76cb8",
+    "check_design.rpt": "41e260dce35cce42fdf803feed3a95e86fc84e61676ec08e80c37c735d2d58ca",
+    "check_timing.rpt": "f6cffa490ffdf5fb049368de73240bdfdc97ceecec5b93d7d7e4946c30525d33",
+    "qor.rpt": "e831994c557554097057aa81a3da10c2cfbc1772e01459536c07e41d5134f807",
+    "constraints.rpt": "1423985482001d710ea351c8a0622dd265059bcb6c7e4d6f8d0a79b0eea5a63b",
+    "constraints_precise.rpt": "d3676dd4d5685636ca329634821a2be19db565b950ffb7e6ff977820821acbb7",
+    "hold.rpt": "211da567d13f6295417acd5f18a3656d5ac1ad2f3f7ad7b95f6de7beb2e46715",
+    "setup_precise.rpt": "82b2e55565a6b8e7fcb7888d0880d64f2516e3868067699ddfec65ac5d020852",
+    "clocks.rpt": "aea58f3fddc6265fadbb4f2c7ca26e51f21bdfddc566bc57c7973e06eaa4c2b5",
+    "library_attributes.rpt": "474524327581aa3033f1b56f88a79692e04b02e6b060d4d9e2b59bc9f28d49dc",
+    "environment.rpt": "e19b119d93878985b666cd4586ddeebaa5aab055da962458d71ab5cbc0e9c85c",
+    "design.rpt": "5c01edd1434bf1dc8799a4675b605ca58cd7635f1a952e8bcc6bed9499d04727",
+    "mapped.sdc": "6839ef2ed6aa805ee32d98a55e47ea2ef575226b1166777dcb4c46f7ab6a7d58",
+    "references.rpt": "859f57ef8a27f283739091764f4dd11d6bd861664b99818f197eeafff545d826"
+  }
+}

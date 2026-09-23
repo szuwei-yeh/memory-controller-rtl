@@ -1,0 +1,2081 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH4_SCHED_POLICY1_AGING_ENABLE0
+Version: R-2020.09-SP4
+Date   : Tue Sep 22 18:30:39 2026
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_bank[0]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U231/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U231/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n174 (net)                                    1     0.001504            0.000000   2.886437 f
+  U165/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U165/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n113 (net)                                    1     0.001827            0.000000   2.961828 f
+  U61/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U61/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n279 (net)                                    1     0.001476            0.000000   3.010858 f
+  U164/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U164/Y (INVX1)                                                0.047790  0.046835   3.057693 r
+  cmd_bank[0] (net)                             4     0.016185            0.000000   3.057693 r
+  cmd_bank[0] (out)                                             0.047790  0.000000   3.057693 r
+  data arrival time                                                                  3.057693
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.057693
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.842307
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_bank[1]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U245/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U245/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n188 (net)                                    1     0.001504            0.000000   2.886437 f
+  U177/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U177/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n125 (net)                                    1     0.001827            0.000000   2.961828 f
+  U62/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U62/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n278 (net)                                    1     0.001476            0.000000   3.010858 f
+  U176/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U176/Y (INVX1)                                                0.047527  0.046669   3.057527 r
+  cmd_bank[1] (net)                             4     0.016134            0.000000   3.057527 r
+  cmd_bank[1] (out)                                             0.047527  0.000000   3.057527 r
+  data arrival time                                                                  3.057527
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.057527
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.842473
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[7] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U243/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U243/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n186 (net)                                    1     0.001504            0.000000   2.886437 f
+  U111/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U111/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n59 (net)                                     1     0.001827            0.000000   2.961828 f
+  U60/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U60/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n280 (net)                                    1     0.001476            0.000000   3.010858 f
+  U110/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U110/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[7] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[7] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[6] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U241/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U241/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n184 (net)                                    1     0.001504            0.000000   2.886437 f
+  U120/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U120/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n68 (net)                                     1     0.001827            0.000000   2.961828 f
+  U59/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U59/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n281 (net)                                    1     0.001476            0.000000   3.010858 f
+  U119/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U119/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[6] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[6] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[5] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U239/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U239/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n182 (net)                                    1     0.001504            0.000000   2.886437 f
+  U129/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U129/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n77 (net)                                     1     0.001827            0.000000   2.961828 f
+  U58/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U58/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n282 (net)                                    1     0.001476            0.000000   3.010858 f
+  U128/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U128/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[5] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[5] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[4] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U237/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U237/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n180 (net)                                    1     0.001504            0.000000   2.886437 f
+  U141/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U141/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n89 (net)                                     1     0.001827            0.000000   2.961828 f
+  U57/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U57/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n283 (net)                                    1     0.001476            0.000000   3.010858 f
+  U140/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U140/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[4] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[4] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[3] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U235/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U235/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n178 (net)                                    1     0.001504            0.000000   2.886437 f
+  U153/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U153/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n101 (net)                                    1     0.001827            0.000000   2.961828 f
+  U56/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U56/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n284 (net)                                    1     0.001476            0.000000   3.010858 f
+  U152/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U152/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[3] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[3] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[2] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U233/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U233/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n176 (net)                                    1     0.001504            0.000000   2.886437 f
+  U189/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U189/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n137 (net)                                    1     0.001827            0.000000   2.961828 f
+  U55/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U55/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n285 (net)                                    1     0.001476            0.000000   3.010858 f
+  U188/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U188/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[2] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[2] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[1] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U261/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U261/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n206 (net)                                    1     0.001504            0.000000   2.886437 f
+  U208/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U208/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n156 (net)                                    1     0.001827            0.000000   2.961828 f
+  U54/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U54/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n286 (net)                                    1     0.001476            0.000000   3.010858 f
+  U207/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U207/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[1] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[1] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+  Startpoint: table_i/addresses_reg[48]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_row[0] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg[48]/CLK (DFFPOSX1)                      0.000000  0.000000   0.000000 r
+  table_i/addresses_reg[48]/Q (DFFPOSX1)                        0.104587  0.123892   0.123892 r
+  table_i/addresses[48] (net)                  18     0.042223            0.000000   0.123892 r
+  table_i/addresses[48] (mc_transaction_table_Q_DEPTH4_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.123892 r
+  addresses[48] (net)                                 0.042223            0.000000   0.123892 r
+  candidates_i/addresses[48] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)       0.000000   0.123892 r
+  candidates_i/N82 (net)                              0.042223            0.000000   0.123892 r
+  candidates_i/U858/A (INVX1)                                   0.104587  0.000000   0.123892 r
+  candidates_i/U858/Y (INVX1)                                   0.016423  0.049018   0.172910 f
+  candidates_i/n795 (net)                       3     0.005967            0.000000   0.172910 f
+  candidates_i/U461/A (OR2X1)                                   0.016423  0.000000   0.172910 f
+  candidates_i/U461/Y (OR2X1)                                   0.007788  0.038959   0.211868 f
+  candidates_i/n319 (net)                       1     0.001476            0.000000   0.211868 f
+  candidates_i/U462/A (INVX1)                                   0.007788  0.000000   0.211868 f
+  candidates_i/U462/Y (INVX1)                                   0.189717  0.135517   0.347386 r
+  candidates_i/n666 (net)                      16     0.043970            0.000000   0.347386 r
+  candidates_i/U835/B (AOI22X1)                                 0.189717  0.000000   0.347386 r
+  candidates_i/U835/Y (AOI22X1)                                 0.032793  0.071397   0.418783 f
+  candidates_i/n767 (net)                       1     0.001504            0.000000   0.418783 f
+  candidates_i/U315/A (BUFX2)                                   0.032793  0.000000   0.418783 f
+  candidates_i/U315/Y (BUFX2)                                   0.005911  0.037036   0.455819 f
+  candidates_i/n228 (net)                       1     0.001827            0.000000   0.455819 f
+  candidates_i/U25/B (AND2X1)                                   0.005911  0.000000   0.455819 f
+  candidates_i/U25/Y (AND2X1)                                   0.015444  0.041559   0.497378 f
+  candidates_i/n765 (net)                       1     0.001476            0.000000   0.497378 f
+  candidates_i/U314/A (INVX1)                                   0.015444  0.000000   0.497378 f
+  candidates_i/U314/Y (INVX1)                                   0.000000  0.013740   0.511118 r
+  candidates_i/n227 (net)                       1     0.005589            0.000000   0.511118 r
+  candidates_i/U834/B (XNOR2X1)                                 0.000000  0.000000   0.511118 r
+  candidates_i/U834/Y (XNOR2X1)                                 0.040490  0.048771   0.559889 r
+  candidates_i/n756 (net)                       1     0.002548            0.000000   0.559889 r
+  candidates_i/U827/A (NAND3X1)                                 0.040490  0.000000   0.559889 r
+  candidates_i/U827/Y (NAND3X1)                                 0.014311  0.020653   0.580541 f
+  candidates_i/n747 (net)                       1     0.001504            0.000000   0.580541 f
+  candidates_i/U250/A (BUFX2)                                   0.014311  0.000000   0.580541 f
+  candidates_i/U250/Y (BUFX2)                                   0.003717  0.034521   0.615062 f
+  candidates_i/n168 (net)                       1     0.003011            0.000000   0.615062 f
+  candidates_i/U820/A (NOR3X1)                                  0.003717  0.000000   0.615062 f
+  candidates_i/U820/Y (NOR3X1)                                  0.052156  0.047687   0.662749 r
+  candidates_i/n746 (net)                       1     0.002343            0.000000   0.662749 r
+  candidates_i/U455/B (AND2X1)                                  0.052156  0.000000   0.662749 r
+  candidates_i/U455/Y (AND2X1)                                  0.049540  0.053127   0.715877 r
+  candidates_i/hit[3] (net)                     3     0.006618            0.000000   0.715877 r
+  candidates_i/U819/B (AND2X1)                                  0.049540  0.000000   0.715877 r
+  candidates_i/U819/Y (AND2X1)                                  0.072003  0.067672   0.783549 r
+  candidates_i/n626 (net)                       4     0.011266            0.000000   0.783549 r
+  candidates_i/U776/A (AOI22X1)                                 0.072003  0.000000   0.783549 r
+  candidates_i/U776/Y (AOI22X1)                                 0.032780  0.043899   0.827448 f
+  candidates_i/n689 (net)                       1     0.001504            0.000000   0.827448 f
+  candidates_i/U392/A (BUFX2)                                   0.032780  0.000000   0.827448 f
+  candidates_i/U392/Y (BUFX2)                                   0.005908  0.037033   0.864482 f
+  candidates_i/n283 (net)                       1     0.001827            0.000000   0.864482 f
+  candidates_i/U7/B (AND2X1)                                    0.005908  0.000000   0.864482 f
+  candidates_i/U7/Y (AND2X1)                                    0.015444  0.041559   0.906041 f
+  candidates_i/n680 (net)                       1     0.001476            0.000000   0.906041 f
+  candidates_i/U390/A (INVX1)                                   0.015444  0.000000   0.906041 f
+  candidates_i/U390/Y (INVX1)                                   0.012368  0.025333   0.931374 r
+  candidates_i/n281 (net)                       4     0.009166            0.000000   0.931374 r
+  candidates_i/U337/A (AND2X1)                                  0.012368  0.000000   0.931374 r
+  candidates_i/U337/Y (AND2X1)                                  0.025584  0.028390   0.959764 r
+  candidates_i/n687 (net)                       1     0.001551            0.000000   0.959764 r
+  candidates_i/U338/A (INVX1)                                   0.025584  0.000000   0.959764 r
+  candidates_i/U338/Y (INVX1)                                   0.011816  0.020771   0.980535 f
+  candidates_i/n245 (net)                       1     0.002600            0.000000   0.980535 f
+  candidates_i/U775/B (NAND3X1)                                 0.011816  0.000000   0.980535 f
+  candidates_i/U775/Y (NAND3X1)                                 0.033877  0.030613   1.011148 r
+  candidates_i/n670 (net)                       1     0.001539            0.000000   1.011148 r
+  candidates_i/U336/A (BUFX2)                                   0.033877  0.000000   1.011148 r
+  candidates_i/U336/Y (BUFX2)                                   0.020395  0.042190   1.053337 r
+  candidates_i/n244 (net)                       3     0.007035            0.000000   1.053337 r
+  candidates_i/U765/A (INVX1)                                   0.020395  0.000000   1.053337 r
+  candidates_i/U765/Y (INVX1)                                   0.028257  0.030389   1.083727 f
+  candidates_i/n600 (net)                       3     0.007975            0.000000   1.083727 f
+  candidates_i/U764/A (AOI22X1)                                 0.028257  0.000000   1.083727 f
+  candidates_i/U764/Y (AOI22X1)                                 0.042778  0.049908   1.133635 r
+  candidates_i/n675 (net)                       1     0.001551            0.000000   1.133635 r
+  candidates_i/U189/A (INVX1)                                   0.042778  0.000000   1.133635 r
+  candidates_i/U189/Y (INVX1)                                   0.009752  0.024837   1.158472 f
+  candidates_i/n107 (net)                       1     0.002313            0.000000   1.158472 f
+  candidates_i/U39/A (OR2X1)                                    0.009752  0.000000   1.158472 f
+  candidates_i/U39/Y (OR2X1)                                    0.012707  0.040026   1.198498 f
+  candidates_i/n1 (net)                         1     0.002247            0.000000   1.198498 f
+  candidates_i/U48/B (OR2X1)                                    0.012707  0.000000   1.198498 f
+  candidates_i/U48/Y (OR2X1)                                    0.019245  0.053376   1.251875 f
+  candidates_i/n6 (net)                         2     0.004524            0.000000   1.251875 f
+  candidates_i/U759/B (NAND3X1)                                 0.019245  0.000000   1.251875 f
+  candidates_i/U759/Y (NAND3X1)                                 0.035849  0.034440   1.286315 r
+  candidates_i/n672 (net)                       1     0.002010            0.000000   1.286315 r
+  candidates_i/U758/C (OAI21X1)                                 0.035849  0.000000   1.286315 r
+  candidates_i/U758/Y (OAI21X1)                                 0.030220  0.035854   1.322169 f
+  candidates_i/candidate_slots[0] (net)         5     0.012168            0.000000   1.322169 f
+  candidates_i/candidate_slots[0] (mc_candidates_Q_DEPTH4_ROW_W8_COL_W6)  0.000000   1.322169 f
+  candidate_slots[0] (net)                            0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/candidate_slots[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   1.322169 f
+  frfcfs.scheduler_i/N64 (net)                        0.012168            0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/A (INVX1)                             0.030220  0.000000   1.322169 f
+  frfcfs.scheduler_i/U131/Y (INVX1)                             0.023463  0.036191   1.358359 r
+  frfcfs.scheduler_i/n131 (net)                 4     0.010909            0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/B (AOI22X1)                           0.023463  0.000000   1.358359 r
+  frfcfs.scheduler_i/U157/Y (AOI22X1)                           0.033747  0.029178   1.387537 f
+  frfcfs.scheduler_i/n130 (net)                 1     0.001504            0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/A (BUFX2)                              0.033747  0.000000   1.387537 f
+  frfcfs.scheduler_i/U54/Y (BUFX2)                              0.007181  0.038077   1.425614 f
+  frfcfs.scheduler_i/n32 (net)                  1     0.002632            0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/B (OAI21X1)                           0.007181  0.000000   1.425614 f
+  frfcfs.scheduler_i/U160/Y (OAI21X1)                           0.040761  0.039496   1.465110 r
+  frfcfs.scheduler_i/N109 (net)                 1     0.002343            0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/B (AND2X1)                            0.040761  0.000000   1.465110 r
+  frfcfs.scheduler_i/U144/Y (AND2X1)                            0.071157  0.067135   1.532245 r
+  frfcfs.scheduler_i/n94 (net)                  4     0.010888            0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/C (NAND3X1)                            0.071157  0.000000   1.532245 r
+  frfcfs.scheduler_i/U89/Y (NAND3X1)                            0.016538  0.023748   1.555993 f
+  frfcfs.scheduler_i/n102 (net)                 1     0.001820            0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/B (AND2X2)                              0.016538  0.000000   1.555993 f
+  frfcfs.scheduler_i/U8/Y (AND2X2)                              0.000000  0.038008   1.594001 f
+  frfcfs.scheduler_i/n100 (net)                 1     0.001476            0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/A (INVX1)                             0.000000  0.000000   1.594001 f
+  frfcfs.scheduler_i/U110/Y (INVX1)                             0.000000  -0.001672  1.592329 r
+  frfcfs.scheduler_i/n77 (net)                  1     0.002525            0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/A (OR2X1)                              0.000000  0.000000   1.592329 r
+  frfcfs.scheduler_i/U22/Y (OR2X1)                              0.023956  0.039048   1.631377 r
+  frfcfs.scheduler_i/n15 (net)                  1     0.002424            0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/B (OR2X1)                               0.023956  0.000000   1.631377 r
+  frfcfs.scheduler_i/U7/Y (OR2X1)                               0.034895  0.057820   1.689196 r
+  frfcfs.scheduler_i/n3 (net)                   2     0.004774            0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/B (AOI22X1)                            0.034895  0.000000   1.689196 r
+  frfcfs.scheduler_i/U81/Y (AOI22X1)                            0.034431  0.032633   1.721829 f
+  frfcfs.scheduler_i/n88 (net)                  1     0.001820            0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/B (AND2X2)                              0.034431  0.000000   1.721829 f
+  frfcfs.scheduler_i/U5/Y (AND2X2)                              0.015410  0.052358   1.774187 f
+  frfcfs.scheduler_i/n75 (net)                  4     0.010290            0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/A (OAI21X1)                            0.015410  0.000000   1.774187 f
+  frfcfs.scheduler_i/U74/Y (OAI21X1)                            0.038962  0.040999   1.815186 r
+  frfcfs.scheduler_i/n74 (net)                  1     0.001551            0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/A (INVX1)                             0.038962  0.000000   1.815186 r
+  frfcfs.scheduler_i/U133/Y (INVX1)                             0.036845  0.042145   1.857330 f
+  frfcfs.scheduler_i/n156 (net)                 5     0.011267            0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/B (AOI22X1)                            0.036845  0.000000   1.857330 f
+  frfcfs.scheduler_i/U71/Y (AOI22X1)                            0.042268  0.044750   1.902080 r
+  frfcfs.scheduler_i/n73 (net)                  1     0.001551            0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/A (INVX1)                             0.042268  0.000000   1.902080 r
+  frfcfs.scheduler_i/U125/Y (INVX1)                             0.009788  0.024699   1.926779 f
+  frfcfs.scheduler_i/n127 (net)                 1     0.002313            0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/A (OR2X1)                              0.009788  0.000000   1.926779 f
+  frfcfs.scheduler_i/U11/Y (OR2X1)                              0.011695  0.040029   1.966808 f
+  frfcfs.scheduler_i/n4 (net)                   1     0.002247            0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/B (OR2X1)                              0.011695  0.000000   1.966808 f
+  frfcfs.scheduler_i/U16/Y (OR2X1)                              0.021047  0.054522   2.021330 f
+  frfcfs.scheduler_i/n9 (net)                   2     0.005145            0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/A (OAI21X1)                            0.021047  0.000000   2.021330 f
+  frfcfs.scheduler_i/U57/Y (OAI21X1)                            0.147883  0.117609   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (net)       7     0.024952            0.000000   2.138939 r
+  frfcfs.scheduler_i/select_slot[0] (mc_scheduler_frfcfs_Q_DEPTH4_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0)
+                                                                          0.000000   2.138939 r
+  select_slot[0] (net)                                0.024952            0.000000   2.138939 r
+  U225/A (BUFX2)                                                0.147883  0.000000   2.138939 r
+  U225/Y (BUFX2)                                                0.059021  0.068821   2.207759 r
+  n161 (net)                                    7     0.019293            0.000000   2.207759 r
+  U219/A (INVX1)                                                0.059021  0.000000   2.207759 r
+  U219/Y (INVX1)                                                0.019577  0.036707   2.244467 f
+  n172 (net)                                    3     0.005967            0.000000   2.244467 f
+  U221/A (OR2X1)                                                0.019577  0.000000   2.244467 f
+  U221/Y (OR2X1)                                                0.010073  0.039199   2.283666 f
+  n158 (net)                                    1     0.001476            0.000000   2.283666 f
+  U212/A (INVX1)                                                0.010073  0.000000   2.283666 f
+  U212/Y (INVX1)                                                0.679609  0.446137   2.729803 r
+  n170 (net)                                   48     0.139513            0.000000   2.729803 r
+  U259/D (AOI22X1)                                              0.679609  0.000000   2.729803 r
+  U259/Y (AOI22X1)                                              0.223624  0.156634   2.886437 f
+  n202 (net)                                    1     0.001504            0.000000   2.886437 f
+  U198/A (BUFX2)                                                0.223624  0.000000   2.886437 f
+  U198/Y (BUFX2)                                                0.066807  0.075391   2.961828 f
+  n146 (net)                                    1     0.001827            0.000000   2.961828 f
+  U53/B (AND2X1)                                                0.066807  0.000000   2.961828 f
+  U53/Y (AND2X1)                                                0.011882  0.049030   3.010858 f
+  n287 (net)                                    1     0.001476            0.000000   3.010858 f
+  U197/A (INVX1)                                                0.011882  0.000000   3.010858 f
+  U197/Y (INVX1)                                                0.024051  0.031809   3.042667 r
+  cmd_row[0] (net)                              2     0.011551            0.000000   3.042667 r
+  cmd_row[0] (out)                                              0.024051  0.000000   3.042667 r
+  data arrival time                                                                  3.042667
+
+  clock core_clk (rise edge)                                              5.000000   5.000000
+  clock network delay (ideal)                                             0.000000   5.000000
+  clock uncertainty                                                       -0.100000  4.900000
+  output external delay                                                   -1.000000  3.900000
+  data required time                                                                 3.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 3.900000
+  data arrival time                                                                  -3.042667
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.857333
+
+
+1

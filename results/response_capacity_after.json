@@ -1,0 +1,941 @@
+{
+  "label": "after",
+  "results": [
+    {
+      "policy": 0,
+      "aging": 0,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 5373,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 11,
+      "same_addr_block": 696,
+      "independent_bypass": 6,
+      "overlap": 1300,
+      "full": 0,
+      "bank_overlap": 0,
+      "idle_empty": 139,
+      "idle_timing": 12,
+      "idle_policy": 4,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "strict_fcfs",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_strict_fcfs_ccd1",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 5012,
+        "responses_per_cycle": 0.9976057462090981,
+        "bytes_per_cycle": 3.9904229848363926,
+        "latency": {
+          "admission": {
+            "mean": 1,
+            "median": 1.0,
+            "p95": 1,
+            "p99": 1,
+            "max": 1
+          },
+          "queue": {
+            "mean": 7,
+            "median": 7.0,
+            "p95": 7,
+            "p99": 7,
+            "max": 7
+          },
+          "completion": {
+            "mean": 9.25,
+            "median": 10.0,
+            "p95": 10,
+            "p99": 10,
+            "max": 10
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2.75,
+            "median": 2.0,
+            "p95": 5,
+            "p99": 5,
+            "max": 5
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 12,
+            "median": 12.0,
+            "p95": 12,
+            "p99": 12,
+            "max": 12
+          }
+        },
+        "read_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "write_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.9990023942537909,
+        "mean_occupancy": 11.984437350359139,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.9976057462090981,
+        "column_issues_per_cycle": 0.9990023942537909,
+        "internal_completions_per_cycle": 0.9994014365522745,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 0,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 1
+      },
+      "longest_consecutive_handshakes": 5000,
+      "response_window_rate": 1.0,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 1,
+          "SCHED_POLICY": 0,
+          "AGING_ENABLE": 0
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    },
+    {
+      "policy": 1,
+      "aging": 0,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 5373,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 8,
+      "same_addr_block": 696,
+      "independent_bypass": 6,
+      "overlap": 1300,
+      "full": 0,
+      "bank_overlap": 4,
+      "idle_empty": 145,
+      "idle_timing": 10,
+      "idle_policy": 0,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "frfcfs",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_frfcfs_ccd1",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 5012,
+        "responses_per_cycle": 0.9976057462090981,
+        "bytes_per_cycle": 3.9904229848363926,
+        "latency": {
+          "admission": {
+            "mean": 1,
+            "median": 1.0,
+            "p95": 1,
+            "p99": 1,
+            "max": 1
+          },
+          "queue": {
+            "mean": 7,
+            "median": 7.0,
+            "p95": 7,
+            "p99": 7,
+            "max": 7
+          },
+          "completion": {
+            "mean": 9.25,
+            "median": 10.0,
+            "p95": 10,
+            "p99": 10,
+            "max": 10
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2.75,
+            "median": 2.0,
+            "p95": 5,
+            "p99": 5,
+            "max": 5
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 12,
+            "median": 12.0,
+            "p95": 12,
+            "p99": 12,
+            "max": 12
+          }
+        },
+        "read_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "write_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.9990023942537909,
+        "mean_occupancy": 11.984437350359139,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.9976057462090981,
+        "column_issues_per_cycle": 0.9990023942537909,
+        "internal_completions_per_cycle": 0.9994014365522745,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 0,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 1
+      },
+      "longest_consecutive_handshakes": 5000,
+      "response_window_rate": 1.0,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 1,
+          "SCHED_POLICY": 1,
+          "AGING_ENABLE": 0
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    },
+    {
+      "policy": 1,
+      "aging": 1,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 5373,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 8,
+      "same_addr_block": 696,
+      "independent_bypass": 6,
+      "overlap": 1300,
+      "full": 0,
+      "bank_overlap": 4,
+      "idle_empty": 145,
+      "idle_timing": 10,
+      "idle_policy": 0,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "frfcfs_aging",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_frfcfs_aging_ccd1",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 5012,
+        "responses_per_cycle": 0.9976057462090981,
+        "bytes_per_cycle": 3.9904229848363926,
+        "latency": {
+          "admission": {
+            "mean": 1,
+            "median": 1.0,
+            "p95": 1,
+            "p99": 1,
+            "max": 1
+          },
+          "queue": {
+            "mean": 7,
+            "median": 7.0,
+            "p95": 7,
+            "p99": 7,
+            "max": 7
+          },
+          "completion": {
+            "mean": 9.25,
+            "median": 10.0,
+            "p95": 10,
+            "p99": 10,
+            "max": 10
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2.75,
+            "median": 2.0,
+            "p95": 5,
+            "p99": 5,
+            "max": 5
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 12,
+            "median": 12.0,
+            "p95": 12,
+            "p99": 12,
+            "max": 12
+          }
+        },
+        "read_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "write_latency": {
+          "mean": 12,
+          "median": 12.0,
+          "p95": 12,
+          "p99": 12,
+          "max": 12
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.9990023942537909,
+        "mean_occupancy": 11.984437350359139,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.9976057462090981,
+        "column_issues_per_cycle": 0.9990023942537909,
+        "internal_completions_per_cycle": 0.9994014365522745,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 0,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 1
+      },
+      "longest_consecutive_handshakes": 5000,
+      "response_window_rate": 1.0,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 1,
+          "SCHED_POLICY": 1,
+          "AGING_ENABLE": 1
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    },
+    {
+      "policy": 0,
+      "aging": 0,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 10572,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 28,
+      "same_addr_block": 683,
+      "independent_bypass": 1305,
+      "overlap": 0,
+      "full": 1,
+      "bank_overlap": 0,
+      "idle_empty": 134,
+      "idle_timing": 5210,
+      "idle_policy": 10,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "strict_fcfs",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_strict_fcfs_ccd2",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 10032,
+        "responses_per_cycle": 0.4984051036682616,
+        "bytes_per_cycle": 1.9936204146730463,
+        "latency": {
+          "admission": {
+            "mean": 2680.75,
+            "median": 2680.0,
+            "p95": 4931,
+            "p99": 5131,
+            "max": 5180
+          },
+          "queue": {
+            "mean": 26.75,
+            "median": 26.5,
+            "p95": 28,
+            "p99": 28,
+            "max": 28
+          },
+          "completion": {
+            "mean": 29,
+            "median": 29.0,
+            "p95": 30,
+            "p99": 30,
+            "max": 30
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2,
+            "median": 2.0,
+            "p95": 2,
+            "p99": 2,
+            "max": 2
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 31,
+            "median": 31.0,
+            "p95": 32,
+            "p99": 32,
+            "max": 32
+          }
+        },
+        "read_latency": {
+          "mean": 31.333333333333332,
+          "median": 31.0,
+          "p95": 32,
+          "p99": 32,
+          "max": 32
+        },
+        "write_latency": {
+          "mean": 30,
+          "median": 30.0,
+          "p95": 30,
+          "p99": 30,
+          "max": 30
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.4998006379585327,
+        "mean_occupancy": 15.475079744816586,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.4984051036682616,
+        "column_issues_per_cycle": 0.4998006379585327,
+        "internal_completions_per_cycle": 0.49990031897926634,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 5013,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 2
+      },
+      "longest_consecutive_handshakes": 3,
+      "response_window_rate": 0.4998500149985001,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 2,
+          "SCHED_POLICY": 0,
+          "AGING_ENABLE": 0
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    },
+    {
+      "policy": 1,
+      "aging": 0,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 10572,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 28,
+      "same_addr_block": 689,
+      "independent_bypass": 1305,
+      "overlap": 0,
+      "full": 1,
+      "bank_overlap": 5,
+      "idle_empty": 142,
+      "idle_timing": 5212,
+      "idle_policy": 0,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "frfcfs",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_frfcfs_ccd2",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 10032,
+        "responses_per_cycle": 0.4984051036682616,
+        "bytes_per_cycle": 1.9936204146730463,
+        "latency": {
+          "admission": {
+            "mean": 2680.75,
+            "median": 2680.0,
+            "p95": 4931,
+            "p99": 5131,
+            "max": 5180
+          },
+          "queue": {
+            "mean": 26.75,
+            "median": 26.5,
+            "p95": 28,
+            "p99": 28,
+            "max": 28
+          },
+          "completion": {
+            "mean": 29,
+            "median": 29.0,
+            "p95": 30,
+            "p99": 30,
+            "max": 30
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2,
+            "median": 2.0,
+            "p95": 2,
+            "p99": 2,
+            "max": 2
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 31,
+            "median": 31.0,
+            "p95": 32,
+            "p99": 32,
+            "max": 32
+          }
+        },
+        "read_latency": {
+          "mean": 31.333333333333332,
+          "median": 31.0,
+          "p95": 32,
+          "p99": 32,
+          "max": 32
+        },
+        "write_latency": {
+          "mean": 30,
+          "median": 30.0,
+          "p95": 30,
+          "p99": 30,
+          "max": 30
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.4998006379585327,
+        "mean_occupancy": 15.475079744816586,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.4984051036682616,
+        "column_issues_per_cycle": 0.4998006379585327,
+        "internal_completions_per_cycle": 0.49990031897926634,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 5013,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 2
+      },
+      "longest_consecutive_handshakes": 3,
+      "response_window_rate": 0.4998500149985001,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 2,
+          "SCHED_POLICY": 1,
+          "AGING_ENABLE": 0
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    },
+    {
+      "policy": 1,
+      "aging": 1,
+      "seed": 42,
+      "accepted": 5210,
+      "cycles": 10572,
+      "act": 6,
+      "read": 3906,
+      "write": 1304,
+      "pre": 2,
+      "protection": 0,
+      "max_wait": 28,
+      "same_addr_block": 689,
+      "independent_bypass": 1305,
+      "overlap": 0,
+      "full": 1,
+      "bank_overlap": 5,
+      "idle_empty": 142,
+      "idle_timing": 5212,
+      "idle_policy": 0,
+      "idle_dependency": 0,
+      "protected_owner_block": 0,
+      "policy_name": "frfcfs_aging",
+      "workload": "row_hit",
+      "path": "build/runs/response_capacity_after_frfcfs_aging_ccd2",
+      "ready_percent": 100,
+      "offered_interval": 1,
+      "metrics": {
+        "requests": 5000,
+        "measurement_cycles": 10032,
+        "responses_per_cycle": 0.4984051036682616,
+        "bytes_per_cycle": 1.9936204146730463,
+        "latency": {
+          "admission": {
+            "mean": 2680.75,
+            "median": 2680.0,
+            "p95": 4931,
+            "p99": 5131,
+            "max": 5180
+          },
+          "queue": {
+            "mean": 26.75,
+            "median": 26.5,
+            "p95": 28,
+            "p99": 28,
+            "max": 28
+          },
+          "completion": {
+            "mean": 29,
+            "median": 29.0,
+            "p95": 30,
+            "p99": 30,
+            "max": 30
+          },
+          "response_order": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "response_arbitration": {
+            "mean": 2,
+            "median": 2.0,
+            "p95": 2,
+            "p99": 2,
+            "max": 2
+          },
+          "host_backpressure": {
+            "mean": 0,
+            "median": 0.0,
+            "p95": 0,
+            "p99": 0,
+            "max": 0
+          },
+          "end_to_end": {
+            "mean": 31,
+            "median": 31.0,
+            "p95": 32,
+            "p99": 32,
+            "max": 32
+          }
+        },
+        "read_latency": {
+          "mean": 31.333333333333332,
+          "median": 31.0,
+          "p95": 32,
+          "p99": 32,
+          "max": 32
+        },
+        "write_latency": {
+          "mean": 30,
+          "median": 30.0,
+          "p95": 30,
+          "p99": 30,
+          "max": 30
+        },
+        "row_hit_rate": 1.0,
+        "closed_miss_rate": 0.0,
+        "row_conflict_rate": 0.0,
+        "act_per_request": 0.0,
+        "pre_per_request": 0.0,
+        "command_utilization": 0.4998006379585327,
+        "mean_occupancy": 15.475079744816586,
+        "mean_preparing_banks": 0,
+        "protection_activations": 0,
+        "accepted_per_cycle": 0.4984051036682616,
+        "column_issues_per_cycle": 0.4998006379585327,
+        "internal_completions_per_cycle": 0.49990031897926634,
+        "bank_open_fraction": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bank_preparing_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "idle_cycles": {
+          "empty": 5,
+          "timing": 5013,
+          "policy": 0,
+          "dependency_or_owner": 0
+        },
+        "protected_duration": {}
+      },
+      "parameters": {
+        "COLS": 64,
+        "T_CCD": 2
+      },
+      "longest_consecutive_handshakes": 3,
+      "response_window_rate": 0.4998500149985001,
+      "build": {
+        "parameters": {
+          "COLS": 64,
+          "T_CCD": 2,
+          "SCHED_POLICY": 1,
+          "AGING_ENABLE": 1
+        },
+        "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+        "source_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38",
+          "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+          "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+        }
+      }
+    }
+  ]
+}

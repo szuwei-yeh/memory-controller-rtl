@@ -1,0 +1,30 @@
+**The random-traffic p99 increase at 50% ready is systematic in this study, not
+just a seed-42 fluctuation.** For both FR-FCFS configurations, all 20 paired seeds
+increase by 7–10 cycles: mean +8.80 cycles, median +9, paired bootstrap 95% interval
+[+8.50, +9.05]. Average per-seed p99 moves from 81.20 to 90.00 cycles. These two
+configurations produce identical metrics on the tested random streams, so they
+are not two independent confirmations. In exchange, average throughput increases
+28.60% (0.24906 → 0.32029 responses/cycle), while mean latency decreases 23.14%
+(63.00 → 48.42 cycles). p95 increases 5.45 cycles and the average per-run maximum
+increases 6.00 cycles. The result is a repeatable throughput/mean-versus-tail tradeoff.
+
+Strict Request FCFS does not share that tail regression: its mean paired p99 change
+is −0.70 cycles, and throughput remains approximately 0.1463 responses/cycle.
+Its small changes should not be confused with the much larger FR-FCFS effect.
+
+Across the final random-traffic runs, FR-FCFS with and without aging averages
+0.4187 / 0.3203 / 0.1958 responses/cycle at ready 100% / 50% / 20%, respectively.
+Corresponding average per-run p99 values are 69.35 / 90.00 / 98.05 cycles.
+Throughput spans 0.4150–0.4234, 0.3174–0.3228, and 0.1952–0.1971 across seeds;
+the qualitative policy comparison is stable. Strict Request FCFS stays near
+0.146 responses/cycle and remains limited by command scheduling in these streams.
+
+At 100% ready, hot/cold traffic exposes the aging tradeoff: FR-FCFS p99/max are
+333/403 cycles; aging reduces both to 137 cycles while throughput decreases from
+0.4815 to 0.4617 responses/cycle. HOL throughput is 0.4952 for either FR-FCFS policy
+versus 0.3054 for Strict Request FCFS, although the reordering policies have higher
+p99 (102 versus 51 cycles). At 50% ready, FR-FCFS hot/cold and HOL throughput is
+0.3503 and 0.3772; at 20% ready, those workloads converge near the host limit of
+0.200 responses/cycle across policies. Aging does not change their measured
+50%/20% metrics in this study. These are comparisons among the frozen final-design
+policies; historical paired measurements here cover only random/50%.

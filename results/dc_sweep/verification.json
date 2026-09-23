@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "distinct_runs": 30,
+  "setup_passing_runs": 25,
+  "per_run_notebook_entries_verified": 30,
+  "baseline_hold_path_count": 14,
+  "rtl_and_sdc_unchanged": true,
+  "same_config_and_flow_hashes_across_runs": true,
+  "baseline_area_setup_hold_reproduced": true,
+  "unconstrained_endpoints_total": 0,
+  "max_capacitance_violations_total": 186081,
+  "zero_allowed_load_violations_total": 186081,
+  "library_db_sha256_after_sweep": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+  "summary_csv_sha256": "fe6e41b1aeb63a5cee1767d0d352414461877822162beb7427a7c4386ec8e156",
+  "summary_json_sha256": "3b18ea790a765c5229a22871ec58fd8c77ba6135e1b7ac022f07e49442f52d80"
+}

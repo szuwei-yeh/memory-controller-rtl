@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 20
+
+[engines]
+abc pdr
+
+[script]
+read -formal -sv -D SYNTHESIS mc_bank_tracker.sv formal_bank.sv
+prep -top formal_bank
+
+[files]
+rtl/mc_bank_tracker.sv
+formal/formal_bank.sv

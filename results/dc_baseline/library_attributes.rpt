@@ -1,0 +1,6 @@
+time_unit_name = ns
+capacitive_load_units = 1000.000000
+default_operating_conditions = typical
+nom_process = 1.000000
+nom_voltage = 1.100000
+nom_temperature = 27.000000

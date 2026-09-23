@@ -1,0 +1,3 @@
+NAND2X1/Y max_capacitance=0.000000
+INVX1/Y max_capacitance=0.238796
+Companion gscl45nm.lib NAND2X1 max_capacitance: 0

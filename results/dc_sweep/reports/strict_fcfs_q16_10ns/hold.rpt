@@ -1,0 +1,755 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -input_pins
+        -nets
+        -max_paths 20
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH16_SCHED_POLICY0_AGING_ENABLE0
+Version: R-2020.09-SP4
+Date   : Tue Sep 22 18:05:30 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/done_reg[6]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[6]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[6]/CLK (DFFPOSX1)             0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[6]/Q (DFFPOSX1)               0.016672  0.066161   0.066161 r
+  table_i/done[6] (net)          2     0.004402            0.000000   0.066161 r
+  table_i/U1744/A (NAND2X1)                      0.016672  0.000000   0.066161 r
+  table_i/U1744/Y (NAND2X1)                      0.000000  0.013285   0.079445 f
+  table_i/n980 (net)             1     0.001944            0.000000   0.079445 f
+  table_i/U1743/B (NAND2X1)                      0.000000  0.000000   0.079445 f
+  table_i/U1743/Y (NAND2X1)                      0.030209  0.007953   0.087398 r
+  table_i/n3390 (net)            1     0.001816            0.000000   0.087398 r
+  table_i/done_reg[6]/D (DFFPOSX1)               0.030209  0.000000   0.087398 r
+  data arrival time                                                   0.087398
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[6]/CLK (DFFPOSX1)                       0.000000   0.100000 r
+  library hold time                                        -0.010064  0.089936
+  data required time                                                  0.089936
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089936
+  data arrival time                                                   -0.087398
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.002538
+
+
+  Startpoint: table_i/done_reg[14]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[14]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[14]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[14]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[14] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1713/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1713/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n937 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1712/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1712/Y (NAND2X1)                      0.030211  0.010068   0.089223 r
+  table_i/n3382 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[14]/D (DFFPOSX1)              0.030211  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[14]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[15]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[15]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[15]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[15]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[15] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1709/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1709/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n929 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1708/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1708/Y (NAND2X1)                      0.030211  0.010068   0.089223 r
+  table_i/n3381 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[15]/D (DFFPOSX1)              0.030211  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[15]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[8]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[8]/CLK (DFFPOSX1)             0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[8]/Q (DFFPOSX1)               0.018649  0.067459   0.067459 r
+  table_i/done[8] (net)          2     0.005253            0.000000   0.067459 r
+  table_i/U1737/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1737/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n972 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1736/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1736/Y (NAND2X1)                      0.030211  0.010068   0.089223 r
+  table_i/n3388 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[8]/D (DFFPOSX1)               0.030211  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[8]/CLK (DFFPOSX1)                       0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[10]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[10]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[10]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[10]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[10] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1729/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1729/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n962 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1728/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1728/Y (NAND2X1)                      0.030211  0.010068   0.089223 r
+  table_i/n3386 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[10]/D (DFFPOSX1)              0.030211  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[10]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[11]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[11]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[11]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[11]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[11] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1725/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1725/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n956 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1724/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1724/Y (NAND2X1)                      0.030211  0.010068   0.089223 r
+  table_i/n3385 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[11]/D (DFFPOSX1)              0.030211  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[11]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[12]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[12]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[12]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[12]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[12] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1721/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1721/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n950 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1720/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1720/Y (NAND2X1)                      0.030209  0.010068   0.089223 r
+  table_i/n3384 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[12]/D (DFFPOSX1)              0.030209  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[12]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010064  0.089936
+  data required time                                                  0.089936
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089936
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: table_i/done_reg[13]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[13]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[13]/CLK (DFFPOSX1)            0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[13]/Q (DFFPOSX1)              0.018649  0.067459   0.067459 r
+  table_i/done[13] (net)         2     0.005253            0.000000   0.067459 r
+  table_i/U1717/C (NAND3X1)                      0.018649  0.000000   0.067459 r
+  table_i/U1717/Y (NAND3X1)                      0.006518  0.011695   0.079154 f
+  table_i/n944 (net)             1     0.001944            0.000000   0.079154 f
+  table_i/U1716/B (NAND2X1)                      0.006518  0.000000   0.079154 f
+  table_i/U1716/Y (NAND2X1)                      0.030209  0.010068   0.089223 r
+  table_i/n3383 (net)            1     0.001816            0.000000   0.089223 r
+  table_i/done_reg[13]/D (DFFPOSX1)              0.030209  0.000000   0.089223 r
+  data arrival time                                                   0.089223
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[13]/CLK (DFFPOSX1)                      0.000000   0.100000 r
+  library hold time                                        -0.010064  0.089936
+  data required time                                                  0.089936
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089936
+  data arrival time                                                   -0.089223
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000714
+
+
+  Startpoint: banks_i/ras_reg[1][2]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: banks_i/ras_reg[1][2]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  banks_i/ras_reg[1][2]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  banks_i/ras_reg[1][2]/Q (DFFPOSX1)                            0.018956  0.067661   0.067661 r
+  banks_i/ras[1][2] (net)                       2     0.005385            0.000000   0.067661 r
+  banks_i/U78/C (NAND3X1)                                       0.018956  0.000000   0.067661 r
+  banks_i/U78/Y (NAND3X1)                                       0.005089  0.011767   0.079428 f
+  banks_i/n59 (net)                             1     0.001944            0.000000   0.079428 f
+  banks_i/U77/B (NAND2X1)                                       0.005089  0.000000   0.079428 f
+  banks_i/U77/Y (NAND2X1)                                       0.029657  0.009604   0.089033 r
+  banks_i/n208 (net)                            1     0.001816            0.000000   0.089033 r
+  banks_i/ras_reg[1][2]/D (DFFPOSX1)                            0.029657  0.000000   0.089033 r
+  data arrival time                                                                  0.089033
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  banks_i/ras_reg[1][2]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.010308  0.089692
+  data required time                                                                 0.089692
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.089692
+  data arrival time                                                                  -0.089033
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.000659
+
+
+  Startpoint: table_i/done_reg[9]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/done_reg[9]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/done_reg[9]/CLK (DFFPOSX1)             0.000000  0.000000 # 0.000000 r
+  table_i/done_reg[9]/Q (DFFPOSX1)               0.018768  0.067537   0.067537 r
+  table_i/done[9] (net)          2     0.005304            0.000000   0.067537 r
+  table_i/U1733/C (NAND3X1)                      0.018768  0.000000   0.067537 r
+  table_i/U1733/Y (NAND3X1)                      0.006518  0.011723   0.079261 f
+  table_i/n967 (net)             1     0.001944            0.000000   0.079261 f
+  table_i/U1732/B (NAND2X1)                      0.006518  0.000000   0.079261 f
+  table_i/U1732/Y (NAND2X1)                      0.030211  0.010068   0.089329 r
+  table_i/n3387 (net)            1     0.001816            0.000000   0.089329 r
+  table_i/done_reg[9]/D (DFFPOSX1)               0.030211  0.000000   0.089329 r
+  data arrival time                                                   0.089329
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/done_reg[9]/CLK (DFFPOSX1)                       0.000000   0.100000 r
+  library hold time                                        -0.010063  0.089937
+  data required time                                                  0.089937
+  -------------------------------------------------------------------------------
+  data required time                                                  0.089937
+  data arrival time                                                   -0.089329
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.000608
+
+
+  Startpoint: banks_i/rcd_reg[1][1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: banks_i/rcd_reg[1][1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  banks_i/rcd_reg[1][1]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  banks_i/rcd_reg[1][1]/Q (DFFPOSX1)                            0.019192  0.067816   0.067816 r
+  banks_i/rcd[1][1] (net)                       2     0.005486            0.000000   0.067816 r
+  banks_i/U118/C (NAND3X1)                                      0.019192  0.000000   0.067816 r
+  banks_i/U118/Y (NAND3X1)                                      0.005033  0.011822   0.079638 f
+  banks_i/n105 (net)                            1     0.001944            0.000000   0.079638 f
+  banks_i/U117/B (NAND2X1)                                      0.005033  0.000000   0.079638 f
+  banks_i/U117/Y (NAND2X1)                                      0.029657  0.009586   0.089224 r
+  banks_i/n226 (net)                            1     0.001816            0.000000   0.089224 r
+  banks_i/rcd_reg[1][1]/D (DFFPOSX1)                            0.029657  0.000000   0.089224 r
+  data arrival time                                                                  0.089224
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  banks_i/rcd_reg[1][1]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.010308  0.089692
+  data required time                                                                 0.089692
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.089692
+  data arrival time                                                                  -0.089224
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.000467
+
+
+  Startpoint: rsp_ready (input port clocked by core_clk)
+  Endpoint: response_i/held_slot_reg[1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    0.000000   0.000000 r
+  rsp_ready (in)                                                0.100000  0.000000   0.000000 r
+  rsp_ready (net)                               2     0.005085            0.000000   0.000000 r
+  response_i/rsp_ready (mc_response_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8)   0.000000   0.000000 r
+  response_i/rsp_ready (net)                          0.005085            0.000000   0.000000 r
+  response_i/U303/A (OAI21X1)                                   0.100000  0.000000   0.000000 r
+  response_i/U303/Y (OAI21X1)                                   0.018280  0.054094   0.054094 f
+  response_i/n1039 (net)                        5     0.011200            0.000000   0.054094 f
+  response_i/U1782/A (INVX1)                                    0.018280  0.000000   0.054094 f
+  response_i/U1782/Y (INVX1)                                    0.000000  0.009984   0.064078 r
+  response_i/n4830 (net)                        2     0.004120            0.000000   0.064078 r
+  response_i/U283/A (NAND2X1)                                   0.000000  0.000000   0.064078 r
+  response_i/U283/Y (NAND2X1)                                   0.000000  0.009678   0.073756 f
+  response_i/n1047 (net)                        1     0.001924            0.000000   0.073756 f
+  response_i/U282/C (OAI21X1)                                   0.000000  0.000000   0.073756 f
+  response_i/U282/Y (OAI21X1)                                   0.006710  0.013809   0.087564 r
+  response_i/n1729 (net)                        1     0.001816            0.000000   0.087564 r
+  response_i/held_slot_reg[1]/D (DFFPOSX1)                      0.006710  0.000000   0.087564 r
+  data arrival time                                                                  0.087564
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  response_i/held_slot_reg[1]/CLK (DFFPOSX1)                              0.000000   0.100000 r
+  library hold time                                                       -0.020467  0.079533
+  data required time                                                                 0.079533
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.079533
+  data arrival time                                                                  -0.087564
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.008031
+
+
+  Startpoint: rsp_ready (input port clocked by core_clk)
+  Endpoint: response_i/held_slot_reg[2]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    0.000000   0.000000 r
+  rsp_ready (in)                                                0.100000  0.000000   0.000000 r
+  rsp_ready (net)                               2     0.005085            0.000000   0.000000 r
+  response_i/rsp_ready (mc_response_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8)   0.000000   0.000000 r
+  response_i/rsp_ready (net)                          0.005085            0.000000   0.000000 r
+  response_i/U303/A (OAI21X1)                                   0.100000  0.000000   0.000000 r
+  response_i/U303/Y (OAI21X1)                                   0.018280  0.054094   0.054094 f
+  response_i/n1039 (net)                        5     0.011200            0.000000   0.054094 f
+  response_i/U1782/A (INVX1)                                    0.018280  0.000000   0.054094 f
+  response_i/U1782/Y (INVX1)                                    0.000000  0.009984   0.064078 r
+  response_i/n4830 (net)                        2     0.004120            0.000000   0.064078 r
+  response_i/U280/C (OAI21X1)                                   0.000000  0.000000   0.064078 r
+  response_i/U280/Y (OAI21X1)                                   0.000000  0.010318   0.074396 f
+  response_i/n1042 (net)                        1     0.001924            0.000000   0.074396 f
+  response_i/U279/C (OAI21X1)                                   0.000000  0.000000   0.074396 f
+  response_i/U279/Y (OAI21X1)                                   0.006710  0.013809   0.088204 r
+  response_i/n1728 (net)                        1     0.001816            0.000000   0.088204 r
+  response_i/held_slot_reg[2]/D (DFFPOSX1)                      0.006710  0.000000   0.088204 r
+  data arrival time                                                                  0.088204
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  response_i/held_slot_reg[2]/CLK (DFFPOSX1)                              0.000000   0.100000 r
+  library hold time                                                       -0.020467  0.079533
+  data required time                                                                 0.079533
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.079533
+  data arrival time                                                                  -0.088204
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.008671
+
+
+  Startpoint: table_i/ages_reg[110]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[110]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[110]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[110]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[110] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1787/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1787/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1018 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6449/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6449/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6504 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[110]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[110]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[109]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[109]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[109]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[109]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[109] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1788/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1788/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1019 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6448/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6448/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6503 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[109]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[109]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[108]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[108]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[108]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[108]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[108] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1789/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1789/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1020 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6447/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6447/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6502 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[108]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[108]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[107]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[107]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[107]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[107]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[107] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1790/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1790/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1021 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6446/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6446/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6501 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[107]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[107]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[106]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[106]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[106]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[106]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[106] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1791/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1791/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1022 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6445/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6445/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6500 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[106]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[106]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[105]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[105]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/ages_reg[105]/CLK (DFFPOSX1)                          0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[105]/Q (DFFPOSX1)                            0.023783  0.070831   0.070831 r
+  table_i/ages[105] (net)                       2     0.007461            0.000000   0.070831 r
+  table_i/U1792/C (AOI22X1)                                     0.023783  0.000000   0.070831 r
+  table_i/U1792/Y (AOI22X1)                                     0.003966  0.018928   0.089759 f
+  table_i/n1023 (net)                           1     0.001476            0.000000   0.089759 f
+  table_i/U6444/A (INVX1)                                       0.003966  0.000000   0.089759 f
+  table_i/U6444/Y (INVX1)                                       0.000000  -0.002568  0.087191 r
+  table_i/n6499 (net)                           1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[105]/D (DFFPOSX1)                            0.000000  0.000000   0.087191 r
+  data arrival time                                                                  0.087191
+
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  clock uncertainty                                                       0.100000   0.100000
+  table_i/ages_reg[105]/CLK (DFFPOSX1)                                    0.000000   0.100000 r
+  library hold time                                                       -0.023438  0.076563
+  data required time                                                                 0.076563
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.076563
+  data arrival time                                                                  -0.087191
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.010629
+
+
+  Startpoint: table_i/ages_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/ages_reg[1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  table_i/ages_reg[1]/CLK (DFFPOSX1)             0.000000  0.000000 # 0.000000 r
+  table_i/ages_reg[1]/Q (DFFPOSX1)               0.023783  0.070831   0.070831 r
+  table_i/ages[1] (net)          2     0.007461            0.000000   0.070831 r
+  table_i/U1934/C (AOI22X1)                      0.023783  0.000000   0.070831 r
+  table_i/U1934/Y (AOI22X1)                      0.003966  0.018928   0.089759 f
+  table_i/n1178 (net)            1     0.001476            0.000000   0.089759 f
+  table_i/U6564/A (INVX1)                        0.003966  0.000000   0.089759 f
+  table_i/U6564/Y (INVX1)                        0.000000  -0.002568  0.087191 r
+  table_i/n6545 (net)            1     0.001816            0.000000   0.087191 r
+  table_i/ages_reg[1]/D (DFFPOSX1)               0.000000  0.000000   0.087191 r
+  data arrival time                                                   0.087191
+
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  clock uncertainty                                        0.100000   0.100000
+  table_i/ages_reg[1]/CLK (DFFPOSX1)                       0.000000   0.100000 r
+  library hold time                                        -0.023438  0.076563
+  data required time                                                  0.076563
+  -------------------------------------------------------------------------------
+  data required time                                                  0.076563
+  data arrival time                                                   -0.087191
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.010629
+
+
+1

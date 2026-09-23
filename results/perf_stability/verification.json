@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "frozen_sources_unchanged": true,
+  "final_runs": 540,
+  "historical_runs": 60,
+  "accepted": 1326000,
+  "measured": 1200000,
+  "paired_address_operation_sequences_identical": 60,
+  "prior_seed42_metric_sets_reproduced": 6,
+  "deterministic_hot_cold_hol_confirmed": true
+}

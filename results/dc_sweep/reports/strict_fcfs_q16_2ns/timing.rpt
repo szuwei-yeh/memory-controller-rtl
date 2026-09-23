@@ -1,0 +1,1026 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH16_SCHED_POLICY0_AGING_ENABLE0
+Version: R-2020.09-SP4
+Date   : Tue Sep 22 18:15:10 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: rsp_valid (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  rst (in)                                                      0.100000  0.000000   1.000000 f
+  rst (net)                                     7     0.011940            0.000000   1.000000 f
+  response_i/rst (mc_response_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8)         0.000000   1.000000 f
+  response_i/rst (net)                                0.011940            0.000000   1.000000 f
+  response_i/U2133/A (INVX1)                                    0.100000  0.000000   1.000000 f
+  response_i/U2133/Y (INVX1)                                    0.012483  0.047068   1.047068 r
+  response_i/n1872 (net)                        3     0.006644            0.000000   1.047068 r
+  response_i/U2526/B (AND2X1)                                   0.012483  0.000000   1.047068 r
+  response_i/U2526/Y (AND2X1)                                   0.080937  0.073481   1.120549 r
+  response_i/rsp_valid (net)                    2     0.012291            0.000000   1.120549 r
+  response_i/rsp_valid (mc_response_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8)   0.000000   1.120549 r
+  rsp_valid (net)                                     0.012291            0.000000   1.120549 r
+  rsp_valid (out)                                               0.080937  0.000000   1.120549 r
+  data arrival time                                                                  1.120549
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -1.120549
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.220549
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: req_ready (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  rst (in)                                                      0.100000  0.000000   1.000000 f
+  rst (net)                                     7     0.011940            0.000000   1.000000 f
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.000000 f
+  table_i/rst (net)                                   0.011940            0.000000   1.000000 f
+  table_i/U183/C (AOI21X1)                                      0.100000  0.000000   1.000000 f
+  table_i/U183/Y (AOI21X1)                                      0.023936  0.040684   1.040684 r
+  table_i/n27 (net)                             1     0.001551            0.000000   1.040684 r
+  table_i/U182/A (INVX1)                                        0.023936  0.000000   1.040684 r
+  table_i/U182/Y (INVX1)                                        0.008570  0.018022   1.058706 f
+  table_i/n25 (net)                             1     0.001476            0.000000   1.058706 f
+  table_i/U88/A (INVX1)                                         0.008570  0.000000   1.058706 f
+  table_i/U88/Y (INVX1)                                         0.027363  0.033043   1.091749 r
+  table_i/req_ready (net)                       2     0.012291            0.000000   1.091749 r
+  table_i/req_ready (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.091749 r
+  req_ready (net)                                     0.012291            0.000000   1.091749 r
+  req_ready (out)                                               0.027363  0.000000   1.091749 r
+  data arrival time                                                                  1.091749
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -1.091749
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.191749
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: cmd_valid (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     1.000000   1.000000 r
+  rst (in)                                       0.100000  0.000000   1.000000 r
+  rst (net)                      7     0.012565            0.000000   1.000000 r
+  U1051/A (INVX1)                                0.100000  0.000000   1.000000 r
+  U1051/Y (INVX1)                                0.004076  0.039199   1.039199 f
+  n778 (net)                     1     0.001763            0.000000   1.039199 f
+  U265/A (AND2X2)                                0.004076  0.000000   1.039199 f
+  U265/Y (AND2X2)                                0.009558  0.041435   1.080634 f
+  cmd_valid (net)                2     0.011504            0.000000   1.080634 f
+  cmd_valid (out)                                0.009558  0.000000   1.080634 f
+  data arrival time                                                   1.080634
+
+  clock core_clk (rise edge)                               2.000000   2.000000
+  clock network delay (ideal)                              0.000000   2.000000
+  clock uncertainty                                        -0.100000  1.900000
+  output external delay                                    -1.000000  0.900000
+  data required time                                                  0.900000
+  -------------------------------------------------------------------------------
+  data required time                                                  0.900000
+  data arrival time                                                   -1.080634
+  -------------------------------------------------------------------------------
+  slack (VIOLATED)                                                    -0.180634
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[25]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/Y (AOI22X1)                      0.043209  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n201 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/B (AND2X2)                       0.043209  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/Y (AND2X2)                       0.008777  0.032508   0.227653 r
+  strict_fcfs.scheduler_i/n247 (net)            1     0.001551            0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/A (INVX1)                         0.008777  0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/Y (INVX1)                         0.011826  0.015421   0.243074 f
+  strict_fcfs.scheduler_i/n23 (net)             1     0.002209            0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/A (NOR2X1)                        0.011826  0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/Y (NOR2X1)                        0.024030  0.027104   0.270178 r
+  strict_fcfs.scheduler_i/n27 (net)             1     0.001551            0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/A (INVX1)                         0.024030  0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/Y (INVX1)                         0.011032  0.019739   0.289917 f
+  strict_fcfs.scheduler_i/n26 (net)             1     0.002301            0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/A (OR2X2)                         0.011032  0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/Y (OR2X2)                         0.008882  0.040450   0.330367 f
+  strict_fcfs.scheduler_i/n17 (net)             2     0.004643            0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/B (OR2X2)                         0.008882  0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/Y (OR2X2)                         0.007311  0.046794   0.377160 f
+  strict_fcfs.scheduler_i/n16 (net)             2     0.002952            0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/A (INVX1)                         0.007311  0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/Y (INVX1)                         0.000000  0.000470   0.377631 r
+  strict_fcfs.scheduler_i/n18 (net)             1     0.002386            0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/C (AOI21X1)                      0.000000  0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.015183  0.006979   0.384610 f
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001476            0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.015183  0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.000000  0.002371   0.386981 r
+  strict_fcfs.scheduler_i/n55 (net)             1     0.002111            0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.000000  0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.019838  0.009714   0.396695 f
+  strict_fcfs.scheduler_i/n56 (net)             1     0.001944            0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.019838  0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.036777  0.017296   0.413991 r
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002741            0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.036777  0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.017332  0.022673   0.436664 f
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002573            0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.017332  0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.044336  0.045261   0.481924 r
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002741            0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.044336  0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.017858  0.024592   0.506517 f
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002632            0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.017858  0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.050921  0.047830   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004206            0.000000   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.554347 r
+  select_slot[0] (net)                                0.004206            0.000000   0.554347 r
+  U288/A (INVX1)                                                0.050921  0.000000   0.554347 r
+  U288/Y (INVX1)                                                0.011097  0.028349   0.582695 f
+  n33 (net)                                     2     0.002952            0.000000   0.582695 f
+  U283/A (INVX1)                                                0.011097  0.000000   0.582695 f
+  U283/Y (INVX1)                                                0.000000  -0.000093  0.582602 r
+  n31 (net)                                     1     0.001798            0.000000   0.582602 r
+  U1050/A (AND2X2)                                              0.000000  0.000000   0.582602 r
+  U1050/Y (AND2X2)                                              0.019077  0.039783   0.622385 r
+  n639 (net)                                    4     0.007004            0.000000   0.622385 r
+  U1039/B (AND2X2)                                              0.019077  0.000000   0.622385 r
+  U1039/Y (AND2X2)                                              0.018160  0.038480   0.660865 r
+  n1855 (net)                                   4     0.006204            0.000000   0.660865 r
+  U1041/A (INVX1)                                               0.018160  0.000000   0.660865 r
+  U1041/Y (INVX1)                                               0.013475  0.019543   0.680409 f
+  n631 (net)                                    2     0.002980            0.000000   0.680409 f
+  U1255/A (INVX1)                                               0.013475  0.000000   0.680409 f
+  U1255/Y (INVX1)                                               0.000000  0.004979   0.685388 r
+  n661 (net)                                    2     0.003102            0.000000   0.685388 r
+  U1265/A (INVX1)                                               0.000000  0.000000   0.685388 r
+  U1265/Y (INVX1)                                               0.053260  0.041115   0.726503 f
+  n671 (net)                                    7     0.015880            0.000000   0.726503 f
+  U1221/B (OR2X1)                                               0.053260  0.000000   0.726503 f
+  U1221/Y (OR2X1)                                               0.009322  0.052625   0.779128 f
+  n1578 (net)                                   1     0.001924            0.000000   0.779128 f
+  U1752/C (OAI21X1)                                             0.009322  0.000000   0.779128 f
+  U1752/Y (OAI21X1)                                             0.046398  0.021539   0.800667 r
+  n1581 (net)                                   1     0.003288            0.000000   0.800667 r
+  U1753/C (NOR3X1)                                              0.046398  0.000000   0.800667 r
+  U1753/Y (NOR3X1)                                              0.023760  0.028389   0.829057 f
+  n1587 (net)                                   1     0.001884            0.000000   0.829057 f
+  U1756/A (NAND2X1)                                             0.023760  0.000000   0.829057 f
+  U1756/Y (NAND2X1)                                             0.036516  0.032148   0.861205 r
+  n1588 (net)                                   1     0.002744            0.000000   0.861205 r
+  U319/B (MUX2X1)                                               0.036516  0.000000   0.861205 r
+  U319/Y (MUX2X1)                                               0.036330  0.038786   0.899991 f
+  cmd_wdata[25] (net)                           1     0.010000            0.000000   0.899991 f
+  cmd_wdata[25] (out)                                           0.036330  0.000000   0.899991 f
+  data arrival time                                                                  0.899991
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899991
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000009
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[30]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U218/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U218/Y (AOI22X1)                      0.043238  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n214 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U318/B (AND2X2)                       0.043238  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U318/Y (AND2X2)                       0.011692  0.034471   0.229616 r
+  strict_fcfs.scheduler_i/n250 (net)            1     0.002832            0.000000   0.229616 r
+  strict_fcfs.scheduler_i/U319/B (NAND3X1)                      0.011692  0.000000   0.229616 r
+  strict_fcfs.scheduler_i/U319/Y (NAND3X1)                      0.015394  0.012716   0.242332 f
+  strict_fcfs.scheduler_i/n251 (net)            1     0.001504            0.000000   0.242332 f
+  strict_fcfs.scheduler_i/U58/A (BUFX2)                         0.015394  0.000000   0.242332 f
+  strict_fcfs.scheduler_i/U58/Y (BUFX2)                         0.005002  0.035540   0.277873 f
+  strict_fcfs.scheduler_i/n22 (net)             2     0.003777            0.000000   0.277873 f
+  strict_fcfs.scheduler_i/U97/A (OR2X2)                         0.005002  0.000000   0.277873 f
+  strict_fcfs.scheduler_i/U97/Y (OR2X2)                         0.009143  0.038911   0.316783 f
+  strict_fcfs.scheduler_i/n47 (net)             2     0.004155            0.000000   0.316783 f
+  strict_fcfs.scheduler_i/U358/B (AOI21X1)                      0.009143  0.000000   0.316783 f
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.023506  0.027528   0.344312 r
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001551            0.000000   0.344312 r
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.023506  0.000000   0.344312 r
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.009821  0.018742   0.363054 f
+  strict_fcfs.scheduler_i/n55 (net)             1     0.001884            0.000000   0.363054 f
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.009821  0.000000   0.363054 f
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.033492  0.025526   0.388580 r
+  strict_fcfs.scheduler_i/n56 (net)             1     0.002027            0.000000   0.388580 r
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.033492  0.000000   0.388580 r
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.021171  0.021062   0.409642 f
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002566            0.000000   0.409642 f
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.021171  0.000000   0.409642 f
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.029501  0.040441   0.450082 r
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002742            0.000000   0.450082 r
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.029501  0.000000   0.450082 r
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.006806  0.020503   0.470586 f
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002566            0.000000   0.470586 f
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.006806  0.000000   0.470586 f
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.029683  0.037016   0.507602 r
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002832            0.000000   0.507602 r
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.029683  0.000000   0.507602 r
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.008887  0.023169   0.530771 f
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004149            0.000000   0.530771 f
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.530771 f
+  select_slot[0] (net)                                0.004149            0.000000   0.530771 f
+  U288/A (INVX1)                                                0.008887  0.000000   0.530771 f
+  U288/Y (INVX1)                                                0.000000  0.003352   0.534123 r
+  n33 (net)                                     2     0.003102            0.000000   0.534123 r
+  U283/A (INVX1)                                                0.000000  0.000000   0.534123 r
+  U283/Y (INVX1)                                                0.011111  0.012130   0.546253 f
+  n31 (net)                                     1     0.001763            0.000000   0.546253 f
+  U1050/A (AND2X2)                                              0.011111  0.000000   0.546253 f
+  U1050/Y (AND2X2)                                              0.005388  0.038235   0.584488 f
+  n639 (net)                                    4     0.006850            0.000000   0.584488 f
+  U1056/A (AND2X2)                                              0.005388  0.000000   0.584488 f
+  U1056/Y (AND2X2)                                              0.006289  0.032669   0.617157 f
+  n637 (net)                                    2     0.002980            0.000000   0.617157 f
+  U349/A (BUFX2)                                                0.006289  0.000000   0.617157 f
+  U349/Y (BUFX2)                                                0.001997  0.032828   0.649985 f
+  n62 (net)                                     2     0.002952            0.000000   0.649985 f
+  U385/A (INVX1)                                                0.001997  0.000000   0.649985 f
+  U385/Y (INVX1)                                                0.012562  0.021983   0.671969 r
+  n94 (net)                                     4     0.009597            0.000000   0.671969 r
+  U861/B (OR2X2)                                                0.012562  0.000000   0.671969 r
+  U861/Y (OR2X2)                                                0.006926  0.042610   0.714579 r
+  n1679 (net)                                   1     0.001551            0.000000   0.714579 r
+  U862/A (INVX1)                                                0.006926  0.000000   0.714579 r
+  U862/Y (INVX1)                                                0.014352  0.016567   0.731146 f
+  n504 (net)                                    1     0.003011            0.000000   0.731146 f
+  U1798/A (NOR3X1)                                              0.014352  0.000000   0.731146 f
+  U1798/Y (NOR3X1)                                              0.048588  0.047336   0.778482 r
+  n1687 (net)                                   1     0.001798            0.000000   0.778482 r
+  U752/A (AND2X2)                                               0.048588  0.000000   0.778482 r
+  U752/Y (AND2X2)                                               0.009095  0.033380   0.811862 r
+  n1699 (net)                                   1     0.001551            0.000000   0.811862 r
+  U753/A (INVX1)                                                0.009095  0.000000   0.811862 r
+  U753/Y (INVX1)                                                0.012882  0.016247   0.828109 f
+  n427 (net)                                    1     0.002569            0.000000   0.828109 f
+  U280/B (MUX2X1)                                               0.012882  0.000000   0.828109 f
+  U280/Y (MUX2X1)                                               0.077965  0.071616   0.899725 r
+  cmd_wdata[30] (net)                           1     0.010000            0.000000   0.899725 r
+  cmd_wdata[30] (out)                                           0.077965  0.000000   0.899725 r
+  data arrival time                                                                  0.899725
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899725
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000275
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[3]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/Y (AOI22X1)                      0.043209  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n201 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/B (AND2X2)                       0.043209  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/Y (AND2X2)                       0.008777  0.032508   0.227653 r
+  strict_fcfs.scheduler_i/n247 (net)            1     0.001551            0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/A (INVX1)                         0.008777  0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/Y (INVX1)                         0.011826  0.015421   0.243074 f
+  strict_fcfs.scheduler_i/n23 (net)             1     0.002209            0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/A (NOR2X1)                        0.011826  0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/Y (NOR2X1)                        0.024030  0.027104   0.270178 r
+  strict_fcfs.scheduler_i/n27 (net)             1     0.001551            0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/A (INVX1)                         0.024030  0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/Y (INVX1)                         0.011032  0.019739   0.289917 f
+  strict_fcfs.scheduler_i/n26 (net)             1     0.002301            0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/A (OR2X2)                         0.011032  0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/Y (OR2X2)                         0.008882  0.040450   0.330367 f
+  strict_fcfs.scheduler_i/n17 (net)             2     0.004643            0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/B (OR2X2)                         0.008882  0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/Y (OR2X2)                         0.007311  0.046794   0.377160 f
+  strict_fcfs.scheduler_i/n16 (net)             2     0.002952            0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/A (INVX1)                         0.007311  0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/Y (INVX1)                         0.000000  0.000470   0.377631 r
+  strict_fcfs.scheduler_i/n18 (net)             1     0.002386            0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/C (AOI21X1)                      0.000000  0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.015183  0.006979   0.384610 f
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001476            0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.015183  0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.000000  0.002371   0.386981 r
+  strict_fcfs.scheduler_i/n55 (net)             1     0.002111            0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.000000  0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.019838  0.009714   0.396695 f
+  strict_fcfs.scheduler_i/n56 (net)             1     0.001944            0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.019838  0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.036777  0.017296   0.413991 r
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002741            0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.036777  0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.017332  0.022673   0.436664 f
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002573            0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.017332  0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.044336  0.045261   0.481924 r
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002741            0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.044336  0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.017858  0.024592   0.506517 f
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002632            0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.017858  0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.050921  0.047830   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004206            0.000000   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.554347 r
+  select_slot[0] (net)                                0.004206            0.000000   0.554347 r
+  U1288/A (INVX2)                                               0.050921  0.000000   0.554347 r
+  U1288/Y (INVX2)                                               0.023088  0.025600   0.579947 f
+  n1870 (net)                                   4     0.007185            0.000000   0.579947 f
+  U341/B (NAND2X1)                                              0.023088  0.000000   0.579947 f
+  U341/Y (NAND2X1)                                              0.034194  0.016786   0.596733 r
+  n54 (net)                                     1     0.002242            0.000000   0.596733 r
+  U353/A (NOR2X1)                                               0.034194  0.000000   0.596733 r
+  U353/Y (NOR2X1)                                               0.000306  0.018990   0.615723 f
+  n688 (net)                                    1     0.001476            0.000000   0.615723 f
+  U336/A (INVX1)                                                0.000306  0.000000   0.615723 f
+  U336/Y (INVX1)                                                0.000000  0.000308   0.616031 r
+  n49 (net)                                     2     0.003102            0.000000   0.616031 r
+  U287/A (INVX1)                                                0.000000  0.000000   0.616031 r
+  U287/Y (INVX1)                                                0.019070  0.017603   0.633634 f
+  n32 (net)                                     3     0.004428            0.000000   0.633634 f
+  U465/A (INVX1)                                                0.019070  0.000000   0.633634 f
+  U465/Y (INVX1)                                                0.000000  0.011951   0.645585 r
+  n172 (net)                                    3     0.004641            0.000000   0.645585 r
+  U355/A (INVX1)                                                0.000000  0.000000   0.645585 r
+  U355/Y (INVX1)                                                0.010256  0.011542   0.657127 f
+  n65 (net)                                     1     0.001476            0.000000   0.657127 f
+  U356/A (INVX1)                                                0.010256  0.000000   0.657127 f
+  U356/Y (INVX1)                                                0.000000  0.008750   0.665876 r
+  n66 (net)                                     3     0.004617            0.000000   0.665876 r
+  U482/A (BUFX2)                                                0.000000  0.000000   0.665876 r
+  U482/Y (BUFX2)                                                0.018693  0.041071   0.706948 r
+  n189 (net)                                    3     0.008088            0.000000   0.706948 r
+  U80/B (OR2X1)                                                 0.018693  0.000000   0.706948 r
+  U80/Y (OR2X1)                                                 0.018613  0.047638   0.754585 r
+  n1105 (net)                                   1     0.001551            0.000000   0.754585 r
+  U695/A (INVX1)                                                0.018613  0.000000   0.754585 r
+  U695/Y (INVX1)                                                0.013702  0.019844   0.774429 f
+  n387 (net)                                    1     0.003067            0.000000   0.774429 f
+  U1543/B (NOR3X1)                                              0.013702  0.000000   0.774429 f
+  U1543/Y (NOR3X1)                                              0.050738  0.038011   0.812440 r
+  n1107 (net)                                   1     0.002111            0.000000   0.812440 r
+  U1544/A (NAND2X1)                                             0.050738  0.000000   0.812440 r
+  U1544/Y (NAND2X1)                                             0.019641  0.021787   0.834228 f
+  n1109 (net)                                   1     0.002623            0.000000   0.834228 f
+  U284/A (MUX2X1)                                               0.019641  0.000000   0.834228 f
+  U284/Y (MUX2X1)                                               0.077588  0.065242   0.899470 r
+  cmd_wdata[3] (net)                            1     0.010000            0.000000   0.899470 r
+  cmd_wdata[3] (out)                                            0.077588  0.000000   0.899470 r
+  data arrival time                                                                  0.899470
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899470
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000530
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[28]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/Y (AOI22X1)                      0.043209  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n201 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/B (AND2X2)                       0.043209  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/Y (AND2X2)                       0.008777  0.032508   0.227653 r
+  strict_fcfs.scheduler_i/n247 (net)            1     0.001551            0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/A (INVX1)                         0.008777  0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/Y (INVX1)                         0.011826  0.015421   0.243074 f
+  strict_fcfs.scheduler_i/n23 (net)             1     0.002209            0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/A (NOR2X1)                        0.011826  0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/Y (NOR2X1)                        0.024030  0.027104   0.270178 r
+  strict_fcfs.scheduler_i/n27 (net)             1     0.001551            0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/A (INVX1)                         0.024030  0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/Y (INVX1)                         0.011032  0.019739   0.289917 f
+  strict_fcfs.scheduler_i/n26 (net)             1     0.002301            0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/A (OR2X2)                         0.011032  0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/Y (OR2X2)                         0.008882  0.040450   0.330367 f
+  strict_fcfs.scheduler_i/n17 (net)             2     0.004643            0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/B (OR2X2)                         0.008882  0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/Y (OR2X2)                         0.007311  0.046794   0.377160 f
+  strict_fcfs.scheduler_i/n16 (net)             2     0.002952            0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/A (INVX1)                         0.007311  0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/Y (INVX1)                         0.000000  0.000470   0.377631 r
+  strict_fcfs.scheduler_i/n18 (net)             1     0.002386            0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/C (AOI21X1)                      0.000000  0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.015183  0.006979   0.384610 f
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001476            0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.015183  0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.000000  0.002371   0.386981 r
+  strict_fcfs.scheduler_i/n55 (net)             1     0.002111            0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.000000  0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.019838  0.009714   0.396695 f
+  strict_fcfs.scheduler_i/n56 (net)             1     0.001944            0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.019838  0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.036777  0.017296   0.413991 r
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002741            0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.036777  0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.017332  0.022673   0.436664 f
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002573            0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.017332  0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.044336  0.045261   0.481924 r
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002741            0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.044336  0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.017858  0.024592   0.506517 f
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002632            0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.017858  0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.050921  0.047830   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004206            0.000000   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.554347 r
+  select_slot[0] (net)                                0.004206            0.000000   0.554347 r
+  U288/A (INVX1)                                                0.050921  0.000000   0.554347 r
+  U288/Y (INVX1)                                                0.011097  0.028349   0.582695 f
+  n33 (net)                                     2     0.002952            0.000000   0.582695 f
+  U283/A (INVX1)                                                0.011097  0.000000   0.582695 f
+  U283/Y (INVX1)                                                0.000000  -0.000093  0.582602 r
+  n31 (net)                                     1     0.001798            0.000000   0.582602 r
+  U1050/A (AND2X2)                                              0.000000  0.000000   0.582602 r
+  U1050/Y (AND2X2)                                              0.019077  0.039783   0.622385 r
+  n639 (net)                                    4     0.007004            0.000000   0.622385 r
+  U1039/B (AND2X2)                                              0.019077  0.000000   0.622385 r
+  U1039/Y (AND2X2)                                              0.018160  0.038480   0.660865 r
+  n1855 (net)                                   4     0.006204            0.000000   0.660865 r
+  U1042/A (INVX1)                                               0.018160  0.000000   0.660865 r
+  U1042/Y (INVX1)                                               0.017805  0.022513   0.683379 f
+  n632 (net)                                    3     0.004428            0.000000   0.683379 f
+  U1256/A (INVX1)                                               0.017805  0.000000   0.683379 f
+  U1256/Y (INVX1)                                               0.000000  0.006515   0.689894 r
+  n662 (net)                                    2     0.003102            0.000000   0.689894 r
+  U1261/A (INVX1)                                               0.000000  0.000000   0.689894 r
+  U1261/Y (INVX1)                                               0.039827  0.031878   0.721771 f
+  n667 (net)                                    5     0.011381            0.000000   0.721771 f
+  U269/B (OR2X2)                                                0.039827  0.000000   0.721771 f
+  U269/Y (OR2X2)                                                0.008673  0.051206   0.772978 f
+  n1634 (net)                                   1     0.001924            0.000000   0.772978 f
+  U1777/C (OAI21X1)                                             0.008673  0.000000   0.772978 f
+  U1777/Y (OAI21X1)                                             0.041735  0.018200   0.791178 r
+  n1637 (net)                                   1     0.002292            0.000000   0.791178 r
+  U701/A (OR2X2)                                                0.041735  0.000000   0.791178 r
+  U701/Y (OR2X2)                                                0.010609  0.039388   0.830566 r
+  n1643 (net)                                   1     0.001551            0.000000   0.830566 r
+  U702/A (INVX1)                                                0.010609  0.000000   0.830566 r
+  U702/Y (INVX1)                                                0.010907  0.015374   0.845940 f
+  n392 (net)                                    1     0.001944            0.000000   0.845940 f
+  U1780/B (NAND2X1)                                             0.010907  0.000000   0.845940 f
+  U1780/Y (NAND2X1)                                             0.037394  0.014406   0.860347 r
+  n1655 (net)                                   1     0.002744            0.000000   0.860347 r
+  U1786/B (MUX2X1)                                              0.037394  0.000000   0.860347 r
+  U1786/Y (MUX2X1)                                              0.036835  0.038996   0.899343 f
+  cmd_wdata[28] (net)                           1     0.010000            0.000000   0.899343 f
+  cmd_wdata[28] (out)                                           0.036835  0.000000   0.899343 f
+  data arrival time                                                                  0.899343
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899343
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000657
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[20]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/Y (AOI22X1)                      0.043209  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n201 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/B (AND2X2)                       0.043209  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/Y (AND2X2)                       0.008777  0.032508   0.227653 r
+  strict_fcfs.scheduler_i/n247 (net)            1     0.001551            0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/A (INVX1)                         0.008777  0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/Y (INVX1)                         0.011826  0.015421   0.243074 f
+  strict_fcfs.scheduler_i/n23 (net)             1     0.002209            0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/A (NOR2X1)                        0.011826  0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/Y (NOR2X1)                        0.024030  0.027104   0.270178 r
+  strict_fcfs.scheduler_i/n27 (net)             1     0.001551            0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/A (INVX1)                         0.024030  0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/Y (INVX1)                         0.011032  0.019739   0.289917 f
+  strict_fcfs.scheduler_i/n26 (net)             1     0.002301            0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/A (OR2X2)                         0.011032  0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/Y (OR2X2)                         0.008882  0.040450   0.330367 f
+  strict_fcfs.scheduler_i/n17 (net)             2     0.004643            0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/B (OR2X2)                         0.008882  0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/Y (OR2X2)                         0.007311  0.046794   0.377160 f
+  strict_fcfs.scheduler_i/n16 (net)             2     0.002952            0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/A (INVX1)                         0.007311  0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/Y (INVX1)                         0.000000  0.000470   0.377631 r
+  strict_fcfs.scheduler_i/n18 (net)             1     0.002386            0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/C (AOI21X1)                      0.000000  0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.015183  0.006979   0.384610 f
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001476            0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.015183  0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.000000  0.002371   0.386981 r
+  strict_fcfs.scheduler_i/n55 (net)             1     0.002111            0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.000000  0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.019838  0.009714   0.396695 f
+  strict_fcfs.scheduler_i/n56 (net)             1     0.001944            0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.019838  0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.036777  0.017296   0.413991 r
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002741            0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.036777  0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.017332  0.022673   0.436664 f
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002573            0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.017332  0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.044336  0.045261   0.481924 r
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002741            0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.044336  0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.017858  0.024592   0.506517 f
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002632            0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.017858  0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.050921  0.047830   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004206            0.000000   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.554347 r
+  select_slot[0] (net)                                0.004206            0.000000   0.554347 r
+  U1288/A (INVX2)                                               0.050921  0.000000   0.554347 r
+  U1288/Y (INVX2)                                               0.023088  0.025600   0.579947 f
+  n1870 (net)                                   4     0.007185            0.000000   0.579947 f
+  U341/B (NAND2X1)                                              0.023088  0.000000   0.579947 f
+  U341/Y (NAND2X1)                                              0.034194  0.016786   0.596733 r
+  n54 (net)                                     1     0.002242            0.000000   0.596733 r
+  U353/A (NOR2X1)                                               0.034194  0.000000   0.596733 r
+  U353/Y (NOR2X1)                                               0.000306  0.018990   0.615723 f
+  n688 (net)                                    1     0.001476            0.000000   0.615723 f
+  U336/A (INVX1)                                                0.000306  0.000000   0.615723 f
+  U336/Y (INVX1)                                                0.000000  0.000308   0.616031 r
+  n49 (net)                                     2     0.003102            0.000000   0.616031 r
+  U337/A (INVX1)                                                0.000000  0.000000   0.616031 r
+  U337/Y (INVX1)                                                0.014663  0.014573   0.630604 f
+  n50 (net)                                     2     0.002952            0.000000   0.630604 f
+  U463/A (INVX1)                                                0.014663  0.000000   0.630604 f
+  U463/Y (INVX1)                                                0.000000  0.010311   0.640915 r
+  n170 (net)                                    3     0.004617            0.000000   0.640915 r
+  U475/A (BUFX2)                                                0.000000  0.000000   0.640915 r
+  U475/Y (BUFX2)                                                0.043001  0.056846   0.697761 r
+  n182 (net)                                    7     0.018051            0.000000   0.697761 r
+  U144/B (OR2X1)                                                0.043001  0.000000   0.697761 r
+  U144/Y (OR2X1)                                                0.018644  0.048846   0.746607 r
+  n1476 (net)                                   1     0.001551            0.000000   0.746607 r
+  U878/A (INVX1)                                                0.018644  0.000000   0.746607 r
+  U878/Y (INVX1)                                                0.013700  0.019852   0.766458 f
+  n515 (net)                                    1     0.003067            0.000000   0.766458 f
+  U1708/B (NOR3X1)                                              0.013700  0.000000   0.766458 f
+  U1708/Y (NOR3X1)                                              0.050738  0.038011   0.804469 r
+  n1478 (net)                                   1     0.002111            0.000000   0.804469 r
+  U1709/A (NAND2X1)                                             0.050738  0.000000   0.804469 r
+  U1709/Y (NAND2X1)                                             0.019516  0.021692   0.826161 f
+  n1480 (net)                                   1     0.002569            0.000000   0.826161 f
+  U325/B (MUX2X1)                                               0.019516  0.000000   0.826161 f
+  U325/Y (MUX2X1)                                               0.077588  0.073133   0.899293 r
+  cmd_wdata[20] (net)                           1     0.010000            0.000000   0.899293 r
+  cmd_wdata[20] (out)                                           0.077588  0.000000   0.899293 r
+  data arrival time                                                                  0.899293
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899293
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000707
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_col[5] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U218/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U218/Y (AOI22X1)                      0.043238  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n214 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U318/B (AND2X2)                       0.043238  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U318/Y (AND2X2)                       0.011692  0.034471   0.229616 r
+  strict_fcfs.scheduler_i/n250 (net)            1     0.002832            0.000000   0.229616 r
+  strict_fcfs.scheduler_i/U319/B (NAND3X1)                      0.011692  0.000000   0.229616 r
+  strict_fcfs.scheduler_i/U319/Y (NAND3X1)                      0.015394  0.012716   0.242332 f
+  strict_fcfs.scheduler_i/n251 (net)            1     0.001504            0.000000   0.242332 f
+  strict_fcfs.scheduler_i/U58/A (BUFX2)                         0.015394  0.000000   0.242332 f
+  strict_fcfs.scheduler_i/U58/Y (BUFX2)                         0.005002  0.035540   0.277873 f
+  strict_fcfs.scheduler_i/n22 (net)             2     0.003777            0.000000   0.277873 f
+  strict_fcfs.scheduler_i/U97/A (OR2X2)                         0.005002  0.000000   0.277873 f
+  strict_fcfs.scheduler_i/U97/Y (OR2X2)                         0.009143  0.038911   0.316783 f
+  strict_fcfs.scheduler_i/n47 (net)             2     0.004155            0.000000   0.316783 f
+  strict_fcfs.scheduler_i/U358/B (AOI21X1)                      0.009143  0.000000   0.316783 f
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.023506  0.027528   0.344312 r
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001551            0.000000   0.344312 r
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.023506  0.000000   0.344312 r
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.009821  0.018742   0.363054 f
+  strict_fcfs.scheduler_i/n55 (net)             1     0.001884            0.000000   0.363054 f
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.009821  0.000000   0.363054 f
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.033492  0.025526   0.388580 r
+  strict_fcfs.scheduler_i/n56 (net)             1     0.002027            0.000000   0.388580 r
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.033492  0.000000   0.388580 r
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.021171  0.021062   0.409642 f
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002566            0.000000   0.409642 f
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.021171  0.000000   0.409642 f
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.029501  0.040441   0.450082 r
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002742            0.000000   0.450082 r
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.029501  0.000000   0.450082 r
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.006806  0.020503   0.470586 f
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002566            0.000000   0.470586 f
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.006806  0.000000   0.470586 f
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.029683  0.037016   0.507602 r
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002832            0.000000   0.507602 r
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.029683  0.000000   0.507602 r
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.008887  0.023169   0.530771 f
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004149            0.000000   0.530771 f
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.530771 f
+  select_slot[0] (net)                                0.004149            0.000000   0.530771 f
+  U1288/A (INVX2)                                               0.008887  0.000000   0.530771 f
+  U1288/Y (INVX2)                                               0.005889  0.020880   0.551651 r
+  n1870 (net)                                   4     0.007475            0.000000   0.551651 r
+  U256/A (INVX1)                                                0.005889  0.000000   0.551651 r
+  U256/Y (INVX1)                                                0.033918  0.029679   0.581329 f
+  n48 (net)                                     5     0.009536            0.000000   0.581329 f
+  U1284/B (NAND3X1)                                             0.033918  0.000000   0.581329 f
+  U1284/Y (NAND3X1)                                             0.033232  0.037694   0.619024 r
+  n1854 (net)                                   1     0.001551            0.000000   0.619024 r
+  U344/A (INVX1)                                                0.033232  0.000000   0.619024 r
+  U344/Y (INVX1)                                                0.012336  0.023563   0.642587 f
+  n57 (net)                                     2     0.002952            0.000000   0.642587 f
+  U331/A (INVX1)                                                0.012336  0.000000   0.642587 f
+  U331/Y (INVX1)                                                0.000000  0.009604   0.652191 r
+  n700 (net)                                    3     0.004653            0.000000   0.652191 r
+  U1054/A (INVX1)                                               0.000000  0.000000   0.652191 r
+  U1054/Y (INVX1)                                               0.019321  0.017776   0.669967 f
+  n698 (net)                                    3     0.004512            0.000000   0.669967 f
+  U527/A (BUFX2)                                                0.019321  0.000000   0.669967 f
+  U527/Y (BUFX2)                                                0.010748  0.040105   0.710071 f
+  n234 (net)                                    5     0.007381            0.000000   0.710071 f
+  U534/A (INVX1)                                                0.010748  0.000000   0.710071 f
+  U534/Y (INVX1)                                                0.000000  0.001355   0.711426 r
+  n241 (net)                                    1     0.002283            0.000000   0.711426 r
+  U926/B (OR2X2)                                                0.000000  0.000000   0.711426 r
+  U926/Y (OR2X2)                                                0.024606  0.041056   0.752481 r
+  n1842 (net)                                   1     0.001551            0.000000   0.752481 r
+  U927/A (INVX1)                                                0.024606  0.000000   0.752481 r
+  U927/Y (INVX1)                                                0.010991  0.019895   0.772376 f
+  n550 (net)                                    1     0.002301            0.000000   0.772376 f
+  U924/A (OR2X2)                                                0.010991  0.000000   0.772376 f
+  U924/Y (OR2X2)                                                0.004176  0.036990   0.809366 f
+  n1853 (net)                                   1     0.001476            0.000000   0.809366 f
+  U925/A (INVX1)                                                0.004176  0.000000   0.809366 f
+  U925/Y (INVX1)                                                0.000000  -0.000118  0.809248 r
+  n549 (net)                                    1     0.002548            0.000000   0.809248 r
+  U1931/A (NAND3X1)                                             0.000000  0.000000   0.809248 r
+  U1931/Y (NAND3X1)                                             0.018255  0.017127   0.826375 f
+  n1869 (net)                                   1     0.002569            0.000000   0.826375 f
+  U1943/B (MUX2X1)                                              0.018255  0.000000   0.826375 f
+  U1943/Y (MUX2X1)                                              0.077623  0.072844   0.899219 r
+  cmd_col[5] (net)                              1     0.010000            0.000000   0.899219 r
+  cmd_col[5] (out)                                              0.077623  0.000000   0.899219 r
+  data arrival time                                                                  0.899219
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899219
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000781
+
+
+  Startpoint: table_i/pending_reg[8]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[29]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/pending_reg[8]/CLK (DFFPOSX1)                         0.000000  0.000000 # 0.000000 r
+  table_i/pending_reg[8]/Q (DFFPOSX1)                           0.023267  0.105501   0.105501 f
+  table_i/n6652 (net)                           1     0.005092            0.000000   0.105501 f
+  table_i/U198/A (INVX4)                                        0.023267  0.000000   0.105501 f
+  table_i/U198/Y (INVX4)                                        0.009539  0.021286   0.126787 r
+  table_i/n38 (net)                             1     0.010083            0.000000   0.126787 r
+  table_i/U199/A (INVX8)                                        0.009539  0.000000   0.126787 r
+  table_i/U199/Y (INVX8)                                        0.012950  0.029488   0.156274 f
+  table_i/pending[8] (net)                     18     0.044215            0.000000   0.156274 f
+  table_i/pending[8] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.156274 f
+  pending[8] (net)                                    0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (mc_scheduler_strict_fcfs_Q_DEPTH16) 0.000000   0.156274 f
+  strict_fcfs.scheduler_i/pending[8] (net)            0.044215            0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/B (AOI22X1)                      0.012950  0.000000   0.156274 f
+  strict_fcfs.scheduler_i/U205/Y (AOI22X1)                      0.043209  0.038871   0.195145 r
+  strict_fcfs.scheduler_i/n201 (net)            1     0.001869            0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/B (AND2X2)                       0.043209  0.000000   0.195145 r
+  strict_fcfs.scheduler_i/U314/Y (AND2X2)                       0.008777  0.032508   0.227653 r
+  strict_fcfs.scheduler_i/n247 (net)            1     0.001551            0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/A (INVX1)                         0.008777  0.000000   0.227653 r
+  strict_fcfs.scheduler_i/U59/Y (INVX1)                         0.011826  0.015421   0.243074 f
+  strict_fcfs.scheduler_i/n23 (net)             1     0.002209            0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/A (NOR2X1)                        0.011826  0.000000   0.243074 f
+  strict_fcfs.scheduler_i/U62/Y (NOR2X1)                        0.024030  0.027104   0.270178 r
+  strict_fcfs.scheduler_i/n27 (net)             1     0.001551            0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/A (INVX1)                         0.024030  0.000000   0.270178 r
+  strict_fcfs.scheduler_i/U63/Y (INVX1)                         0.011032  0.019739   0.289917 f
+  strict_fcfs.scheduler_i/n26 (net)             1     0.002301            0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/A (OR2X2)                         0.011032  0.000000   0.289917 f
+  strict_fcfs.scheduler_i/U50/Y (OR2X2)                         0.008882  0.040450   0.330367 f
+  strict_fcfs.scheduler_i/n17 (net)             2     0.004643            0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/B (OR2X2)                         0.008882  0.000000   0.330367 f
+  strict_fcfs.scheduler_i/U49/Y (OR2X2)                         0.007311  0.046794   0.377160 f
+  strict_fcfs.scheduler_i/n16 (net)             2     0.002952            0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/A (INVX1)                         0.007311  0.000000   0.377160 f
+  strict_fcfs.scheduler_i/U52/Y (INVX1)                         0.000000  0.000470   0.377631 r
+  strict_fcfs.scheduler_i/n18 (net)             1     0.002386            0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/C (AOI21X1)                      0.000000  0.000000   0.377631 r
+  strict_fcfs.scheduler_i/U358/Y (AOI21X1)                      0.015183  0.006979   0.384610 f
+  strict_fcfs.scheduler_i/n321 (net)            1     0.001476            0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/A (INVX1)                        0.015183  0.000000   0.384610 f
+  strict_fcfs.scheduler_i/U117/Y (INVX1)                        0.000000  0.002371   0.386981 r
+  strict_fcfs.scheduler_i/n55 (net)             1     0.002111            0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/A (NAND2X1)                      0.000000  0.000000   0.386981 r
+  strict_fcfs.scheduler_i/U108/Y (NAND2X1)                      0.019838  0.009714   0.396695 f
+  strict_fcfs.scheduler_i/n56 (net)             1     0.001944            0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/B (NAND2X1)                      0.019838  0.000000   0.396695 f
+  strict_fcfs.scheduler_i/U112/Y (NAND2X1)                      0.036777  0.017296   0.413991 r
+  strict_fcfs.scheduler_i/n322 (net)            1     0.002741            0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/A (AOI21X1)                      0.036777  0.000000   0.413991 r
+  strict_fcfs.scheduler_i/U359/Y (AOI21X1)                      0.017332  0.022673   0.436664 f
+  strict_fcfs.scheduler_i/n323 (net)            1     0.002573            0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/A (OAI21X1)                      0.017332  0.000000   0.436664 f
+  strict_fcfs.scheduler_i/U360/Y (OAI21X1)                      0.044336  0.045261   0.481924 r
+  strict_fcfs.scheduler_i/n324 (net)            1     0.002741            0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/A (AOI21X1)                      0.044336  0.000000   0.481924 r
+  strict_fcfs.scheduler_i/U361/Y (AOI21X1)                      0.017858  0.024592   0.506517 f
+  strict_fcfs.scheduler_i/n325 (net)            1     0.002632            0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/B (OAI21X1)                      0.017858  0.000000   0.506517 f
+  strict_fcfs.scheduler_i/U362/Y (OAI21X1)                      0.050921  0.047830   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (net)
+                                                2     0.004206            0.000000   0.554347 r
+  strict_fcfs.scheduler_i/select_slot[0] (mc_scheduler_strict_fcfs_Q_DEPTH16)
+                                                                          0.000000   0.554347 r
+  select_slot[0] (net)                                0.004206            0.000000   0.554347 r
+  U1288/A (INVX2)                                               0.050921  0.000000   0.554347 r
+  U1288/Y (INVX2)                                               0.023088  0.025600   0.579947 f
+  n1870 (net)                                   4     0.007185            0.000000   0.579947 f
+  U341/B (NAND2X1)                                              0.023088  0.000000   0.579947 f
+  U341/Y (NAND2X1)                                              0.034194  0.016786   0.596733 r
+  n54 (net)                                     1     0.002242            0.000000   0.596733 r
+  U353/A (NOR2X1)                                               0.034194  0.000000   0.596733 r
+  U353/Y (NOR2X1)                                               0.000306  0.018990   0.615723 f
+  n688 (net)                                    1     0.001476            0.000000   0.615723 f
+  U336/A (INVX1)                                                0.000306  0.000000   0.615723 f
+  U336/Y (INVX1)                                                0.000000  0.000308   0.616031 r
+  n49 (net)                                     2     0.003102            0.000000   0.616031 r
+  U337/A (INVX1)                                                0.000000  0.000000   0.616031 r
+  U337/Y (INVX1)                                                0.014663  0.014573   0.630604 f
+  n50 (net)                                     2     0.002952            0.000000   0.630604 f
+  U463/A (INVX1)                                                0.014663  0.000000   0.630604 f
+  U463/Y (INVX1)                                                0.000000  0.010311   0.640915 r
+  n170 (net)                                    3     0.004617            0.000000   0.640915 r
+  U475/A (BUFX2)                                                0.000000  0.000000   0.640915 r
+  U475/Y (BUFX2)                                                0.043001  0.056846   0.697761 r
+  n182 (net)                                    7     0.018051            0.000000   0.697761 r
+  U182/B (OR2X1)                                                0.043001  0.000000   0.697761 r
+  U182/Y (OR2X1)                                                0.018613  0.048846   0.746607 r
+  n1672 (net)                                   1     0.001551            0.000000   0.746607 r
+  U586/A (INVX1)                                                0.018613  0.000000   0.746607 r
+  U586/Y (INVX1)                                                0.013702  0.019844   0.766450 f
+  n294 (net)                                    1     0.003067            0.000000   0.766450 f
+  U1795/B (NOR3X1)                                              0.013702  0.000000   0.766450 f
+  U1795/Y (NOR3X1)                                              0.050105  0.038011   0.804461 r
+  n1674 (net)                                   1     0.002111            0.000000   0.804461 r
+  U1796/A (NAND2X1)                                             0.050105  0.000000   0.804461 r
+  U1796/Y (NAND2X1)                                             0.019516  0.021556   0.826017 f
+  n1676 (net)                                   1     0.002569            0.000000   0.826017 f
+  U320/B (MUX2X1)                                               0.019516  0.000000   0.826017 f
+  U320/Y (MUX2X1)                                               0.077588  0.073133   0.899150 r
+  cmd_wdata[29] (net)                           1     0.010000            0.000000   0.899150 r
+  cmd_wdata[29] (out)                                           0.077588  0.000000   0.899150 r
+  data arrival time                                                                  0.899150
+
+  clock core_clk (rise edge)                                              2.000000   2.000000
+  clock network delay (ideal)                                             0.000000   2.000000
+  clock uncertainty                                                       -0.100000  1.900000
+  output external delay                                                   -1.000000  0.900000
+  data required time                                                                 0.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 0.900000
+  data arrival time                                                                  -0.899150
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000850
+
+
+1

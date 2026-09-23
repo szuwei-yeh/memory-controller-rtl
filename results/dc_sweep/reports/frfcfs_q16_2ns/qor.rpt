@@ -1,0 +1,84 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : qor
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE0
+Version: R-2020.09-SP4
+Date   : Tue Sep 22 18:30:21 2026
+****************************************
+
+
+  Timing Path Group 'core_clk'
+  -----------------------------------
+  Levels of Logic:              74.00
+  Critical Path Length:          2.13
+  Critical Path Slack:          -1.23
+  Critical Path Clk Period:      2.00
+  Total Negative Slack:       -517.78
+  No. of Violating Paths:      804.00
+  Worst Hold Violation:         -0.04
+  Total Hold Violation:         -3.66
+  No. of Hold Violations:      259.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         21
+  Hierarchical Port Count:       5037
+  Leaf Cell Count:              30817
+  Buf/Inv Cell Count:            9565
+  Buf Cell Count:                 831
+  Inv Cell Count:                8734
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     28843
+  Sequential Cell Count:         1974
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    74005.323272
+  Noncombinational Area: 15748.769051
+  Buf/Inv Area:          15608.448436
+  Total Buffer Area:          1958.86
+  Total Inverter Area:       13649.59
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:             89754.092322
+  Design Area:           89754.092322
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         31008
+  Nets With Violations:          6206
+  Max Trans Violations:             0
+  Max Cap Violations:            6206
+  -----------------------------------
+
+
+  Hostname: redacted-lab-host
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   41.68
+  Logic Optimization:                146.35
+  Mapping Optimization:              268.16
+  -----------------------------------------
+  Overall Compile Time:              460.39
+  Overall Compile Wall Clock Time:   461.43
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 1.23  TNS: 517.78  Number of Violating Paths: 804
+
+
+  Design (Hold)  WNS: 0.04  TNS: 3.66  Number of Violating Paths: 259
+
+  --------------------------------------------------------------------
+
+
+1

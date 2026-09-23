@@ -1,0 +1,28 @@
+[tasks]
+strict
+frfcfs
+aging
+
+[options]
+mode bmc
+depth 12
+
+[engines]
+abc bmc3
+
+[script]
+read -formal -sv -D SYNTHESIS mc_transaction_table.sv mc_bank_tracker.sv mc_candidates.sv mc_scheduler_strict_fcfs.sv mc_scheduler_frfcfs.sv mc_response.sv mc_top.sv formal_top.sv
+strict: chparam -set POLICY 0 -set AGING 0 formal_top
+frfcfs: chparam -set POLICY 1 -set AGING 0 formal_top
+aging: chparam -set POLICY 1 -set AGING 1 formal_top
+prep -top formal_top
+
+[files]
+rtl/mc_transaction_table.sv
+rtl/mc_bank_tracker.sv
+rtl/mc_candidates.sv
+rtl/mc_scheduler_strict_fcfs.sv
+rtl/mc_scheduler_frfcfs.sv
+rtl/mc_response.sv
+rtl/mc_top.sv
+formal/formal_top.sv

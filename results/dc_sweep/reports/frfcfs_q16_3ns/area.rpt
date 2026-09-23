@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : area
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE0
+Version: R-2020.09-SP4
+Date   : Tue Sep 22 18:22:09 2026
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: ${TECH_LIBRARY_DIR}/gscl45nm.db)
+
+Number of ports:                         5225
+Number of nets:                         34797
+Number of cells:                        30048
+Number of combinational cells:          28052
+Number of sequential cells:              1974
+Number of macros/black boxes:               0
+Number of buf/inv:                       9276
+Number of references:                      23
+
+Combinational area:              71747.051705
+Buf/Inv area:                    15261.166440
+Noncombinational area:           15748.769051
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 87495.820756
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------------------------------------------------------------------------
+mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE0
+                                  87495.8208    100.0   5154.7911      0.0000  0.0000  mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE0
+banks_i                            1631.7561      1.9    889.7928    741.9633  0.0000  mc_bank_tracker_ROW_W8_SLOT_W4_T_RCD3_T_RP3_T_RAS6_T_CCD2_T_WR3
+candidates_i                      28636.2161     32.7  28636.2161      0.0000  0.0000  mc_candidates_Q_DEPTH16_ROW_W8_COL_W6
+frfcfs.scheduler_i                 3369.5740      3.9   3329.6835     39.8905  0.0000  mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE0
+response_i                        17789.2853     20.3  17749.3948     39.8905  0.0000  mc_response_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8
+table_i                           30914.1982     35.3  15439.0311  14927.0248  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128
+table_i/add_68                       34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_15
+table_i/add_68_I10                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_6
+table_i/add_68_I11                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_5
+table_i/add_68_I12                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_4
+table_i/add_68_I13                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_3
+table_i/add_68_I14                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_2
+table_i/add_68_I15                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_1
+table_i/add_68_I16                   34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_0
+table_i/add_68_I2                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_14
+table_i/add_68_I3                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_13
+table_i/add_68_I4                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_12
+table_i/add_68_I5                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_11
+table_i/add_68_I6                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_10
+table_i/add_68_I7                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_9
+table_i/add_68_I8                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_8
+table_i/add_68_I9                    34.2589      0.0     34.2589      0.0000  0.0000  mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_7
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------------------------------------------------------------------------------
+Total                                                  71747.0517  15748.7691  0.0000
+
+1

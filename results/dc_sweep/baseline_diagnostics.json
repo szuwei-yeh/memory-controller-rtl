@@ -1,0 +1,98 @@
+{
+  "hold_paths": [
+    {
+      "startpoint": "table_i/done_reg_4_",
+      "endpoint": "table_i/done_reg_4_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.002538
+    },
+    {
+      "startpoint": "table_i/done_reg_0_",
+      "endpoint": "table_i/done_reg_0_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.002538
+    },
+    {
+      "startpoint": "table_i/done_reg_5_",
+      "endpoint": "table_i/done_reg_5_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.002538
+    },
+    {
+      "startpoint": "table_i/done_reg_6_",
+      "endpoint": "table_i/done_reg_6_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.002538
+    },
+    {
+      "startpoint": "table_i/done_reg_14_",
+      "endpoint": "table_i/done_reg_14_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_15_",
+      "endpoint": "table_i/done_reg_15_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_8_",
+      "endpoint": "table_i/done_reg_8_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_10_",
+      "endpoint": "table_i/done_reg_10_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_11_",
+      "endpoint": "table_i/done_reg_11_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_12_",
+      "endpoint": "table_i/done_reg_12_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "table_i/done_reg_13_",
+      "endpoint": "table_i/done_reg_13_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000714
+    },
+    {
+      "startpoint": "banks_i/ras_reg_1__2_",
+      "endpoint": "banks_i/ras_reg_1__2_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000659
+    },
+    {
+      "startpoint": "table_i/done_reg_9_",
+      "endpoint": "table_i/done_reg_9_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000608
+    },
+    {
+      "startpoint": "banks_i/rcd_reg_1__1_",
+      "endpoint": "banks_i/rcd_reg_1__1_",
+      "classification": "register-to-register",
+      "worst_slack_ns": -0.000467
+    }
+  ],
+  "counts": {
+    "input-to-register": 0,
+    "register-to-register": 14,
+    "register-to-output": 0,
+    "other": 0
+  },
+  "max_capacitance_violations": 5556,
+  "zero_allowed_load_violations": 5556,
+  "library_unchanged": true,
+  "constraints_unchanged": true
+}
