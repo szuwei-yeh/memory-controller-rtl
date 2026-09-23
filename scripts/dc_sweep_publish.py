@@ -37,11 +37,11 @@ def main():
     lines=['# Frozen v1.1 ASIC comparison sweep','',
         f"All **30 distinct Design Compiler runs** completed; **{sum(r['setup_pass'] for r in rows)}/30** meet their target setup constraint. RTL, architecture, library, and SDC were not changed. A setup pass does not waive hold or capacitance violations.",'',
         '## Diagnostics completed before the sweep','',
-        '[All 14 baseline hold paths](asic-diagnostics.md) are register-to-register feedback paths: 12 transaction DONE bits and two bank timing counters. Input-to-register, register-to-output, and other classifications each have zero entries. Worst hold slack is −0.002538 ns.', '',
+        '[All 14 baseline hold paths](../results/dc_sweep/baseline_hold_paths.csv) are register-to-register feedback paths: 12 transaction DONE bits and two bank timing counters. Input-to-register, register-to-output, and other classifications each have zero entries. Worst hold slack is −0.002538 ns.', '',
         'The baseline’s 5,556 max-capacitance violations all use zero allowed load. The inherited gscl45nm database and companion Liberty both specify NAND2X1/Y max_capacitance=0. No library, constraint, or RTL edits were used to suppress these violations.', '',
         '## Fixed experiment conditions','',
-        '- DC R-2020.09-SP4 on redacted-lab-host; `compile -map_effort medium` in every run.',
-        '- FlashAttention target library: `${TECH_LIBRARY_DIR}/gscl45nm.db`; link library is `*` followed by that same database.',
+        '- DC R-2020.09-SP4; `compile -map_effort medium` in every run.',
+        '- Target library: `${TECH_LIBRARY_DIR}/gscl45nm.db`; link library is `*` followed by that same database.',
         '- Typical corner, process factor 1, 1.1 V, 27°C; time 1 ns, capacitance 1 pF. Same configuration hash and database identity as the accepted baseline.',
         '- I/O maximum/minimum delays 1/0 ns; uncertainty 0.1 ns (unchanged for setup and hold); input transition 0.1 ns; output load 10 fF; no false or multicycle paths.',
         '- Seven-file controller-only manifest; rows=256, columns=64, data=32 bits, fixed DRAM cycle timings/read latency/aging threshold. Only the requested scheduler, queue depth, and clock target vary.',
@@ -86,8 +86,8 @@ def main():
         '- [Frozen RTL/SDC hashes](../results/dc_sweep/frozen_inputs.json)',
         '- [Baseline hold-path CSV](../results/dc_sweep/baseline_hold_paths.csv)',
         '- [Published per-run reports](../results/dc_sweep/reports/)',
-        '- [Verified lab setup](ucsb-baseline.md)', '',
-        'Raw transcripts, full constraint reports and mapped Verilog/DDC are retained locally in `build/dc_sweep/runs/`; remote session paths/commands are in `build/dc_sweep/session.json`. Only allowlisted controller/flow inputs were transferred. Every completed experiment and its interpretation was appended to the private Traditional Chinese notebook locally; it was never exported.', '']
+        '- [Synthesis setup](#synthesis-setup)', '',
+        'Raw transcripts, full constraint reports and mapped Verilog/DDC are retained locally in `build/dc_sweep/runs/`; remote session paths/commands are in `build/dc_sweep/session.json`.', '']
     interpretation=OUT/'interpretation.txt'
     if interpretation.exists(): lines=[interpretation.read_text().strip() if x=='<!-- INTERPRETATION -->' else x for x in lines]
     # Standalone plot artifacts use the same numeric rows as the report.
@@ -113,7 +113,12 @@ def main():
     fig.legend(*axes[0].get_legend_handles_labels(),loc='outside lower center',ncols=3)
     fig.savefig(OUT/'area_timing.png',dpi=170);fig.savefig(OUT/'area_timing.pdf');plt.close(fig)
     lines.insert(lines.index('## Architectural tradeoffs'),'![Frozen ASIC area/timing comparison](../results/dc_sweep/area_timing.png)\n')
-    (ROOT/'docs/asic-results.md').write_text('\n'.join(lines))
+    document=ROOT/'docs/asic-results.md'
+    marker='<!-- technical-reference -->'
+    text='\n'.join(lines)
+    if document.exists() and marker in document.read_text():
+        text+='\n'+marker+document.read_text().split(marker,1)[1]
+    document.write_text(text)
     append_entry('整理固定 ASIC 矩陣公開報告','以實際 30 次輸出呈現架構的面積／時序取捨。','逐點驗證 RTL/SDC、環境與流程雜湊一致，產生 CSV/JSON、原始報告白名單及獨立圖表。','docs/asic-results.md；results/dc_sweep/。','.tools/venv/bin/python scripts/dc_sweep_publish.py',
         f"30 次工具流程完成，setup 通過 {sum(r['setup_pass'] for r in rows)} 次；最快已測目標 {json.dumps(fastest)}。",'hold 與零上限 max-cap 違例仍保留；不能宣稱完整 signoff 或精確最高頻率。','僅比較既有架構，不依結果最佳化 RTL；所有解讀限定目前 typical pre-layout 假設。','完成最終解讀後回報並停止。')
     print(json.dumps(fastest,indent=2))

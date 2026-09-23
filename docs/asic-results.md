@@ -4,14 +4,14 @@ All **30 distinct Design Compiler runs** completed; **25/30** meet their target 
 
 ## Diagnostics completed before the sweep
 
-[All 14 baseline hold paths](asic-diagnostics.md) are register-to-register feedback paths: 12 transaction DONE bits and two bank timing counters. Input-to-register, register-to-output, and other classifications each have zero entries. Worst hold slack is −0.002538 ns.
+[All 14 baseline hold paths](../results/dc_sweep/baseline_hold_paths.csv) are register-to-register feedback paths: 12 transaction DONE bits and two bank timing counters. Input-to-register, register-to-output, and other classifications each have zero entries. Worst hold slack is −0.002538 ns.
 
 The baseline’s 5,556 max-capacitance violations all use zero allowed load. The inherited gscl45nm database and companion Liberty both specify NAND2X1/Y max_capacitance=0. No library, constraint, or RTL edits were used to suppress these violations.
 
 ## Fixed experiment conditions
 
-- DC R-2020.09-SP4 on redacted-lab-host; `compile -map_effort medium` in every run.
-- FlashAttention target library: `${TECH_LIBRARY_DIR}/gscl45nm.db`; link library is `*` followed by that same database.
+- DC R-2020.09-SP4; `compile -map_effort medium` in every run.
+- Target library: `${TECH_LIBRARY_DIR}/gscl45nm.db`; link library is `*` followed by that same database.
 - Typical corner, process factor 1, 1.1 V, 27°C; time 1 ns, capacitance 1 pF. Same configuration hash and database identity as the accepted baseline.
 - I/O maximum/minimum delays 1/0 ns; uncertainty 0.1 ns (unchanged for setup and hold); input transition 0.1 ns; output load 10 fF; no false or multicycle paths.
 - Seven-file controller-only manifest; rows=256, columns=64, data=32 bits, fixed DRAM cycle timings/read latency/aging threshold. Only the requested scheduler, queue depth, and clock target vary.
@@ -161,6 +161,49 @@ python3 scripts/dc_sweep_report.py
 - [Frozen RTL/SDC hashes](../results/dc_sweep/frozen_inputs.json)
 - [Baseline hold-path CSV](../results/dc_sweep/baseline_hold_paths.csv)
 - [Published per-run reports](../results/dc_sweep/reports/)
-- [Verified lab setup](ucsb-baseline.md)
+- [Synthesis setup](#synthesis-setup)
 
-Raw transcripts, full constraint reports and mapped Verilog/DDC are retained locally in `build/dc_sweep/runs/`; remote session paths/commands are in `build/dc_sweep/session.json`. Only allowlisted controller/flow inputs were transferred. Every completed experiment and its interpretation was appended to the private Traditional Chinese notebook locally; it was never exported.
+Raw transcripts, full constraint reports and mapped Verilog/DDC are retained locally in `build/dc_sweep/runs/`; remote session paths/commands are in `build/dc_sweep/session.json`.
+
+<!-- technical-reference -->
+
+## Synthesis setup
+
+Use Python 3.10+ and an authorized Synopsys installation. The measured flow used
+Design Compiler R-2020.09-SP4 and Python 3.11. Load your site's tool/license
+environment, then create the ignored `synth/lab_config.tcl` from
+`synth/lab_config.example.tcl`. Supply the target database, search directory,
+internal library name, operating condition, and library time/capacitance units.
+The measured library is `gscl45nm`, typical, process 1, 1.1 V, 27°C; one time unit
+is 1 ns and one capacitance unit is 1 pF (`LIB_CAP_FF=1000`). Use the same target
+list for linking, preceded by `*`. Library files and site configuration are not
+included in the repository.
+
+`make lab-bundle` packages the seven controller RTL files, explicit manifest,
+SDC, DC/PT scripts, runner, configuration example, and this synthesis guide.
+Transfer the bundle to the authorized workspace and extract it. Testbenches,
+formal harnesses, workloads, and local files are excluded. Run there:
+
+```sh
+python3 scripts/synth.py dc --lab --config synth/lab_config.tcl
+# One Q=16, FR-FCFS+aging, 5 ns point:
+python3 scripts/synth.py dc --lab --baseline --config synth/lab_config.tcl
+# Optional PrimeTime, using the same library (not executed for the published results):
+python3 scripts/synth.py pt --lab --config synth/lab_config.tcl \
+  --run build/synth/dc/frfcfs_aging_q16_5ns
+```
+
+Use `--policy strict_fcfs`, `--policy frfcfs`, or `--policy frfcfs_aging` for one
+policy's ten points. The optional remote orchestrator takes `LAB_SSH_TARGET`,
+`LAB_BASELINE_DIR` (containing the verified `synth/lab_config.tcl`), and optional
+`LAB_SSH_CONTROL_PATH` from the environment. Keep these site details private.
+It expects Python 3.11 at `/usr/bin/python3.11` on the remote host.
+
+Only `synth/rtl_files.f` is analyzed, with `mc_top` and `SYNTHESIS` defined.
+Synchronous reset is constrained; do not import asynchronous-reset false paths.
+Each fresh compile records source/configuration hashes and preserves mapped
+netlist/SDC, area, setup/hold, QoR, constraint, and design/timing reports.
+Report regeneration needs the full downloaded raw directories under
+`build/dc_sweep/runs/`, not only the curated public subset. Original report hashes
+refer to pre-redaction artifacts; public report copies omit private site strings.
+Check regenerated metadata for site details before sharing it.

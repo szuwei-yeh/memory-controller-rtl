@@ -92,7 +92,7 @@ def main():
         'performance':[{k:v for k,v in r.items() if k!='path'} for r in metrics],
         'asic_status':('Frozen 30-point UCSB DC sweep completed; 25 setup targets pass; hold/max-capacitance violations remain; see docs/asic-results.md'
                        if (ROOT/'results/dc_sweep/summary.json').exists() else
-                       'Initial UCSB 5 ns DC baseline completed; setup met, hold/max-capacitance violations remain; see docs/ucsb-baseline.md'
+                       'Initial UCSB 5 ns DC baseline completed; setup met, hold/max-capacitance violations remain; see docs/asic-results.md'
                        if (ROOT/'results/dc_baseline/summary.json').exists() else
                        'Pending UCSB lab access and technology library configuration'),
         'rtl_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'rtl').glob('*.sv'))}}
@@ -138,7 +138,7 @@ def main():
 
 These verification and performance results come from executed local runs.
 ASIC status: {public['asic_status']}.
-See the [UCSB flow](lab-flow.md) and [completed ASIC sweep](asic-results.md).
+See the [ASIC sweep and synthesis setup](asic-results.md).
 PrimeTime was not run; mapped results are pre-layout.
 
 ## Verification
@@ -153,7 +153,6 @@ PrimeTime was not run; mapped results are pre-layout.
 - The response-refill test passed: eight consecutive independent handshakes,
   stable stalled payloads, ordered same-address consumption, and reset cancellation.
 - RTL lint passed. Optional generic Yosys synthesis completed; it is a synthesizability check.
-- Private-directory ignore/tracking and allowlisted lab-bundle checks passed.
 
 Aggregated coverage counts (events/cycles, not percentages):
 
@@ -204,7 +203,7 @@ The response holding register now consumes and refills on the same edge for
 already-eligible independent transactions. The default tCCD=2 limits sustained
 column-command throughput to 0.5/cycle; row-hit traffic approaches that limit across
 all policies. A separate tCCD=1 capacity experiment isolates the response path's
-one-per-cycle capability; see [before/after response-refill results](response-refill.md).
+one-per-cycle capability; see [response-path throughput](#response-path-throughput).
 FR-FCFS
 improves locality and bank overlap on conflicts and random traffic. Hot/cold traffic
 shows its tail-latency cost; aging trades some throughput for a shorter tail.
@@ -216,7 +215,6 @@ These are abstract word-transfer results, not physical DDR bandwidth measurement
 The [20-seed stability study](performance-stability.md) records the subsequent
 540 final-design runs and 60 historical paired runs, including the random/50%
 p99 tradeoff and deterministic hot/cold and HOL stimulus limitations.
-See the [portfolio release audit](release-audit.md) for clean-checkout validation.
 
 ```sh
 make lint test
@@ -230,10 +228,14 @@ make report
 
 Machine-readable public results and RTL hashes are in `results/local_summary.json`.
 Detailed commands, source hashes, logs and CSV events are retained locally under
-`build/`. The publication script reads only explicitly selected build summaries
-and traces; it never reads the private engineering notebook.
+`build/`. The report script reads the run summaries and event traces. Regenerate in a
+disposable checkout to preserve the published measurements.
 '''
-    (ROOT/'docs/results.md').write_text(text)
+    document=ROOT/'docs/results.md'
+    marker='<!-- technical-reference -->'
+    if document.exists() and marker in document.read_text():
+        text+='\n'+marker+document.read_text().split(marker,1)[1]
+    document.write_text(text)
     append_entry('整理公開驗證與效能報告','以實際輸出建立可重現的作品集證據。',
                  '產生數值摘要、PNG／PDF 圖表及結果文件。','results/*、docs/results.md',
                  'python3 scripts/report.py','完成；ASIC 狀態依已存在的基準報告分別標示。','無',

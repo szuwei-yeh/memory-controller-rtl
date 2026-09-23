@@ -14,7 +14,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def main():
     files=manifest()+['synth/rtl_files.f','synth/lab_config.example.tcl',
         'synth/constraints/controller.sdc','synth/dc/run.tcl','synth/pt/run.tcl',
-        'scripts/synth.py','docs/lab-flow.md']
+        'scripts/synth.py','docs/asic-results.md']
     tracked=subprocess.run(['git','ls-files','--','local_notes'],cwd=ROOT,text=True,capture_output=True,check=True)
     if tracked.stdout.strip(): raise RuntimeError('Private notes are tracked; refusing export')
     ignored=subprocess.run(['git','check-ignore','-q','local_notes/實驗日誌.md'],cwd=ROOT)

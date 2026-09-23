@@ -6,7 +6,7 @@ timing enforcement, scheduling, starvation protection, ordering, verification,
 and ASIC implementation tradeoffs. It is not a DDR PHY or JEDEC-compliant device
 controller.
 
-## Final v1.1 results — portfolio frozen
+## Results
 
 - **Verification:** 3,003,000 accepted transactions across 300 randomized regression
   runs; 42 directed/workload/reset/corner simulations plus model, scheduler, and
@@ -33,13 +33,13 @@ not JEDEC compliance, post-layout timing, or physical DDR bandwidth. Hold violat
 remain. The inherited library's zero allowed-load/max-capacitance constraints also
 remain violated and are not waived. Setup passes do not imply timing signoff.
 See [local evidence](docs/results.md), [multi-seed stability](docs/performance-stability.md),
-[ASIC evidence](docs/asic-results.md), and the [release audit](docs/release-audit.md)
-for scope, provenance, reproduction status, and limitations.
+and [ASIC evidence](docs/asic-results.md) for methodology and limitations.
 
 ## Run locally
 
 Requires Python 3.10+, Verilator with `--binary --timing --assert`, a C++ compiler,
-and make. The tested tool versions and actual results are in [results](docs/results.md).
+and make. See [tool setup](docs/results.md#tool-setup) and
+[workloads](docs/results.md#workloads) for dependencies and experiment definitions.
 
 ```sh
 make lint
@@ -83,17 +83,13 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 
 ## Design and evidence
 
-- [Frozen architecture and milestones](docs/architecture.md)
-- [Interface, timing edges, ordering, and reset](docs/protocol-and-timing.md)
-- [Verification strategy and coverage](docs/verification-plan.md)
-- [Measured local results and limitations](docs/results.md)
-- [Response-refill amendment and before/after measurements](docs/response-refill.md)
+- [Architecture](docs/architecture.md)
+- [Interface, timing, ordering, and reset](docs/protocol-and-timing.md)
+- [Verification strategy and proof scope](docs/verification-plan.md)
+- [Performance, response throughput, workloads, and reproduction](docs/results.md)
+- [Multi-seed performance stability](docs/performance-stability.md)
+- [ASIC area/timing tradeoffs and synthesis setup](docs/asic-results.md)
 - [Annotated command traces](docs/traces.md)
-- [UCSB Design Compiler / PrimeTime flow](docs/lab-flow.md)
-- [Executed UCSB 5 ns baseline: setup meets, hold/capacitance violations remain](docs/ucsb-baseline.md)
-- [Frozen 30-point ASIC area/timing sweep and baseline hold diagnostics](docs/asic-results.md)
-- [Verified toolchain and isolated setup](docs/toolchain.md)
 
-Final ASIC evidence comes from the UCSB lab's Design Compiler and technology
-library. The supplied flow includes SDC, mapped reports, a clock-period sweep,
-and optional PrimeTime. Local generic gate counts are not mapped ASIC area or frequency.
+ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.
+Local generic Yosys counts are synthesizability evidence, not mapped ASIC area or frequency.

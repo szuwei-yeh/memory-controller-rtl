@@ -222,14 +222,14 @@ replace the working controller. Local raw baseline snapshots are under
 decision, baseline, verification, and before/after experiment results; it is excluded
 from Git and all export bundles.
 '''
-    (ROOT/'docs/response-refill.md').write_text(text)
+    (ROOT/'build/response_refill/report.md').write_text(text)
     rates=[f'{r["policy_name"]} tCCD={r["parameters"]["T_CCD"]}: '
            f'{r["response_window_rate"]:.6f} 回應／週期，最長 {r["longest_consecutive_handshakes"]} 筆連續握手'
            for r in capacities['after']['results']]
     append_entry('回應補入修訂的前後結果與公開報告',
                  '量化單一回應模組修訂的正確性、吞吐量與綜合代價。',
                  '產生前後比較、RTL 差異與公開說明文件。',
-                 'docs/response-refill.md、results/response_refill*',
+                 'build/response_refill/report.md、results/response_refill*',
                  'python3 scripts/response_refill_report.py；yosys read_json 與 ltp -noff',
                  '完整回歸與五項形式檢查通過。修改前端點區間吞吐量皆為 0.5。修改後：\n'+ '\n'.join(rates)+
                  f'\n回應模組通用元件：{baseline["synthesis"]["response_cells"]} → {after["response_cells"]}；'
