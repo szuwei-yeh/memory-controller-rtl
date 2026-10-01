@@ -61,9 +61,19 @@ event in Strict-FCFS or Q=1, where some events are structurally impossible.
 
 ## Formal
 
-The current `make formal-command-mask` checks whole-controller equivalence
+The current `make formal-parallel` checks whole-controller equivalence against
+the frozen selected command-mask scheduler at `9d40e16`. Q=1/3/16 crossed with
+the three policies produces nine checks; CI uses Q=1/3. Six unchanged modules
+are hash-checked, and the reference scheduler is stored in
+`formal/reference/parallel_arbitration/`. `make compare-parallel` compares
+120 complete baseline/current event-trace pairs. A wrong class selector
+(`column_winners != 0`) is rejected with three unproven cells. See
+[parallel-arbitration evidence](parallel-arbitration-experiment.md) for source
+hashes, the matched-node proof scope, and measured timing.
+
+The preceding `make formal-command-mask` checks whole-controller equivalence
 against the frozen compact candidate-mask snapshot at Q=1/3/16 across all three
-policies (nine checks; CI uses Q=1/3). Three original modules are frozen and
+policies (nine checks in that experiment). Three original modules are frozen and
 hash-checked, with four identical modules on both sides. Flattening includes the
 actual command-mask wiring and fixed-slot table updates; memory mapping and identical
 cell merging precede matched-node SAT checks. Every equivalence cell must be

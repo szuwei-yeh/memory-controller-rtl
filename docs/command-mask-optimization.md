@@ -1,5 +1,10 @@
 # Direct command-selection mask experiment
 
+This is the measured checkpoint at `9d40e16`. The current RTL subsequently
+adopts [parallel command-class arbitration](parallel-arbitration-experiment.md).
+Reproduce this historical experiment's collector at its checkpoint; its source
+guards deliberately do not accept a later scheduler as the measured snapshot.
+
 The selected **direct mask plus fixed-slot storage** reduces the magnitude of
 the Q16/3 ns worst setup violation by **40.95%**, from −0.116465 to −0.068773 ns,
 while reducing mapped area by **1.89%**. All 34 internal setup failures disappear.

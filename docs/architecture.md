@@ -6,10 +6,13 @@ cycle-level policy. Their measured implementation changes are documented in
 [address sharing](address-sharing-optimization.md), and
 [candidate masks](candidate-mask-optimization.md); the v1.1 measurements remain
 separate from the current RTL's mapping results.
-The current [command-mask and storage optimization](command-mask-optimization.md)
+The [command-mask and storage optimization](command-mask-optimization.md)
 also preserves the protocol and cycle behavior.
 The [remaining command-path analysis](command-path-3ns.md) examines that selected
 implementation and proposes the next scheduler experiment without changing RTL.
+The resulting [parallel-arbitration implementation](parallel-arbitration-experiment.md)
+is now selected. Column and PRE/ACT oldest winners are computed independently,
+then selected using column presence; the protocol and cycle behavior are unchanged.
 
 ## Goals and boundaries
 

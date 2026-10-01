@@ -11,8 +11,8 @@ jobs:
         run: test -z "$(git ls-files -- local_notes)"
       - name: Lint, directed tests and parameter corners
         run: make lint test
-      - name: Command-mask controller equivalence (small and non-power-of-two queues)
-        run: python3 scripts/command_mask_equiv.py --depths 1 3
+      - name: Parallel-arbitration controller equivalence (small and non-power-of-two queues)
+        run: python3 scripts/parallel_arbitration_check.py --trial . --out build/parallel_arbitration_current --depths 1 3
       - name: Reproducible regression sample
         run: make regress SEEDS=5 N=1000 JOBS=2
       # No directory-wide artifact upload: local notes must remain local.

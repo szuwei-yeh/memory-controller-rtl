@@ -8,27 +8,29 @@ controller.
 
 ## Current ASIC optimization
 
-Direct command masks plus fixed-slot completion/data writes reduce the magnitude
-of the Q=16/3 ns worst setup violation by **40.95%** (−0.116465 → −0.068773 ns)
-relative to the compact candidate-mask revision. All **34 internal setup failures
-disappear**. Mapped area decreases **1.89% at 3 ns** and **2.56% at 4 ns**; 4 ns
-setup still passes at +0.000109 ns. Hold improves at both targets, with failing
-endpoints decreasing from 17 to eight at 3 ns and from 39 to two at 4 ns.
-No pipeline, storage, or command latency is added.
+Parallel column/PRE-ACT arbitration changes Q=16/3 ns setup slack from
+**−0.068773 to +0.000038 ns**, removing all **50 setup violations** relative to
+the selected command-mask plus storage revision. Mapped area decreases
+**1.89% at 3 ns** and **0.44% at 4 ns**. The 4 ns setup margin increases from
++0.000109 to +0.001984 ns. No pipeline, storage or command latency is added.
+See the [parallel-arbitration experiment](docs/parallel-arbitration-experiment.md)
+for matched measurements, verification and adoption criteria.
 The measured RTL passes nine whole-controller equivalence configurations,
-120 complete trace pairs, and 3,003,000 randomized regression transactions.
+120 complete trace pairs, 42 directed/corner simulations, five formal tasks,
+and 300 regression runs with 3,003,000 accepted transactions.
 
-**3 ns setup and hold still fail; 4 ns also retains two hold failures.**
-The [command-mask experiment](docs/command-mask-optimization.md) reports all three
-alternatives, source-matched verification, and the selection criteria. This is
-ongoing pre-layout timing work, not timing closure. The preceding
+**3 ns setup passes with only 0.038 ps margin; hold still fails at both targets**
+(eight endpoints at 3 ns, two at 4 ns). These typical-corner, ideal-clock,
+pre-layout results are not timing closure or a routed-frequency claim.
+The preceding [command-mask experiment](docs/command-mask-optimization.md)
+retains its three alternatives and source-matched evidence. The earlier
 [address-sharing experiment](docs/address-sharing-optimization.md) achieved
 16.71% area reduction at Q=16/5 ns and 24.19% at Q=32/5 ns; those measurements
 belong to that earlier revision, not the current mask RTL.
 The [candidate-mask](docs/candidate-mask-optimization.md) and standalone
 [storage timing](docs/storage-timing-experiment.md) studies retain their historical
 measurements. The latter rejected fixed-slot writes alone; the new combined
-implementation is independently measured and passes the current adoption screen.
+implementation was independently measured before the parallel-arbitration change.
 
 ## Published v1.1 results
 
@@ -74,6 +76,8 @@ make perf                       # identical workloads, warm-up, latency distribu
 make formal                     # SymbiYosys, Yosys and ABC
 make formal-command-mask        # whole-controller equivalence at Q=1/3/16, all policies
 make compare-command-mask       # 120 complete old/new cycle-trace pairs
+make formal-parallel            # current controller vs selected command-mask baseline
+make compare-parallel           # 120 complete baseline/current cycle-trace pairs
 make synth-local-sanity         # optional generic Yosys check, not ASIC evidence
 make report                     # requires the preceding run outputs and Matplotlib/NumPy
 make lab-bundle                 # explicit allowlist; does not upload anything
@@ -125,6 +129,7 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 - [Storage timing diagnosis and free-slot experiments](docs/storage-timing-experiment.md)
 - [Direct command-mask and storage optimization](docs/command-mask-optimization.md)
 - [Remaining 68.8 ps: selected command-path analysis](docs/command-path-3ns.md)
+- [Parallel command-class arbitration and 3 ns setup pass](docs/parallel-arbitration-experiment.md)
 - [Annotated command traces](docs/traces.md)
 
 ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.

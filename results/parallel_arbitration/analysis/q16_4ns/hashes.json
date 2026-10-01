@@ -1,0 +1,16 @@
+{
+  "raw": {
+    "area.rpt": "cf62ff429b10bfa8d2e10e7d8bc8c3b1a7c188a59dde06c0ed34b187eb316d71",
+    "clocks.rpt": "33f84df106d073d35fba46a7da60e0031b5becb31ea5c1ecc11e42a404608515",
+    "constraints.rpt": "cee025478f7baf00afd5969c2f4b525cb4fa232f443e44a86267286acb15cbee",
+    "register_to_register.rpt": "f5aaa1070df5b4a9631bea227711f9ed1ab5b3ac78af9044c210a5b52dde582c",
+    "register_to_output.rpt": "d31f298010c26ea98b3cce84a1a53e93fa625fdb7c76bb39ec4d0c5899da102a"
+  },
+  "public": {
+    "area.rpt": "11c15043121a76a244d68095e250e6cc18a24fdfe04d691840bf95fb1a3fc30a",
+    "clocks.rpt": "d666546174d69e3c2171feb973e792e8494a1bfb3e84ffd0c32446787b021701",
+    "constraints.rpt": "5d314a546ed3d1702b145bbed2b1d88df7e4eb61a81e4837472d381b3a7242be",
+    "register_to_register.rpt": "c4127f8404def939947db48874801cdba6b8c0d3bdc46318928735c189e203ff",
+    "register_to_output.rpt": "b7911f3756152a982760ad5a9e2ab96be0b63c083d8b0783dee02fde768a052a"
+  }
+}

@@ -1,5 +1,9 @@
 # Remaining 3 ns command-output paths
 
+This analysis describes checkpoint `9d40e16`. The proposed experiment has since
+been [implemented and measured](parallel-arbitration-experiment.md); its results
+are kept separately rather than changing this pre-experiment diagnosis.
+
 The selected command-mask plus storage implementation still misses 3 ns setup
 by **68.773 ps**. Read-only queries on its saved mapped DDC reproduce all **50
 setup and eight hold violations**. Two almost equally critical path families

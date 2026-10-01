@@ -5,7 +5,7 @@ JOBS ?= 4
 PLOT_PYTHON ?= $(if $(wildcard .tools/venv/bin/python),.tools/venv/bin/python,$(PYTHON))
 LAB_CONFIG ?= synth/lab_config.tcl
 DC_RUN ?= build/synth/dc/frfcfs_aging_q16_5ns
-.PHONY: lint test smoke regress perf formal formal-scheduler compare-scheduler formal-address compare-address formal-candidate-mask compare-candidate-mask formal-command-mask compare-command-mask report synth-local-sanity synth-dc sta-pt lab-bundle
+.PHONY: lint test smoke regress perf formal formal-scheduler compare-scheduler formal-address compare-address formal-candidate-mask compare-candidate-mask formal-command-mask compare-command-mask formal-parallel compare-parallel report synth-local-sanity synth-dc sta-pt lab-bundle
 lint:
 	$(PYTHON) scripts/run.py lint
 test:
@@ -34,6 +34,10 @@ formal-command-mask:
 	$(PYTHON) scripts/command_mask_equiv.py
 compare-command-mask:
 	$(PYTHON) scripts/command_mask_equiv.py --trace
+formal-parallel:
+	$(PYTHON) scripts/parallel_arbitration_check.py --trial . --out build/parallel_arbitration_current
+compare-parallel:
+	$(PYTHON) scripts/parallel_arbitration_check.py --trace --trial . --out build/parallel_arbitration_current
 report:
 	$(PLOT_PYTHON) scripts/report.py
 synth-local-sanity:

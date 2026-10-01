@@ -1,0 +1,1326 @@
+{
+  "status": "PASS",
+  "pairs": 120,
+  "workload_requests": 500,
+  "warmup": 0,
+  "seeds": [
+    1,
+    42
+  ],
+  "ready_percent": [
+    100,
+    30
+  ],
+  "results": [
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "a803133a8b3f9f6e8bdf98af0f8a6ff40089344cb3283fcda51221a7c1a46ef9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w0_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w0_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b3cd44aa367fc22671b7a1f2a069653b0c309795d3a46222538f1cf9ada5e174",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w0_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w0_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "a803133a8b3f9f6e8bdf98af0f8a6ff40089344cb3283fcda51221a7c1a46ef9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w0_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w0_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b3cd44aa367fc22671b7a1f2a069653b0c309795d3a46222538f1cf9ada5e174",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w0_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w0_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "ebcf0072e98f6a4459698d77e0220eda9b6d8e1d14c8efcbebb578cd21717891",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w1_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w1_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "97febcc331113d8d54a95ccf04916178457d675dd844f881724da993c7c8a12f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w1_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w1_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "ebcf0072e98f6a4459698d77e0220eda9b6d8e1d14c8efcbebb578cd21717891",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w1_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w1_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "97febcc331113d8d54a95ccf04916178457d675dd844f881724da993c7c8a12f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w1_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w1_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d8d7b13e7bc616e0199f67992acb006fe00f7a3b1fbd0e81d3cf622a8c6362a9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w2_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w2_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "983b3b079a9951fd47abe5d0438ef0fcc00862b595bc3bc2a31209f911a3057a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w2_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w2_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d8d7b13e7bc616e0199f67992acb006fe00f7a3b1fbd0e81d3cf622a8c6362a9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w2_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w2_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "983b3b079a9951fd47abe5d0438ef0fcc00862b595bc3bc2a31209f911a3057a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w2_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w2_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "random",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fc2e39c2137405b5f7d2132dc373c4e5bf046bb9c34506f1d813bd8e6b2bf0b2",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w3_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w3_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "random",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "3e6fca5cfc1461f54f5cc2efa1e106fca33ba8c4afff6b945bdfd576b9523c96",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w3_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w3_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "random",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "efc3d9478edf7fd8a2d8659aa98cb0d3fd3f943cb01e5c1057c235532b3f0abf",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w3_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w3_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "random",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "0e9a168010fe97b2f1f22d8581d772e0c43c35d8f043ca290c71938de341d6b3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w3_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w3_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "eba1b8f31c8326d56100377c6aa536299901c0ac7d1be51f3de0dab5939d8e17",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w4_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w4_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "3d5243752c293158dd1c343645b620f411cf6ac4525406e1cac5d0024e173b1a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w4_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w4_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "eba1b8f31c8326d56100377c6aa536299901c0ac7d1be51f3de0dab5939d8e17",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w4_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w4_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "3d5243752c293158dd1c343645b620f411cf6ac4525406e1cac5d0024e173b1a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w4_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w4_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f9d357595f91821ebcf6869e04f2e478792c7d39b6676c4795ac46fce7ea6069",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w5_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w5_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "52162e6ffff4693ad1ff003e9fb50b89ed1a9111890d3197c0974a984216579b",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w5_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w5_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f9d357595f91821ebcf6869e04f2e478792c7d39b6676c4795ac46fce7ea6069",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w5_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w5_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "52162e6ffff4693ad1ff003e9fb50b89ed1a9111890d3197c0974a984216579b",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w5_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w5_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "93abbb1b5eb8bd9a4c57f27e6d90e35d250e6baf1ff727df1451b615b39528d9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w6_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w6_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "339819a4cb83a802bb1100d8d3a2673bf4d1847def81865278e736128badb681",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w6_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w6_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "6007a7715ff8bcd15a250a6bb5c91cb41610ba96e96160df5215edc6d4596f2f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w6_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w6_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "9d4d7fabe8c87e067c6f1df922a4df8a0020487a4b409f0a756c3edaeea8ef72",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w6_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w6_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f8a8f858c70c14085c633523b5c2a9b61dff1b9783d31dd6d3cadc77671a9de4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w7_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w7_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d4dba10fcf1b7b032a82877a5c2939a1ea35aac0d32e2d2bfdaac50fac5d4e75",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w7_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w7_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "9cb79975e707c121e3b8d7d11008f4435bca8c24a165bf3795d849fa204647ad",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w7_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w7_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "610317d56141e96d27a2a5a6aa2a788a12a80f92e770732c3e5a56010b4fdd9a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w7_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w7_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e9f72203568c989d092c8e25153909c5bb9317552ea0f8d115e3c30bff9ad8fd",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w8_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w8_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b6ca48e7eb46d296c02af5271b4b13d922dd96a2934a566ec34aaba1faf59d1f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w8_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w8_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "02d58858f7c3ce8b4d10b1664f6cb24f1cfa3955e58df869cdf9e67bbd40f17f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w8_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w8_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f5473db9ed0abb5b35c2cb0a3d87641c9b70e49901506b60686cae22273faa5f",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w8_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w8_s42_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cea55d77a2bbfa056b4d32712e4274c82b333183c0e5b2b8d8ac5520b4d6f112",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w9_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w9_s1_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fd6a78cac1e9392772d98e8c70cb425c037ad287041af0df7e27df50991aa167",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w9_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w9_s1_r30"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cea55d77a2bbfa056b4d32712e4274c82b333183c0e5b2b8d8ac5520b4d6f112",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w9_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w9_s42_r100"
+    },
+    {
+      "policy": "strict_fcfs",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fd6a78cac1e9392772d98e8c70cb425c037ad287041af0df7e27df50991aa167",
+      "before_path": "build/runs/parallel_arbitration_compare_before_strict_fcfs_w9_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_strict_fcfs_w9_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "7bf78a78acd76ab943291567ac769d4d0588d0a946193c6c226ffdb0324f0c4c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w0_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w0_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e73d2a9340fad3486aa9743d055892032334c634205ad180bee728abfca4f125",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w0_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w0_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "7bf78a78acd76ab943291567ac769d4d0588d0a946193c6c226ffdb0324f0c4c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w0_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w0_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e73d2a9340fad3486aa9743d055892032334c634205ad180bee728abfca4f125",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w0_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w0_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e9cbfdd0c3394ad515cc023ca6b1c8a248db7eea1aa5798dd55ddd3a39a6c1b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w1_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w1_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "c933d103e362715b53f969a27ce901336f3d782f6fdf1fbbb31d7f75748c61b5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w1_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w1_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e9cbfdd0c3394ad515cc023ca6b1c8a248db7eea1aa5798dd55ddd3a39a6c1b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w1_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w1_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "c933d103e362715b53f969a27ce901336f3d782f6fdf1fbbb31d7f75748c61b5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w1_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w1_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38b7552d4d728775c1eaf129b0e2ef12c4369dbb1f4e989b55d9302443145694",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w2_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w2_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "241704fa0206ecf5b17f4fbd168d74d59fa877df2c36974f8e0e1172984fa731",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w2_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w2_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38b7552d4d728775c1eaf129b0e2ef12c4369dbb1f4e989b55d9302443145694",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w2_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w2_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "241704fa0206ecf5b17f4fbd168d74d59fa877df2c36974f8e0e1172984fa731",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w2_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w2_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "random",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "33c5be00a146243e930c75a453e7a3b79b5259904d7bdc236278980f458774b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w3_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w3_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "random",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "5421b7bd5c46efd93857819bd24326c2c87b4bd19c4fa74e47560f280465cb5e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w3_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w3_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "random",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "baad1c6b8a35991cce2e343365ef2cf9f0546e8daca07565a8d116ec252b4937",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w3_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w3_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "random",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "2e479038f010465a6256b542e90cf1462a8258ccf1b810fe4d4b9d61368eee38",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w3_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w3_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "ef0c2f7867660de08dec608d212309d3db80ae6845adceb8c43eb5aea487ca46",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w4_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w4_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fb88e88fa3b2780cedf6678604ae7c9504ea99c4de015cd4ca384d2929ee48e5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w4_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w4_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "ef0c2f7867660de08dec608d212309d3db80ae6845adceb8c43eb5aea487ca46",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w4_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w4_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fb88e88fa3b2780cedf6678604ae7c9504ea99c4de015cd4ca384d2929ee48e5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w4_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w4_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "82aca65db2b3e64e24941da3777ddf6d45fe58693a6c7b55f80258a96277b076",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w5_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w5_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d0985171c83fe0013806c05175552fda4e036b2750f745266560cb647af5d88e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w5_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w5_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "82aca65db2b3e64e24941da3777ddf6d45fe58693a6c7b55f80258a96277b076",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w5_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w5_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d0985171c83fe0013806c05175552fda4e036b2750f745266560cb647af5d88e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w5_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w5_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f2a05a5301b7d384876ba7dc755cfcdcfa8f3e248fd2c2177258141a4d9dcb05",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w6_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w6_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "6c93a0102e09feea0f4cea82e4c9c89be10adc84cba49d64fa79691f36f3c1c8",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w6_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w6_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "343a3ba4f218378e112190418164829147cab4ed14f4031c845ddf036eaa6adf",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w6_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w6_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "11d1c04c809dfe7ca7e545d213ed0ced73ed7de34d3a4a5c5afdcf9afedde751",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w6_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w6_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "629fd7266f52b2d4ca0f5e8296e8eecc27c5644965611fc417aa15933fef1c8c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w7_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w7_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "108ca9b0fe683777c73514c2f2b574120bee6a6465bb2352999b92f21fae78cb",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w7_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w7_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38fbbc9a7472410c8e854be1727079b81efe3b62647134b3e640242246d41efd",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w7_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w7_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "1a96f0c7fe038def1c61dafbf0d5dad8783562597a1af41b1027109488df54f8",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w7_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w7_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "4e4935bb5467cb2a142c00fcb1b859b84e9b4616567646ff9d897cccf2ee48d3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w8_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w8_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "8fdad97aaa841530950d90036964f8ecdde6da195ac61b557c6b839c835c39b0",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w8_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w8_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "51c083aecaff2ed130ebba10f72495490b6aa3893c340a322191e9fe6eeae2e9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w8_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w8_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "53f938127b4006219dc5ac5e07eb7e0bdc36d4ce9bb670f77ed1bf3395d1341a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w8_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w8_s42_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cf7fa841fda4f2dc2021e83ee102df7fd1de359852aff11866ec296612add6e3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w9_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w9_s1_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b5034ececd9dcd5f0becf3322d9e89b91a1de989e1eb85c79492a8a27d53b826",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w9_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w9_s1_r30"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cf7fa841fda4f2dc2021e83ee102df7fd1de359852aff11866ec296612add6e3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w9_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w9_s42_r100"
+    },
+    {
+      "policy": "frfcfs",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b5034ececd9dcd5f0becf3322d9e89b91a1de989e1eb85c79492a8a27d53b826",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_w9_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_w9_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "7bf78a78acd76ab943291567ac769d4d0588d0a946193c6c226ffdb0324f0c4c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w0_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w0_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_hit",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e73d2a9340fad3486aa9743d055892032334c634205ad180bee728abfca4f125",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w0_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w0_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "7bf78a78acd76ab943291567ac769d4d0588d0a946193c6c226ffdb0324f0c4c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w0_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w0_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_hit",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e73d2a9340fad3486aa9743d055892032334c634205ad180bee728abfca4f125",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w0_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w0_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e9cbfdd0c3394ad515cc023ca6b1c8a248db7eea1aa5798dd55ddd3a39a6c1b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w1_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w1_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "sequential",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "c933d103e362715b53f969a27ce901336f3d782f6fdf1fbbb31d7f75748c61b5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w1_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w1_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "e9cbfdd0c3394ad515cc023ca6b1c8a248db7eea1aa5798dd55ddd3a39a6c1b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w1_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w1_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "sequential",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "c933d103e362715b53f969a27ce901336f3d782f6fdf1fbbb31d7f75748c61b5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w1_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w1_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38b7552d4d728775c1eaf129b0e2ef12c4369dbb1f4e989b55d9302443145694",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w2_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w2_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_conflict",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "241704fa0206ecf5b17f4fbd168d74d59fa877df2c36974f8e0e1172984fa731",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w2_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w2_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38b7552d4d728775c1eaf129b0e2ef12c4369dbb1f4e989b55d9302443145694",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w2_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w2_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "row_conflict",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "241704fa0206ecf5b17f4fbd168d74d59fa877df2c36974f8e0e1172984fa731",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w2_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w2_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "random",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "33c5be00a146243e930c75a453e7a3b79b5259904d7bdc236278980f458774b4",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w3_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w3_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "random",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "5421b7bd5c46efd93857819bd24326c2c87b4bd19c4fa74e47560f280465cb5e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w3_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w3_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "random",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "baad1c6b8a35991cce2e343365ef2cf9f0546e8daca07565a8d116ec252b4937",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w3_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w3_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "random",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "2e479038f010465a6256b542e90cf1462a8258ccf1b810fe4d4b9d61368eee38",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w3_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w3_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "4a3b4956a00ff7bced96a99b1b168bdd11be359ec7701378c465ed7e6b67cf25",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w4_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w4_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hot_cold",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fb88e88fa3b2780cedf6678604ae7c9504ea99c4de015cd4ca384d2929ee48e5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w4_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w4_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "4a3b4956a00ff7bced96a99b1b168bdd11be359ec7701378c465ed7e6b67cf25",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w4_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w4_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hot_cold",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "fb88e88fa3b2780cedf6678604ae7c9504ea99c4de015cd4ca384d2929ee48e5",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w4_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w4_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "82aca65db2b3e64e24941da3777ddf6d45fe58693a6c7b55f80258a96277b076",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w5_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w5_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hol",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d0985171c83fe0013806c05175552fda4e036b2750f745266560cb647af5d88e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w5_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w5_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "82aca65db2b3e64e24941da3777ddf6d45fe58693a6c7b55f80258a96277b076",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w5_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w5_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "hol",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "d0985171c83fe0013806c05175552fda4e036b2750f745266560cb647af5d88e",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w5_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w5_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "f2a05a5301b7d384876ba7dc755cfcdcfa8f3e248fd2c2177258141a4d9dcb05",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w6_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w6_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "6c93a0102e09feea0f4cea82e4c9c89be10adc84cba49d64fa79691f36f3c1c8",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w6_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w6_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "343a3ba4f218378e112190418164829147cab4ed14f4031c845ddf036eaa6adf",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w6_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w6_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "11d1c04c809dfe7ca7e545d213ed0ced73ed7de34d3a4a5c5afdcf9afedde751",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w6_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w6_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "629fd7266f52b2d4ca0f5e8296e8eecc27c5644965611fc417aa15933fef1c8c",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w7_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w7_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_write_50",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "108ca9b0fe683777c73514c2f2b574120bee6a6465bb2352999b92f21fae78cb",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w7_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w7_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "38fbbc9a7472410c8e854be1727079b81efe3b62647134b3e640242246d41efd",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w7_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w7_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "read_write_50",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "1a96f0c7fe038def1c61dafbf0d5dad8783562597a1af41b1027109488df54f8",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w7_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w7_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "4e4935bb5467cb2a142c00fcb1b859b84e9b4616567646ff9d897cccf2ee48d3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w8_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w8_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "write_only",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "8fdad97aaa841530950d90036964f8ecdde6da195ac61b557c6b839c835c39b0",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w8_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w8_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "51c083aecaff2ed130ebba10f72495490b6aa3893c340a322191e9fe6eeae2e9",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w8_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w8_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "write_only",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "53f938127b4006219dc5ac5e07eb7e0bdc36d4ce9bb670f77ed1bf3395d1341a",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w8_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w8_s42_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cf7fa841fda4f2dc2021e83ee102df7fd1de359852aff11866ec296612add6e3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w9_s1_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w9_s1_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "same_address",
+      "seed": 1,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b5034ececd9dcd5f0becf3322d9e89b91a1de989e1eb85c79492a8a27d53b826",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w9_s1_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w9_s1_r30"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 100,
+      "accepted_per_revision": 510,
+      "trace_sha256": "cf7fa841fda4f2dc2021e83ee102df7fd1de359852aff11866ec296612add6e3",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w9_s42_r100",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w9_s42_r100"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "workload": "same_address",
+      "seed": 42,
+      "ready": 30,
+      "accepted_per_revision": 510,
+      "trace_sha256": "b5034ececd9dcd5f0becf3322d9e89b91a1de989e1eb85c79492a8a27d53b826",
+      "before_path": "build/runs/parallel_arbitration_compare_before_frfcfs_aging_w9_s42_r30",
+      "after_path": "build/runs/parallel_arbitration_compare_after_frfcfs_aging_w9_s42_r30"
+    }
+  ],
+  "builds": {
+    "before/strict_fcfs": {
+      "parameters": {
+        "SCHED_POLICY": 0,
+        "AGING_ENABLE": 0
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "df896185604273fb59b4cfdff2f96fea87a9c95be90944e707242ac19e083ad9",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    },
+    "before/frfcfs": {
+      "parameters": {
+        "SCHED_POLICY": 1,
+        "AGING_ENABLE": 0
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "df896185604273fb59b4cfdff2f96fea87a9c95be90944e707242ac19e083ad9",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    },
+    "before/frfcfs_aging": {
+      "parameters": {
+        "SCHED_POLICY": 1,
+        "AGING_ENABLE": 1
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "df896185604273fb59b4cfdff2f96fea87a9c95be90944e707242ac19e083ad9",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    },
+    "after/strict_fcfs": {
+      "parameters": {
+        "SCHED_POLICY": 0,
+        "AGING_ENABLE": 0
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    },
+    "after/frfcfs": {
+      "parameters": {
+        "SCHED_POLICY": 1,
+        "AGING_ENABLE": 0
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    },
+    "after/frfcfs_aging": {
+      "parameters": {
+        "SCHED_POLICY": 1,
+        "AGING_ENABLE": 1
+      },
+      "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+      "source_sha256": {
+        "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+        "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+        "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979"
+      }
+    }
+  }
+}

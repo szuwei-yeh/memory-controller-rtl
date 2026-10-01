@@ -1,0 +1,32 @@
+
+****************************************
+Report : area
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Wed Sep 30 20:55:13 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    gscl45nm (File: ${TECH_LIBRARY_DIR}/gscl45nm.db)
+
+Number of ports:                         5489
+Number of nets:                         28724
+Number of cells:                        23627
+Number of combinational cells:          21631
+Number of sequential cells:              1974
+Number of macros/black boxes:               0
+Number of buf/inv:                       6736
+Number of references:                      24
+
+Combinational area:              54613.847714
+Buf/Inv area:                    11272.116499
+Noncombinational area:           15748.769051
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 70362.616764
+Total area:                 undefined
+1
