@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "audit_base": {
+    "source_commit": "0be62b7a30882165fc3e2bcef804db76e207468f",
+    "clean_start": true,
+    "no_build_cache": true,
+    "no_private_notes": true,
+    "no_repo_tools": true
+  },
+  "recorded_utc": "2026-10-01T04:19:13.727070+00:00",
+  "platform": {
+    "os": "macOS",
+    "version": "26.5",
+    "architecture": "arm64"
+  },
+  "tools": {
+    "python": "Python 3.13.0",
+    "verilator": "Verilator 5.046 2026-02-28 rev vUNKNOWN-built20260228",
+    "yosys": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 16.0.0.16000026)",
+    "compiler": "Apple clang version 16.0.0 (clang-1600.0.26.6)",
+    "sby_commit": "b1a1e98cba941ec8433f8dc27f416cd7bb7f14be",
+    "click": "8.5.0"
+  },
+  "rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+    "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+    "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe"
+  },
+  "execution_input_sha256": {
+    "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+    "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+    "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe",
+    "scripts/run.py": "e03a040f1ea22aed5ac5f5c08e54887fd852db883dc7af4914e7776a8d23e5b5",
+    "scripts/formal.py": "b91e4fce0449e1a280338344b5af91a01bc58bf2078d4d6e1cb8c8f6adec0e16",
+    "scripts/parallel_arbitration_check.py": "b552eebbf737e55865373a198d8aeb09fd85d4fb534f1ac7810021636b860f23",
+    "scripts/candidate_mask_equiv.py": "d0358d5305527d425a709824404ba0e33bb21310061fbcf9ede98aa35e237dbb",
+    "scripts/scheduler_trace_compare.py": "13f98bd56b6caca2f2a2a8fabd27b5cb3f2a6aa0f551e65f906e2cd7c3855b95",
+    "scripts/synth.py": "8792952e3bef411c7dda1f52afbec0fe747647137bdc0e5a92e60599d0016b43",
+    "scripts/lab_bundle.py": "ffca0fb351b235bcea5826846fc4d18843a8095d55ae961ba56b12c18c5ef05e",
+    "scripts/log_experiment.py": "1f3ba95de57412b09da6aa49eaad29642f865a6fca702169f2bbd761147622c8",
+    "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+    "formal/reference/parallel_arbitration/mc_scheduler_frfcfs.sv": "df896185604273fb59b4cfdff2f96fea87a9c95be90944e707242ac19e083ad9",
+    "tb/tb_model.sv": "edc1e9efd818ea97d02fc7706e131c628327272233a2134b2316a026eae7a26a",
+    "tb/tb_top.sv": "9a1fe85770a12a445882f2f154d5490c1d44697bcdd25fc12392aff99945d979",
+    "tb/tb_scheduler.sv": "12c9e6194e5fc711e1028f474001449142f8c8d2368d82c0b8b157191f1c0614",
+    "tb/dram_model.sv": "49562908e2c2e3de08a3612e68f91b6627d29f3a1ca3b89d767cf73f31bf8529",
+    "tb/tb_response.sv": "9fcb06a2c793376603de1fa3cba5b26db9bfa4cd027db09e5e4e260881b3d0f0",
+    "formal/scheduler_equiv.sby": "4d8d9d3ca7a4d9119f0b3b2189dca0a487d4ecaf3466afd67efd230bc5dee144",
+    "formal/progress.sby": "258ce8b3d3d5c174f0fcb90d47fdba142f996e52900dcf1b9a8612801cf01b3b",
+    "formal/controller.sby": "4d5f199344712fc952415bde0e364528388bc7ee80258cdf1d2922a68f054d64",
+    "formal/bank.sby": "89e4e10b40c77463a0375cf257c97e5d0bbb87c77f34f2be2925d6ef62a65bed",
+    "formal/formal_top.sv": "7456973966c13266b676d097f1afb1bfee7b0a524c91c598c1503e91895670ea",
+    "formal/formal_scheduler_equiv.sv": "6d0f2c796a4f91709c38f706ee81b1f118b7b529bcd319dd2ec8bd2bc86feb62",
+    "formal/formal_progress.sv": "bdc8012c5cf1dc3e0d6b4940e44166eadbb01ee6e5e8e245692700c8282b9b82",
+    "formal/formal_bank.sv": "9187f843c8ac4d6d6b1cde8772aafd971cd7d7255a8aa5c805d8d0e46bc268ba"
+  },
+  "commands": [
+    {
+      "command": [
+        "make",
+        "lint"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 1.1748062919359654
+    },
+    {
+      "command": [
+        "make",
+        "smoke"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 80.43117012502626
+    },
+    {
+      "command": [
+        "make",
+        "test"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 163.76772949984297
+    },
+    {
+      "command": [
+        "make",
+        "regress",
+        "SEEDS=5",
+        "N=1000",
+        "JOBS=2"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 1.4148416670504957
+    },
+    {
+      "command": [
+        "make",
+        "formal-parallel"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 139.78500420902856
+    },
+    {
+      "command": [
+        "make",
+        "compare-parallel"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 64.36106670810841
+    },
+    {
+      "command": [
+        "make",
+        "synth-local-sanity"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 44.19843687489629
+    },
+    {
+      "command": [
+        "make",
+        "lab-bundle"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_s": 0.16205991618335247
+    }
+  ],
+  "simulation_counts": {
+    "smoke": {
+      "runs": 3,
+      "accepted": 3030
+    },
+    "test": {
+      "runs": 42,
+      "accepted": 20193
+    },
+    "regress": {
+      "runs": 15,
+      "accepted": 15150
+    }
+  },
+  "formal": [
+    {
+      "task": "strict",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "frfcfs",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "aging",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "bank",
+      "status": "PASS",
+      "mode": "prove",
+      "depth": null
+    },
+    {
+      "task": "progress",
+      "status": "PASS",
+      "mode": "prove",
+      "depth": null
+    }
+  ],
+  "equivalence_configurations": 9,
+  "trace_pairs": 120,
+  "trace_simulations": 240,
+  "trace_accepted_total": 122400,
+  "generic_synthesis_latches": [],
+  "lab_bundle_entries": 15,
+  "clean_tracked_checkout_after_runs": true,
+  "raw_log_sha256": {
+    "check_0.log": "aeb18ec063a3d9f0c97e5557e16e18e2a239d906428860325a07f6121cba1855",
+    "check_1.log": "e3515c311b6b61d5e04bf122f8bc0ff09ae194af810fb7b9afe13bdce060d6b7",
+    "check_2.log": "5ea7971b9a9752df39fa58eefd44bd81beb765217eafd10d4a873fd8fb2ca2a2",
+    "check_3.log": "b48e1b3075f998773076b0c6765fae784a9141d7b71f22a7ade39c6c027b3eda",
+    "check_4.log": "434fb978eb77579a34b338c22c96504957126bfd4786722bb6775c369ae4f19d",
+    "check_5.log": "21746bdeda95a6bbaace0d7ca9ca4a1501fc1a1e0000fb856aa572aba4c8617c",
+    "check_6.log": "67b1373632e523683ee9017d7567fe1cbf1a48f790f8f77593f28be4926f947e",
+    "check_7.log": "793174e14a5c5479866cb8dea39354a226d1883ea51e7a17d998a5c0c8a478f2",
+    "formal.log": "ac954fc11e867a0e2533680f342546ad0da7f2e384041197b1b94993ca6b23fc"
+  },
+  "evidence_checker": {
+    "command": "make check-evidence",
+    "status": "PASS",
+    "script_sha256": "8aff1d4ffdf096cf814daea5fa8b22cb3fb78acf7d2f2efdc2def35aa747dae7",
+    "scope": "Closeout addition; no EDA invocation. Core commands use the clean base checkout above."
+  },
+  "limits": "Fresh repository clone on the same workstation, reusing system-installed tools. New pinned SBY clone/venv. Not a fresh OS/container or executed Linux CI. Short regression only; the source-matched 300-run evidence remains in results/parallel_arbitration. No new licensed synthesis, physical implementation or power measurement."
+}

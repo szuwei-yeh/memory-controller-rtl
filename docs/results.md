@@ -239,7 +239,11 @@ python3 -m venv .tools/venv
 make formal
 ```
 
-For figures, install into the same isolated environment and use the report target:
+For historical figure regeneration in a separate matching checkout, install
+into the same isolated environment and use the report target after producing
+all of that experiment's required inputs. This publisher overwrites this frozen
+report and public performance artifacts; it is not a current-snapshot check.
+See the [current reproduction guide](reproduce.md) for the review workflow.
 
 ```sh
 .tools/venv/bin/pip install -r scripts/requirements-plot.txt

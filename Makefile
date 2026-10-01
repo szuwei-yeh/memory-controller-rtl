@@ -5,9 +5,11 @@ JOBS ?= 4
 PLOT_PYTHON ?= $(if $(wildcard .tools/venv/bin/python),.tools/venv/bin/python,$(PYTHON))
 LAB_CONFIG ?= synth/lab_config.tcl
 DC_RUN ?= build/synth/dc/frfcfs_aging_q16_5ns
-.PHONY: lint test smoke regress perf formal formal-scheduler compare-scheduler formal-address compare-address formal-candidate-mask compare-candidate-mask formal-command-mask compare-command-mask formal-parallel compare-parallel report synth-local-sanity synth-dc sta-pt lab-bundle
+.PHONY: lint test smoke regress perf formal formal-scheduler compare-scheduler formal-address compare-address formal-candidate-mask compare-candidate-mask formal-command-mask compare-command-mask formal-parallel compare-parallel check-evidence report synth-local-sanity synth-dc sta-pt lab-bundle
 lint:
 	$(PYTHON) scripts/run.py lint
+check-evidence:
+	$(PYTHON) scripts/check_portfolio.py
 test:
 	$(PYTHON) scripts/run.py test
 smoke:

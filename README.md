@@ -6,6 +6,10 @@ timing enforcement, scheduling, starvation protection, ordering, verification,
 and ASIC implementation tradeoffs. It is not a DDR PHY or JEDEC-compliant device
 controller.
 
+Start with the [five-minute design review](docs/portfolio-review.md) for the
+architecture, critical-path change and PPA tradeoffs, or
+[reproduce the current snapshot](docs/reproduce.md) to inspect and run it.
+
 ## Current ASIC optimization
 
 Parallel column/PRE-ACT arbitration changes Q=16/3 ns setup slack from
@@ -64,28 +68,29 @@ and [ASIC evidence](docs/asic-results.md) for methodology and limitations.
 ## Run locally
 
 Requires Python 3.10+, Verilator with `--binary --timing --assert`, a C++ compiler,
-and make. See [tool setup](docs/results.md#tool-setup) and
-[workloads](docs/results.md#workloads) for dependencies and experiment definitions.
+and make; equivalence also requires Yosys. See the
+[tested setup and fresh-checkout audit](docs/reproduce.md) and
+[workloads](docs/results.md#workloads). Run commands sequentially.
+The clean-checkout audit passes local tests, all nine equivalence configurations,
+120 trace pairs and five property tasks; its regression portion is a 15-run sample.
 
 ```sh
+make check-evidence                      # audit committed source/report hashes and numbers
 make lint
 make smoke
 make test
-make regress                    # 100 seeds × 10,000 workload requests × 3 policies
-make perf                       # identical workloads, warm-up, latency distributions
-make formal                     # SymbiYosys, Yosys and ABC
-make formal-command-mask        # whole-controller equivalence at Q=1/3/16, all policies
-make compare-command-mask       # 120 complete old/new cycle-trace pairs
-make formal-parallel            # current controller vs selected command-mask baseline
-make compare-parallel           # 120 complete baseline/current cycle-trace pairs
-make synth-local-sanity         # optional generic Yosys check, not ASIC evidence
-make report                     # requires the preceding run outputs and Matplotlib/NumPy
-make lab-bundle                 # explicit allowlist; does not upload anything
+make regress SEEDS=5 N=1000 JOBS=2        # quick 15-run sample
+make formal-parallel                    # nine baseline/current equivalence checks
+make compare-parallel                   # 120 complete cycle-trace pairs
 ```
 
 `build/` contains build logs, simulation event traces, commands, and machine-readable
 results. Builds are cached by RTL/testbench content, parameters, and Verilator version.
-Regression can be shortened with `make regress SEEDS=5 N=1000 JOBS=4`.
+Use `make regress` for the full 300-run regression and `make formal` for the
+five property tasks after installing SymbiYosys as documented. Optional generic
+synthesis, workload studies and lab packaging are described in the reproduction
+guide. `make report` is a historical publisher that overwrites frozen public
+reports; it is not part of the current quickstart.
 Earlier encoded-interface checks are reproduced at their recorded checkpoints:
 `27f522c` for candidate decoding and `12db399` for address sharing.
 The compact candidate-mask snapshot is preserved under `results/candidate_mask/variants/`.
@@ -116,6 +121,8 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 
 ## Design and evidence
 
+- [Five-minute design review and interview walkthrough](docs/portfolio-review.md)
+- [Reproduction guide and clean-checkout audit](docs/reproduce.md)
 - [Architecture](docs/architecture.md)
 - [Interface, timing, ordering, and reset](docs/protocol-and-timing.md)
 - [Verification strategy and proof scope](docs/verification-plan.md)
