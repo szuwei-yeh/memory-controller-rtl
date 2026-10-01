@@ -1,0 +1,5456 @@
+{
+  "status": "COMPLETE",
+  "policy": "frfcfs_aging",
+  "runs": [
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 5,
+      "area_um2": 80975.366581,
+      "combinational_area_um2": 65226.597531,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": 0.001615,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.002538,
+      "hold_violation_count": 14,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[80]",
+      "critical_endpoint": "cmd_wdata[9]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 5556,
+      "zero_allowed_load_violation_count": 5556,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 17,
+          "LINT-1": 38,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[9]",
+          "slack_ns": 0.001615,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[0]",
+          "slack_ns": 0.001939,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[16]",
+          "slack_ns": 0.004458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[15]",
+          "slack_ns": 0.004458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[14]",
+          "slack_ns": 0.004791,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[13]",
+          "slack_ns": 0.004791,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[12]",
+          "slack_ns": 0.004791,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[11]",
+          "slack_ns": 0.004791,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[10]",
+          "slack_ns": 0.004791,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[80]",
+          "endpoint": "cmd_wdata[1]",
+          "slack_ns": 0.00533,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "table_i/done_reg[4]",
+          "endpoint": "table_i/done_reg[4]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[0]",
+          "endpoint": "table_i/done_reg[0]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[5]",
+          "endpoint": "table_i/done_reg[5]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[15]",
+          "endpoint": "table_i/done_reg[15]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[11]",
+          "endpoint": "table_i/done_reg[11]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[1][2]",
+          "endpoint": "banks_i/ras_reg[1][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.000608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[1][1]",
+          "endpoint": "banks_i/rcd_reg[1][1]",
+          "slack_ns": -0.000467,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[1]",
+          "slack_ns": 0.008031,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[2]",
+          "slack_ns": 0.008671,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][3]",
+          "endpoint": "table_i/return_slot_reg[1][3]",
+          "slack_ns": 0.010608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][2]",
+          "endpoint": "table_i/return_slot_reg[1][2]",
+          "slack_ns": 0.010608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][0]",
+          "endpoint": "table_i/return_slot_reg[1][0]",
+          "slack_ns": 0.012248,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[1][0]",
+          "endpoint": "table_i/return_slot_reg[2][0]",
+          "slack_ns": 0.012248,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/done_reg[0]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[4]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[5]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[15]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[11]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089329,
+          "slack": -0.000608
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 5,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 126.1846399307251
+      },
+      "variant": "baseline",
+      "scheduler_area_um2": 4262.1825,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/baseline/q16_5ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 4,
+      "area_um2": 83993.904183,
+      "combinational_area_um2": 68245.135132,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": 0.000617,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.002538,
+      "hold_violation_count": 11,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[241]",
+      "critical_endpoint": "cmd_wdata[22]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 6116,
+      "zero_allowed_load_violation_count": 6116,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 17,
+          "LINT-1": 38,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[241]",
+          "endpoint": "cmd_wdata[22]",
+          "slack_ns": 0.000617,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[241]",
+          "endpoint": "cmd_wdata[13]",
+          "slack_ns": 0.000875,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[20]",
+          "slack_ns": 0.000974,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[2]",
+          "slack_ns": 0.001024,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[1]",
+          "slack_ns": 0.001024,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[12]",
+          "slack_ns": 0.001246,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[6]",
+          "slack_ns": 0.001246,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[7]",
+          "slack_ns": 0.00138,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[241]",
+          "endpoint": "cmd_row[7]",
+          "slack_ns": 0.001515,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[30]",
+          "endpoint": "cmd_wdata[15]",
+          "slack_ns": 0.001603,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "table_i/done_reg[5]",
+          "endpoint": "table_i/done_reg[5]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.00072,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000719,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[15]",
+          "endpoint": "table_i/done_reg[15]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[1][2]",
+          "endpoint": "banks_i/ras_reg[1][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.000608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[1][1]",
+          "endpoint": "banks_i/rcd_reg[1][1]",
+          "slack_ns": -0.000467,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[1]",
+          "slack_ns": 0.008031,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[2]",
+          "slack_ns": 0.008671,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][3]",
+          "endpoint": "table_i/return_slot_reg[1][3]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][2]",
+          "endpoint": "table_i/return_slot_reg[1][2]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][0]",
+          "endpoint": "table_i/return_slot_reg[1][0]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[1][3]",
+          "endpoint": "table_i/return_slot_reg[2][3]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[1][1]",
+          "endpoint": "table_i/return_slot_reg[2][1]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[1][0]",
+          "endpoint": "table_i/return_slot_reg[2][0]",
+          "slack_ns": 0.01132,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][1]",
+          "endpoint": "table_i/return_slot_reg[1][1]",
+          "slack_ns": 0.011887,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/done_reg[5]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089936,
+          "actual": 0.089216,
+          "slack": -0.00072
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089218,
+          "slack": -0.000719
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[15]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089329,
+          "slack": -0.000608
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 4,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 201.6086938381195
+      },
+      "variant": "baseline",
+      "scheduler_area_um2": 4442.863,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/baseline/q16_4ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 3,
+      "area_um2": 90281.585513,
+      "combinational_area_um2": 74532.816463,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": -0.375142,
+      "setup_wns_ns": -0.375142,
+      "setup_tns_ns": -18.655097,
+      "setup_violation_count": 51,
+      "worst_hold_slack_ns": -0.014064,
+      "hold_violation_count": 256,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[160]",
+      "critical_endpoint": "cmd_wdata[26]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output",
+      "setup_pass": false,
+      "max_capacitance_violation_count": 6731,
+      "zero_allowed_load_violation_count": 6731,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 17,
+          "LINT-1": 38,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_wdata[26]",
+          "slack_ns": -0.375142,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_wdata[14]",
+          "slack_ns": -0.375069,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[21]",
+          "endpoint": "cmd_wdata[18]",
+          "slack_ns": -0.375034,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_wdata[25]",
+          "slack_ns": -0.374523,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_row[6]",
+          "slack_ns": -0.374254,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_wdata[19]",
+          "slack_ns": -0.373809,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_op[1]",
+          "slack_ns": -0.373516,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[21]",
+          "endpoint": "cmd_wdata[2]",
+          "slack_ns": -0.373333,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_wdata[22]",
+          "slack_ns": -0.373286,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[160]",
+          "endpoint": "cmd_row[2]",
+          "slack_ns": -0.372952,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "rd_data[1]",
+          "endpoint": "table_i/read_data_reg[193]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[2]",
+          "endpoint": "table_i/read_data_reg[194]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[3]",
+          "endpoint": "table_i/read_data_reg[195]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[4]",
+          "endpoint": "table_i/read_data_reg[196]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[5]",
+          "endpoint": "table_i/read_data_reg[197]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[6]",
+          "endpoint": "table_i/read_data_reg[198]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[7]",
+          "endpoint": "table_i/read_data_reg[199]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[8]",
+          "endpoint": "table_i/read_data_reg[200]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[9]",
+          "endpoint": "table_i/read_data_reg[201]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[10]",
+          "endpoint": "table_i/read_data_reg[202]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[11]",
+          "endpoint": "table_i/read_data_reg[203]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[12]",
+          "endpoint": "table_i/read_data_reg[204]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[13]",
+          "endpoint": "table_i/read_data_reg[205]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[14]",
+          "endpoint": "table_i/read_data_reg[206]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[15]",
+          "endpoint": "table_i/read_data_reg[207]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[16]",
+          "endpoint": "table_i/read_data_reg[208]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[17]",
+          "endpoint": "table_i/read_data_reg[209]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[18]",
+          "endpoint": "table_i/read_data_reg[210]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[19]",
+          "endpoint": "table_i/read_data_reg[211]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "rd_data[0]",
+          "endpoint": "table_i/read_data_reg[192]",
+          "slack_ns": -0.014064,
+          "classification": "input-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [
+        {
+          "endpoint": "cmd_wdata[26]",
+          "required": 1.9,
+          "actual": 2.275142,
+          "slack": -0.375142
+        },
+        {
+          "endpoint": "cmd_wdata[14]",
+          "required": 1.9,
+          "actual": 2.275069,
+          "slack": -0.375069
+        },
+        {
+          "endpoint": "cmd_wdata[18]",
+          "required": 1.9,
+          "actual": 2.275034,
+          "slack": -0.375034
+        },
+        {
+          "endpoint": "cmd_wdata[25]",
+          "required": 1.9,
+          "actual": 2.274523,
+          "slack": -0.374523
+        },
+        {
+          "endpoint": "cmd_row[6]",
+          "required": 1.9,
+          "actual": 2.274255,
+          "slack": -0.374255
+        },
+        {
+          "endpoint": "cmd_wdata[19]",
+          "required": 1.9,
+          "actual": 2.273809,
+          "slack": -0.373809
+        },
+        {
+          "endpoint": "cmd_op[1]",
+          "required": 1.9,
+          "actual": 2.273516,
+          "slack": -0.373516
+        },
+        {
+          "endpoint": "cmd_wdata[2]",
+          "required": 1.9,
+          "actual": 2.273333,
+          "slack": -0.373333
+        },
+        {
+          "endpoint": "cmd_wdata[22]",
+          "required": 1.9,
+          "actual": 2.273286,
+          "slack": -0.373286
+        },
+        {
+          "endpoint": "cmd_row[2]",
+          "required": 1.9,
+          "actual": 2.272952,
+          "slack": -0.372952
+        },
+        {
+          "endpoint": "cmd_wdata[15]",
+          "required": 1.9,
+          "actual": 2.272494,
+          "slack": -0.372494
+        },
+        {
+          "endpoint": "cmd_wdata[20]",
+          "required": 1.9,
+          "actual": 2.272365,
+          "slack": -0.372365
+        },
+        {
+          "endpoint": "cmd_wdata[13]",
+          "required": 1.9,
+          "actual": 2.272158,
+          "slack": -0.372158
+        },
+        {
+          "endpoint": "cmd_wdata[23]",
+          "required": 1.9,
+          "actual": 2.271906,
+          "slack": -0.371906
+        },
+        {
+          "endpoint": "cmd_wdata[5]",
+          "required": 1.9,
+          "actual": 2.271852,
+          "slack": -0.371853
+        },
+        {
+          "endpoint": "cmd_wdata[9]",
+          "required": 1.9,
+          "actual": 2.271852,
+          "slack": -0.371853
+        },
+        {
+          "endpoint": "cmd_wdata[17]",
+          "required": 1.9,
+          "actual": 2.271836,
+          "slack": -0.371836
+        },
+        {
+          "endpoint": "cmd_row[4]",
+          "required": 1.9,
+          "actual": 2.271794,
+          "slack": -0.371794
+        },
+        {
+          "endpoint": "cmd_row[1]",
+          "required": 1.9,
+          "actual": 2.271522,
+          "slack": -0.371522
+        },
+        {
+          "endpoint": "cmd_wdata[11]",
+          "required": 1.9,
+          "actual": 2.271314,
+          "slack": -0.371314
+        },
+        {
+          "endpoint": "cmd_row[5]",
+          "required": 1.9,
+          "actual": 2.270895,
+          "slack": -0.370895
+        },
+        {
+          "endpoint": "cmd_wdata[4]",
+          "required": 1.9,
+          "actual": 2.270687,
+          "slack": -0.370687
+        },
+        {
+          "endpoint": "cmd_wdata[16]",
+          "required": 1.9,
+          "actual": 2.270687,
+          "slack": -0.370687
+        },
+        {
+          "endpoint": "cmd_wdata[12]",
+          "required": 1.9,
+          "actual": 2.270686,
+          "slack": -0.370686
+        },
+        {
+          "endpoint": "cmd_wdata[10]",
+          "required": 1.9,
+          "actual": 2.27018,
+          "slack": -0.37018
+        },
+        {
+          "endpoint": "cmd_wdata[6]",
+          "required": 1.9,
+          "actual": 2.270095,
+          "slack": -0.370095
+        },
+        {
+          "endpoint": "cmd_bank[1]",
+          "required": 1.9,
+          "actual": 2.268264,
+          "slack": -0.368264
+        },
+        {
+          "endpoint": "cmd_col[1]",
+          "required": 1.9,
+          "actual": 2.26778,
+          "slack": -0.36778
+        },
+        {
+          "endpoint": "cmd_wdata[29]",
+          "required": 1.9,
+          "actual": 2.26773,
+          "slack": -0.36773
+        },
+        {
+          "endpoint": "cmd_col[3]",
+          "required": 1.9,
+          "actual": 2.267558,
+          "slack": -0.367558
+        },
+        {
+          "endpoint": "cmd_wdata[0]",
+          "required": 1.9,
+          "actual": 2.267322,
+          "slack": -0.367322
+        },
+        {
+          "endpoint": "cmd_wdata[8]",
+          "required": 1.9,
+          "actual": 2.267249,
+          "slack": -0.367249
+        },
+        {
+          "endpoint": "cmd_wdata[31]",
+          "required": 1.9,
+          "actual": 2.267172,
+          "slack": -0.367172
+        },
+        {
+          "endpoint": "cmd_col[5]",
+          "required": 1.9,
+          "actual": 2.266735,
+          "slack": -0.366735
+        },
+        {
+          "endpoint": "cmd_op[0]",
+          "required": 1.9,
+          "actual": 2.266091,
+          "slack": -0.366091
+        },
+        {
+          "endpoint": "cmd_wdata[7]",
+          "required": 1.9,
+          "actual": 2.266004,
+          "slack": -0.366004
+        },
+        {
+          "endpoint": "cmd_wdata[30]",
+          "required": 1.9,
+          "actual": 2.266004,
+          "slack": -0.366004
+        },
+        {
+          "endpoint": "cmd_row[0]",
+          "required": 1.9,
+          "actual": 2.266001,
+          "slack": -0.366001
+        },
+        {
+          "endpoint": "cmd_wdata[27]",
+          "required": 1.9,
+          "actual": 2.265791,
+          "slack": -0.365791
+        },
+        {
+          "endpoint": "cmd_col[2]",
+          "required": 1.9,
+          "actual": 2.26509,
+          "slack": -0.36509
+        },
+        {
+          "endpoint": "cmd_bank[0]",
+          "required": 1.9,
+          "actual": 2.262376,
+          "slack": -0.362376
+        },
+        {
+          "endpoint": "cmd_row[3]",
+          "required": 1.9,
+          "actual": 2.262096,
+          "slack": -0.362096
+        },
+        {
+          "endpoint": "cmd_row[7]",
+          "required": 1.9,
+          "actual": 2.26201,
+          "slack": -0.36201
+        },
+        {
+          "endpoint": "cmd_wdata[1]",
+          "required": 1.9,
+          "actual": 2.261508,
+          "slack": -0.361508
+        },
+        {
+          "endpoint": "cmd_col[4]",
+          "required": 1.9,
+          "actual": 2.261145,
+          "slack": -0.361145
+        },
+        {
+          "endpoint": "cmd_wdata[21]",
+          "required": 1.9,
+          "actual": 2.260852,
+          "slack": -0.360852
+        },
+        {
+          "endpoint": "cmd_wdata[28]",
+          "required": 1.9,
+          "actual": 2.258762,
+          "slack": -0.358762
+        },
+        {
+          "endpoint": "cmd_wdata[24]",
+          "required": 1.9,
+          "actual": 2.258639,
+          "slack": -0.358639
+        },
+        {
+          "endpoint": "cmd_wdata[3]",
+          "required": 1.9,
+          "actual": 2.257339,
+          "slack": -0.357339
+        },
+        {
+          "endpoint": "cmd_col[0]",
+          "required": 1.9,
+          "actual": 2.256634,
+          "slack": -0.356634
+        },
+        {
+          "endpoint": "cmd_valid",
+          "required": 1.9,
+          "actual": 2.135701,
+          "slack": -0.235701
+        }
+      ],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/read_data_reg[192]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[193]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[194]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[195]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[196]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[197]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[198]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[199]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[200]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[201]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[202]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[203]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[204]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[205]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[206]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[207]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[208]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[209]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[210]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[211]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[212]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[213]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[214]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[215]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[216]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[217]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[218]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[219]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[220]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[221]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[222]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[223]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[224]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[225]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[226]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[227]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[228]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[229]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[230]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[231]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[232]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[233]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[234]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[235]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[236]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[237]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[238]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[239]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[240]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[241]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[242]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[243]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[244]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[245]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[246]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[247]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[248]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[249]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[250]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[251]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[252]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[253]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[254]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[255]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[0]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[1]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[2]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[3]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[4]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[5]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[6]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[7]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[8]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[9]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[10]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[11]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[12]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[13]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[14]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[15]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[16]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[17]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[18]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[19]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[20]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[21]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[22]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[23]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[24]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[25]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[26]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[27]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[28]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[29]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[30]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[31]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[32]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[33]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[34]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[35]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[36]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[37]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[38]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[39]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[40]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[41]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[42]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[43]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[44]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[45]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[46]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[47]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[48]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[49]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[50]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[51]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[52]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[53]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[54]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[55]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[56]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[57]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[58]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[59]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[60]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[61]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[62]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[63]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014064
+        },
+        {
+          "endpoint": "table_i/read_data_reg[128]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[129]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[130]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[131]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[132]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[133]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[134]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[135]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[136]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[137]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[138]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[139]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[140]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[141]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[142]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[143]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[144]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[145]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[146]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[147]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[148]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[149]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[150]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[151]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[152]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[153]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[154]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[155]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[156]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[157]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[158]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[159]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[160]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[161]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[162]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[163]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[164]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[165]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[166]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[167]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[168]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[169]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[170]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[171]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[172]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[173]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[174]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[175]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[176]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[177]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[178]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[179]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[180]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[181]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[182]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[183]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[184]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[185]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[186]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[187]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[188]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[189]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[190]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[191]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[64]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[65]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[66]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[67]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[68]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[69]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[70]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[71]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[72]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[73]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[74]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[75]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[76]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[77]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[78]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[79]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[80]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[81]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[82]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[83]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[84]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[85]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[86]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[87]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[88]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[89]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[90]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[91]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[92]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[93]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[94]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[95]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[96]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[97]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[98]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[99]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[100]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[101]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[102]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[103]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[104]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[105]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[106]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[107]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[108]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[109]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[110]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[111]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[112]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[113]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[114]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[115]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[116]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[117]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[118]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[119]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[120]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[121]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[122]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[123]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[124]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[125]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[126]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        },
+        {
+          "endpoint": "table_i/read_data_reg[127]/D",
+          "required": 0.079695,
+          "actual": 0.065632,
+          "slack": -0.014063
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 3,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 612.1212542057037
+      },
+      "variant": "baseline",
+      "scheduler_area_um2": 5489.402,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/baseline/q16_3ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 32,
+      "clock_ns": 5,
+      "area_um2": 241478.778617,
+      "combinational_area_um2": 206766.066287,
+      "sequential_area_um2": 34712.71233,
+      "setup_worst_slack_ns": 1e-06,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.050676,
+      "hold_violation_count": 33,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/occupied_reg[2]",
+      "critical_endpoint": "table_i/addresses_reg[319]",
+      "critical_logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 20694,
+      "zero_allowed_load_violation_count": 20694,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 17,
+          "LINT-1": 53,
+          "LINT-2": 102,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 448
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/addresses_reg[319]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/addresses_reg[318]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/addresses_reg[317]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/addresses_reg[314]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/addresses_reg[310]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/write_data_reg[619]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/write_data_reg[616]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/write_data_reg[615]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/write_data_reg[613]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/occupied_reg[2]",
+          "endpoint": "table_i/write_data_reg[609]",
+          "slack_ns": 1e-06,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "rst",
+          "endpoint": "banks_i/wr_reg[0][0]",
+          "slack_ns": -0.050676,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "banks_i/wr_reg[1][0]",
+          "slack_ns": -0.050676,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "banks_i/wr_reg[2][0]",
+          "slack_ns": -0.050676,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "banks_i/wr_reg[3][0]",
+          "slack_ns": -0.050676,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "banks_i/ccd_reg[0]",
+          "slack_ns": -0.036871,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "table_i/return_valid_reg[0]",
+          "slack_ns": -0.033614,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "frfcfs.scheduler_i/protected_valid_reg",
+          "slack_ns": -0.025608,
+          "classification": "input-to-register",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "rst",
+          "endpoint": "req_ready",
+          "slack_ns": -0.022515,
+          "classification": "other",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[1][2]",
+          "endpoint": "banks_i/ras_reg[1][2]",
+          "slack_ns": -0.001203,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[2][2]",
+          "endpoint": "banks_i/ras_reg[2][2]",
+          "slack_ns": -0.001203,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[3][2]",
+          "endpoint": "banks_i/ras_reg[3][2]",
+          "slack_ns": -0.001203,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[1][1]",
+          "endpoint": "banks_i/rcd_reg[1][1]",
+          "slack_ns": -0.001011,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[2][1]",
+          "endpoint": "banks_i/rcd_reg[2][1]",
+          "slack_ns": -0.001011,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[3][1]",
+          "endpoint": "banks_i/rcd_reg[3][1]",
+          "slack_ns": -0.001011,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000811,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[26]",
+          "endpoint": "table_i/done_reg[26]",
+          "slack_ns": -0.000717,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[1]",
+          "endpoint": "table_i/done_reg[1]",
+          "slack_ns": -0.000716,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[0]",
+          "endpoint": "table_i/done_reg[0]",
+          "slack_ns": -0.000715,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[19]",
+          "endpoint": "table_i/done_reg[19]",
+          "slack_ns": -0.000715,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "banks_i/wr_reg[0][0]/D",
+          "required": 0.091935,
+          "actual": 0.041259,
+          "slack": -0.050676
+        },
+        {
+          "endpoint": "banks_i/wr_reg[1][0]/D",
+          "required": 0.091935,
+          "actual": 0.041259,
+          "slack": -0.050676
+        },
+        {
+          "endpoint": "banks_i/wr_reg[2][0]/D",
+          "required": 0.091935,
+          "actual": 0.041259,
+          "slack": -0.050676
+        },
+        {
+          "endpoint": "banks_i/wr_reg[3][0]/D",
+          "required": 0.091935,
+          "actual": 0.041259,
+          "slack": -0.050676
+        },
+        {
+          "endpoint": "banks_i/ccd_reg[0]/D",
+          "required": 0.085378,
+          "actual": 0.048507,
+          "slack": -0.036871
+        },
+        {
+          "endpoint": "table_i/return_valid_reg[0]/D",
+          "required": 0.092709,
+          "actual": 0.059095,
+          "slack": -0.033614
+        },
+        {
+          "endpoint": "frfcfs.scheduler_i/protected_valid_reg/D",
+          "required": 0.076563,
+          "actual": 0.050955,
+          "slack": -0.025608
+        },
+        {
+          "endpoint": "req_ready",
+          "required": 0.1,
+          "actual": 0.077485,
+          "slack": -0.022515
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.090235,
+          "actual": 0.089033,
+          "slack": -0.001203
+        },
+        {
+          "endpoint": "banks_i/ras_reg[2][2]/D",
+          "required": 0.090235,
+          "actual": 0.089033,
+          "slack": -0.001203
+        },
+        {
+          "endpoint": "banks_i/ras_reg[3][2]/D",
+          "required": 0.090235,
+          "actual": 0.089033,
+          "slack": -0.001203
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.090235,
+          "actual": 0.089224,
+          "slack": -0.001011
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[2][1]/D",
+          "required": 0.090235,
+          "actual": 0.089224,
+          "slack": -0.001011
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[3][1]/D",
+          "required": 0.090235,
+          "actual": 0.089224,
+          "slack": -0.001011
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089127,
+          "slack": -0.000811
+        },
+        {
+          "endpoint": "table_i/done_reg[26]/D",
+          "required": 0.089938,
+          "actual": 0.08922,
+          "slack": -0.000717
+        },
+        {
+          "endpoint": "table_i/done_reg[1]/D",
+          "required": 0.089937,
+          "actual": 0.089222,
+          "slack": -0.000716
+        },
+        {
+          "endpoint": "table_i/done_reg[0]/D",
+          "required": 0.089937,
+          "actual": 0.089222,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[19]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[20]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[22]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[23]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[24]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[25]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[27]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[28]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[29]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[7]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[30]/D",
+          "required": 0.089938,
+          "actual": 0.08975,
+          "slack": -0.000187
+        },
+        {
+          "endpoint": "table_i/done_reg[31]/D",
+          "required": 0.089938,
+          "actual": 0.089753,
+          "slack": -0.000186
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 32,
+        "clock_ns": 5,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 603.7398793697357
+      },
+      "variant": "baseline",
+      "scheduler_area_um2": 10883.0668,
+      "sequential_cells": 4351,
+      "report_path": "results/scheduler_optimization/reports/baseline/q32_5ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 5,
+      "area_um2": 79548.694597,
+      "combinational_area_um2": 63799.925546,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": 0.012058,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.002538,
+      "hold_violation_count": 11,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[91]",
+      "critical_endpoint": "cmd_bank[0]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 5490,
+      "zero_allowed_load_violation_count": 5490,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 18,
+          "LINT-1": 34,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_bank[0]",
+          "slack_ns": 0.012058,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[27]",
+          "slack_ns": 0.014234,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[24]",
+          "slack_ns": 0.014234,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[26]",
+          "slack_ns": 0.01475,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[23]",
+          "slack_ns": 0.01475,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[25]",
+          "slack_ns": 0.016423,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[22]",
+          "slack_ns": 0.016423,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[6]",
+          "slack_ns": 0.016707,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[5]",
+          "slack_ns": 0.016707,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[91]",
+          "endpoint": "cmd_wdata[3]",
+          "slack_ns": 0.016707,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[15]",
+          "endpoint": "table_i/done_reg[15]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[11]",
+          "endpoint": "table_i/done_reg[11]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[1][2]",
+          "endpoint": "banks_i/ras_reg[1][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.000608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[1][1]",
+          "endpoint": "banks_i/rcd_reg[1][1]",
+          "slack_ns": -0.000467,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[2]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[2]",
+          "slack_ns": 0.003223,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[0]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[0]",
+          "slack_ns": 0.003223,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[3]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[3]",
+          "slack_ns": 0.003337,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[1]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[1]",
+          "slack_ns": 0.004182,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[1]",
+          "slack_ns": 0.008031,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[2]",
+          "slack_ns": 0.008671,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][2]",
+          "endpoint": "table_i/return_slot_reg[1][2]",
+          "slack_ns": 0.012088,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][1]",
+          "endpoint": "table_i/return_slot_reg[1][1]",
+          "slack_ns": 0.012088,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[1][2]",
+          "endpoint": "table_i/return_slot_reg[2][2]",
+          "slack_ns": 0.012088,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[15]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[11]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089329,
+          "slack": -0.000608
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 5,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 125.9256603717804
+      },
+      "variant": "decode_trial",
+      "scheduler_area_um2": 3599.5309,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/decode_trial/q16_5ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 4,
+      "area_um2": 80695.194497,
+      "combinational_area_um2": 64946.425447,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": 0.000458,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.002538,
+      "hold_violation_count": 12,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[175]",
+      "critical_endpoint": "cmd_wdata[19]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 5571,
+      "zero_allowed_load_violation_count": 5571,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 18,
+          "LINT-1": 34,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[19]",
+          "slack_ns": 0.000458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[18]",
+          "slack_ns": 0.000458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[17]",
+          "slack_ns": 0.000458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[1]",
+          "slack_ns": 0.000458,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[7]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[6]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[5]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[4]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[3]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[175]",
+          "endpoint": "cmd_wdata[2]",
+          "slack_ns": 0.000485,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "table_i/done_reg[4]",
+          "endpoint": "table_i/done_reg[4]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.000719,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000718,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[15]",
+          "endpoint": "table_i/done_reg[15]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[11]",
+          "endpoint": "table_i/done_reg[11]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[3][2]",
+          "endpoint": "banks_i/ras_reg[3][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.000608,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/rcd_reg[3][1]",
+          "endpoint": "banks_i/rcd_reg[3][1]",
+          "slack_ns": -0.000467,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[2]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[2]",
+          "slack_ns": 0.003223,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[0]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[0]",
+          "slack_ns": 0.003223,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[3]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[3]",
+          "slack_ns": 0.003337,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "frfcfs.scheduler_i/protected_slot_reg[1]",
+          "endpoint": "frfcfs.scheduler_i/protected_slot_reg[1]",
+          "slack_ns": 0.004182,
+          "classification": "register-to-register",
+          "logic_description": "FR-FCFS arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[1]",
+          "slack_ns": 0.008031,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "rsp_ready",
+          "endpoint": "response_i/held_slot_reg[2]",
+          "slack_ns": 0.008671,
+          "classification": "input-to-register",
+          "logic_description": "same-address response eligibility/arbitration"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][3]",
+          "endpoint": "table_i/return_slot_reg[1][3]",
+          "slack_ns": 0.010539,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/return_slot_reg[0][2]",
+          "endpoint": "table_i/return_slot_reg[1][2]",
+          "slack_ns": 0.010539,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/done_reg[4]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089936,
+          "actual": 0.089218,
+          "slack": -0.000719
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089219,
+          "slack": -0.000718
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[15]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[11]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "banks_i/ras_reg[3][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089329,
+          "slack": -0.000608
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[3][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 4,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 135.32698249816895
+      },
+      "variant": "decode_trial",
+      "scheduler_area_um2": 3697.6146,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/decode_trial/q16_4ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 16,
+      "clock_ns": 3,
+      "area_um2": 87867.975663,
+      "combinational_area_um2": 72119.206613,
+      "sequential_area_um2": 15748.769051,
+      "setup_worst_slack_ns": -0.166662,
+      "setup_wns_ns": -0.166662,
+      "setup_tns_ns": -7.999685,
+      "setup_violation_count": 51,
+      "worst_hold_slack_ns": -0.003765,
+      "hold_violation_count": 25,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[133]",
+      "critical_endpoint": "cmd_wdata[25]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output",
+      "setup_pass": false,
+      "max_capacitance_violation_count": 6411,
+      "zero_allowed_load_violation_count": 6411,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 18,
+          "LINT-1": 34,
+          "LINT-2": 53,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 224
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[25]",
+          "slack_ns": -0.166662,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[14]",
+          "slack_ns": -0.166625,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[5]",
+          "slack_ns": -0.166504,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[17]",
+          "slack_ns": -0.166228,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[11]",
+          "slack_ns": -0.166189,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[4]",
+          "slack_ns": -0.166183,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[30]",
+          "slack_ns": -0.16614,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[15]",
+          "slack_ns": -0.165742,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[3]",
+          "slack_ns": -0.165597,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[133]",
+          "endpoint": "cmd_wdata[2]",
+          "slack_ns": -0.164944,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "rst",
+          "endpoint": "cmd_valid",
+          "slack_ns": -0.003765,
+          "classification": "other",
+          "logic_description": "reset fanout and register/output gating"
+        },
+        {
+          "startpoint": "table_i/done_reg[4]",
+          "endpoint": "table_i/done_reg[4]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[0]",
+          "endpoint": "table_i/done_reg[0]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[5]",
+          "endpoint": "table_i/done_reg[5]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[1]",
+          "endpoint": "table_i/done_reg[1]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[2]",
+          "endpoint": "table_i/done_reg[2]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[7]",
+          "endpoint": "table_i/done_reg[7]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[3]",
+          "endpoint": "table_i/done_reg[3]",
+          "slack_ns": -0.002538,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000721,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000717,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[15]",
+          "endpoint": "table_i/done_reg[15]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[11]",
+          "endpoint": "table_i/done_reg[11]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000714,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[1][2]",
+          "endpoint": "banks_i/ras_reg[1][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[2][2]",
+          "endpoint": "banks_i/ras_reg[2][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "banks_i/ras_reg[3][2]",
+          "endpoint": "banks_i/ras_reg[3][2]",
+          "slack_ns": -0.000659,
+          "classification": "register-to-register",
+          "logic_description": "bank state/timing logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.00061,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [
+        {
+          "endpoint": "cmd_wdata[25]",
+          "required": 1.9,
+          "actual": 2.066662,
+          "slack": -0.166662
+        },
+        {
+          "endpoint": "cmd_wdata[14]",
+          "required": 1.9,
+          "actual": 2.066626,
+          "slack": -0.166626
+        },
+        {
+          "endpoint": "cmd_wdata[5]",
+          "required": 1.9,
+          "actual": 2.066504,
+          "slack": -0.166505
+        },
+        {
+          "endpoint": "cmd_wdata[17]",
+          "required": 1.9,
+          "actual": 2.066228,
+          "slack": -0.166228
+        },
+        {
+          "endpoint": "cmd_wdata[11]",
+          "required": 1.9,
+          "actual": 2.066189,
+          "slack": -0.166189
+        },
+        {
+          "endpoint": "cmd_wdata[4]",
+          "required": 1.9,
+          "actual": 2.066183,
+          "slack": -0.166183
+        },
+        {
+          "endpoint": "cmd_wdata[30]",
+          "required": 1.9,
+          "actual": 2.06614,
+          "slack": -0.16614
+        },
+        {
+          "endpoint": "cmd_wdata[15]",
+          "required": 1.9,
+          "actual": 2.065742,
+          "slack": -0.165742
+        },
+        {
+          "endpoint": "cmd_wdata[3]",
+          "required": 1.9,
+          "actual": 2.065597,
+          "slack": -0.165597
+        },
+        {
+          "endpoint": "cmd_wdata[2]",
+          "required": 1.9,
+          "actual": 2.064944,
+          "slack": -0.164944
+        },
+        {
+          "endpoint": "cmd_wdata[6]",
+          "required": 1.9,
+          "actual": 2.06462,
+          "slack": -0.16462
+        },
+        {
+          "endpoint": "cmd_wdata[28]",
+          "required": 1.9,
+          "actual": 2.063854,
+          "slack": -0.163854
+        },
+        {
+          "endpoint": "cmd_wdata[18]",
+          "required": 1.9,
+          "actual": 2.063653,
+          "slack": -0.163653
+        },
+        {
+          "endpoint": "cmd_bank[0]",
+          "required": 1.9,
+          "actual": 2.063632,
+          "slack": -0.163633
+        },
+        {
+          "endpoint": "cmd_wdata[27]",
+          "required": 1.9,
+          "actual": 2.063245,
+          "slack": -0.163245
+        },
+        {
+          "endpoint": "cmd_wdata[0]",
+          "required": 1.9,
+          "actual": 2.062985,
+          "slack": -0.162985
+        },
+        {
+          "endpoint": "cmd_wdata[24]",
+          "required": 1.9,
+          "actual": 2.062979,
+          "slack": -0.162979
+        },
+        {
+          "endpoint": "cmd_wdata[13]",
+          "required": 1.9,
+          "actual": 2.062728,
+          "slack": -0.162728
+        },
+        {
+          "endpoint": "cmd_row[6]",
+          "required": 1.9,
+          "actual": 2.062314,
+          "slack": -0.162314
+        },
+        {
+          "endpoint": "cmd_wdata[23]",
+          "required": 1.9,
+          "actual": 2.062001,
+          "slack": -0.162001
+        },
+        {
+          "endpoint": "cmd_wdata[21]",
+          "required": 1.9,
+          "actual": 2.061893,
+          "slack": -0.161893
+        },
+        {
+          "endpoint": "cmd_wdata[16]",
+          "required": 1.9,
+          "actual": 2.06171,
+          "slack": -0.16171
+        },
+        {
+          "endpoint": "cmd_col[1]",
+          "required": 1.9,
+          "actual": 2.06148,
+          "slack": -0.16148
+        },
+        {
+          "endpoint": "cmd_wdata[1]",
+          "required": 1.9,
+          "actual": 2.061356,
+          "slack": -0.161356
+        },
+        {
+          "endpoint": "cmd_wdata[19]",
+          "required": 1.9,
+          "actual": 2.061019,
+          "slack": -0.161019
+        },
+        {
+          "endpoint": "cmd_row[2]",
+          "required": 1.9,
+          "actual": 2.060886,
+          "slack": -0.160886
+        },
+        {
+          "endpoint": "cmd_wdata[10]",
+          "required": 1.9,
+          "actual": 2.060686,
+          "slack": -0.160686
+        },
+        {
+          "endpoint": "cmd_wdata[7]",
+          "required": 1.9,
+          "actual": 2.060562,
+          "slack": -0.160562
+        },
+        {
+          "endpoint": "cmd_col[3]",
+          "required": 1.9,
+          "actual": 2.059713,
+          "slack": -0.159713
+        },
+        {
+          "endpoint": "cmd_row[1]",
+          "required": 1.9,
+          "actual": 2.059641,
+          "slack": -0.159641
+        },
+        {
+          "endpoint": "cmd_row[5]",
+          "required": 1.9,
+          "actual": 2.059382,
+          "slack": -0.159382
+        },
+        {
+          "endpoint": "cmd_wdata[29]",
+          "required": 1.9,
+          "actual": 2.059365,
+          "slack": -0.159365
+        },
+        {
+          "endpoint": "cmd_col[5]",
+          "required": 1.9,
+          "actual": 2.058145,
+          "slack": -0.158145
+        },
+        {
+          "endpoint": "cmd_row[7]",
+          "required": 1.9,
+          "actual": 2.058108,
+          "slack": -0.158108
+        },
+        {
+          "endpoint": "cmd_op[0]",
+          "required": 1.9,
+          "actual": 2.057807,
+          "slack": -0.157807
+        },
+        {
+          "endpoint": "cmd_wdata[22]",
+          "required": 1.9,
+          "actual": 2.057765,
+          "slack": -0.157765
+        },
+        {
+          "endpoint": "cmd_row[0]",
+          "required": 1.9,
+          "actual": 2.057349,
+          "slack": -0.157349
+        },
+        {
+          "endpoint": "cmd_wdata[9]",
+          "required": 1.9,
+          "actual": 2.057278,
+          "slack": -0.157278
+        },
+        {
+          "endpoint": "cmd_wdata[31]",
+          "required": 1.9,
+          "actual": 2.056247,
+          "slack": -0.156247
+        },
+        {
+          "endpoint": "cmd_wdata[8]",
+          "required": 1.9,
+          "actual": 2.055804,
+          "slack": -0.155805
+        },
+        {
+          "endpoint": "cmd_col[0]",
+          "required": 1.9,
+          "actual": 2.055478,
+          "slack": -0.155478
+        },
+        {
+          "endpoint": "cmd_col[4]",
+          "required": 1.9,
+          "actual": 2.05338,
+          "slack": -0.15338
+        },
+        {
+          "endpoint": "cmd_wdata[12]",
+          "required": 1.9,
+          "actual": 2.053376,
+          "slack": -0.153376
+        },
+        {
+          "endpoint": "cmd_row[3]",
+          "required": 1.9,
+          "actual": 2.052167,
+          "slack": -0.152167
+        },
+        {
+          "endpoint": "cmd_wdata[20]",
+          "required": 1.9,
+          "actual": 2.052027,
+          "slack": -0.152027
+        },
+        {
+          "endpoint": "cmd_bank[1]",
+          "required": 1.9,
+          "actual": 2.051625,
+          "slack": -0.151625
+        },
+        {
+          "endpoint": "cmd_col[2]",
+          "required": 1.9,
+          "actual": 2.050558,
+          "slack": -0.150558
+        },
+        {
+          "endpoint": "cmd_row[4]",
+          "required": 1.9,
+          "actual": 2.049855,
+          "slack": -0.149855
+        },
+        {
+          "endpoint": "cmd_op[1]",
+          "required": 1.9,
+          "actual": 2.04948,
+          "slack": -0.14948
+        },
+        {
+          "endpoint": "cmd_wdata[26]",
+          "required": 1.9,
+          "actual": 2.045895,
+          "slack": -0.145895
+        },
+        {
+          "endpoint": "cmd_valid",
+          "required": 1.9,
+          "actual": 1.906819,
+          "slack": -0.006819
+        }
+      ],
+      "hold_violations": [
+        {
+          "endpoint": "cmd_valid",
+          "required": 0.1,
+          "actual": 0.096235,
+          "slack": -0.003765
+        },
+        {
+          "endpoint": "table_i/done_reg[0]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[1]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[2]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[3]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[4]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[5]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[7]/D",
+          "required": 0.089936,
+          "actual": 0.087398,
+          "slack": -0.002538
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089216,
+          "slack": -0.000721
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.08922,
+          "slack": -0.000717
+        },
+        {
+          "endpoint": "table_i/done_reg[15]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[11]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089936,
+          "actual": 0.089223,
+          "slack": -0.000714
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "banks_i/ras_reg[2][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "banks_i/ras_reg[3][2]/D",
+          "required": 0.089692,
+          "actual": 0.089033,
+          "slack": -0.000659
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089327,
+          "slack": -0.00061
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[0][1]/D",
+          "required": 0.089694,
+          "actual": 0.089224,
+          "slack": -0.000469
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[2][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[3][1]/D",
+          "required": 0.089692,
+          "actual": 0.089224,
+          "slack": -0.000467
+        },
+        {
+          "endpoint": "banks_i/ras_reg[0][2]/D",
+          "required": 0.089694,
+          "actual": 0.089531,
+          "slack": -0.000162
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 16,
+        "clock_ns": 3,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 515.4215741157532
+      },
+      "variant": "decode_trial",
+      "scheduler_area_um2": 4668.5963,
+      "sequential_cells": 1974,
+      "report_path": "results/scheduler_optimization/reports/decode_trial/q16_3ns"
+    },
+    {
+      "policy": "frfcfs_aging",
+      "queue_depth": 32,
+      "clock_ns": 5,
+      "area_um2": 239885.035734,
+      "combinational_area_um2": 205172.323405,
+      "sequential_area_um2": 34712.71233,
+      "setup_worst_slack_ns": 4.4e-05,
+      "setup_wns_ns": 0,
+      "setup_tns_ns": 0,
+      "setup_violation_count": 0,
+      "worst_hold_slack_ns": -0.000839,
+      "hold_violation_count": 33,
+      "unconstrained_endpoint_count": 0,
+      "critical_startpoint": "table_i/addresses_reg[27]",
+      "critical_endpoint": "cmd_bank[0]",
+      "critical_logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output",
+      "setup_pass": true,
+      "max_capacitance_violation_count": 19860,
+      "zero_allowed_load_violation_count": 19860,
+      "warning_counts": {
+        "tool.log": {
+          "VER-318": 18,
+          "LINT-1": 49,
+          "LINT-2": 102,
+          "TIM-134": 1
+        },
+        "check_design.rpt": {
+          "LINT-28": 448
+        },
+        "check_timing.rpt": {
+          "TIM-134": 1
+        }
+      },
+      "setup_paths": [
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_bank[0]",
+          "slack_ns": 4.4e-05,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_row[3]",
+          "slack_ns": 0.00014,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_row[4]",
+          "slack_ns": 0.00017,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_row[5]",
+          "slack_ns": 0.00038,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_row[6]",
+          "slack_ns": 0.000615,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_wdata[31]",
+          "slack_ns": 0.000799,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_wdata[3]",
+          "slack_ns": 0.000799,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_row[2]",
+          "slack_ns": 0.000839,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_wdata[5]",
+          "slack_ns": 0.001456,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        },
+        {
+          "startpoint": "table_i/addresses_reg[27]",
+          "endpoint": "cmd_wdata[4]",
+          "slack_ns": 0.001456,
+          "classification": "register-to-output",
+          "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+        }
+      ],
+      "hold_paths": [
+        {
+          "startpoint": "table_i/done_reg[16]",
+          "endpoint": "table_i/done_reg[16]",
+          "slack_ns": -0.000839,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[18]",
+          "endpoint": "table_i/done_reg[18]",
+          "slack_ns": -0.000839,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[17]",
+          "endpoint": "table_i/done_reg[17]",
+          "slack_ns": -0.000839,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[21]",
+          "endpoint": "table_i/done_reg[21]",
+          "slack_ns": -0.000839,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[2]",
+          "endpoint": "table_i/done_reg[2]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[12]",
+          "endpoint": "table_i/done_reg[12]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[4]",
+          "endpoint": "table_i/done_reg[4]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[11]",
+          "endpoint": "table_i/done_reg[11]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[13]",
+          "endpoint": "table_i/done_reg[13]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[5]",
+          "endpoint": "table_i/done_reg[5]",
+          "slack_ns": -0.000838,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[22]",
+          "endpoint": "table_i/done_reg[22]",
+          "slack_ns": -0.000834,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[0]",
+          "endpoint": "table_i/done_reg[0]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[14]",
+          "endpoint": "table_i/done_reg[14]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[6]",
+          "endpoint": "table_i/done_reg[6]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[8]",
+          "endpoint": "table_i/done_reg[8]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[10]",
+          "endpoint": "table_i/done_reg[10]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[3]",
+          "endpoint": "table_i/done_reg[3]",
+          "slack_ns": -0.000833,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[9]",
+          "endpoint": "table_i/done_reg[9]",
+          "slack_ns": -0.000727,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[1]",
+          "endpoint": "table_i/done_reg[1]",
+          "slack_ns": -0.000716,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        },
+        {
+          "startpoint": "table_i/done_reg[19]",
+          "endpoint": "table_i/done_reg[19]",
+          "slack_ns": -0.000715,
+          "classification": "register-to-register",
+          "logic_description": "transaction-table registers/data logic"
+        }
+      ],
+      "setup_violations": [],
+      "hold_violations": [
+        {
+          "endpoint": "table_i/done_reg[16]/D",
+          "required": 0.089938,
+          "actual": 0.089099,
+          "slack": -0.000839
+        },
+        {
+          "endpoint": "table_i/done_reg[17]/D",
+          "required": 0.089938,
+          "actual": 0.089099,
+          "slack": -0.000839
+        },
+        {
+          "endpoint": "table_i/done_reg[18]/D",
+          "required": 0.089938,
+          "actual": 0.089099,
+          "slack": -0.000839
+        },
+        {
+          "endpoint": "table_i/done_reg[21]/D",
+          "required": 0.089938,
+          "actual": 0.089099,
+          "slack": -0.000839
+        },
+        {
+          "endpoint": "table_i/done_reg[2]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[4]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[5]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[11]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[12]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[13]/D",
+          "required": 0.089937,
+          "actual": 0.089099,
+          "slack": -0.000838
+        },
+        {
+          "endpoint": "table_i/done_reg[22]/D",
+          "required": 0.089938,
+          "actual": 0.089104,
+          "slack": -0.000834
+        },
+        {
+          "endpoint": "table_i/done_reg[0]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[6]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[14]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[3]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[8]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[10]/D",
+          "required": 0.089937,
+          "actual": 0.089104,
+          "slack": -0.000833
+        },
+        {
+          "endpoint": "table_i/done_reg[9]/D",
+          "required": 0.089937,
+          "actual": 0.089211,
+          "slack": -0.000727
+        },
+        {
+          "endpoint": "table_i/done_reg[1]/D",
+          "required": 0.089937,
+          "actual": 0.089222,
+          "slack": -0.000716
+        },
+        {
+          "endpoint": "table_i/done_reg[19]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[20]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[23]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[25]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[27]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[28]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[29]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[24]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[26]/D",
+          "required": 0.089938,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "table_i/done_reg[7]/D",
+          "required": 0.089937,
+          "actual": 0.089223,
+          "slack": -0.000715
+        },
+        {
+          "endpoint": "banks_i/ras_reg[1][2]/D",
+          "required": 0.089693,
+          "actual": 0.089033,
+          "slack": -0.000661
+        },
+        {
+          "endpoint": "banks_i/rcd_reg[1][1]/D",
+          "required": 0.089693,
+          "actual": 0.089224,
+          "slack": -0.000469
+        },
+        {
+          "endpoint": "table_i/done_reg[31]/D",
+          "required": 0.089938,
+          "actual": 0.089753,
+          "slack": -0.000185
+        },
+        {
+          "endpoint": "table_i/done_reg[30]/D",
+          "required": 0.089938,
+          "actual": 0.089753,
+          "slack": -0.000185
+        }
+      ],
+      "metadata": {
+        "action": "dc",
+        "policy": "frfcfs_aging",
+        "queue_depth": 32,
+        "clock_ns": 5,
+        "status": "PASS",
+        "rtl_sha256": {
+          "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+          "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+          "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+          "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+          "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+          "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+          "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+        },
+        "lab_config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "flow_sha256": {
+          "synth/rtl_files.f": "c4c8d02eb7ea2bb01affaf68e4243568f8d7db967e74f674683cebe919066289",
+          "synth/dc/run.tcl": "c6e61575f7e14d1bc2d5598aaf396823535752005d90feac7790feb2117ef8e6",
+          "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418"
+        },
+        "command": [
+          "dc_shell",
+          "-f",
+          "synth/dc/run.tcl"
+        ],
+        "elapsed_s": 532.4955065250397
+      },
+      "variant": "decode_trial",
+      "scheduler_area_um2": 9936.958,
+      "sequential_cells": 4351,
+      "report_path": "results/scheduler_optimization/reports/decode_trial/q32_5ns"
+    }
+  ],
+  "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+  "baseline_commit": "038404ad7961c2fe43148cc4866adc7ea8d4bc62",
+  "baseline_rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+    "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+    "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+  },
+  "current_rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f423f1e7058ecd8fe74f2c42d0576475e16575dad26dee9fb88ca7e744c1f52e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+    "rtl/mc_response.sv": "27fed41b1c6558725bf784a5078fb5f0052b978e1783752bb8424d7b26390daf",
+    "rtl/mc_top.sv": "256acec217c60cabd0efad41ec5170b520eeff97d7eb933127b7f6c121691b38"
+  },
+  "verification_source_sha256": {
+    "formal/formal_scheduler_equiv.sv": "6d0f2c796a4f91709c38f706ee81b1f118b7b529bcd319dd2ec8bd2bc86feb62",
+    "formal/scheduler_equiv.sby": "4d8d9d3ca7a4d9119f0b3b2189dca0a487d4ecaf3466afd67efd230bc5dee144",
+    "scripts/scheduler_equiv.py": "31087ab4326fa7ae55d0bc2df3fa6e0a500f6346f9157c05215d3ee9d2103efc",
+    "scripts/scheduler_trace_compare.py": "c0b18d880e50b350206a51a92fd23fbb67098d4975bae031c1cefdc986089ed9"
+  },
+  "fresh_baseline_reproduces_frozen_results": true,
+  "equivalence": {
+    "tool": "Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 16.0.0.16000026)",
+    "baseline_sha256": "7106fa600ff25041af4770918d8f304e5f109e5e7920efa421dd55b7e933704f",
+    "source_sha256": {
+      "formal/reference/mc_scheduler_frfcfs_v1.sv": "7d0a67e3ad9f59763b64b676991211e7e8ebda8e2af26790499652b344cf6ee4",
+      "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418"
+    },
+    "results": [
+      {
+        "queue_depth": 1,
+        "aging": 0,
+        "status": "PASS",
+        "elapsed_s": 0.7449033260345459,
+        "proven_cells": 12,
+        "script": "build/scheduler_equiv/q1_aging0.ys",
+        "log": "build/scheduler_equiv/q1_aging0.log"
+      },
+      {
+        "queue_depth": 1,
+        "aging": 1,
+        "status": "PASS",
+        "elapsed_s": 1.205517053604126,
+        "proven_cells": 16,
+        "script": "build/scheduler_equiv/q1_aging1.ys",
+        "log": "build/scheduler_equiv/q1_aging1.log"
+      },
+      {
+        "queue_depth": 3,
+        "aging": 0,
+        "status": "PASS",
+        "elapsed_s": 1.214756727218628,
+        "proven_cells": 21,
+        "script": "build/scheduler_equiv/q3_aging0.ys",
+        "log": "build/scheduler_equiv/q3_aging0.log"
+      },
+      {
+        "queue_depth": 3,
+        "aging": 1,
+        "status": "PASS",
+        "elapsed_s": 2.367924928665161,
+        "proven_cells": 26,
+        "script": "build/scheduler_equiv/q3_aging1.ys",
+        "log": "build/scheduler_equiv/q3_aging1.log"
+      },
+      {
+        "queue_depth": 16,
+        "aging": 0,
+        "status": "PASS",
+        "elapsed_s": 3.0674169063568115,
+        "proven_cells": 57,
+        "script": "build/scheduler_equiv/q16_aging0.ys",
+        "log": "build/scheduler_equiv/q16_aging0.log"
+      },
+      {
+        "queue_depth": 16,
+        "aging": 1,
+        "status": "PASS",
+        "elapsed_s": 8.256422996520996,
+        "proven_cells": 64,
+        "script": "build/scheduler_equiv/q16_aging1.ys",
+        "log": "build/scheduler_equiv/q16_aging1.log"
+      },
+      {
+        "queue_depth": 32,
+        "aging": 0,
+        "status": "PASS",
+        "elapsed_s": 9.981166124343872,
+        "proven_cells": 94,
+        "script": "build/scheduler_equiv/q32_aging0.ys",
+        "log": "build/scheduler_equiv/q32_aging0.log"
+      },
+      {
+        "queue_depth": 32,
+        "aging": 1,
+        "status": "PASS",
+        "elapsed_s": 25.678544759750366,
+        "proven_cells": 102,
+        "script": "build/scheduler_equiv/q32_aging1.ys",
+        "log": "build/scheduler_equiv/q32_aging1.log"
+      }
+    ],
+    "status": "PASS"
+  },
+  "reset_equivalence": [
+    {
+      "task": "q1_plain",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "smtbmc z3"
+    },
+    {
+      "task": "q1_aging",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "smtbmc z3"
+    },
+    {
+      "task": "q3_plain",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "smtbmc z3"
+    },
+    {
+      "task": "q3_aging",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "smtbmc z3"
+    },
+    {
+      "task": "q16_plain",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "abc pdr"
+    },
+    {
+      "task": "q16_aging",
+      "mode": "prove",
+      "status": "PASS",
+      "engine": "abc pdr"
+    }
+  ],
+  "trace_pairs": 120,
+  "trace_simulations": 240,
+  "trace_accepted_total": 122400,
+  "trace_source_sha256": "618744c305b44107468c7243c646c79b7722b0318fa3dbcb9efebd8f73cc39f8",
+  "regression_runs": 300,
+  "regression_accepted": 3003000,
+  "directed_corner_runs": 42,
+  "controller_formal": [
+    {
+      "task": "strict",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "frfcfs",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "aging",
+      "status": "PASS",
+      "mode": "bmc",
+      "depth": 12
+    },
+    {
+      "task": "bank",
+      "status": "PASS",
+      "mode": "prove",
+      "depth": null
+    },
+    {
+      "task": "progress",
+      "status": "PASS",
+      "mode": "prove",
+      "depth": null
+    }
+  ],
+  "negative_control": {
+    "mutation": "Invert ready-column preference condition",
+    "queue_depth": 3,
+    "expected_failure_detected": true,
+    "returncode": 1
+  },
+  "limits": "Typical-corner pre-layout mapping only. Hold and zero-limit max-capacitance violations remain. No power, post-layout, signoff, or exact Fmax claim."
+}

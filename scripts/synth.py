@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import shutil
@@ -29,9 +30,20 @@ def main():
     p.add_argument('--run',type=Path,help='Existing DC run directory for PrimeTime')
     p.add_argument('--baseline',action='store_true',help='DC only: run frfcfs_aging, Q=16, 5 ns instead of the full sweep')
     p.add_argument('--policy',choices=POLICIES,help='DC sweep: restrict execution to one policy in an isolated workspace')
+    p.add_argument('--point',nargs=2,metavar=('Q','NS'),help='DC only: one queue depth/clock point; requires --policy')
     args=p.parse_args(); files=manifest(); status='失敗或中斷'; commands=[]
     if args.baseline and args.action!='dc': p.error('--baseline requires dc')
     if args.policy and (args.action!='dc' or args.baseline): p.error('--policy requires dc without --baseline')
+    point=None
+    if args.point:
+        if args.action!='dc' or not args.policy or args.baseline:
+            p.error('--point requires dc --policy, without --baseline')
+        try:
+            depth=int(args.point[0]); period=float(args.point[1])
+            if depth<1 or not math.isfinite(period) or period<=0: raise ValueError
+        except ValueError:
+            p.error('--point requires a positive integer Q and finite positive clock period')
+        point=(args.policy,depth,int(period) if period.is_integer() else period)
     try:
         tool={'local':'yosys','dc':'dc_shell','pt':'pt_shell'}[args.action]
         if not shutil.which(tool): raise RuntimeError(f'{tool} is not available in this environment')
@@ -46,6 +58,7 @@ def main():
             experiments += [(p,q,5) for p in POLICIES for q in [4,8,32]]
             if args.baseline: experiments=[('frfcfs_aging',16,5)]
             if args.policy: experiments=[point for point in experiments if point[0]==args.policy]
+            if point is not None: experiments=[point]
         else:
             if not args.run: raise RuntimeError('--run is required for PrimeTime')
             experiments=[('existing',0,0)]

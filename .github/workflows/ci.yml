@@ -5,12 +5,14 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Install simulator
-        run: sudo apt-get update && sudo apt-get install -y verilator
+      - name: Install simulator and equivalence checker
+        run: sudo apt-get update && sudo apt-get install -y verilator yosys
       - name: Verify private directory is untracked
         run: test -z "$(git ls-files -- local_notes)"
-      - name: Lint and smoke
-        run: make lint smoke
+      - name: Lint, directed tests and parameter corners
+        run: make lint test
+      - name: Scheduler equivalence against v1.1
+        run: make formal-scheduler
       - name: Reproducible regression sample
         run: make regress SEEDS=5 N=1000 JOBS=2
       # No directory-wide artifact upload: local notes must remain local.

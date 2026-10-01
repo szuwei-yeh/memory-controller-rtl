@@ -6,7 +6,16 @@ timing enforcement, scheduling, starvation protection, ordering, verification,
 and ASIC implementation tradeoffs. It is not a DDR PHY or JEDEC-compliant device
 controller.
 
-## Results
+## Current scheduler optimization
+
+The candidate-decode implementation reduces full-controller mapped area by
+**1.76% at Q=16/5 ns**, **3.93% at Q=16/4 ns**, and **0.66% at Q=32/5 ns**, using fresh matched Design
+Compiler runs. Eight scheduler SAT equivalence configurations pass, and 120
+old/new controller trace pairs are identical. Scheduling behavior is unchanged.
+The tested 3 ns target still fails setup; hold and library capacitance violations
+remain. See the [optimization experiment](docs/scheduler-optimization.md).
+
+## Published v1.1 results
 
 - **Verification:** 3,003,000 accepted transactions across 300 randomized regression
   runs; 42 directed/workload/reset/corner simulations plus model, scheduler, and
@@ -48,6 +57,8 @@ make test
 make regress                    # 100 seeds × 10,000 workload requests × 3 policies
 make perf                       # identical workloads, warm-up, latency distributions
 make formal                     # SymbiYosys, Yosys and ABC
+make formal-scheduler           # SAT equivalence to the frozen v1.1 scheduler
+make compare-scheduler          # 120 complete old/new cycle-trace comparisons
 make synth-local-sanity         # optional generic Yosys check, not ASIC evidence
 make report                     # requires the preceding run outputs and Matplotlib/NumPy
 make lab-bundle                 # explicit allowlist; does not upload anything
@@ -89,6 +100,7 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 - [Performance, response throughput, workloads, and reproduction](docs/results.md)
 - [Multi-seed performance stability](docs/performance-stability.md)
 - [ASIC area/timing tradeoffs and synthesis setup](docs/asic-results.md)
+- [Candidate-decode optimization and paired ASIC evidence](docs/scheduler-optimization.md)
 - [Annotated command traces](docs/traces.md)
 
 ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.

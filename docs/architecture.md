@@ -1,5 +1,10 @@
 # Frozen v1 architecture — response-refill amendment
 
+The candidate-decode optimization preserves this protocol and cycle-level policy.
+Its implementation change and paired synthesis evidence are documented in
+[scheduler optimization](scheduler-optimization.md); the v1.1 measurements remain
+separate from the current RTL's mapping results.
+
 ## Goals and boundaries
 
 Demonstrate RTL microarchitecture, bank-level parallelism, timing constraints,

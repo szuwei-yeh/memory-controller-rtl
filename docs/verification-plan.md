@@ -61,6 +61,26 @@ event in Strict-FCFS or Q=1, where some events are structurally impossible.
 
 ## Formal
 
+`make formal-scheduler` additionally compares the current scheduler with the frozen
+v1.1 reference using Yosys SAT and matched internal signals at Q=1/3/16/32, aging
+off/on, and default address/age parameters. Every equivalence cell must be proved.
+Both implementations have the same synchronous reset and state-update structure.
+The immutable reference is hash-checked and excluded from synthesis manifests.
+
+`formal/scheduler_equiv.sby` separately proves post-reset output equivalence at
+Q=1/3/16 with aging off/on, four-bit addresses and age limit three. Slot indices
+are constrained to be in range. Ordering matrices, candidate uniqueness, bank
+matching, and legal/pending relationships are otherwise unconstrained. Selection
+outputs and protection-valid match; protection-slot is compared when protection
+is active. Non-power-of-two configurations use SMT/Z3 to retain undefined-access
+semantics; Q=16 uses ABC PDR. These checks concern scheduler equivalence, not a
+new proof of full-controller data correctness.
+
+`make compare-scheduler` compares complete event CSVs from the old and new
+controllers: three policies, ten workloads, seeds 1/42 and ready 100%/30%, with
+500 workload requests plus the directed prelude per run. Any cycle-level event
+difference fails. It does not regenerate the historical performance results.
+
 SymbiYosys configuration and harnesses are in formal/. The integrated harness uses
 two slots, four banks, two rows/two columns, 8-bit words and a small timing profile.
 Host requests, data, addresses, tags, and response readiness are nondeterministic.

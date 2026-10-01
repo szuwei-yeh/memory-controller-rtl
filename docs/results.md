@@ -1,4 +1,8 @@
-# Measured local results
+# Frozen v1.1 local results
+
+This report records the v1.1 baseline. The current candidate-decode RTL change,
+fresh verification, and paired synthesis results are tracked separately in
+[scheduler optimization](scheduler-optimization.md).
 
 The verification and performance results below come from executed local runs.
 The subsequent [UCSB Design Compiler baseline](asic-results.md) maps the unchanged

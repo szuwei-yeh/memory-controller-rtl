@@ -1,0 +1,30 @@
+[tasks]
+q1_plain q1 plain
+q1_aging q1 aging
+q3_plain q3 plain
+q3_aging q3 aging
+q16_plain q16 plain
+q16_aging q16 aging
+
+[options]
+mode prove
+timeout 300
+
+[engines]
+q1: smtbmc z3
+q3: smtbmc z3
+q16: abc pdr
+
+[script]
+read -formal -sv mc_scheduler_frfcfs.sv mc_scheduler_frfcfs_v1.sv formal_scheduler_equiv.sv
+q1: chparam -set Q_DEPTH 1 formal_scheduler_equiv
+q3: chparam -set Q_DEPTH 3 formal_scheduler_equiv
+q16: chparam -set Q_DEPTH 16 formal_scheduler_equiv
+plain: chparam -set AGING_ENABLE 0 formal_scheduler_equiv
+aging: chparam -set AGING_ENABLE 1 formal_scheduler_equiv
+prep -top formal_scheduler_equiv
+
+[files]
+rtl/mc_scheduler_frfcfs.sv
+formal/reference/mc_scheduler_frfcfs_v1.sv
+formal/formal_scheduler_equiv.sv
