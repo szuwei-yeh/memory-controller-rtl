@@ -1,7 +1,8 @@
 # Frozen v1.1 ASIC comparison sweep
 
-These measurements retain the original v1.1 RTL. For the current scheduler's
-paired before/after measurements, see [scheduler optimization](scheduler-optimization.md).
+These measurements retain the original v1.1 RTL. Subsequent implementation
+measurements are recorded in [scheduler optimization](scheduler-optimization.md)
+and [shared address comparisons](address-sharing-optimization.md).
 
 All **30 distinct Design Compiler runs** completed; **25/30** meet their target setup constraint. RTL, architecture, library, and SDC were not changed. A setup pass does not waive hold or capacitance violations.
 

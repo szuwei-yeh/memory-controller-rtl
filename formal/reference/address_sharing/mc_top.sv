@@ -29,7 +29,6 @@ module mc_top #(
     wire [Q_DEPTH*DATA_W-1:0] write_data, read_data;
     wire [Q_DEPTH*TAG_W-1:0] tags;
     wire [Q_DEPTH*Q_DEPTH-1:0] older;
-    wire [Q_DEPTH*Q_DEPTH-1:0] same_address;
     wire [Q_DEPTH*AGE_W-1:0] ages;
     wire [Q_DEPTH*2-1:0] next_ops;
     wire [3:0] bank_open, owner_valid, can_act, can_col, can_pre, candidate_valid;
@@ -39,21 +38,6 @@ module mc_top #(
     wire [SLOT_W-1:0] select_slot, retire_slot, protection_slot;
     wire [ADDR_W-1:0] selected_addr=addresses[integer'(select_slot)*ADDR_W+:ADDR_W];
     wire issue_column=cmd_valid && (cmd_op==1 || cmd_op==2);
-
-    // Share address equality only. Command and response dependency lifetimes
-    // remain separate: the consumers qualify this matrix with pending/occupied.
-    for (genvar i=0;i<Q_DEPTH;i=i+1) begin : address_match
-        for (genvar j=0;j<Q_DEPTH;j=j+1) begin : pair_match
-            if (i==j) begin : diagonal
-                assign same_address[i*Q_DEPTH+j]=1'b1;
-            end else if (i<j) begin : compare_pair
-                assign same_address[i*Q_DEPTH+j]=
-                    addresses[i*ADDR_W+:ADDR_W]==addresses[j*ADDR_W+:ADDR_W];
-            end else begin : mirror_pair
-                assign same_address[i*Q_DEPTH+j]=same_address[j*Q_DEPTH+i];
-            end
-        end
-    end
 
     mc_transaction_table #(.Q_DEPTH(Q_DEPTH),.ADDR_W(ADDR_W),.DATA_W(DATA_W),.TAG_W(TAG_W),
         .READ_LATENCY(READ_LATENCY),.AGE_LIMIT(AGE_LIMIT)) table_i (
@@ -67,7 +51,7 @@ module mc_top #(
         .issue_row(cmd_row),.issue_slot(select_slot),.bank_open,.owner_valid,.open_rows,
         .owners,.can_act,.can_col,.can_pre);
     mc_candidates #(.Q_DEPTH(Q_DEPTH),.ROW_W(ROW_W),.COL_W(COL_W)) candidates_i (
-        .pending,.writes,.addresses,.same_address,.older,.bank_open,.owner_valid,.can_act,.can_col,.can_pre,
+        .pending,.writes,.addresses,.older,.bank_open,.owner_valid,.can_act,.can_col,.can_pre,
         .open_rows,.owners,.eligible,.legal,.hit,.next_ops,.candidate_valid,.candidate_slots);
     if (SCHED_POLICY==0) begin : strict_fcfs
         mc_scheduler_strict_fcfs #(.Q_DEPTH(Q_DEPTH)) scheduler_i (
@@ -80,8 +64,8 @@ module mc_top #(
             .clk,.rst,.pending,.legal,.next_ops,.addresses,.older,.ages,.candidate_valid,
             .owner_valid,.candidate_slots,.owners,.select_valid,.select_slot,.protection_active,.protection_slot);
     end
-    mc_response #(.Q_DEPTH(Q_DEPTH),.DATA_W(DATA_W),.TAG_W(TAG_W)) response_i (
-        .clk,.rst,.occupied,.done,.writes,.same_address,.read_data,.tags,.older,.rsp_ready,
+    mc_response #(.Q_DEPTH(Q_DEPTH),.ADDR_W(ADDR_W),.DATA_W(DATA_W),.TAG_W(TAG_W)) response_i (
+        .clk,.rst,.occupied,.done,.writes,.addresses,.read_data,.tags,.older,.rsp_ready,
         .rsp_valid,.rsp_write,.rsp_tag,.rsp_rdata,.retire_valid,.retire_slot,.response_eligible);
     assign cmd_valid=select_valid && !rst;
     assign cmd_op=next_ops[integer'(select_slot)*2+:2];

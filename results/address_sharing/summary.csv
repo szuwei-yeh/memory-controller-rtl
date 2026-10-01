@@ -1,0 +1,9 @@
+variant,baseline_reused,queue_depth,clock_ns,area_um2,sequential_cells,setup_worst_slack_ns,setup_tns_ns,setup_violation_count,worst_hold_slack_ns,hold_violation_count,max_capacitance_violation_count,unconstrained_endpoint_count
+baseline,True,16,5,79548.694597,1974,0.012058,0,0,-0.002538,11,5490,0
+baseline,True,16,4,80695.194497,1974,0.000458,0,0,-0.002538,12,5571,0
+baseline,True,16,3,87867.975663,1974,-0.166662,-7.999685,51,-0.003765,25,6411,0
+baseline,True,32,5,239885.035734,4351,4.4e-05,0,0,-0.000839,33,19860,0
+shared_address,False,16,5,66252.956667,1974,0.010557,0,0,-0.002538,10,4608,0
+shared_address,False,16,4,67387.254761,1974,0.000694,0,0,-0.002538,9,4617,0
+shared_address,False,16,3,72879.472659,1974,-0.201311,-9.964599,51,-0.00696,24,5616,0
+shared_address,False,32,5,181855.153734,4351,3.1e-05,0,0,-0.000833,26,16253,0

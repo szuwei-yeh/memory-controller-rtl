@@ -1,10 +1,10 @@
 module mc_response #(
-    parameter integer Q_DEPTH=16, DATA_W=32, TAG_W=8,
+    parameter integer Q_DEPTH=16, ADDR_W=16, DATA_W=32, TAG_W=8,
     parameter integer SLOT_W=(Q_DEPTH>1 ? $clog2(Q_DEPTH) : 1)
 ) (
     input wire clk, rst,
     input wire [Q_DEPTH-1:0] occupied, done, writes,
-    input wire [Q_DEPTH*Q_DEPTH-1:0] same_address,
+    input wire [Q_DEPTH*ADDR_W-1:0] addresses,
     input wire [Q_DEPTH*DATA_W-1:0] read_data,
     input wire [Q_DEPTH*TAG_W-1:0] tags,
     input wire [Q_DEPTH*Q_DEPTH-1:0] older,
@@ -27,7 +27,7 @@ module mc_response #(
             blocked=0;
             for (integer j=0;j<Q_DEPTH;j=j+1)
                 if (occupied[j] && older[j*Q_DEPTH+i] &&
-                    same_address[j*Q_DEPTH+i]) blocked=1;
+                    addresses[j*ADDR_W+:ADDR_W]==addresses[i*ADDR_W+:ADDR_W]) blocked=1;
             response_eligible[i]=occupied[i] && done[i] && !blocked;
             // Exclude only the held response from replacement arbitration. Its
             // occupied slot still blocks same-address successors above.

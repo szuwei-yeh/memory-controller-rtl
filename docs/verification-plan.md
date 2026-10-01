@@ -61,6 +61,21 @@ event in Strict-FCFS or Q=1, where some events are structurally impossible.
 
 ## Formal
 
+`make formal-address` compares the shared-address controller against three frozen,
+hash-checked pre-sharing modules, with the other four modules identical on both
+sides. It flattens the actual top wiring, maps memories, merges identical cells,
+and requires zero unproved matched internal/output equivalence cells. Q=1/3/16/32
+and all three policies are checked at default address/data/age parameters; CI
+runs the Q=1/3 subset. Corresponding state has the same synchronous reset. This
+is implementation equivalence via matched nodes, not an independent proof of
+arbitrary functionality or every parameter combination. An isolated broken
+address-pair comparison is rejected by the same checker.
+
+`make compare-address` adds 120 complete before/after event-trace pairs at Q=16
+using three policies, ten workloads, seeds 1/42 and ready 100%/30%. Every pair must
+match byte-for-byte. See [the experiment](address-sharing-optimization.md) for
+source provenance, measured PPA and proof scope.
+
 `make formal-scheduler` additionally compares the current scheduler with the frozen
 v1.1 reference using Yosys SAT and matched internal signals at Q=1/3/16/32, aging
 off/on, and default address/age parameters. Every equivalence cell must be proved.

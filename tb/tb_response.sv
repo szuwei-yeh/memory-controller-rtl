@@ -7,6 +7,12 @@ module tb_response;
     reg rst=1, rsp_ready=0;
     reg [Q-1:0] occupied=0, done=0, writes=0;
     reg [Q*AW-1:0] addresses=0;
+    wire [Q*Q-1:0] same_address;
+    for (genvar i=0;i<Q;i=i+1) begin : address_match
+        for (genvar j=0;j<Q;j=j+1) begin : pair_match
+            assign same_address[i*Q+j]=addresses[i*AW+:AW]==addresses[j*AW+:AW];
+        end
+    end
     reg [Q*DW-1:0] read_data=0;
     reg [Q*TW-1:0] tags=0;
     reg [Q*Q-1:0] older=0;
@@ -16,7 +22,7 @@ module tb_response;
     wire [SW-1:0] retire_slot;
     wire [Q-1:0] response_eligible;
     integer count=0;
-    mc_response #(.Q_DEPTH(Q),.ADDR_W(AW),.DATA_W(DW),.TAG_W(TW)) dut (.*);
+    mc_response #(.Q_DEPTH(Q),.DATA_W(DW),.TAG_W(TW)) dut (.*);
 
     // The table frees the consumed slot on the same edge as the response register.
     always @(posedge clk) begin

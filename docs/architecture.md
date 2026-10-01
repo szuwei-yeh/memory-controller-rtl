@@ -1,8 +1,9 @@
 # Frozen v1 architecture — response-refill amendment
 
-The candidate-decode optimization preserves this protocol and cycle-level policy.
-Its implementation change and paired synthesis evidence are documented in
-[scheduler optimization](scheduler-optimization.md); the v1.1 measurements remain
+The candidate-decode and shared-address optimizations preserve this protocol and
+cycle-level policy. Their measured implementation changes are documented in
+[scheduler optimization](scheduler-optimization.md) and
+[address sharing](address-sharing-optimization.md); the v1.1 measurements remain
 separate from the current RTL's mapping results.
 
 ## Goals and boundaries
@@ -56,7 +57,7 @@ flowchart LR
 
 | Block | Responsibility and tradeoff |
 |---|---|
-| `mc_top` | Integration, address slicing, command issue; keeps small glue local |
+| `mc_top` | Integration, address slicing, shared address-equality matrix, command issue |
 | `mc_transaction_table` | Owns allocation, data, completion, exact acceptance-order matrix; slots remain reserved until responses retire |
 | `mc_bank_tracker` | Logical bank state, timers, preparation owner; legality independent of policy |
 | `mc_candidates` | Same-address pending dependency filtering and one candidate per bank |
@@ -68,6 +69,14 @@ flowchart LR
 Flat packed-vector module ports support the selected Verilator, Yosys, and DC
 front ends. Metadata and data are separate vectors. The older-than matrix costs
 quadratic bits/logic but avoids sequence wraparound assumptions for a small queue.
+
+The top computes one full-address comparison per unordered slot pair and mirrors
+it into `same_address[i*Q_DEPTH+j]`; diagonal entries are constant one. Both
+`mc_candidates` and `mc_response` consume this combinational matrix. Command
+dependencies qualify it with `pending`, response dependencies with `occupied`.
+No dependency lifetime, register, or pipeline stage is shared or added. Equality
+sharing reduces duplicated logic across the synthesis hierarchy; it does not
+remove the quadratic order matrix or pairwise dependency checks.
 
 Slot lifecycle: `FREE -> PENDING -> READ_INFLIGHT -> DONE -> FREE`, or
 `FREE -> PENDING -> DONE -> FREE` for WRITE. Occupied slots reserve completion

@@ -13,8 +13,10 @@ from scheduler_equiv import baseline_source
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def main():
-    out = ROOT / 'build/scheduler_trace_compare'
+def main(sources=None, label='scheduler'):
+    if sources is None:
+        sources = {'rtl/mc_scheduler_frfcfs.sv': baseline_source()}
+    out = ROOT / 'build' / f'{label}_trace_compare'
     historical = out / 'baseline'
     files = (ROOT/'synth/rtl_files.f').read_text().split()+[
         'synth/rtl_files.f', 'tb/dram_model.sv', 'tb/tb_top.sv']
@@ -22,13 +24,14 @@ def main():
         target = historical / name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT/name, target)
-    (historical/'rtl/mc_scheduler_frfcfs.sv').write_text(baseline_source())
+    for name, source in sources.items():
+        (historical/name).write_text(source)
     binaries = {}
     try:
-        for label, root in [('before', historical), ('after', ROOT)]:
+        for revision, root in [('before', historical), ('after', ROOT)]:
             run.ROOT = root
             for policy in run.POLICIES:
-                binaries[label, policy] = run.build(policy)
+                binaries[revision, policy] = run.build(policy)
     finally:
         run.ROOT = ROOT
     tasks = [(policy, w, seed, ready) for policy in run.POLICIES
@@ -37,10 +40,10 @@ def main():
     def compare(task):
         policy, workload, seed, ready = task
         pair = []
-        for label in ['before', 'after']:
-            result = run.simulate(binaries[label, policy], policy, seed, 500,
+        for revision in ['before', 'after']:
+            result = run.simulate(binaries[revision, policy], policy, seed, 500,
                 workload=workload, ready=ready, trace=True,
-                label=f'scheduler_compare_{label}_{policy}_w{workload}_s{seed}_r{ready}')
+                label=f'{label}_compare_{revision}_{policy}_w{workload}_s{seed}_r{ready}')
             pair.append(result)
         traces = [(ROOT / r['path'] / 'events.csv').read_bytes() for r in pair]
         if traces[0] != traces[1]:
@@ -60,12 +63,12 @@ def main():
     finally:
         report = dict(status=status, pairs=len(results), workload_requests=500,
             warmup=0, seeds=[1,42], ready_percent=[100,30], results=results,
-            builds={f'{label}/{policy}':json.loads((binary.parent/'build_config.json').read_text())
-                    for (label,policy),binary in binaries.items()})
+            builds={f'{revision}/{policy}':json.loads((binary.parent/'build_config.json').read_text())
+                    for (revision,policy),binary in binaries.items()})
         (out/'summary.json').write_text(json.dumps(report, indent=2)+'\n')
-        append_entry('Scheduler 優化逐週期 trace 配對', '確認完整控制器的接受、命令、完成與回應事件不變。',
-            f'完成 {len(results)}/{len(tasks)} 組新舊配對。', 'build/scheduler_trace_compare/；build/runs/scheduler_compare_*',
-            'python3 scripts/scheduler_trace_compare.py', status,
+        append_entry(f'{label} 優化逐週期 trace 配對', '確認完整控制器的接受、命令、完成與回應事件不變。',
+            f'完成 {len(results)}/{len(tasks)} 組新舊配對。', f'build/{label}_trace_compare/；build/runs/{label}_compare_*',
+            'python3 scripts/scheduler_trace_compare.py' if label=='scheduler' else 'python3 scripts/address_equiv.py --trace', status,
             '有限刺激的逐位元組 CSV 比較，不能替代形式證明。',
             '三政策、十工作負載、兩 seeds、兩 ready 比例；使用相同 testbench 和相同請求序列。',
             '與 mapped synthesis、形式證明一起判斷修改。')

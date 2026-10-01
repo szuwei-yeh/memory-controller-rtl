@@ -98,6 +98,11 @@ These exploratory outcomes are not counted as passing proofs.
 
 ## Reproduction
 
+This experiment is frozen at commit `27f522c`. Check out that revision to reproduce
+the complete paired results and source checks below. Later address-sharing changes
+have a [separate experiment](address-sharing-optimization.md); replacing only the
+scheduler in a later controller does not reconstruct the v1.1 full-controller baseline.
+
 ```sh
 make lint test
 make regress SEEDS=100 N=10000 JOBS=4

@@ -5,7 +5,6 @@ module mc_candidates #(
 ) (
     input wire [Q_DEPTH-1:0] pending, writes,
     input wire [Q_DEPTH*ADDR_W-1:0] addresses,
-    input wire [Q_DEPTH*Q_DEPTH-1:0] same_address,
     input wire [Q_DEPTH*Q_DEPTH-1:0] older,
     input wire [3:0] bank_open, owner_valid, can_act, can_col, can_pre,
     input wire [4*ROW_W-1:0] open_rows,
@@ -27,7 +26,7 @@ module mc_candidates #(
             blocked=0;
             for (integer j=0;j<Q_DEPTH;j=j+1)
                 if (pending[j] && older[j*Q_DEPTH+i] &&
-                    same_address[j*Q_DEPTH+i]) blocked=1;
+                    addresses[j*ADDR_W+:ADDR_W]==addresses[i*ADDR_W+:ADDR_W]) blocked=1;
             eligible[i]=pending[i] && !blocked &&
                 (!owner_valid[bank] || owners[bank*SLOT_W+:SLOT_W]==SLOT_W'(i));
             hit[i]=bank_open[bank] &&
