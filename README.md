@@ -124,6 +124,7 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 - [Candidate-mask timing experiment and remaining violations](docs/candidate-mask-optimization.md)
 - [Storage timing diagnosis and free-slot experiments](docs/storage-timing-experiment.md)
 - [Direct command-mask and storage optimization](docs/command-mask-optimization.md)
+- [Remaining 68.8 ps: selected command-path analysis](docs/command-path-3ns.md)
 - [Annotated command traces](docs/traces.md)
 
 ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.

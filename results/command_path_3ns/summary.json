@@ -1,0 +1,3223 @@
+{
+  "status": "READ_ONLY_ANALYSIS_COMPLETE",
+  "provenance": {
+    "source_commit": "9d40e165e8b071bbe20c01e16d8a12e20b6a8bbc",
+    "rtl_sha256": {
+      "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+      "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+      "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+      "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+      "rtl/mc_scheduler_frfcfs.sv": "df896185604273fb59b4cfdff2f96fea87a9c95be90944e707242ac19e083ad9",
+      "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+      "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe"
+    },
+    "ddc_sha256": "1cc1dbd5f1e36f6475d667bdadd801072e4b408f652a34c158c4feded3022502",
+    "config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+    "sdc_sha256": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418",
+    "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+    "script_sha256": "89538bf5cd7b285b28b42304776a5d3485c4064aa514ce0bc7610532880e8e10",
+    "read_only": true,
+    "constraints_reapplied": false
+  },
+  "baseline_evidence": "results/command_mask/summary.json",
+  "baseline_variant": "mask_and_storage",
+  "area_um2": 71720.770984,
+  "sequential_cells": 1974,
+  "clock_ns": 3,
+  "setup_worst_slack_ns": -0.068773,
+  "setup_tns_ns": -3.396384,
+  "setup_endpoint_count": 50,
+  "hold_endpoint_count": 8,
+  "hold_worst_slack_ns": -0.000661,
+  "unconstrained_endpoint_count": 0,
+  "max_capacitance_violation_count": 5545,
+  "all_constraint_violation_slacks_match_original": true,
+  "timing_vs_constraint_rounding_differences_ns": {
+    "cmd_bank[1]": 1e-06,
+    "cmd_row[3]": 1e-06
+  },
+  "queries": {
+    "timing": [
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_op[0]",
+        "slack_ns": -0.068773,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[1]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[30]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[29]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[27]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[26]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[25]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[6]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[28]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[24]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[16]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[13]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[11]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[5]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[2]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[8]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[20]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[19]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[12]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[10]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[21]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[7]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[3]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[0]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[23]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[18]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[15]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[9]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[1]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[14]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[4]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_op[1]",
+        "slack_ns": -0.068667,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[22]",
+        "slack_ns": -0.068521,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[17]",
+        "slack_ns": -0.068521,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[1]",
+        "slack_ns": -0.068389,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[0]",
+        "slack_ns": -0.068155,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[2]",
+        "slack_ns": -0.068072,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[7]",
+        "slack_ns": -0.068052,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_bank[1]",
+        "slack_ns": -0.067979,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[2]",
+        "slack_ns": -0.066485,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[5]",
+        "slack_ns": -0.066416,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[3]",
+        "slack_ns": -0.066282,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[3]",
+        "slack_ns": -0.065937,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[4]",
+        "slack_ns": -0.065936,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[5]",
+        "slack_ns": -0.065932,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_bank[0]",
+        "slack_ns": -0.065136,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[4]",
+        "slack_ns": -0.065042,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[0]",
+        "slack_ns": -0.065042,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[31]",
+        "slack_ns": -0.065042,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_row[6]",
+        "slack_ns": -0.061233,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_48_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_55_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_54_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_53_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_52_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_51_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_50_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_49_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_289_",
+        "slack_ns": 0.013583,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_288_",
+        "slack_ns": 0.013583,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      }
+    ],
+    "register_to_output": [
+      {
+        "startpoint": "table_i/addresses_reg_146_",
+        "endpoint": "cmd_op[0]",
+        "slack_ns": -0.068773,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[1]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[30]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[29]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[27]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[26]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[25]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[6]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[28]",
+        "slack_ns": -0.068769,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[24]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[16]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[13]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[11]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[5]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[2]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[8]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[20]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[19]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[12]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[10]",
+        "slack_ns": -0.068759,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[21]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[7]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[3]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[0]",
+        "slack_ns": -0.068753,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[23]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[18]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[15]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[9]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[1]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[14]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[4]",
+        "slack_ns": -0.068751,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_col[1]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[30]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[29]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[28]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[27]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[26]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[25]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[6]",
+        "slack_ns": -0.068748,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_210_",
+        "endpoint": "cmd_op[0]",
+        "slack_ns": -0.068743,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[24]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[20]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[16]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[13]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[12]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[11]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[10]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[8]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[5]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[2]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[19]",
+        "slack_ns": -0.068738,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[21]",
+        "slack_ns": -0.068732,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[3]",
+        "slack_ns": -0.068732,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[0]",
+        "slack_ns": -0.068732,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[7]",
+        "slack_ns": -0.068731,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[23]",
+        "slack_ns": -0.06873,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[18]",
+        "slack_ns": -0.06873,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[15]",
+        "slack_ns": -0.06873,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[14]",
+        "slack_ns": -0.06873,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_195_",
+        "endpoint": "cmd_wdata[9]",
+        "slack_ns": -0.06873,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      }
+    ],
+    "register_to_register": [
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_48_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_55_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_54_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_53_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_52_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_51_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_50_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_49_",
+        "slack_ns": 0.002394,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_1_",
+        "endpoint": "table_i/ages_reg_48_",
+        "slack_ns": 0.005693,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_1_",
+        "endpoint": "table_i/ages_reg_55_",
+        "slack_ns": 0.005693,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      }
+    ],
+    "input_to_register": [
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_48_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_55_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_54_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_53_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_52_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_51_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_50_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_49_",
+        "slack_ns": 0.429083,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/write_data_reg_297_",
+        "slack_ns": 0.470581,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "table_i/write_data_reg_296_",
+        "slack_ns": 0.470581,
+        "classification": "input-to-register",
+        "logic_description": "reset fanout and register/output gating"
+      }
+    ],
+    "input_to_output": [
+      {
+        "startpoint": "rst",
+        "endpoint": "req_ready",
+        "slack_ns": 0.574358,
+        "classification": "input-to-output",
+        "logic_description": "reset fanout and register/output gating"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "rsp_valid",
+        "slack_ns": 0.71334,
+        "classification": "input-to-output",
+        "logic_description": "reset output masking -> host response-valid output"
+      },
+      {
+        "startpoint": "rst",
+        "endpoint": "cmd_valid",
+        "slack_ns": 0.765463,
+        "classification": "input-to-output",
+        "logic_description": "reset fanout and register/output gating"
+      }
+    ],
+    "hold": [
+      {
+        "startpoint": "banks_i/ras_reg_2__2_",
+        "endpoint": "banks_i/ras_reg_2__2_",
+        "slack_ns": -0.000661,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/ras_reg_3__2_",
+        "endpoint": "banks_i/ras_reg_3__2_",
+        "slack_ns": -0.000661,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/ras_reg_1__2_",
+        "endpoint": "banks_i/ras_reg_1__2_",
+        "slack_ns": -0.000659,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/rcd_reg_0__1_",
+        "endpoint": "banks_i/rcd_reg_0__1_",
+        "slack_ns": -0.000469,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/rcd_reg_2__1_",
+        "endpoint": "banks_i/rcd_reg_2__1_",
+        "slack_ns": -0.000469,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/rcd_reg_3__1_",
+        "endpoint": "banks_i/rcd_reg_3__1_",
+        "slack_ns": -0.000469,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/rcd_reg_1__1_",
+        "endpoint": "banks_i/rcd_reg_1__1_",
+        "slack_ns": -0.000467,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "banks_i/ras_reg_0__2_",
+        "endpoint": "banks_i/ras_reg_0__2_",
+        "slack_ns": -0.000162,
+        "classification": "register-to-register",
+        "logic_description": "bank state/timing logic"
+      },
+      {
+        "startpoint": "rsp_ready",
+        "endpoint": "response_i/held_slot_reg_1_",
+        "slack_ns": 0.008031,
+        "classification": "input-to-register",
+        "logic_description": "same-address response eligibility/arbitration"
+      },
+      {
+        "startpoint": "rsp_ready",
+        "endpoint": "response_i/held_slot_reg_2_",
+        "slack_ns": 0.008671,
+        "classification": "input-to-register",
+        "logic_description": "same-address response eligibility/arbitration"
+      },
+      {
+        "startpoint": "table_i/return_valid_reg_1_",
+        "endpoint": "table_i/return_valid_reg_2_",
+        "slack_ns": 0.009501,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_valid_reg_0_",
+        "endpoint": "table_i/return_valid_reg_1_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_0__3_",
+        "endpoint": "table_i/return_slot_reg_1__3_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_0__2_",
+        "endpoint": "table_i/return_slot_reg_1__2_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_0__1_",
+        "endpoint": "table_i/return_slot_reg_1__1_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_0__0_",
+        "endpoint": "table_i/return_slot_reg_1__0_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_1__3_",
+        "endpoint": "table_i/return_slot_reg_2__3_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_1__2_",
+        "endpoint": "table_i/return_slot_reg_2__2_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_1__1_",
+        "endpoint": "table_i/return_slot_reg_2__1_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/return_slot_reg_1__0_",
+        "endpoint": "table_i/return_slot_reg_2__0_",
+        "slack_ns": 0.010375,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      }
+    ]
+  },
+  "worst_by_query": {
+    "timing": {
+      "startpoint": "table_i/addresses_reg_146_",
+      "endpoint": "cmd_op[0]",
+      "slack_ns": -0.068773,
+      "classification": "register-to-output",
+      "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+    },
+    "register_to_output": {
+      "startpoint": "table_i/addresses_reg_146_",
+      "endpoint": "cmd_op[0]",
+      "slack_ns": -0.068773,
+      "classification": "register-to-output",
+      "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+    },
+    "register_to_register": {
+      "startpoint": "table_i/occupied_reg_0_",
+      "endpoint": "table_i/ages_reg_48_",
+      "slack_ns": 0.002394,
+      "classification": "register-to-register",
+      "logic_description": "transaction-table registers/data logic"
+    },
+    "input_to_register": {
+      "startpoint": "rst",
+      "endpoint": "table_i/ages_reg_48_",
+      "slack_ns": 0.429083,
+      "classification": "input-to-register",
+      "logic_description": "reset fanout and register/output gating"
+    },
+    "input_to_output": {
+      "startpoint": "rst",
+      "endpoint": "req_ready",
+      "slack_ns": 0.574358,
+      "classification": "input-to-output",
+      "logic_description": "reset fanout and register/output gating"
+    },
+    "hold": {
+      "startpoint": "banks_i/ras_reg_2__2_",
+      "endpoint": "banks_i/ras_reg_2__2_",
+      "slack_ns": -0.000661,
+      "classification": "register-to-register",
+      "logic_description": "bank state/timing logic"
+    }
+  },
+  "top20_startpoints": {
+    "table_i/addresses_reg_146_": 1,
+    "table_i/addresses_reg_7_": 19
+  },
+  "top20_masks": {
+    "select_mask[5]": 1,
+    "select_mask[4]": 19
+  },
+  "failing_startpoints": {
+    "table_i/addresses_reg_146_": 12,
+    "table_i/addresses_reg_7_": 38
+  },
+  "failing_masks": {
+    "select_mask[5]": 4,
+    "select_mask[4]": 39,
+    "select_mask[3]": 1,
+    "select_mask[11]": 1,
+    "select_mask[1]": 2,
+    "select_mask[8]": 3
+  },
+  "top20_shared_driver_pins": [
+    "candidates_i/U1617/Y",
+    "candidates_i/U1693/Y",
+    "candidates_i/U2481/Y",
+    "candidates_i/U2673/Y",
+    "candidates_i/U4201/Y",
+    "candidates_i/U4202/Y",
+    "candidates_i/U4203/Y",
+    "candidates_i/U4391/Y",
+    "candidates_i/U4404/Y",
+    "frfcfs_scheduler_i/U1295/Y",
+    "frfcfs_scheduler_i/U1312/Y",
+    "frfcfs_scheduler_i/U154/Y",
+    "frfcfs_scheduler_i/U1553/Y",
+    "frfcfs_scheduler_i/U1619/Y",
+    "frfcfs_scheduler_i/U264/Y",
+    "frfcfs_scheduler_i/U380/Y",
+    "frfcfs_scheduler_i/U414/Y",
+    "frfcfs_scheduler_i/U449/Y",
+    "frfcfs_scheduler_i/U450/Y",
+    "frfcfs_scheduler_i/U768/Y"
+  ],
+  "command_mask_nets": {
+    "select_mask[15]": {
+      "loads": 2,
+      "min_capacitance_ff": 5.31042,
+      "max_capacitance_ff": 5.34532
+    },
+    "select_mask[14]": {
+      "loads": 2,
+      "min_capacitance_ff": 4.49277,
+      "max_capacitance_ff": 4.52465
+    },
+    "select_mask[13]": {
+      "loads": 1,
+      "min_capacitance_ff": 2.65521,
+      "max_capacitance_ff": 2.67266
+    },
+    "select_mask[12]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "select_mask[11]": {
+      "loads": 12,
+      "min_capacitance_ff": 24.059,
+      "max_capacitance_ff": 24.9576
+    },
+    "select_mask[10]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "select_mask[9]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "select_mask[8]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "select_mask[7]": {
+      "loads": 3,
+      "min_capacitance_ff": 5.62498,
+      "max_capacitance_ff": 5.75727
+    },
+    "select_mask[6]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "select_mask[5]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "select_mask[4]": {
+      "loads": 50,
+      "min_capacitance_ff": 128.42000000000002,
+      "max_capacitance_ff": 130.56300000000002
+    },
+    "select_mask[3]": {
+      "loads": 47,
+      "min_capacitance_ff": 132.078,
+      "max_capacitance_ff": 135.761
+    },
+    "select_mask[2]": {
+      "loads": 1,
+      "min_capacitance_ff": 2.65521,
+      "max_capacitance_ff": 2.67266
+    },
+    "select_mask[1]": {
+      "loads": 3,
+      "min_capacitance_ff": 4.4564699999999995,
+      "max_capacitance_ff": 4.64102
+    },
+    "select_mask[0]": {
+      "loads": 12,
+      "min_capacitance_ff": 39.3183,
+      "max_capacitance_ff": 40.0926
+    },
+    "frfcfs_scheduler_i/select_mask[15]": {
+      "loads": 2,
+      "min_capacitance_ff": 5.31042,
+      "max_capacitance_ff": 5.34532
+    },
+    "frfcfs_scheduler_i/select_mask[14]": {
+      "loads": 2,
+      "min_capacitance_ff": 4.49277,
+      "max_capacitance_ff": 4.52465
+    },
+    "frfcfs_scheduler_i/select_mask[13]": {
+      "loads": 1,
+      "min_capacitance_ff": 2.65521,
+      "max_capacitance_ff": 2.67266
+    },
+    "frfcfs_scheduler_i/select_mask[12]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "frfcfs_scheduler_i/select_mask[11]": {
+      "loads": 12,
+      "min_capacitance_ff": 24.059,
+      "max_capacitance_ff": 24.9576
+    },
+    "frfcfs_scheduler_i/select_mask[10]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "frfcfs_scheduler_i/select_mask[9]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "frfcfs_scheduler_i/select_mask[8]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "frfcfs_scheduler_i/select_mask[7]": {
+      "loads": 3,
+      "min_capacitance_ff": 5.62498,
+      "max_capacitance_ff": 5.75727
+    },
+    "frfcfs_scheduler_i/select_mask[6]": {
+      "loads": 2,
+      "min_capacitance_ff": 2.95232,
+      "max_capacitance_ff": 3.10206
+    },
+    "frfcfs_scheduler_i/select_mask[5]": {
+      "loads": 1,
+      "min_capacitance_ff": 5.08038,
+      "max_capacitance_ff": 5.0916
+    },
+    "frfcfs_scheduler_i/select_mask[4]": {
+      "loads": 50,
+      "min_capacitance_ff": 128.42000000000002,
+      "max_capacitance_ff": 130.56300000000002
+    },
+    "frfcfs_scheduler_i/select_mask[3]": {
+      "loads": 47,
+      "min_capacitance_ff": 132.078,
+      "max_capacitance_ff": 135.761
+    },
+    "frfcfs_scheduler_i/select_mask[2]": {
+      "loads": 1,
+      "min_capacitance_ff": 2.65521,
+      "max_capacitance_ff": 2.67266
+    },
+    "frfcfs_scheduler_i/select_mask[1]": {
+      "loads": 3,
+      "min_capacitance_ff": 4.4564699999999995,
+      "max_capacitance_ff": 4.64102
+    },
+    "frfcfs_scheduler_i/select_mask[0]": {
+      "loads": 12,
+      "min_capacitance_ff": 39.3183,
+      "max_capacitance_ff": 40.0926
+    }
+  },
+  "representative_paths": [
+    {
+      "startpoint": "table_i/addresses_reg_146_",
+      "endpoint": "cmd_op[0]",
+      "arrival_ns": 1.968773,
+      "required_ns": 1.9,
+      "slack_ns": -0.068773,
+      "mask": {
+        "pin": "frfcfs_scheduler_i/U308/Y",
+        "cell": "NAND2X1",
+        "stage": "scheduler",
+        "increment_ns": 0.023065,
+        "arrival_ns": 1.73131,
+        "transition_ns": 0.027271,
+        "net": "select_mask[5]",
+        "fanout": 1,
+        "capacitance_ff": 5.0920000000000005,
+        "edge": "f"
+      },
+      "arcs": [
+        {
+          "pin": "table_i/addresses_reg_146_/Q",
+          "cell": "DFFPOSX1",
+          "stage": "clock_to_q",
+          "increment_ns": 0.101875,
+          "arrival_ns": 0.101875,
+          "transition_ns": 0.018446,
+          "net": "table_i/n6715",
+          "fanout": 1,
+          "capacitance_ff": 1.4760000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "table_i/U5243/Y",
+          "cell": "INVX1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.013153,
+          "arrival_ns": 0.115028,
+          "transition_ns": 0.0,
+          "net": "table_i/n5191",
+          "fanout": 1,
+          "capacitance_ff": 5.08,
+          "edge": "r"
+        },
+        {
+          "pin": "table_i/U905/Y",
+          "cell": "INVX4",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.032337,
+          "arrival_ns": 0.147366,
+          "transition_ns": 0.014422,
+          "net": "table_i/addresses[146]",
+          "fanout": 10,
+          "capacitance_ff": 32.254,
+          "edge": "f"
+        },
+        {
+          "pin": "U6899/Y",
+          "cell": "XOR2X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.048763,
+          "arrival_ns": 0.196128,
+          "transition_ns": 0.041773,
+          "net": "n6422",
+          "fanout": 1,
+          "capacitance_ff": 2.027,
+          "edge": "r"
+        },
+        {
+          "pin": "U3275/Y",
+          "cell": "NAND2X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.023752,
+          "arrival_ns": 0.21988,
+          "transition_ns": 0.021547,
+          "net": "n2244",
+          "fanout": 1,
+          "capacitance_ff": 3.0669999999999997,
+          "edge": "f"
+        },
+        {
+          "pin": "U6903/Y",
+          "cell": "NOR3X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.039205,
+          "arrival_ns": 0.259085,
+          "transition_ns": 0.048403,
+          "net": "n6437",
+          "fanout": 1,
+          "capacitance_ff": 1.869,
+          "edge": "r"
+        },
+        {
+          "pin": "U1760/Y",
+          "cell": "AND2X2",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.035133,
+          "arrival_ns": 0.294218,
+          "transition_ns": 0.012582,
+          "net": "n6438",
+          "fanout": 2,
+          "capacitance_ff": 3.1020000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "U1761/Y",
+          "cell": "INVX1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.016632,
+          "arrival_ns": 0.310851,
+          "transition_ns": 0.011823,
+          "net": "n1267",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "U6911/Y",
+          "cell": "NOR2X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.028166,
+          "arrival_ns": 0.339017,
+          "transition_ns": 0.026376,
+          "net": "n7885",
+          "fanout": 1,
+          "capacitance_ff": 2.027,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1527/Y",
+          "cell": "NAND2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.018106,
+          "arrival_ns": 0.357123,
+          "transition_ns": 0.019948,
+          "net": "candidates_i/n3013",
+          "fanout": 1,
+          "capacitance_ff": 1.7630000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U3432/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.036155,
+          "arrival_ns": 0.393278,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n3014",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U3433/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.027379,
+          "arrival_ns": 0.420657,
+          "transition_ns": 0.036896,
+          "net": "candidates_i/n3023",
+          "fanout": 1,
+          "capacitance_ff": 2.242,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U2674/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.023697,
+          "arrival_ns": 0.444355,
+          "transition_ns": 0.005196,
+          "net": "candidates_i/n3048",
+          "fanout": 2,
+          "capacitance_ff": 3.3240000000000003,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U608/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.036495,
+          "arrival_ns": 0.48085,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n463",
+          "fanout": 2,
+          "capacitance_ff": 2.98,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U563/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": -0.002192,
+          "arrival_ns": 0.478658,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n431",
+          "fanout": 1,
+          "capacitance_ff": 2.3649999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1888/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.007609,
+          "arrival_ns": 0.486266,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1690",
+          "fanout": 1,
+          "capacitance_ff": 1.4760000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1397/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.0002,
+          "arrival_ns": 0.486466,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1012",
+          "fanout": 2,
+          "capacitance_ff": 3.1020000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1398/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.014313,
+          "arrival_ns": 0.500779,
+          "transition_ns": 0.014285,
+          "net": "candidates_i/n1013",
+          "fanout": 1,
+          "capacitance_ff": 2.826,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4201/Y",
+          "cell": "AOI22X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.029756,
+          "arrival_ns": 0.530535,
+          "transition_ns": 0.047664,
+          "net": "candidates_i/n3872",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4202/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.022272,
+          "arrival_ns": 0.552807,
+          "transition_ns": 0.015928,
+          "net": "candidates_i/n3875",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4203/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.034091,
+          "arrival_ns": 0.586898,
+          "transition_ns": 0.033506,
+          "net": "candidates_i/n3877",
+          "fanout": 2,
+          "capacitance_ff": 3.5959999999999996,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1617/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.042256,
+          "arrival_ns": 0.629154,
+          "transition_ns": 0.022519,
+          "net": "candidates_i/n1160",
+          "fanout": 5,
+          "capacitance_ff": 7.755,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1424/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.020104,
+          "arrival_ns": 0.649258,
+          "transition_ns": 0.012267,
+          "net": "candidates_i/n1027",
+          "fanout": 1,
+          "capacitance_ff": 2.679,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4219/Y",
+          "cell": "AOI21X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.035229,
+          "arrival_ns": 0.684487,
+          "transition_ns": 0.034055,
+          "net": "candidates_i/n3900",
+          "fanout": 2,
+          "capacitance_ff": 3.6670000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1131/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.039055,
+          "arrival_ns": 0.723542,
+          "transition_ns": 0.018695,
+          "net": "candidates_i/n828",
+          "fanout": 3,
+          "capacitance_ff": 6.113,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4364/Y",
+          "cell": "AOI22X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.02852,
+          "arrival_ns": 0.752062,
+          "transition_ns": 0.034524,
+          "net": "candidates_i/n4050",
+          "fanout": 1,
+          "capacitance_ff": 1.82,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4366/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.044379,
+          "arrival_ns": 0.796441,
+          "transition_ns": 0.004773,
+          "net": "candidates_i/n4051",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4367/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.02872,
+          "arrival_ns": 0.825161,
+          "transition_ns": 0.037735,
+          "net": "candidates_i/n4054",
+          "fanout": 1,
+          "capacitance_ff": 2.283,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4368/Y",
+          "cell": "OR2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.048562,
+          "arrival_ns": 0.873723,
+          "transition_ns": 0.014175,
+          "net": "candidates_i/n4362",
+          "fanout": 2,
+          "capacitance_ff": 3.42,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U2481/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.034239,
+          "arrival_ns": 0.907962,
+          "transition_ns": 0.011891,
+          "net": "candidates_i/n1723",
+          "fanout": 2,
+          "capacitance_ff": 3.5959999999999996,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1693/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.033938,
+          "arrival_ns": 0.9419,
+          "transition_ns": 0.010642,
+          "net": "candidates_i/n1199",
+          "fanout": 1,
+          "capacitance_ff": 2.9610000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4391/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.010416,
+          "arrival_ns": 0.952316,
+          "transition_ns": 0.015911,
+          "net": "candidates_i/n4095",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U2673/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.028975,
+          "arrival_ns": 0.981291,
+          "transition_ns": 0.025802,
+          "net": "candidates_i/n4096",
+          "fanout": 1,
+          "capacitance_ff": 2.0100000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4404/Y",
+          "cell": "OAI21X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.018907,
+          "arrival_ns": 1.000198,
+          "transition_ns": 0.006941,
+          "net": "candidates_i/n4237",
+          "fanout": 2,
+          "capacitance_ff": 2.9520000000000004,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1262/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.002662,
+          "arrival_ns": 1.00286,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1324",
+          "fanout": 2,
+          "capacitance_ff": 3.1020000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1468/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.013227,
+          "arrival_ns": 1.016087,
+          "transition_ns": 0.012707,
+          "net": "candidates_i/n1066",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1116/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.031363,
+          "arrival_ns": 1.04745,
+          "transition_ns": 0.030805,
+          "net": "candidates_i/n4239",
+          "fanout": 1,
+          "capacitance_ff": 2.9610000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4454/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.016019,
+          "arrival_ns": 1.063469,
+          "transition_ns": 0.018136,
+          "net": "candidates_i/n4254",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4456/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.031602,
+          "arrival_ns": 1.095071,
+          "transition_ns": 0.036815,
+          "net": "candidates_i/candidate_mask[6]",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U429/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.016766,
+          "arrival_ns": 1.111837,
+          "transition_ns": 0.021024,
+          "net": "frfcfs_scheduler_i/n989",
+          "fanout": 1,
+          "capacitance_ff": 1.4760000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U952/Y",
+          "cell": "INVX1",
+          "stage": "scheduler",
+          "increment_ns": 0.009161,
+          "arrival_ns": 1.120999,
+          "transition_ns": 0.0,
+          "net": "frfcfs_scheduler_i/n1171",
+          "fanout": 2,
+          "capacitance_ff": 3.5660000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1284/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.012636,
+          "arrival_ns": 1.133635,
+          "transition_ns": 0.02311,
+          "net": "frfcfs_scheduler_i/n991",
+          "fanout": 1,
+          "capacitance_ff": 1.944,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U430/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.01937,
+          "arrival_ns": 1.153005,
+          "transition_ns": 0.038082,
+          "net": "frfcfs_scheduler_i/n1006",
+          "fanout": 1,
+          "capacitance_ff": 3.063,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1295/Y",
+          "cell": "NOR3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.033724,
+          "arrival_ns": 1.186729,
+          "transition_ns": 0.028535,
+          "net": "frfcfs_scheduler_i/n1029",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1312/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.034661,
+          "arrival_ns": 1.22139,
+          "transition_ns": 0.036873,
+          "net": "frfcfs_scheduler_i/n1030",
+          "fanout": 1,
+          "capacitance_ff": 2.242,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U154/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.024787,
+          "arrival_ns": 1.246176,
+          "transition_ns": 0.006608,
+          "net": "frfcfs_scheduler_i/n1044",
+          "fanout": 2,
+          "capacitance_ff": 3.848,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U380/Y",
+          "cell": "OAI21X1",
+          "stage": "scheduler",
+          "increment_ns": 0.02697,
+          "arrival_ns": 1.273146,
+          "transition_ns": 0.055693,
+          "net": "frfcfs_scheduler_i/n237",
+          "fanout": 2,
+          "capacitance_ff": 5.31,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U264/Y",
+          "cell": "INVX2",
+          "stage": "scheduler",
+          "increment_ns": 0.028538,
+          "arrival_ns": 1.301684,
+          "transition_ns": 0.027927,
+          "net": "frfcfs_scheduler_i/n1189",
+          "fanout": 4,
+          "capacitance_ff": 10.075000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U449/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.032427,
+          "arrival_ns": 1.334111,
+          "transition_ns": 0.025737,
+          "net": "frfcfs_scheduler_i/n285",
+          "fanout": 1,
+          "capacitance_ff": 2.2920000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U450/Y",
+          "cell": "OR2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.04843,
+          "arrival_ns": 1.382542,
+          "transition_ns": 0.024198,
+          "net": "frfcfs_scheduler_i/n1417",
+          "fanout": 4,
+          "capacitance_ff": 8.59,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U215/Y",
+          "cell": "INVX1",
+          "stage": "scheduler",
+          "increment_ns": 0.022079,
+          "arrival_ns": 1.40462,
+          "transition_ns": 0.014369,
+          "net": "frfcfs_scheduler_i/n127",
+          "fanout": 2,
+          "capacitance_ff": 3.42,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U272/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.012561,
+          "arrival_ns": 1.417181,
+          "transition_ns": 0.032676,
+          "net": "frfcfs_scheduler_i/n161",
+          "fanout": 1,
+          "capacitance_ff": 1.7979999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U274/Y",
+          "cell": "AND2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.033529,
+          "arrival_ns": 1.45071,
+          "transition_ns": 0.00944,
+          "net": "frfcfs_scheduler_i/n1382",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U374/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.012363,
+          "arrival_ns": 1.463073,
+          "transition_ns": 0.023009,
+          "net": "frfcfs_scheduler_i/n232",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1507/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.035805,
+          "arrival_ns": 1.498878,
+          "transition_ns": 0.032987,
+          "net": "frfcfs_scheduler_i/n1394",
+          "fanout": 2,
+          "capacitance_ff": 3.662,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1511/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.016672,
+          "arrival_ns": 1.515551,
+          "transition_ns": 0.020383,
+          "net": "frfcfs_scheduler_i/n1579",
+          "fanout": 1,
+          "capacitance_ff": 1.8840000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1552/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.03277,
+          "arrival_ns": 1.548321,
+          "transition_ns": 0.039026,
+          "net": "frfcfs_scheduler_i/n1577",
+          "fanout": 1,
+          "capacitance_ff": 3.2880000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1553/Y",
+          "cell": "NOR3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.02619,
+          "arrival_ns": 1.574511,
+          "transition_ns": 0.023406,
+          "net": "frfcfs_scheduler_i/n1440",
+          "fanout": 1,
+          "capacitance_ff": 1.7630000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U414/Y",
+          "cell": "AND2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.040618,
+          "arrival_ns": 1.615129,
+          "transition_ns": 0.005383,
+          "net": "frfcfs_scheduler_i/n261",
+          "fanout": 3,
+          "capacitance_ff": 6.191999999999999,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1619/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.026632,
+          "arrival_ns": 1.641761,
+          "transition_ns": 0.032953,
+          "net": "frfcfs_scheduler_i/n1554",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U768/Y",
+          "cell": "INVX1",
+          "stage": "scheduler",
+          "increment_ns": 0.030611,
+          "arrival_ns": 1.672371,
+          "transition_ns": 0.022764,
+          "net": "frfcfs_scheduler_i/n1548",
+          "fanout": 3,
+          "capacitance_ff": 6.428,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1622/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.035874,
+          "arrival_ns": 1.708245,
+          "transition_ns": 0.03621,
+          "net": "frfcfs_scheduler_i/n1550",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U308/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.023065,
+          "arrival_ns": 1.73131,
+          "transition_ns": 0.027271,
+          "net": "frfcfs_scheduler_i/select_mask[5]",
+          "fanout": 1,
+          "capacitance_ff": 5.0920000000000005,
+          "edge": "f"
+        },
+        {
+          "pin": "U5444/Y",
+          "cell": "INVX4",
+          "stage": "command_mux",
+          "increment_ns": 0.028487,
+          "arrival_ns": 1.759797,
+          "transition_ns": 0.021575,
+          "net": "n4501",
+          "fanout": 9,
+          "capacitance_ff": 18.593,
+          "edge": "r"
+        },
+        {
+          "pin": "U1000/Y",
+          "cell": "INVX1",
+          "stage": "command_mux",
+          "increment_ns": 0.019946,
+          "arrival_ns": 1.779743,
+          "transition_ns": 0.012475,
+          "net": "n4500",
+          "fanout": 1,
+          "capacitance_ff": 2.726,
+          "edge": "f"
+        },
+        {
+          "pin": "U7553/Y",
+          "cell": "AOI22X1",
+          "stage": "command_mux",
+          "increment_ns": 0.038735,
+          "arrival_ns": 1.818478,
+          "transition_ns": 0.044779,
+          "net": "n7378",
+          "fanout": 1,
+          "capacitance_ff": 1.869,
+          "edge": "r"
+        },
+        {
+          "pin": "U7555/Y",
+          "cell": "AND2X2",
+          "stage": "command_mux",
+          "increment_ns": 0.032584,
+          "arrival_ns": 1.851062,
+          "transition_ns": 0.008864,
+          "net": "n7379",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "U2034/Y",
+          "cell": "INVX1",
+          "stage": "command_mux",
+          "increment_ns": 0.015635,
+          "arrival_ns": 1.866697,
+          "transition_ns": 0.012096,
+          "net": "n1434",
+          "fanout": 1,
+          "capacitance_ff": 2.301,
+          "edge": "f"
+        },
+        {
+          "pin": "U1894/Y",
+          "cell": "OR2X2",
+          "stage": "command_mux",
+          "increment_ns": 0.038069,
+          "arrival_ns": 1.904766,
+          "transition_ns": 0.004914,
+          "net": "n1338",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "U2036/Y",
+          "cell": "NOR2X1",
+          "stage": "command_mux",
+          "increment_ns": 0.025169,
+          "arrival_ns": 1.929935,
+          "transition_ns": 0.02489,
+          "net": "n1433",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "U2033/Y",
+          "cell": "INVX1",
+          "stage": "command_mux",
+          "increment_ns": 0.038839,
+          "arrival_ns": 1.968773,
+          "transition_ns": 0.038509,
+          "net": "cmd_op[0]",
+          "fanout": 2,
+          "capacitance_ff": 11.504,
+          "edge": "f"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "delay_ns": 0.101875,
+          "end_ns": 0.101875,
+          "cells": 1
+        },
+        {
+          "stage": "address_comparison_distribution",
+          "delay_ns": 0.237142,
+          "end_ns": 0.339017,
+          "cells": 8
+        },
+        {
+          "stage": "bank_candidates",
+          "delay_ns": 0.756054,
+          "end_ns": 1.095071,
+          "cells": 30
+        },
+        {
+          "stage": "scheduler",
+          "delay_ns": 0.636239,
+          "end_ns": 1.73131,
+          "cells": 24
+        },
+        {
+          "stage": "command_mux",
+          "delay_ns": 0.237463,
+          "end_ns": 1.968773,
+          "cells": 8
+        }
+      ]
+    },
+    {
+      "startpoint": "table_i/addresses_reg_7_",
+      "endpoint": "cmd_col[1]",
+      "arrival_ns": 1.968769,
+      "required_ns": 1.9,
+      "slack_ns": -0.068769,
+      "mask": {
+        "pin": "frfcfs_scheduler_i/U400/Y",
+        "cell": "INVX8",
+        "stage": "scheduler",
+        "increment_ns": 0.056263,
+        "arrival_ns": 1.806417,
+        "transition_ns": 0.072704,
+        "net": "select_mask[4]",
+        "fanout": 50,
+        "capacitance_ff": 130.56300000000002,
+        "edge": "r"
+      },
+      "arcs": [
+        {
+          "pin": "table_i/addresses_reg_7_/Q",
+          "cell": "DFFPOSX1",
+          "stage": "clock_to_q",
+          "increment_ns": 0.113515,
+          "arrival_ns": 0.113515,
+          "transition_ns": 0.033924,
+          "net": "table_i/addresses[7]",
+          "fanout": 3,
+          "capacitance_ff": 13.084,
+          "edge": "f"
+        },
+        {
+          "pin": "U4286/Y",
+          "cell": "INVX1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.019649,
+          "arrival_ns": 0.133164,
+          "transition_ns": 0.0,
+          "net": "n3004",
+          "fanout": 3,
+          "capacitance_ff": 5.394,
+          "edge": "r"
+        },
+        {
+          "pin": "U1362/Y",
+          "cell": "OR2X2",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.035496,
+          "arrival_ns": 0.16866,
+          "transition_ns": 0.005685,
+          "net": "n2831",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "U4076/Y",
+          "cell": "NAND2X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.012097,
+          "arrival_ns": 0.180757,
+          "transition_ns": 0.021251,
+          "net": "n4649",
+          "fanout": 1,
+          "capacitance_ff": 2.6,
+          "edge": "f"
+        },
+        {
+          "pin": "U5782/Y",
+          "cell": "NAND3X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.039042,
+          "arrival_ns": 0.2198,
+          "transition_ns": 0.04178,
+          "net": "n4652",
+          "fanout": 1,
+          "capacitance_ff": 3.2880000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "U5783/Y",
+          "cell": "NOR3X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.029116,
+          "arrival_ns": 0.248916,
+          "transition_ns": 0.028425,
+          "net": "n4655",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "U5784/Y",
+          "cell": "NAND3X1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.034784,
+          "arrival_ns": 0.2837,
+          "transition_ns": 0.037757,
+          "net": "n4656",
+          "fanout": 1,
+          "capacitance_ff": 2.2920000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "U3044/Y",
+          "cell": "OR2X2",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.041293,
+          "arrival_ns": 0.324993,
+          "transition_ns": 0.013454,
+          "net": "n2067",
+          "fanout": 2,
+          "capacitance_ff": 3.09,
+          "edge": "r"
+        },
+        {
+          "pin": "U3045/Y",
+          "cell": "INVX1",
+          "stage": "address_comparison_distribution",
+          "increment_ns": 0.017965,
+          "arrival_ns": 0.342958,
+          "transition_ns": 0.01336,
+          "net": "n2642",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U3384/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.029643,
+          "arrival_ns": 0.372601,
+          "transition_ns": 0.03495,
+          "net": "candidates_i/n2940",
+          "fanout": 1,
+          "capacitance_ff": 1.869,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U619/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.032964,
+          "arrival_ns": 0.405565,
+          "transition_ns": 0.009597,
+          "net": "candidates_i/n472",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1706/Y",
+          "cell": "NAND2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.012397,
+          "arrival_ns": 0.417962,
+          "transition_ns": 0.022993,
+          "net": "candidates_i/n2946",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U2651/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.029789,
+          "arrival_ns": 0.447752,
+          "transition_ns": 0.023924,
+          "net": "candidates_i/n2972",
+          "fanout": 1,
+          "capacitance_ff": 1.7979999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U621/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.034678,
+          "arrival_ns": 0.48243,
+          "transition_ns": 0.012574,
+          "net": "candidates_i/n473",
+          "fanout": 2,
+          "capacitance_ff": 3.1020000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U622/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.01663,
+          "arrival_ns": 0.49906,
+          "transition_ns": 0.011824,
+          "net": "candidates_i/n1321",
+          "fanout": 1,
+          "capacitance_ff": 2.297,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1453/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.026631,
+          "arrival_ns": 0.52569,
+          "transition_ns": 0.024062,
+          "net": "candidates_i/n1698",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1375/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.021082,
+          "arrival_ns": 0.546773,
+          "transition_ns": 0.012978,
+          "net": "candidates_i/n996",
+          "fanout": 2,
+          "capacitance_ff": 2.9520000000000004,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1376/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.003708,
+          "arrival_ns": 0.550481,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n997",
+          "fanout": 1,
+          "capacitance_ff": 2.764,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4201/Y",
+          "cell": "AOI22X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.025139,
+          "arrival_ns": 0.57562,
+          "transition_ns": 0.036479,
+          "net": "candidates_i/n3872",
+          "fanout": 1,
+          "capacitance_ff": 2.6,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4202/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.041033,
+          "arrival_ns": 0.616653,
+          "transition_ns": 0.03697,
+          "net": "candidates_i/n3875",
+          "fanout": 1,
+          "capacitance_ff": 2.3649999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4203/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.022082,
+          "arrival_ns": 0.638735,
+          "transition_ns": 0.006611,
+          "net": "candidates_i/n3877",
+          "fanout": 2,
+          "capacitance_ff": 3.5260000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1617/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.037672,
+          "arrival_ns": 0.676407,
+          "transition_ns": 0.003639,
+          "net": "candidates_i/n1160",
+          "fanout": 5,
+          "capacitance_ff": 7.381,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1683/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.010648,
+          "arrival_ns": 0.687055,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1192",
+          "fanout": 3,
+          "capacitance_ff": 5.9239999999999995,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U700/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.033082,
+          "arrival_ns": 0.720137,
+          "transition_ns": 0.010426,
+          "net": "candidates_i/n531",
+          "fanout": 1,
+          "capacitance_ff": 3.2880000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U699/Y",
+          "cell": "NOR3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.020604,
+          "arrival_ns": 0.740741,
+          "transition_ns": 0.026369,
+          "net": "candidates_i/n529",
+          "fanout": 1,
+          "capacitance_ff": 2.726,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4354/Y",
+          "cell": "AOI22X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.042692,
+          "arrival_ns": 0.783433,
+          "transition_ns": 0.043095,
+          "net": "candidates_i/n4038",
+          "fanout": 1,
+          "capacitance_ff": 1.869,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4356/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.034661,
+          "arrival_ns": 0.818094,
+          "transition_ns": 0.011977,
+          "net": "candidates_i/n4039",
+          "fanout": 1,
+          "capacitance_ff": 2.9610000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U4357/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.01058,
+          "arrival_ns": 0.828674,
+          "transition_ns": 0.016341,
+          "net": "candidates_i/n4042",
+          "fanout": 1,
+          "capacitance_ff": 2.209,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1691/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.028156,
+          "arrival_ns": 0.85683,
+          "transition_ns": 0.023568,
+          "net": "candidates_i/n1198",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1162/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.021536,
+          "arrival_ns": 0.878366,
+          "transition_ns": 0.01387,
+          "net": "candidates_i/n851",
+          "fanout": 2,
+          "capacitance_ff": 3.2390000000000003,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U2481/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.035375,
+          "arrival_ns": 0.913741,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1723",
+          "fanout": 2,
+          "capacitance_ff": 3.5260000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1693/Y",
+          "cell": "AND2X2",
+          "stage": "bank_candidates",
+          "increment_ns": 0.031161,
+          "arrival_ns": 0.944902,
+          "transition_ns": 0.0,
+          "net": "candidates_i/n1199",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4391/Y",
+          "cell": "NAND3X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.027755,
+          "arrival_ns": 0.972657,
+          "transition_ns": 0.037236,
+          "net": "candidates_i/n4095",
+          "fanout": 1,
+          "capacitance_ff": 2.3649999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U2673/Y",
+          "cell": "NOR2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.018849,
+          "arrival_ns": 0.991506,
+          "transition_ns": 0.001951,
+          "net": "candidates_i/n4096",
+          "fanout": 1,
+          "capacitance_ff": 1.924,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4404/Y",
+          "cell": "OAI21X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.018493,
+          "arrival_ns": 1.009999,
+          "transition_ns": 0.046653,
+          "net": "candidates_i/n4237",
+          "fanout": 2,
+          "capacitance_ff": 3.1020000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1936/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.029111,
+          "arrival_ns": 1.03911,
+          "transition_ns": 0.014202,
+          "net": "candidates_i/n4259",
+          "fanout": 2,
+          "capacitance_ff": 3.888,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U1444/Y",
+          "cell": "NAND2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.011732,
+          "arrival_ns": 1.050842,
+          "transition_ns": 0.031517,
+          "net": "candidates_i/n1043",
+          "fanout": 1,
+          "capacitance_ff": 1.5510000000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1334/Y",
+          "cell": "INVX1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.02284,
+          "arrival_ns": 1.073682,
+          "transition_ns": 0.012077,
+          "net": "candidates_i/n964",
+          "fanout": 1,
+          "capacitance_ff": 2.826,
+          "edge": "f"
+        },
+        {
+          "pin": "candidates_i/U4451/Y",
+          "cell": "AOI22X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.027116,
+          "arrival_ns": 1.100798,
+          "transition_ns": 0.04584,
+          "net": "candidates_i/n4230",
+          "fanout": 1,
+          "capacitance_ff": 2.111,
+          "edge": "r"
+        },
+        {
+          "pin": "candidates_i/U1928/Y",
+          "cell": "NAND2X1",
+          "stage": "bank_candidates",
+          "increment_ns": 0.019209,
+          "arrival_ns": 1.120006,
+          "transition_ns": 0.017973,
+          "net": "candidates_i/candidate_mask[5]",
+          "fanout": 1,
+          "capacitance_ff": 1.7630000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U953/Y",
+          "cell": "AND2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.037156,
+          "arrival_ns": 1.157163,
+          "transition_ns": 0.000713,
+          "net": "frfcfs_scheduler_i/n1188",
+          "fanout": 2,
+          "capacitance_ff": 4.23,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1272/Y",
+          "cell": "AOI22X1",
+          "stage": "scheduler",
+          "increment_ns": 0.035845,
+          "arrival_ns": 1.193008,
+          "transition_ns": 0.044721,
+          "net": "frfcfs_scheduler_i/n977",
+          "fanout": 1,
+          "capacitance_ff": 2.027,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U446/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.024675,
+          "arrival_ns": 1.217684,
+          "transition_ns": 0.021634,
+          "net": "frfcfs_scheduler_i/n1007",
+          "fanout": 1,
+          "capacitance_ff": 3.226,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1295/Y",
+          "cell": "NOR3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.028701,
+          "arrival_ns": 1.246385,
+          "transition_ns": 0.053922,
+          "net": "frfcfs_scheduler_i/n1029",
+          "fanout": 1,
+          "capacitance_ff": 2.9610000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1312/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.020374,
+          "arrival_ns": 1.266759,
+          "transition_ns": 0.016088,
+          "net": "frfcfs_scheduler_i/n1030",
+          "fanout": 1,
+          "capacitance_ff": 2.209,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U154/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.036143,
+          "arrival_ns": 1.302902,
+          "transition_ns": 0.037451,
+          "net": "frfcfs_scheduler_i/n1044",
+          "fanout": 2,
+          "capacitance_ff": 4.0200000000000005,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U380/Y",
+          "cell": "OAI21X1",
+          "stage": "scheduler",
+          "increment_ns": 0.02576,
+          "arrival_ns": 1.328663,
+          "transition_ns": 0.015435,
+          "net": "frfcfs_scheduler_i/n237",
+          "fanout": 2,
+          "capacitance_ff": 5.345,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U264/Y",
+          "cell": "INVX2",
+          "stage": "scheduler",
+          "increment_ns": 0.027002,
+          "arrival_ns": 1.355665,
+          "transition_ns": 0.01682,
+          "net": "frfcfs_scheduler_i/n1189",
+          "fanout": 4,
+          "capacitance_ff": 10.682,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U449/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.01397,
+          "arrival_ns": 1.369635,
+          "transition_ns": 0.002379,
+          "net": "frfcfs_scheduler_i/n285",
+          "fanout": 1,
+          "capacitance_ff": 2.301,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U450/Y",
+          "cell": "OR2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.042934,
+          "arrival_ns": 1.412569,
+          "transition_ns": 0.014185,
+          "net": "frfcfs_scheduler_i/n1417",
+          "fanout": 4,
+          "capacitance_ff": 8.257,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1533/Y",
+          "cell": "OAI21X1",
+          "stage": "scheduler",
+          "increment_ns": 0.041123,
+          "arrival_ns": 1.453692,
+          "transition_ns": 0.043388,
+          "net": "frfcfs_scheduler_i/n1418",
+          "fanout": 1,
+          "capacitance_ff": 2.3649999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U69/Y",
+          "cell": "NOR2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.021949,
+          "arrival_ns": 1.475641,
+          "transition_ns": 0.004123,
+          "net": "frfcfs_scheduler_i/n1423",
+          "fanout": 1,
+          "capacitance_ff": 2.6,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1538/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.035268,
+          "arrival_ns": 1.510909,
+          "transition_ns": 0.04486,
+          "net": "frfcfs_scheduler_i/n1424",
+          "fanout": 2,
+          "capacitance_ff": 3.8310000000000004,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U146/Y",
+          "cell": "OR2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.044968,
+          "arrival_ns": 1.555877,
+          "transition_ns": 0.018649,
+          "net": "frfcfs_scheduler_i/n75",
+          "fanout": 3,
+          "capacitance_ff": 4.9719999999999995,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U378/Y",
+          "cell": "INVX1",
+          "stage": "scheduler",
+          "increment_ns": 0.019738,
+          "arrival_ns": 1.575615,
+          "transition_ns": 0.013532,
+          "net": "frfcfs_scheduler_i/n235",
+          "fanout": 1,
+          "capacitance_ff": 3.0109999999999997,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1553/Y",
+          "cell": "NOR3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.04722,
+          "arrival_ns": 1.622836,
+          "transition_ns": 0.04866,
+          "net": "frfcfs_scheduler_i/n1440",
+          "fanout": 1,
+          "capacitance_ff": 1.7979999999999998,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U414/Y",
+          "cell": "AND2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.041113,
+          "arrival_ns": 1.663949,
+          "transition_ns": 0.01984,
+          "net": "frfcfs_scheduler_i/n261",
+          "fanout": 3,
+          "capacitance_ff": 6.623,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U1619/Y",
+          "cell": "NAND3X1",
+          "stage": "scheduler",
+          "increment_ns": 0.01119,
+          "arrival_ns": 1.675139,
+          "transition_ns": 0.014498,
+          "net": "frfcfs_scheduler_i/n1554",
+          "fanout": 1,
+          "capacitance_ff": 1.4760000000000002,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U768/Y",
+          "cell": "INVX1",
+          "stage": "scheduler",
+          "increment_ns": 0.017881,
+          "arrival_ns": 1.69302,
+          "transition_ns": 0.000988,
+          "net": "frfcfs_scheduler_i/n1548",
+          "fanout": 3,
+          "capacitance_ff": 6.97,
+          "edge": "r"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U385/Y",
+          "cell": "NAND2X1",
+          "stage": "scheduler",
+          "increment_ns": 0.012539,
+          "arrival_ns": 1.705559,
+          "transition_ns": 0.022571,
+          "net": "frfcfs_scheduler_i/n240",
+          "fanout": 1,
+          "capacitance_ff": 1.7630000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U383/Y",
+          "cell": "AND2X2",
+          "stage": "scheduler",
+          "increment_ns": 0.044595,
+          "arrival_ns": 1.750154,
+          "transition_ns": 0.011012,
+          "net": "frfcfs_scheduler_i/n238",
+          "fanout": 1,
+          "capacitance_ff": 10.104000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "frfcfs_scheduler_i/U400/Y",
+          "cell": "INVX8",
+          "stage": "scheduler",
+          "increment_ns": 0.056263,
+          "arrival_ns": 1.806417,
+          "transition_ns": 0.072704,
+          "net": "frfcfs_scheduler_i/select_mask[4]",
+          "fanout": 50,
+          "capacitance_ff": 130.56300000000002,
+          "edge": "r"
+        },
+        {
+          "pin": "U8003/Y",
+          "cell": "AOI22X1",
+          "stage": "command_mux",
+          "increment_ns": 0.042133,
+          "arrival_ns": 1.84855,
+          "transition_ns": 0.034079,
+          "net": "n7798",
+          "fanout": 1,
+          "capacitance_ff": 1.7630000000000001,
+          "edge": "f"
+        },
+        {
+          "pin": "U8005/Y",
+          "cell": "AND2X2",
+          "stage": "command_mux",
+          "increment_ns": 0.039692,
+          "arrival_ns": 1.888242,
+          "transition_ns": 0.004806,
+          "net": "n7799",
+          "fanout": 1,
+          "capacitance_ff": 2.832,
+          "edge": "f"
+        },
+        {
+          "pin": "U8006/Y",
+          "cell": "NAND3X1",
+          "stage": "command_mux",
+          "increment_ns": 0.028757,
+          "arrival_ns": 1.916999,
+          "transition_ns": 0.036637,
+          "net": "n7802",
+          "fanout": 1,
+          "capacitance_ff": 2.2920000000000003,
+          "edge": "r"
+        },
+        {
+          "pin": "U8007/Y",
+          "cell": "OR2X2",
+          "stage": "command_mux",
+          "increment_ns": 0.05177,
+          "arrival_ns": 1.968769,
+          "transition_ns": 0.028759,
+          "net": "cmd_col[1]",
+          "fanout": 1,
+          "capacitance_ff": 10.0,
+          "edge": "r"
+        }
+      ],
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "delay_ns": 0.113515,
+          "end_ns": 0.113515,
+          "cells": 1
+        },
+        {
+          "stage": "address_comparison_distribution",
+          "delay_ns": 0.229443,
+          "end_ns": 0.342958,
+          "cells": 8
+        },
+        {
+          "stage": "bank_candidates",
+          "delay_ns": 0.777048,
+          "end_ns": 1.120006,
+          "cells": 31
+        },
+        {
+          "stage": "scheduler",
+          "delay_ns": 0.686411,
+          "end_ns": 1.806417,
+          "cells": 22
+        },
+        {
+          "stage": "command_mux",
+          "delay_ns": 0.162352,
+          "end_ns": 1.968769,
+          "cells": 4
+        }
+      ]
+    }
+  ],
+  "limits": "Saved typical-corner pre-layout DDC with ideal clock; no compile, new PPA result, routing or signoff. Signed reported cell increments retained.",
+  "report_hashes": {
+    "raw": {
+      "area.rpt": "7bd7a94a27bd8539d243d9546ee4d4001897533363d83fa76e96219fe42e1485",
+      "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+      "clocks.rpt": "67a73a7d8c7ed50cb752674dd2fc076ec19232c68b6d3b0b98dca7069c42f62e",
+      "constraints.rpt": "d672f4677526c7b24db7a5a1aef8c4b4bb11cab846ccba72c6a9df0e98a6a621",
+      "timing.rpt": "fe58636bfab1504d03b3451c1135780f5280a0eae9a6127c50f60720120b2d6b",
+      "register_to_output.rpt": "7a0bdd97496e09a7fdfc7ad3c65479f33410b391e4e2f9a415101ede89ae6245",
+      "register_to_register.rpt": "6ab504c2542b90741094e7ce47fd34da172463a5eeff040752f65ca7948e05ad",
+      "input_to_register.rpt": "80e87e5238b00636f60d70283f1eb56a85a09c8712a17d2c8180b0e19d9278af",
+      "input_to_output.rpt": "03b68532609f7e6839250c8fec9e804060611acad6ca1186e210ce65582ea9c5",
+      "hold.rpt": "7b2ad623cc134bf45eb29878fbb004b19c10de653d540f10688ebb0ca65a2b9a",
+      "command_mask_nets.rpt": "5709d8d6b0196cc8795255a64189f8230bfdcf5637a7aefb9dece624e26a496e"
+    },
+    "public": {
+      "area.rpt": "504a331302aa9e6f30ca046b4d74087ec8d3c4281c077c56c03d86b2c5609af4",
+      "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+      "clocks.rpt": "ce69ed8525086e2902ef803445c4536ef913d57b9d933fb8d17ad3e9b3a19372",
+      "constraints.rpt": "7764ba7f382d0a1dcd21181c07eb038d560e0a312e58fa2c90ce51dc2675d5d1",
+      "timing.rpt": "4b770ca3b9f27ef7fa8f8f1ef8921184a338ea762deb4799eff2f1d098b0e841",
+      "register_to_output.rpt": "0c39ec9c99341a99fb5b6f9e5ad705ed7a064aa33c236e8755247dd79a00577b",
+      "register_to_register.rpt": "493fd04cea9b8ba62bab654e6905686a73747bae595629a90ee3bc6994126d0d",
+      "input_to_register.rpt": "e8f9dcbb28673f36c80e470d73338355bd6d49126f4e067b5db735d5c8a68c72",
+      "input_to_output.rpt": "a9411e41a9d538196fbec41d8846045a1b5f12b273d5671a471d8092f9583f97",
+      "hold.rpt": "fd4b5d6151b208870e68708e36ba6550ca6ccac0c0b58f634e6c63c54db824ae",
+      "command_mask_nets.rpt": "2270697bd6c08f38bcc47757c874f524aa5025e2392a678658167c4cc50d2994"
+    }
+  }
+}

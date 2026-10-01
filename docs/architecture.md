@@ -8,6 +8,8 @@ cycle-level policy. Their measured implementation changes are documented in
 separate from the current RTL's mapping results.
 The current [command-mask and storage optimization](command-mask-optimization.md)
 also preserves the protocol and cycle behavior.
+The [remaining command-path analysis](command-path-3ns.md) examines that selected
+implementation and proposes the next scheduler experiment without changing RTL.
 
 ## Goals and boundaries
 

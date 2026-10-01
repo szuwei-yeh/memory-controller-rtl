@@ -6,6 +6,10 @@ while reducing mapped area by **1.89%**. All 34 internal setup failures disappea
 Q16/4 ns retains a setup pass with **2.56% less area**, and hold improves at both
 targets. **3 ns setup and hold still fail; this is not timing closure.**
 
+The subsequent [remaining command-path analysis](command-path-3ns.md) queries
+this selected implementation's saved DDC, reproduces all violations, and breaks
+down the remaining 68.773 ps without another compile or RTL change.
+
 This experiment targets the scheduler-to-command-output path after the
 [candidate-mask revision](candidate-mask-optimization.md) and
 [storage timing study](storage-timing-experiment.md). The storage alternatives

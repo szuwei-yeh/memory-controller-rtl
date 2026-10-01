@@ -1,0 +1,28 @@
+{
+  "raw": {
+    "area.rpt": "7bd7a94a27bd8539d243d9546ee4d4001897533363d83fa76e96219fe42e1485",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "clocks.rpt": "67a73a7d8c7ed50cb752674dd2fc076ec19232c68b6d3b0b98dca7069c42f62e",
+    "constraints.rpt": "d672f4677526c7b24db7a5a1aef8c4b4bb11cab846ccba72c6a9df0e98a6a621",
+    "timing.rpt": "fe58636bfab1504d03b3451c1135780f5280a0eae9a6127c50f60720120b2d6b",
+    "register_to_output.rpt": "7a0bdd97496e09a7fdfc7ad3c65479f33410b391e4e2f9a415101ede89ae6245",
+    "register_to_register.rpt": "6ab504c2542b90741094e7ce47fd34da172463a5eeff040752f65ca7948e05ad",
+    "input_to_register.rpt": "80e87e5238b00636f60d70283f1eb56a85a09c8712a17d2c8180b0e19d9278af",
+    "input_to_output.rpt": "03b68532609f7e6839250c8fec9e804060611acad6ca1186e210ce65582ea9c5",
+    "hold.rpt": "7b2ad623cc134bf45eb29878fbb004b19c10de653d540f10688ebb0ca65a2b9a",
+    "command_mask_nets.rpt": "5709d8d6b0196cc8795255a64189f8230bfdcf5637a7aefb9dece624e26a496e"
+  },
+  "public": {
+    "area.rpt": "504a331302aa9e6f30ca046b4d74087ec8d3c4281c077c56c03d86b2c5609af4",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "clocks.rpt": "ce69ed8525086e2902ef803445c4536ef913d57b9d933fb8d17ad3e9b3a19372",
+    "constraints.rpt": "7764ba7f382d0a1dcd21181c07eb038d560e0a312e58fa2c90ce51dc2675d5d1",
+    "timing.rpt": "4b770ca3b9f27ef7fa8f8f1ef8921184a338ea762deb4799eff2f1d098b0e841",
+    "register_to_output.rpt": "0c39ec9c99341a99fb5b6f9e5ad705ed7a064aa33c236e8755247dd79a00577b",
+    "register_to_register.rpt": "493fd04cea9b8ba62bab654e6905686a73747bae595629a90ee3bc6994126d0d",
+    "input_to_register.rpt": "e8f9dcbb28673f36c80e470d73338355bd6d49126f4e067b5db735d5c8a68c72",
+    "input_to_output.rpt": "a9411e41a9d538196fbec41d8846045a1b5f12b273d5671a471d8092f9583f97",
+    "hold.rpt": "fd4b5d6151b208870e68708e36ba6550ca6ccac0c0b58f634e6c63c54db824ae",
+    "command_mask_nets.rpt": "2270697bd6c08f38bcc47757c874f524aa5025e2392a678658167c4cc50d2994"
+  }
+}

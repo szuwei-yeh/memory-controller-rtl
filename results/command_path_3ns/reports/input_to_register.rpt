@@ -1,0 +1,917 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Wed Sep 30 20:28:09 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_48_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U4656/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U4656/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5621 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U4657/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U4657/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n5047 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5855/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5855/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6622 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_48_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_48_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_55_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U2404/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U2404/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5606 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U2406/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U2406/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n1545 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5848/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5848/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n3373 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_55_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_55_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_54_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U2721/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U2721/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5608 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U2723/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U2723/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n1745 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5849/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5849/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6621 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_54_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_54_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_53_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U3141/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U3141/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5610 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U3145/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U3145/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n2560 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5850/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5850/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6620 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_53_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_53_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_52_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U3611/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U3611/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5612 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U3613/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U3613/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n2696 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5851/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5851/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6619 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_52_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_52_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_51_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U3934/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U3934/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5614 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U3935/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U3935/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n4663 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5852/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5852/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6618 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_51_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_51_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_50_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U4148/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U4148/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5616 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U4149/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U4149/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n4793 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5853/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5853/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6617 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_50_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_50_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/ages_reg_49_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U2891/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U2891/Y (AND2X1)                                      0.167213  0.175404   1.644762 f
+  table_i/n1374 (net)                          21     0.057992            0.000000   1.644762 f
+  table_i/U2893/A (INVX1)                                       0.167213  0.000000   1.644762 f
+  table_i/U2893/Y (INVX1)                                       0.049067  0.088032   1.732793 r
+  table_i/n2500 (net)                           5     0.012016            0.000000   1.732793 r
+  table_i/U4245/A (AND2X2)                                      0.049067  0.000000   1.732793 r
+  table_i/U4245/Y (AND2X2)                                      0.056376  0.063741   1.796535 r
+  table_i/n5977 (net)                          10     0.021461            0.000000   1.796535 r
+  table_i/U4246/A (INVX1)                                       0.056376  0.000000   1.796535 r
+  table_i/U4246/Y (INVX1)                                       0.056203  0.060844   1.857379 f
+  table_i/n4862 (net)                           9     0.018111            0.000000   1.857379 f
+  table_i/U4788/A (INVX1)                                       0.056203  0.000000   1.857379 f
+  table_i/U4788/Y (INVX1)                                       0.360684  0.258423   2.115802 r
+  table_i/n5409 (net)                          30     0.076870            0.000000   2.115802 r
+  table_i/U5846/C (OAI21X1)                                     0.360684  0.000000   2.115802 r
+  table_i/U5846/Y (OAI21X1)                                     0.080463  0.100282   2.216084 f
+  table_i/n5623 (net)                           1     0.001504            0.000000   2.216084 f
+  table_i/U5304/A (BUFX2)                                       0.080463  0.000000   2.216084 f
+  table_i/U5304/Y (BUFX2)                                       0.040184  0.068813   2.284896 f
+  table_i/n5213 (net)                           9     0.022407            0.000000   2.284896 f
+  table_i/U5083/B (AND2X1)                                      0.040184  0.000000   2.284896 f
+  table_i/U5083/Y (AND2X1)                                      0.050128  0.072545   2.357441 f
+  table_i/n5620 (net)                           8     0.014613            0.000000   2.357441 f
+  table_i/U4375/B (AND2X1)                                      0.050128  0.000000   2.357441 f
+  table_i/U4375/Y (AND2X1)                                      0.012858  0.046983   2.404425 f
+  table_i/n5618 (net)                           1     0.001476            0.000000   2.404425 f
+  table_i/U4377/A (INVX1)                                       0.012858  0.000000   2.404425 f
+  table_i/U4377/Y (INVX1)                                       0.000000  0.001220   2.405644 r
+  table_i/n4927 (net)                           1     0.002010            0.000000   2.405644 r
+  table_i/U5854/C (OAI21X1)                                     0.000000  0.000000   2.405644 r
+  table_i/U5854/Y (OAI21X1)                                     0.005984  0.009338   2.414983 f
+  table_i/n6616 (net)                           1     0.001290            0.000000   2.414983 f
+  table_i/ages_reg_49_/D (DFFPOSX1)                             0.005984  0.000000   2.414983 f
+  data arrival time                                                                  2.414983
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/ages_reg_49_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.055934  2.844066
+  data required time                                                                 2.844066
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.844066
+  data arrival time                                                                  -2.414983
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.429083
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/write_data_reg_297_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U3774/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U3774/Y (AND2X1)                                      0.019857  0.069086   1.538444 f
+  table_i/n1505 (net)                           3     0.006103            0.000000   1.538444 f
+  table_i/U3776/A (INVX1)                                       0.019857  0.000000   1.538444 f
+  table_i/U3776/Y (INVX1)                                       0.000000  0.007165   1.545609 r
+  table_i/n4591 (net)                           2     0.003078            0.000000   1.545609 r
+  table_i/U4831/A (BUFX2)                                       0.000000  0.000000   1.545609 r
+  table_i/U4831/Y (BUFX2)                                       0.038966  0.054228   1.599837 r
+  table_i/n5219 (net)                           7     0.016397            0.000000   1.599837 r
+  table_i/U4456/A (AND2X1)                                      0.038966  0.000000   1.599837 r
+  table_i/U4456/Y (AND2X1)                                      0.399067  0.277752   1.877589 r
+  table_i/n6087 (net)                          33     0.081514            0.000000   1.877589 r
+  table_i/U4457/A (INVX1)                                       0.399067  0.000000   1.877589 r
+  table_i/U4457/Y (INVX1)                                       0.084395  0.131461   2.009050 f
+  table_i/n4975 (net)                           5     0.009023            0.000000   2.009050 f
+  table_i/U4767/A (INVX1)                                       0.084395  0.000000   2.009050 f
+  table_i/U4767/Y (INVX1)                                       0.347975  0.258842   2.267893 r
+  table_i/n5400 (net)                          30     0.074074            0.000000   2.267893 r
+  table_i/U3376/A (OAI21X1)                                     0.347975  0.000000   2.267893 r
+  table_i/U3376/Y (OAI21X1)                                     0.047642  0.096913   2.364806 f
+  table_i/n4062 (net)                           1     0.001290            0.000000   2.364806 f
+  table_i/write_data_reg_297_/D (DFFPOSX1)                      0.047642  0.000000   2.364806 f
+  data arrival time                                                                  2.364806
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_297_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.064613  2.835387
+  data required time                                                                 2.835387
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.835387
+  data arrival time                                                                  -2.364806
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.470581
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: table_i/write_data_reg_296_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/U572/B (AND2X1)                                       0.016046  0.000000   1.325642 f
+  table_i/U572/Y (AND2X1)                                       0.153028  0.143716   1.469358 f
+  table_i/n1154 (net)                          28     0.051031            0.000000   1.469358 f
+  table_i/U3774/B (AND2X1)                                      0.153028  0.000000   1.469358 f
+  table_i/U3774/Y (AND2X1)                                      0.019857  0.069086   1.538444 f
+  table_i/n1505 (net)                           3     0.006103            0.000000   1.538444 f
+  table_i/U3776/A (INVX1)                                       0.019857  0.000000   1.538444 f
+  table_i/U3776/Y (INVX1)                                       0.000000  0.007165   1.545609 r
+  table_i/n4591 (net)                           2     0.003078            0.000000   1.545609 r
+  table_i/U4831/A (BUFX2)                                       0.000000  0.000000   1.545609 r
+  table_i/U4831/Y (BUFX2)                                       0.038966  0.054228   1.599837 r
+  table_i/n5219 (net)                           7     0.016397            0.000000   1.599837 r
+  table_i/U4456/A (AND2X1)                                      0.038966  0.000000   1.599837 r
+  table_i/U4456/Y (AND2X1)                                      0.399067  0.277752   1.877589 r
+  table_i/n6087 (net)                          33     0.081514            0.000000   1.877589 r
+  table_i/U4457/A (INVX1)                                       0.399067  0.000000   1.877589 r
+  table_i/U4457/Y (INVX1)                                       0.084395  0.131461   2.009050 f
+  table_i/n4975 (net)                           5     0.009023            0.000000   2.009050 f
+  table_i/U4767/A (INVX1)                                       0.084395  0.000000   2.009050 f
+  table_i/U4767/Y (INVX1)                                       0.347975  0.258842   2.267893 r
+  table_i/n5400 (net)                          30     0.074074            0.000000   2.267893 r
+  table_i/U3374/A (OAI21X1)                                     0.347975  0.000000   2.267893 r
+  table_i/U3374/Y (OAI21X1)                                     0.047642  0.096913   2.364806 f
+  table_i/n4061 (net)                           1     0.001290            0.000000   2.364806 f
+  table_i/write_data_reg_296_/D (DFFPOSX1)                      0.047642  0.000000   2.364806 f
+  data arrival time                                                                  2.364806
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_296_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.064613  2.835387
+  data required time                                                                 2.835387
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.835387
+  data arrival time                                                                  -2.364806
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.470581
+
+
+1

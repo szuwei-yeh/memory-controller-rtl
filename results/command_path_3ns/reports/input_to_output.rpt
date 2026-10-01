@@ -1,0 +1,157 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Wed Sep 30 20:28:37 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: req_ready (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  table_i/rst (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.089129 r
+  table_i/rst (net)                                   0.016401            0.000000   1.089129 r
+  table_i/U4951/A (INVX1)                                       0.048504  0.000000   1.089129 r
+  table_i/U4951/Y (INVX1)                                       0.006840  0.024673   1.113802 f
+  table_i/n5479 (net)                           1     0.001476            0.000000   1.113802 f
+  table_i/U4950/A (INVX1)                                       0.006840  0.000000   1.113802 f
+  table_i/U4950/Y (INVX1)                                       0.000000  0.007657   1.121459 r
+  table_i/n5478 (net)                           3     0.004653            0.000000   1.121459 r
+  table_i/U4863/A (INVX1)                                       0.000000  0.000000   1.121459 r
+  table_i/U4863/Y (INVX1)                                       0.019070  0.017604   1.139062 f
+  table_i/n5475 (net)                           3     0.004428            0.000000   1.139062 f
+  table_i/U4829/A (INVX1)                                       0.019070  0.000000   1.139062 f
+  table_i/U4829/Y (INVX1)                                       0.126008  0.098312   1.237375 r
+  table_i/n5474 (net)                          13     0.031293            0.000000   1.237375 r
+  table_i/U4560/C (AOI21X1)                                     0.126008  0.000000   1.237375 r
+  table_i/U4560/Y (AOI21X1)                                     0.014706  0.044477   1.281852 f
+  table_i/n6708 (net)                           1     0.001504            0.000000   1.281852 f
+  table_i/U626/A (BUFX2)                                        0.014706  0.000000   1.281852 f
+  table_i/U626/Y (BUFX2)                                        0.016046  0.043790   1.325642 f
+  table_i/req_ready (net)                       2     0.011827            0.000000   1.325642 f
+  table_i/req_ready (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   1.325642 f
+  req_ready (net)                                     0.011827            0.000000   1.325642 f
+  req_ready (out)                                               0.016046  0.000000   1.325642 f
+  data arrival time                                                                  1.325642
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  output external delay                                                   -1.000000  1.900000
+  data required time                                                                 1.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 1.900000
+  data arrival time                                                                  -1.325642
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.574358
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: rsp_valid (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 r
+  rst (in)                                                      0.100000  0.000000   1.000000 r
+  rst (net)                                     1     0.001551            0.000000   1.000000 r
+  U5658/A (INVX1)                                               0.100000  0.000000   1.000000 r
+  U5658/Y (INVX1)                                               0.009070  0.042582   1.042582 f
+  n4552 (net)                                   2     0.003420            0.000000   1.042582 f
+  U5630/A (INVX1)                                               0.009070  0.000000   1.042582 f
+  U5630/Y (INVX1)                                               0.048504  0.046547   1.089129 r
+  n4551 (net)                                   8     0.016401            0.000000   1.089129 r
+  response_i/rst (mc_response_Q_DEPTH16_DATA_W32_TAG_W8)                  0.000000   1.089129 r
+  response_i/rst (net)                                0.016401            0.000000   1.089129 r
+  response_i/U652/A (INVX1)                                     0.048504  0.000000   1.089129 r
+  response_i/U652/Y (INVX1)                                     0.019271  0.033160   1.122289 f
+  response_i/n111 (net)                         3     0.005622            0.000000   1.122289 f
+  response_i/U858/B (AND2X1)                                    0.019271  0.000000   1.122289 f
+  response_i/U858/Y (AND2X1)                                    0.043655  0.064371   1.186660 f
+  response_i/rsp_valid (net)                    2     0.011871            0.000000   1.186660 f
+  response_i/rsp_valid (mc_response_Q_DEPTH16_DATA_W32_TAG_W8)            0.000000   1.186660 f
+  rsp_valid (net)                                     0.011871            0.000000   1.186660 f
+  rsp_valid (out)                                               0.043655  0.000000   1.186660 f
+  data arrival time                                                                  1.186660
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  output external delay                                                   -1.000000  1.900000
+  data required time                                                                 1.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 1.900000
+  data arrival time                                                                  -1.186660
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.713340
+
+
+  Startpoint: rst (input port clocked by core_clk)
+  Endpoint: cmd_valid (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock core_clk (rise edge)                               0.000000   0.000000
+  clock network delay (ideal)                              0.000000   0.000000
+  input external delay                                     1.000000   1.000000 f
+  rst (in)                                       0.100000  0.000000   1.000000 f
+  rst (net)                      1     0.001476            0.000000   1.000000 f
+  U5658/A (INVX1)                                0.100000  0.000000   1.000000 f
+  U5658/Y (INVX1)                                0.000000  0.037202   1.037202 r
+  n4552 (net)                    2     0.003579            0.000000   1.037202 r
+  U7569/B (NAND2X1)                              0.000000  0.000000   1.037202 r
+  U7569/Y (NAND2X1)                              0.027626  0.015878   1.053080 f
+  n7394 (net)                    2     0.003818            0.000000   1.053080 f
+  U5592/A (INVX1)                                0.027626  0.000000   1.053080 f
+  U5592/Y (INVX1)                                0.095790  0.081457   1.134537 r
+  cmd_valid (net)                8     0.025170            0.000000   1.134537 r
+  cmd_valid (out)                                0.095790  0.000000   1.134537 r
+  data arrival time                                                   1.134537
+
+  clock core_clk (rise edge)                               3.000000   3.000000
+  clock network delay (ideal)                              0.000000   3.000000
+  clock uncertainty                                        -0.100000  2.900000
+  output external delay                                    -1.000000  1.900000
+  data required time                                                  1.900000
+  -------------------------------------------------------------------------------
+  data required time                                                  1.900000
+  data arrival time                                                   -1.134537
+  -------------------------------------------------------------------------------
+  slack (MET)                                                         0.765463
+
+
+1

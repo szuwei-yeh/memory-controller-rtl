@@ -1,0 +1,955 @@
+
+****************************************
+Report : net
+        -connections
+        -verbose
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Wed Sep 30 20:28:37 2026
+****************************************
+
+
+net 'select_mask[15]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00531042    max:0.00534532
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00531042    max:0.00534532
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'select_mask[15]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1639/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U997/A              Input Pin (INVX2)   0.00267266
+    U2750/A             Input Pin (INVX2)   0.00267266
+
+net 'select_mask[14]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00449277    max:0.00452465
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00449277    max:0.00452465
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'select_mask[14]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1638/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4695/B             Input Pin (AND2X2)  0.00186944
+    U4472/A             Input Pin (INVX2)   0.00267266
+
+net 'select_mask[13]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00265521    max:0.00267266
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00265521    max:0.00267266
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'select_mask[13]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1636/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1198/A             Input Pin (INVX2)   0.00267266
+
+net 'select_mask[12]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'select_mask[12]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1634/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1122/A             Input Pin (INVX4)   0.0050916
+
+net 'select_mask[11]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.024059    max:0.0249576
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.024059    max:0.0249576
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    12
+    number of pins:     13
+
+Connections for net 'select_mask[11]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U5/Y
+                        Output Pin (INVX4)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1120/A             Input Pin (INVX2)   0.00267266
+    U7550/B             Input Pin (NAND2X1) 0.00202749
+    U7484/B             Input Pin (NAND2X1) 0.00202749
+    U7513/B             Input Pin (NAND2X1) 0.00202749
+    U7504/B             Input Pin (NAND2X1) 0.00202749
+    U7495/B             Input Pin (NAND2X1) 0.00202749
+    U7471/B             Input Pin (NAND2X1) 0.00202749
+    U7458/B             Input Pin (NAND2X1) 0.00202749
+    U7526/B             Input Pin (NAND2X1) 0.00202749
+    U7539/B             Input Pin (NAND2X1) 0.00202749
+    U7561/B             Input Pin (NAND2X1) 0.00202749
+    U7436/B             Input Pin (NAND2X1) 0.00202749
+
+net 'select_mask[10]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'select_mask[10]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1630/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U2202/A             Input Pin (INVX1)   0.00155103
+    U5445/A             Input Pin (INVX1)   0.00155103
+
+net 'select_mask[9]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'select_mask[9]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U431/Y
+                        Output Pin (INVX1)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U3615/A             Input Pin (INVX1)   0.00155103
+    U5449/A             Input Pin (INVX1)   0.00155103
+
+net 'select_mask[8]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'select_mask[8]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1625/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4035/A             Input Pin (INVX4)   0.0050916
+
+net 'select_mask[7]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00562498    max:0.00575727
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00562498    max:0.00575727
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    3
+    number of pins:     4
+
+Connections for net 'select_mask[7]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U165/Y
+                        Output Pin (INVX1)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1925/A             Input Pin (INVX1)   0.00155103
+    U1924/A             Input Pin (INVX1)   0.00155103
+    U4620/A             Input Pin (INVX2)   0.00267266
+
+net 'select_mask[6]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'select_mask[6]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U435/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4022/A             Input Pin (INVX1)   0.00155103
+    U5536/A             Input Pin (INVX1)   0.00155103
+
+net 'select_mask[5]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'select_mask[5]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U308/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U5444/A             Input Pin (INVX4)   0.0050916
+
+net 'select_mask[4]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.12842    max:0.130563
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.12842    max:0.130563
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    50
+    number of pins:     51
+
+Connections for net 'select_mask[4]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U400/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1532/A             Input Pin (INVX1)   0.00155103
+    U1225/B             Input Pin (AND2X2)  0.00186944
+    U8003/B             Input Pin (AOI22X1) 0.00276444
+    U1238/B             Input Pin (AND2X2)  0.00186944
+    U1574/B             Input Pin (AND2X2)  0.00186944
+    U1577/A             Input Pin (AND2X2)  0.00179784
+    U1587/B             Input Pin (AND2X2)  0.00186944
+    U1927/A             Input Pin (AND2X2)  0.00179784
+    U7498/B             Input Pin (AOI21X1) 0.00272419
+    U7800/B             Input Pin (AOI22X1) 0.00276444
+    U7864/B             Input Pin (AOI22X1) 0.00276444
+    U7631/B             Input Pin (AOI22X1) 0.00276444
+    U7875/B             Input Pin (AOI22X1) 0.00276444
+    U7851/B             Input Pin (AOI22X1) 0.00276444
+    U7553/D             Input Pin (AOI22X1) 0.00290653
+    U7566/D             Input Pin (AOI22X1) 0.00290653
+    U7488/B             Input Pin (AOI21X1) 0.00272419
+    U7475/B             Input Pin (AOI21X1) 0.00272419
+    U7439/B             Input Pin (AOI21X1) 0.00272419
+    U7462/B             Input Pin (AOI21X1) 0.00272419
+    U7543/B             Input Pin (AOI21X1) 0.00272419
+    U4528/B             Input Pin (AND2X2)  0.00186944
+    U7517/B             Input Pin (AOI21X1) 0.00272419
+    U7592/B             Input Pin (AOI22X1) 0.00276444
+    U7644/B             Input Pin (AOI22X1) 0.00276444
+    U7579/B             Input Pin (AOI22X1) 0.00276444
+    U7605/B             Input Pin (AOI22X1) 0.00276444
+    U7618/B             Input Pin (AOI22X1) 0.00276444
+    U7657/B             Input Pin (AOI22X1) 0.00276444
+    U7670/B             Input Pin (AOI22X1) 0.00276444
+    U7683/B             Input Pin (AOI22X1) 0.00276444
+    U7696/B             Input Pin (AOI22X1) 0.00276444
+    U7709/B             Input Pin (AOI22X1) 0.00276444
+    U7722/B             Input Pin (AOI22X1) 0.00276444
+    U7735/B             Input Pin (AOI22X1) 0.00276444
+    U7748/B             Input Pin (AOI22X1) 0.00276444
+    U7761/B             Input Pin (AOI22X1) 0.00276444
+    U7774/B             Input Pin (AOI22X1) 0.00276444
+    U7787/B             Input Pin (AOI22X1) 0.00276444
+    U7901/B             Input Pin (AOI22X1) 0.00276444
+    U7812/B             Input Pin (AOI22X1) 0.00276444
+    U7825/B             Input Pin (AOI22X1) 0.00276444
+    U7838/B             Input Pin (AOI22X1) 0.00276444
+    U7530/B             Input Pin (AOI21X1) 0.00272419
+    U7940/B             Input Pin (AOI22X1) 0.00276444
+    U7927/B             Input Pin (AOI22X1) 0.00276444
+    U7888/B             Input Pin (AOI22X1) 0.00276444
+    U7966/B             Input Pin (AOI22X1) 0.00276444
+    U7953/B             Input Pin (AOI22X1) 0.00276444
+    U7914/B             Input Pin (AOI22X1) 0.00276444
+
+net 'select_mask[3]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.132078    max:0.135761
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.132078    max:0.135761
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    47
+    number of pins:     48
+
+Connections for net 'select_mask[3]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U959/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U958/A              Input Pin (BUFX4)   0.0039795
+    U7545/D             Input Pin (AOI22X1) 0.00290653
+    U7519/B             Input Pin (AOI22X1) 0.00276444
+    U7464/B             Input Pin (AOI22X1) 0.00276444
+    U4032/B             Input Pin (AND2X2)  0.00186944
+    U7532/B             Input Pin (AOI22X1) 0.00276444
+    U7429/B             Input Pin (AOI22X1) 0.00276444
+    U7451/B             Input Pin (AOI22X1) 0.00276444
+    U7990/D             Input Pin (AOI22X1) 0.00290653
+    U7952/D             Input Pin (AOI22X1) 0.00290653
+    U7913/D             Input Pin (AOI22X1) 0.00290653
+    U7874/D             Input Pin (AOI22X1) 0.00290653
+    U7926/D             Input Pin (AOI22X1) 0.00290653
+    U7824/D             Input Pin (AOI22X1) 0.00290653
+    U7900/D             Input Pin (AOI22X1) 0.00290653
+    U7786/D             Input Pin (AOI22X1) 0.00290653
+    U7760/D             Input Pin (AOI22X1) 0.00290653
+    U7734/D             Input Pin (AOI22X1) 0.00290653
+    U7708/D             Input Pin (AOI22X1) 0.00290653
+    U7682/D             Input Pin (AOI22X1) 0.00290653
+    U7656/D             Input Pin (AOI22X1) 0.00290653
+    U7630/D             Input Pin (AOI22X1) 0.00290653
+    U7604/D             Input Pin (AOI22X1) 0.00290653
+    U7578/D             Input Pin (AOI22X1) 0.00290653
+    U7863/D             Input Pin (AOI22X1) 0.00290653
+    U8027/D             Input Pin (AOI22X1) 0.00290653
+    U8039/D             Input Pin (AOI22X1) 0.00290653
+    U7477/B             Input Pin (AOI22X1) 0.00276444
+    U8050/C             Input Pin (AOI22X1) 0.00287763
+    U7965/D             Input Pin (AOI22X1) 0.00290653
+    U7939/D             Input Pin (AOI22X1) 0.00290653
+    U7887/D             Input Pin (AOI22X1) 0.00290653
+    U7978/D             Input Pin (AOI22X1) 0.00290653
+    U7837/D             Input Pin (AOI22X1) 0.00290653
+    U7811/D             Input Pin (AOI22X1) 0.00290653
+    U7799/D             Input Pin (AOI22X1) 0.00290653
+    U7773/D             Input Pin (AOI22X1) 0.00290653
+    U7747/D             Input Pin (AOI22X1) 0.00290653
+    U7721/D             Input Pin (AOI22X1) 0.00290653
+    U7695/D             Input Pin (AOI22X1) 0.00290653
+    U7669/D             Input Pin (AOI22X1) 0.00290653
+    U7643/D             Input Pin (AOI22X1) 0.00290653
+    U7617/D             Input Pin (AOI22X1) 0.00290653
+    U7591/D             Input Pin (AOI22X1) 0.00290653
+    U7850/D             Input Pin (AOI22X1) 0.00290653
+    U8015/D             Input Pin (AOI22X1) 0.00290653
+    U8002/D             Input Pin (AOI22X1) 0.00290653
+
+net 'select_mask[2]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00265521    max:0.00267266
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00265521    max:0.00267266
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'select_mask[2]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U437/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1748/A             Input Pin (INVX2)   0.00267266
+
+net 'select_mask[1]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00445647    max:0.00464102
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00445647    max:0.00464102
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    3
+    number of pins:     4
+
+Connections for net 'select_mask[1]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1616/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1030/A             Input Pin (INVX1)   0.00155103
+    U4816/A             Input Pin (BUFX2)   0.00153896
+    U5542/A             Input Pin (INVX1)   0.00155103
+
+net 'select_mask[0]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.0393183    max:0.0400926
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.0393183    max:0.0400926
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    12
+    number of pins:     13
+
+Connections for net 'select_mask[0]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U381/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1064/A             Input Pin (INVX8)   0.0101035
+    U8049/A             Input Pin (AOI22X1) 0.00281659
+    U1456/A             Input Pin (BUFX4)   0.0039795
+    U1718/A             Input Pin (INVX1)   0.00155103
+    U4209/B             Input Pin (NAND2X1) 0.00202749
+    U7509/D             Input Pin (AOI22X1) 0.00290653
+    U7500/D             Input Pin (AOI22X1) 0.00290653
+    U7554/B             Input Pin (AOI22X1) 0.00276444
+    U7925/B             Input Pin (AOI22X1) 0.00276444
+    U7989/B             Input Pin (AOI22X1) 0.00276444
+    U7707/B             Input Pin (AOI22X1) 0.00276444
+    U7567/B             Input Pin (AOI22X1) 0.00276444
+
+net 'frfcfs_scheduler_i/select_mask[15]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00531042    max:0.00534532
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00531042    max:0.00534532
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'frfcfs_scheduler_i/select_mask[15]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1639/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U997/A              Input Pin (INVX2)   0.00267266
+    U2750/A             Input Pin (INVX2)   0.00267266
+
+net 'frfcfs_scheduler_i/select_mask[14]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00449277    max:0.00452465
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00449277    max:0.00452465
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'frfcfs_scheduler_i/select_mask[14]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1638/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4695/B             Input Pin (AND2X2)  0.00186944
+    U4472/A             Input Pin (INVX2)   0.00267266
+
+net 'frfcfs_scheduler_i/select_mask[13]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00265521    max:0.00267266
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00265521    max:0.00267266
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'frfcfs_scheduler_i/select_mask[13]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1636/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1198/A             Input Pin (INVX2)   0.00267266
+
+net 'frfcfs_scheduler_i/select_mask[12]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'frfcfs_scheduler_i/select_mask[12]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1634/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1122/A             Input Pin (INVX4)   0.0050916
+
+net 'frfcfs_scheduler_i/select_mask[11]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.024059    max:0.0249576
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.024059    max:0.0249576
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    12
+    number of pins:     13
+
+Connections for net 'frfcfs_scheduler_i/select_mask[11]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U5/Y
+                        Output Pin (INVX4)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1120/A             Input Pin (INVX2)   0.00267266
+    U7550/B             Input Pin (NAND2X1) 0.00202749
+    U7484/B             Input Pin (NAND2X1) 0.00202749
+    U7513/B             Input Pin (NAND2X1) 0.00202749
+    U7504/B             Input Pin (NAND2X1) 0.00202749
+    U7495/B             Input Pin (NAND2X1) 0.00202749
+    U7471/B             Input Pin (NAND2X1) 0.00202749
+    U7458/B             Input Pin (NAND2X1) 0.00202749
+    U7526/B             Input Pin (NAND2X1) 0.00202749
+    U7539/B             Input Pin (NAND2X1) 0.00202749
+    U7561/B             Input Pin (NAND2X1) 0.00202749
+    U7436/B             Input Pin (NAND2X1) 0.00202749
+
+net 'frfcfs_scheduler_i/select_mask[10]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'frfcfs_scheduler_i/select_mask[10]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1630/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U2202/A             Input Pin (INVX1)   0.00155103
+    U5445/A             Input Pin (INVX1)   0.00155103
+
+net 'frfcfs_scheduler_i/select_mask[9]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'frfcfs_scheduler_i/select_mask[9]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U431/Y
+                        Output Pin (INVX1)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U3615/A             Input Pin (INVX1)   0.00155103
+    U5449/A             Input Pin (INVX1)   0.00155103
+
+net 'frfcfs_scheduler_i/select_mask[8]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'frfcfs_scheduler_i/select_mask[8]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1625/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4035/A             Input Pin (INVX4)   0.0050916
+
+net 'frfcfs_scheduler_i/select_mask[7]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00562498    max:0.00575727
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00562498    max:0.00575727
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    3
+    number of pins:     4
+
+Connections for net 'frfcfs_scheduler_i/select_mask[7]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U165/Y
+                        Output Pin (INVX1)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1925/A             Input Pin (INVX1)   0.00155103
+    U1924/A             Input Pin (INVX1)   0.00155103
+    U4620/A             Input Pin (INVX2)   0.00267266
+
+net 'frfcfs_scheduler_i/select_mask[6]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00295232    max:0.00310206
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00295232    max:0.00310206
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'frfcfs_scheduler_i/select_mask[6]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U435/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U4022/A             Input Pin (INVX1)   0.00155103
+    U5536/A             Input Pin (INVX1)   0.00155103
+
+net 'frfcfs_scheduler_i/select_mask[5]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00508038    max:0.0050916
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00508038    max:0.0050916
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'frfcfs_scheduler_i/select_mask[5]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U308/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U5444/A             Input Pin (INVX4)   0.0050916
+
+net 'frfcfs_scheduler_i/select_mask[4]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.12842    max:0.130563
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.12842    max:0.130563
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    50
+    number of pins:     51
+
+Connections for net 'frfcfs_scheduler_i/select_mask[4]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U400/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1532/A             Input Pin (INVX1)   0.00155103
+    U1225/B             Input Pin (AND2X2)  0.00186944
+    U8003/B             Input Pin (AOI22X1) 0.00276444
+    U1238/B             Input Pin (AND2X2)  0.00186944
+    U1574/B             Input Pin (AND2X2)  0.00186944
+    U1577/A             Input Pin (AND2X2)  0.00179784
+    U1587/B             Input Pin (AND2X2)  0.00186944
+    U1927/A             Input Pin (AND2X2)  0.00179784
+    U7498/B             Input Pin (AOI21X1) 0.00272419
+    U7800/B             Input Pin (AOI22X1) 0.00276444
+    U7864/B             Input Pin (AOI22X1) 0.00276444
+    U7631/B             Input Pin (AOI22X1) 0.00276444
+    U7875/B             Input Pin (AOI22X1) 0.00276444
+    U7851/B             Input Pin (AOI22X1) 0.00276444
+    U7553/D             Input Pin (AOI22X1) 0.00290653
+    U7566/D             Input Pin (AOI22X1) 0.00290653
+    U7488/B             Input Pin (AOI21X1) 0.00272419
+    U7475/B             Input Pin (AOI21X1) 0.00272419
+    U7439/B             Input Pin (AOI21X1) 0.00272419
+    U7462/B             Input Pin (AOI21X1) 0.00272419
+    U7543/B             Input Pin (AOI21X1) 0.00272419
+    U4528/B             Input Pin (AND2X2)  0.00186944
+    U7517/B             Input Pin (AOI21X1) 0.00272419
+    U7592/B             Input Pin (AOI22X1) 0.00276444
+    U7644/B             Input Pin (AOI22X1) 0.00276444
+    U7579/B             Input Pin (AOI22X1) 0.00276444
+    U7605/B             Input Pin (AOI22X1) 0.00276444
+    U7618/B             Input Pin (AOI22X1) 0.00276444
+    U7657/B             Input Pin (AOI22X1) 0.00276444
+    U7670/B             Input Pin (AOI22X1) 0.00276444
+    U7683/B             Input Pin (AOI22X1) 0.00276444
+    U7696/B             Input Pin (AOI22X1) 0.00276444
+    U7709/B             Input Pin (AOI22X1) 0.00276444
+    U7722/B             Input Pin (AOI22X1) 0.00276444
+    U7735/B             Input Pin (AOI22X1) 0.00276444
+    U7748/B             Input Pin (AOI22X1) 0.00276444
+    U7761/B             Input Pin (AOI22X1) 0.00276444
+    U7774/B             Input Pin (AOI22X1) 0.00276444
+    U7787/B             Input Pin (AOI22X1) 0.00276444
+    U7901/B             Input Pin (AOI22X1) 0.00276444
+    U7812/B             Input Pin (AOI22X1) 0.00276444
+    U7825/B             Input Pin (AOI22X1) 0.00276444
+    U7838/B             Input Pin (AOI22X1) 0.00276444
+    U7530/B             Input Pin (AOI21X1) 0.00272419
+    U7940/B             Input Pin (AOI22X1) 0.00276444
+    U7927/B             Input Pin (AOI22X1) 0.00276444
+    U7888/B             Input Pin (AOI22X1) 0.00276444
+    U7966/B             Input Pin (AOI22X1) 0.00276444
+    U7953/B             Input Pin (AOI22X1) 0.00276444
+    U7914/B             Input Pin (AOI22X1) 0.00276444
+
+net 'frfcfs_scheduler_i/select_mask[3]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.132078    max:0.135761
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.132078    max:0.135761
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    47
+    number of pins:     48
+
+Connections for net 'frfcfs_scheduler_i/select_mask[3]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U959/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U958/A              Input Pin (BUFX4)   0.0039795
+    U7545/D             Input Pin (AOI22X1) 0.00290653
+    U7519/B             Input Pin (AOI22X1) 0.00276444
+    U7464/B             Input Pin (AOI22X1) 0.00276444
+    U4032/B             Input Pin (AND2X2)  0.00186944
+    U7532/B             Input Pin (AOI22X1) 0.00276444
+    U7429/B             Input Pin (AOI22X1) 0.00276444
+    U7451/B             Input Pin (AOI22X1) 0.00276444
+    U7990/D             Input Pin (AOI22X1) 0.00290653
+    U7952/D             Input Pin (AOI22X1) 0.00290653
+    U7913/D             Input Pin (AOI22X1) 0.00290653
+    U7874/D             Input Pin (AOI22X1) 0.00290653
+    U7926/D             Input Pin (AOI22X1) 0.00290653
+    U7824/D             Input Pin (AOI22X1) 0.00290653
+    U7900/D             Input Pin (AOI22X1) 0.00290653
+    U7786/D             Input Pin (AOI22X1) 0.00290653
+    U7760/D             Input Pin (AOI22X1) 0.00290653
+    U7734/D             Input Pin (AOI22X1) 0.00290653
+    U7708/D             Input Pin (AOI22X1) 0.00290653
+    U7682/D             Input Pin (AOI22X1) 0.00290653
+    U7656/D             Input Pin (AOI22X1) 0.00290653
+    U7630/D             Input Pin (AOI22X1) 0.00290653
+    U7604/D             Input Pin (AOI22X1) 0.00290653
+    U7578/D             Input Pin (AOI22X1) 0.00290653
+    U7863/D             Input Pin (AOI22X1) 0.00290653
+    U8027/D             Input Pin (AOI22X1) 0.00290653
+    U8039/D             Input Pin (AOI22X1) 0.00290653
+    U7477/B             Input Pin (AOI22X1) 0.00276444
+    U8050/C             Input Pin (AOI22X1) 0.00287763
+    U7965/D             Input Pin (AOI22X1) 0.00290653
+    U7939/D             Input Pin (AOI22X1) 0.00290653
+    U7887/D             Input Pin (AOI22X1) 0.00290653
+    U7978/D             Input Pin (AOI22X1) 0.00290653
+    U7837/D             Input Pin (AOI22X1) 0.00290653
+    U7811/D             Input Pin (AOI22X1) 0.00290653
+    U7799/D             Input Pin (AOI22X1) 0.00290653
+    U7773/D             Input Pin (AOI22X1) 0.00290653
+    U7747/D             Input Pin (AOI22X1) 0.00290653
+    U7721/D             Input Pin (AOI22X1) 0.00290653
+    U7695/D             Input Pin (AOI22X1) 0.00290653
+    U7669/D             Input Pin (AOI22X1) 0.00290653
+    U7643/D             Input Pin (AOI22X1) 0.00290653
+    U7617/D             Input Pin (AOI22X1) 0.00290653
+    U7591/D             Input Pin (AOI22X1) 0.00290653
+    U7850/D             Input Pin (AOI22X1) 0.00290653
+    U8015/D             Input Pin (AOI22X1) 0.00290653
+    U8002/D             Input Pin (AOI22X1) 0.00290653
+
+net 'frfcfs_scheduler_i/select_mask[2]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00265521    max:0.00267266
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00265521    max:0.00267266
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'frfcfs_scheduler_i/select_mask[2]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U437/Y
+                        Output Pin (NAND2X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1748/A             Input Pin (INVX2)   0.00267266
+
+net 'frfcfs_scheduler_i/select_mask[1]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00445647    max:0.00464102
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00445647    max:0.00464102
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    3
+    number of pins:     4
+
+Connections for net 'frfcfs_scheduler_i/select_mask[1]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U1616/Y
+                        Output Pin (OAI21X1)
+                                            0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1030/A             Input Pin (INVX1)   0.00155103
+    U4816/A             Input Pin (BUFX2)   0.00153896
+    U5542/A             Input Pin (INVX1)   0.00155103
+
+net 'frfcfs_scheduler_i/select_mask[0]':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.0393183    max:0.0400926
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.0393183    max:0.0400926
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    12
+    number of pins:     13
+
+Connections for net 'frfcfs_scheduler_i/select_mask[0]':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    frfcfs_scheduler_i/U381/Y
+                        Output Pin (INVX8)  0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    U1064/A             Input Pin (INVX8)   0.0101035
+    U8049/A             Input Pin (AOI22X1) 0.00281659
+    U1456/A             Input Pin (BUFX4)   0.0039795
+    U1718/A             Input Pin (INVX1)   0.00155103
+    U4209/B             Input Pin (NAND2X1) 0.00202749
+    U7509/D             Input Pin (AOI22X1) 0.00290653
+    U7500/D             Input Pin (AOI22X1) 0.00290653
+    U7554/B             Input Pin (AOI22X1) 0.00276444
+    U7925/B             Input Pin (AOI22X1) 0.00276444
+    U7989/B             Input Pin (AOI22X1) 0.00276444
+    U7707/B             Input Pin (AOI22X1) 0.00276444
+    U7567/B             Input Pin (AOI22X1) 0.00276444
+1
