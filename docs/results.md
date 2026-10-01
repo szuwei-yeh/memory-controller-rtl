@@ -3,7 +3,9 @@
 This report records the v1.1 baseline. Subsequent candidate-decode and shared-address
 RTL changes, fresh verification, and matched synthesis measurements are recorded
 separately in [scheduler optimization](scheduler-optimization.md) and
-[address sharing](address-sharing-optimization.md).
+[address sharing](address-sharing-optimization.md), followed by the current
+[candidate-mask timing experiment](candidate-mask-optimization.md) and the
+current [command-mask plus storage optimization](command-mask-optimization.md).
 
 The verification and performance results below come from executed local runs.
 The subsequent [UCSB Design Compiler baseline](asic-results.md) maps the unchanged

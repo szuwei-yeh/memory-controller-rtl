@@ -1,0 +1,101 @@
+startpoint,endpoint,slack_ns,classification,logic_description
+table_i/addresses_reg_7_,cmd_wdata[21],-0.201311,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[29],-0.201209,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[9],-0.201167,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[8],-0.201125,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[17],-0.201091,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[12],-0.20109,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[30],-0.201065,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[5],-0.201026,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[3],-0.201026,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[6],-0.200949,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[7],-0.200946,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[25],-0.2009,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[4],-0.200838,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[0],-0.200833,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[23],-0.20083,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[11],-0.200778,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[19],-0.200229,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[16],-0.200157,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[14],-0.200025,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[18],-0.199944,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[2],-0.199851,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[1],-0.199821,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[31],-0.199709,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_op[0],-0.199411,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_32_,cmd_wdata[13],-0.198526,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_bank[0],-0.198398,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[5],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[4],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[3],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[2],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[1],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_col[0],-0.198089,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_32_,cmd_wdata[28],-0.197441,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[24],-0.197322,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[20],-0.197222,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_wdata[22],-0.197199,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_wdata[10],-0.197023,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_row[5],-0.196941,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_wdata[27],-0.196291,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_7_,cmd_row[2],-0.195379,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_32_,cmd_row[3],-0.195239,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_row[1],-0.195137,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_bank[1],-0.194964,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_wdata[26],-0.19444,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_op[1],-0.193867,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_32_,cmd_wdata[15],-0.192993,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output
+table_i/addresses_reg_32_,cmd_row[4],-0.191553,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_row[7],-0.191288,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_32_,cmd_row[6],-0.190861,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_row[0],-0.190127,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/addresses_reg_7_,cmd_valid,-0.058516,register-to-output,transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output
+table_i/occupied_reg_0_,table_i/writes_reg_4_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_159_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_158_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_157_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_156_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_155_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_154_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_153_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_152_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_151_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_150_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_149_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_141_,0.0015,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_148_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_147_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_146_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_145_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_144_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_143_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_142_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_140_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_139_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_138_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_137_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_136_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_135_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/write_data_reg_128_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/tags_reg_36_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/tags_reg_35_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/tags_reg_34_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/tags_reg_33_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/tags_reg_32_,0.001614,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/addresses_reg_79_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_77_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_75_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_74_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_71_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_69_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_67_,0.009363,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_73_,0.009473,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_72_,0.009473,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/addresses_reg_70_,0.009473,register-to-register,occupancy/free-slot admission logic -> allocation/address-register write-enable logic
+table_i/occupied_reg_0_,table_i/ages_reg_112_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_118_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_117_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_116_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_115_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_114_,0.01781,register-to-register,transaction-table registers/data logic
+table_i/occupied_reg_0_,table_i/ages_reg_113_,0.01781,register-to-register,transaction-table registers/data logic

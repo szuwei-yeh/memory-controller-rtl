@@ -13,8 +13,10 @@ from scheduler_equiv import baseline_source
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def main(sources=None, label='scheduler'):
+def main(sources=None, label='scheduler', command=None):
     if sources is None:
+        if 'candidate_mask' in (ROOT/'rtl/mc_scheduler_frfcfs.sv').read_text():
+            raise RuntimeError('Encoded scheduler experiment is archived at 27f522c; use make compare-command-mask for current RTL.')
         sources = {'rtl/mc_scheduler_frfcfs.sv': baseline_source()}
     out = ROOT / 'build' / f'{label}_trace_compare'
     historical = out / 'baseline'
@@ -68,7 +70,7 @@ def main(sources=None, label='scheduler'):
         (out/'summary.json').write_text(json.dumps(report, indent=2)+'\n')
         append_entry(f'{label} 優化逐週期 trace 配對', '確認完整控制器的接受、命令、完成與回應事件不變。',
             f'完成 {len(results)}/{len(tasks)} 組新舊配對。', f'build/{label}_trace_compare/；build/runs/{label}_compare_*',
-            'python3 scripts/scheduler_trace_compare.py' if label=='scheduler' else 'python3 scripts/address_equiv.py --trace', status,
+            command or ('python3 scripts/scheduler_trace_compare.py' if label=='scheduler' else 'python3 scripts/address_equiv.py --trace'), status,
             '有限刺激的逐位元組 CSV 比較，不能替代形式證明。',
             '三政策、十工作負載、兩 seeds、兩 ready 比例；使用相同 testbench 和相同請求序列。',
             '與 mapped synthesis、形式證明一起判斷修改。')

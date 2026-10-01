@@ -8,15 +8,27 @@ controller.
 
 ## Current ASIC optimization
 
-Shared address comparisons reduce full-controller mapped area by **16.71% at
-Q=16/5 ns**, **16.49% at Q=16/4 ns**, and **24.19% at Q=32/5 ns** relative to the
-preceding candidate-decode revision. Four new Design Compiler runs use the same
-library and constraints as the recorded baseline. Whole-controller equivalence
-covers Q=1/3/16/32 across all three policies; 120 old/new cycle-trace pairs match.
-No pipeline or storage is added. The 3 ns setup violation worsens slightly;
-hold and library capacitance violations remain. See the
-[address-sharing experiment](docs/address-sharing-optimization.md) and the
-[preceding scheduler experiment](docs/scheduler-optimization.md).
+Direct command masks plus fixed-slot completion/data writes reduce the magnitude
+of the Q=16/3 ns worst setup violation by **40.95%** (−0.116465 → −0.068773 ns)
+relative to the compact candidate-mask revision. All **34 internal setup failures
+disappear**. Mapped area decreases **1.89% at 3 ns** and **2.56% at 4 ns**; 4 ns
+setup still passes at +0.000109 ns. Hold improves at both targets, with failing
+endpoints decreasing from 17 to eight at 3 ns and from 39 to two at 4 ns.
+No pipeline, storage, or command latency is added.
+The measured RTL passes nine whole-controller equivalence configurations,
+120 complete trace pairs, and 3,003,000 randomized regression transactions.
+
+**3 ns setup and hold still fail; 4 ns also retains two hold failures.**
+The [command-mask experiment](docs/command-mask-optimization.md) reports all three
+alternatives, source-matched verification, and the selection criteria. This is
+ongoing pre-layout timing work, not timing closure. The preceding
+[address-sharing experiment](docs/address-sharing-optimization.md) achieved
+16.71% area reduction at Q=16/5 ns and 24.19% at Q=32/5 ns; those measurements
+belong to that earlier revision, not the current mask RTL.
+The [candidate-mask](docs/candidate-mask-optimization.md) and standalone
+[storage timing](docs/storage-timing-experiment.md) studies retain their historical
+measurements. The latter rejected fixed-slot writes alone; the new combined
+implementation is independently measured and passes the current adoption screen.
 
 ## Published v1.1 results
 
@@ -60,10 +72,8 @@ make test
 make regress                    # 100 seeds × 10,000 workload requests × 3 policies
 make perf                       # identical workloads, warm-up, latency distributions
 make formal                     # SymbiYosys, Yosys and ABC
-make formal-scheduler           # SAT equivalence to the frozen v1.1 scheduler
-make formal-address             # whole-controller equivalence before/after address sharing
-make compare-address            # 120 complete old/new cycle-trace pairs for address sharing
-make compare-scheduler          # 120 complete old/new cycle-trace comparisons
+make formal-command-mask        # whole-controller equivalence at Q=1/3/16, all policies
+make compare-command-mask       # 120 complete old/new cycle-trace pairs
 make synth-local-sanity         # optional generic Yosys check, not ASIC evidence
 make report                     # requires the preceding run outputs and Matplotlib/NumPy
 make lab-bundle                 # explicit allowlist; does not upload anything
@@ -72,6 +82,9 @@ make lab-bundle                 # explicit allowlist; does not upload anything
 `build/` contains build logs, simulation event traces, commands, and machine-readable
 results. Builds are cached by RTL/testbench content, parameters, and Verilator version.
 Regression can be shortened with `make regress SEEDS=5 N=1000 JOBS=4`.
+Earlier encoded-interface checks are reproduced at their recorded checkpoints:
+`27f522c` for candidate decoding and `12db399` for address sharing.
+The compact candidate-mask snapshot is preserved under `results/candidate_mask/variants/`.
 
 ## Architecture
 
@@ -107,6 +120,10 @@ with their command. Requests are full-word transfers; there are no bursts or byt
 - [ASIC area/timing tradeoffs and synthesis setup](docs/asic-results.md)
 - [Candidate-decode optimization and paired ASIC evidence](docs/scheduler-optimization.md)
 - [Shared address comparisons and matched ASIC evidence](docs/address-sharing-optimization.md)
+- [3 ns critical-path breakdown and next experiment](docs/critical-path-3ns.md)
+- [Candidate-mask timing experiment and remaining violations](docs/candidate-mask-optimization.md)
+- [Storage timing diagnosis and free-slot experiments](docs/storage-timing-experiment.md)
+- [Direct command-mask and storage optimization](docs/command-mask-optimization.md)
 - [Annotated command traces](docs/traces.md)
 
 ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.

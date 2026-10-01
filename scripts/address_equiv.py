@@ -53,6 +53,8 @@ def main():
     parser.add_argument('--depths', type=int, nargs='+', default=[1, 3, 16, 32])
     parser.add_argument('--policies', choices=POLICIES, nargs='+', default=list(POLICIES))
     args = parser.parse_args()
+    if 'candidate_mask' in (ROOT/'rtl/mc_scheduler_frfcfs.sv').read_text():
+        parser.error('This encoded-interface checkpoint is archived at 12db399; use make formal-command-mask / compare-command-mask for current RTL.')
     if any(q < 1 for q in args.depths):
         parser.error('Queue depths must be positive')
     sources = baseline_sources()

@@ -1,0 +1,23 @@
+{
+  "raw": {
+    "SUCCESS": "98edbad6107c80083aa11e79c127d613612d36998a5379e57ef40af99ef58381",
+    "area.rpt": "4df74df5a6e9396de3b5b10019764de629be139faa5c6a4bd1e52388b85ba7ff",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "constraints.rpt": "bb95016ccdf6c84af81ef1fe4c96ae1142ff96eddba44b7d38e0672ca76bbb5d",
+    "clocks.rpt": "7b878d0b2e24dcf2111427a4e23825defec3863d8ca66331522d02f08230df91",
+    "timing.rpt": "ff7085ba0393a2ef3f9ed600882a91a4e34ff411dc1e7241f3f2a162ce87a2c0",
+    "register_to_register.rpt": "945bfa234691246b102fe1fe1c43705b0d48efc168bbb43d6e326618b3663285",
+    "input_to_register.rpt": "0491b40bff404c866fbb81dca088bd64856bd17bdedd54c9d896e3e877a8d250",
+    "register_to_output.rpt": "514c55800aaf01f693ab4fde58f70a9be191c865fc820a14da359c6c89a76dc5",
+    "input_to_output.rpt": "016759ddad7016dd71b1e60edfb2acf986f6c80629a695f81350bf3361f01eaa"
+  },
+  "public": {
+    "area.rpt": "d207b1c718baca9d551b72c4214620556d7311e9d09c9208c9a743d578e8f7e9",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "clocks.rpt": "9e51f853ed1fa6638b5eebc31fb2194d9ffd0ccf434d554d6b142d37a5b3979b",
+    "timing.rpt": "5f46a9fccbeddff5bacb215a0ff6a4001f53b12e0c4c4b08056c10e7b8e901a1",
+    "register_to_register.rpt": "af53fdb535fa53e87c774561f54baaa1d694c9e172711e97d40fb7cc04e1a43b",
+    "input_to_register.rpt": "aa27113f080250f94fed2708fc6ba44365cd04ed0e84b3f20171b9c07fdd5912",
+    "input_to_output.rpt": "6afbd7c1053d891b260d6a829a4bcb3e344a3e880036728082e5f4e16d3dea1e"
+  }
+}

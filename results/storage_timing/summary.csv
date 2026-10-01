@@ -1,0 +1,7 @@
+variant,clock_ns,area_um2,setup_worst_slack_ns,setup_tns_ns,setup_violation_count,internal_setup_violation_count,worst_hold_slack_ns,hold_violation_count
+compact_baseline,3,73105.205957,-0.116465,-5.655077,84,34,-0.002538,17
+compact_baseline,4,67729.843772,0.000518,0,0,0,-0.050676,39
+fixed_slot,3,72872.902456,-0.157969,-7.753271,50,0,-0.000659,2
+fixed_slot,4,67494.255175,0.000827,0,0,0,-0.050676,29
+free_valid,3,73426.67645,-0.12998,-6.608304,110,60,-0.002538,9
+free_valid,4,67969.656065,0.000852,0,0,0,-0.050676,29

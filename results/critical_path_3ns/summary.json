@@ -1,0 +1,1806 @@
+{
+  "status": "COMPLETE",
+  "source_commit": "12db3996def42219deb0d0d589ec2ac0c472f0cf",
+  "new_sta_run": true,
+  "new_synthesis_run": false,
+  "supplementary_sta": {
+    "read_only_ddc": true,
+    "constraints_reapplied": false,
+    "rtl_modified": false,
+    "identical_area_um2": 72879.472659,
+    "identical_worst_setup_slack_ns": -0.201311,
+    "all_51_setup_endpoints_reproduced": true,
+    "all_failed_paths_cross_candidates_and_scheduler": true,
+    "failed_startpoint_counts": {
+      "table_i/addresses_reg_7_": 32,
+      "table_i/addresses_reg_32_": 19
+    },
+    "expanded_paths": [
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[21]",
+        "slack_ns": -0.201311,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[29]",
+        "slack_ns": -0.201209,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[9]",
+        "slack_ns": -0.201167,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[8]",
+        "slack_ns": -0.201125,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[17]",
+        "slack_ns": -0.201091,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[12]",
+        "slack_ns": -0.20109,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[30]",
+        "slack_ns": -0.201065,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[5]",
+        "slack_ns": -0.201026,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[3]",
+        "slack_ns": -0.201026,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[6]",
+        "slack_ns": -0.200949,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[7]",
+        "slack_ns": -0.200946,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[25]",
+        "slack_ns": -0.2009,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[4]",
+        "slack_ns": -0.200838,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[0]",
+        "slack_ns": -0.200833,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[23]",
+        "slack_ns": -0.20083,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[11]",
+        "slack_ns": -0.200778,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[19]",
+        "slack_ns": -0.200229,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[16]",
+        "slack_ns": -0.200157,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[14]",
+        "slack_ns": -0.200025,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[18]",
+        "slack_ns": -0.199944,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[2]",
+        "slack_ns": -0.199851,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[1]",
+        "slack_ns": -0.199821,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[31]",
+        "slack_ns": -0.199709,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_op[0]",
+        "slack_ns": -0.199411,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[13]",
+        "slack_ns": -0.198526,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_bank[0]",
+        "slack_ns": -0.198398,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[5]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[4]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[3]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[2]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[1]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_col[0]",
+        "slack_ns": -0.198089,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[28]",
+        "slack_ns": -0.197441,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[24]",
+        "slack_ns": -0.197322,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[20]",
+        "slack_ns": -0.197222,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[22]",
+        "slack_ns": -0.197199,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[10]",
+        "slack_ns": -0.197023,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_row[5]",
+        "slack_ns": -0.196941,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[27]",
+        "slack_ns": -0.196291,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_row[2]",
+        "slack_ns": -0.195379,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_row[3]",
+        "slack_ns": -0.195239,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_row[1]",
+        "slack_ns": -0.195137,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_bank[1]",
+        "slack_ns": -0.194964,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[26]",
+        "slack_ns": -0.19444,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_op[1]",
+        "slack_ns": -0.193867,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_wdata[15]",
+        "slack_ns": -0.192993,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command write-data mux/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_row[4]",
+        "slack_ns": -0.191553,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_row[7]",
+        "slack_ns": -0.191288,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_32_",
+        "endpoint": "cmd_row[6]",
+        "slack_ns": -0.190861,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_row[0]",
+        "slack_ns": -0.190127,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_valid",
+        "slack_ns": -0.058516,
+        "classification": "register-to-output",
+        "logic_description": "transaction-table registers/data logic -> dependency/row-hit and bank-candidate selection -> FR-FCFS arbitration -> command decode/output"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/writes_reg_4_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_159_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_158_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_157_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_156_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_155_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_154_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_153_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_152_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_151_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_150_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_149_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_141_",
+        "slack_ns": 0.0015,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_148_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_147_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_146_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_145_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_144_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_143_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_142_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_140_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_139_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_138_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_137_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_136_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_135_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/write_data_reg_128_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/tags_reg_36_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/tags_reg_35_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/tags_reg_34_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/tags_reg_33_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/tags_reg_32_",
+        "slack_ns": 0.001614,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_79_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_77_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_75_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_74_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_71_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_69_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_67_",
+        "slack_ns": 0.009363,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_73_",
+        "slack_ns": 0.009473,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_72_",
+        "slack_ns": 0.009473,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/addresses_reg_70_",
+        "slack_ns": 0.009473,
+        "classification": "register-to-register",
+        "logic_description": "occupancy/free-slot admission logic -> allocation/address-register write-enable logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_112_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_118_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_117_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_116_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_115_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_114_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      },
+      {
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/ages_reg_113_",
+        "slack_ns": 0.01781,
+        "classification": "register-to-register",
+        "logic_description": "transaction-table registers/data logic"
+      }
+    ],
+    "path_classes": [
+      {
+        "path_class": "register-to-output",
+        "reported_paths": 51,
+        "unique_endpoints": 51,
+        "worst_slack_ns": -0.201311,
+        "startpoint": "table_i/addresses_reg_7_",
+        "endpoint": "cmd_wdata[21]",
+        "report": "results/critical_path_3ns/reports/timing.rpt"
+      },
+      {
+        "path_class": "register-to-register",
+        "reported_paths": 10,
+        "unique_endpoints": 10,
+        "worst_slack_ns": 0.0015,
+        "startpoint": "table_i/occupied_reg_0_",
+        "endpoint": "table_i/writes_reg_4_",
+        "report": "results/critical_path_3ns/reports/register_to_register.rpt"
+      },
+      {
+        "path_class": "input-to-register",
+        "reported_paths": 10,
+        "unique_endpoints": 10,
+        "worst_slack_ns": 0.475024,
+        "startpoint": "rst",
+        "endpoint": "table_i/ages_reg_112_",
+        "report": "results/critical_path_3ns/reports/input_to_register.rpt"
+      },
+      {
+        "path_class": "input-to-output",
+        "reported_paths": 3,
+        "unique_endpoints": 3,
+        "worst_slack_ns": 0.60427,
+        "startpoint": "rst",
+        "endpoint": "req_ready",
+        "report": "results/critical_path_3ns/reports/input_to_output.rpt"
+      }
+    ],
+    "provenance": {
+      "rtl_sha256": {
+        "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+        "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+        "rtl/mc_candidates.sv": "4da7b37a9742faf6bc0d36b07e38d82c3e522b98474c6984114c2023be0662c3",
+        "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+        "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+        "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+        "rtl/mc_top.sv": "314bec72415cd8e0d268da3994f00260182754247a601fe579f48dbe1218678d"
+      },
+      "ddc_sha256": "e1017a1383041f8c7ae6aa6c658bce4054b013c0ff7ef9f72c45ec87c11f6a3f",
+      "config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "script_sha256": "0ea1ae815995fcd53c806ba682ba6e3aa7390b85296109c203768cdacbf4cb8c",
+      "sdc_sha256": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418",
+      "run_json_sha256": "8945336ae41cdd8f3dfe8f5b1438316954033f31634764325ecf329e1872e352"
+    },
+    "report_hashes": {
+      "area.rpt": "d207b1c718baca9d551b72c4214620556d7311e9d09c9208c9a743d578e8f7e9",
+      "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+      "clocks.rpt": "9e51f853ed1fa6638b5eebc31fb2194d9ffd0ccf434d554d6b142d37a5b3979b",
+      "timing.rpt": "5f46a9fccbeddff5bacb215a0ff6a4001f53b12e0c4c4b08056c10e7b8e901a1",
+      "register_to_register.rpt": "af53fdb535fa53e87c774561f54baaa1d694c9e172711e97d40fb7cc04e1a43b",
+      "input_to_register.rpt": "aa27113f080250f94fed2708fc6ba44365cd04ed0e84b3f20171b9c07fdd5912",
+      "input_to_output.rpt": "6afbd7c1053d891b260d6a829a4bcb3e344a3e880036728082e5f4e16d3dea1e"
+    },
+    "scope": "Overall report has 100 distinct endpoints. Focused class reports may contain alternatives to the same endpoint. These are constrained static paths, not claims of simultaneous functional sensitization."
+  },
+  "source_sha256": {
+    "results/address_sharing/summary.json": "604149e2ef6051196f43ff84aa98e392a032c06d8b188668338864b725744e62",
+    "results/address_sharing/reports/q16_3ns/timing.rpt": "30455f1a796726cb6177f44610a0108928fcc5a85689dd73fde11f19f8753db4",
+    "synth/constraints/controller.sdc": "ad862df7c60059dad10bb0b928e4f3bbd1dbf6084598f24b72f21ce3d93a9418",
+    "synth/dc/analyze_paths.tcl": "0ea1ae815995fcd53c806ba682ba6e3aa7390b85296109c203768cdacbf4cb8c"
+  },
+  "rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "1213002bd5421294bb59fa15931d803f42026eb589285456937a10ccb7b0cc2e",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "4da7b37a9742faf6bc0d36b07e38d82c3e522b98474c6984114c2023be0662c3",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "76ec170f40b188b432f3c12c08ea9b3e37d4f11ed6ad04369bd80d60644ba418",
+    "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+    "rtl/mc_top.sv": "314bec72415cd8e0d268da3994f00260182754247a601fe579f48dbe1218678d"
+  },
+  "tool": "Synopsys Design Compiler R-2020.09-SP4",
+  "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+  "corner": "GSCL45nm typical, 1.1 V, 27 C",
+  "queue_depth": 16,
+  "policy": "frfcfs_aging",
+  "budget": {
+    "clock_ns": 3.0,
+    "uncertainty_ns": 0.1,
+    "output_delay_ns": 1.0,
+    "required_ns": 1.9,
+    "arrival_ns": 2.101311,
+    "slack_ns": -0.201311
+  },
+  "prior_round_worst_setup_slack_ns": -0.166662,
+  "setup_tns_ns": -9.964599,
+  "violating_endpoints": [
+    {
+      "port": "cmd_wdata",
+      "violating_endpoints": 32,
+      "worst_slack_ns": -0.201311,
+      "best_violating_slack_ns": -0.192994
+    },
+    {
+      "port": "cmd_row",
+      "violating_endpoints": 8,
+      "worst_slack_ns": -0.196941,
+      "best_violating_slack_ns": -0.190127
+    },
+    {
+      "port": "cmd_col",
+      "violating_endpoints": 6,
+      "worst_slack_ns": -0.198089,
+      "best_violating_slack_ns": -0.198089
+    },
+    {
+      "port": "cmd_bank",
+      "violating_endpoints": 2,
+      "worst_slack_ns": -0.198398,
+      "best_violating_slack_ns": -0.194964
+    },
+    {
+      "port": "cmd_op",
+      "violating_endpoints": 2,
+      "worst_slack_ns": -0.199411,
+      "best_violating_slack_ns": -0.193868
+    },
+    {
+      "port": "cmd_valid",
+      "violating_endpoints": 1,
+      "worst_slack_ns": -0.058517,
+      "best_violating_slack_ns": -0.058517
+    }
+  ],
+  "reported_path_count": 10,
+  "common_prefix_cell_arcs": 0,
+  "common_prefix_last_pin": null,
+  "startpoint_counts": {
+    "table_i/addresses_reg[7]": 9,
+    "table_i/addresses_reg[32]": 1
+  },
+  "startpoint_cohorts": [
+    {
+      "startpoint": "table_i/addresses_reg[7]",
+      "paths": 9,
+      "common_prefix_cell_arcs": 69,
+      "common_prefix_last_pin": "U5302/Y"
+    },
+    {
+      "startpoint": "table_i/addresses_reg[32]",
+      "paths": 1,
+      "common_prefix_cell_arcs": 76,
+      "common_prefix_last_pin": "U2351/Y"
+    }
+  ],
+  "paths": [
+    {
+      "rank": 1,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[21]",
+      "arrival_ns": 2.101311,
+      "required_ns": 1.9,
+      "slack_ns": -0.201311,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.400771232816085,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.145470613345667,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.610107689913576,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.13969231589232,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101311,
+          "delay_ns": 0.329989,
+          "percent_of_arrival": 15.70395814803234,
+          "first_pin": "U4798/Y",
+          "last_pin": "U773/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[29]",
+      "arrival_ns": 2.101209,
+      "required_ns": 1.9,
+      "slack_ns": -0.201209,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401033405053949,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146011653291033,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61178778503233,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14130103192972,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101209,
+          "delay_ns": 0.329887,
+          "percent_of_arrival": 15.699866124692965,
+          "first_pin": "U4798/Y",
+          "last_pin": "U1408/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[9]",
+      "arrival_ns": 2.101167,
+      "required_ns": 1.9,
+      "slack_ns": -0.201167,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401141365726762,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146234449712946,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61247963631639,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14196348981305,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101167,
+          "delay_ns": 0.329845,
+          "percent_of_arrival": 15.69818105843085,
+          "first_pin": "U4798/Y",
+          "last_pin": "U7607/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[8]",
+      "arrival_ns": 2.101125,
+      "required_ns": 1.9,
+      "slack_ns": -0.201125,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401249330715688,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.14645725504194,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61317151525967,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.1426259741805,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101125,
+          "delay_ns": 0.329803,
+          "percent_of_arrival": 15.696495924802191,
+          "first_pin": "U4798/Y",
+          "last_pin": "U7595/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[17]",
+      "arrival_ns": 2.101091,
+      "required_ns": 1.9,
+      "slack_ns": -0.201091,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401336734106234,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146637627784804,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61373162799707,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14316229044816,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101091,
+          "delay_ns": 0.329769,
+          "percent_of_arrival": 15.695131719663724,
+          "first_pin": "U4798/Y",
+          "last_pin": "U7692/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[12]",
+      "arrival_ns": 2.10109,
+      "required_ns": 1.9,
+      "slack_ns": -0.20109,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.4013393048370135,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146642932953846,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61374810217553,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14317806471879,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.10109,
+          "delay_ns": 0.329768,
+          "percent_of_arrival": 15.695091595314814,
+          "first_pin": "U4798/Y",
+          "last_pin": "U7638/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "startpoint": "table_i/addresses_reg[32]",
+      "endpoint": "cmd_wdata[30]",
+      "arrival_ns": 2.101065,
+      "required_ns": 1.9,
+      "slack_ns": -0.201065,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.106981,
+          "delay_ns": 0.106981,
+          "percent_of_arrival": 5.0917510881386345,
+          "first_pin": "table_i/addresses_reg[32]/Q",
+          "last_pin": "table_i/addresses_reg[32]/Q",
+          "max_reported_fanout": 2,
+          "max_reported_capacitance_ff": 6.568
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Address distribution / buffering (no shared comparator on this path)",
+          "cells_on_path": 2,
+          "start_ns": 0.106981,
+          "end_ns": 0.154248,
+          "delay_ns": 0.047267,
+          "percent_of_arrival": 2.24966862043773,
+          "first_pin": "U2877/Y",
+          "last_pin": "U2860/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 10.161
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 33,
+          "start_ns": 0.154248,
+          "end_ns": 1.117524,
+          "delay_ns": 0.963276,
+          "percent_of_arrival": 45.847034718107246,
+          "first_pin": "candidates_i/U1626/Y",
+          "last_pin": "candidates_i/U1472/Y",
+          "max_reported_fanout": 16,
+          "max_reported_capacitance_ff": 40.936
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.117524,
+          "end_ns": 1.788228,
+          "delay_ns": 0.670704,
+          "percent_of_arrival": 31.922096650984138,
+          "first_pin": "frfcfs.scheduler_i/U999/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 6.506
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.788228,
+          "end_ns": 2.101065,
+          "delay_ns": 0.312837,
+          "percent_of_arrival": 14.889448922332257,
+          "first_pin": "U4798/Y",
+          "last_pin": "U2351/Y",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 10.0
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[5]",
+      "arrival_ns": 2.101026,
+      "required_ns": 1.9,
+      "slack_ns": -0.201026,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401503836696929,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146982474276852,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61480248221583,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14418764927231,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101026,
+          "delay_ns": 0.329704,
+          "percent_of_arrival": 15.692523557538077,
+          "first_pin": "U4798/Y",
+          "last_pin": "U2417/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[3]",
+      "arrival_ns": 2.101026,
+      "required_ns": 1.9,
+      "slack_ns": -0.201026,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401503836696929,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.146982474276852,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61480248221583,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14418764927231,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.101026,
+          "delay_ns": 0.329704,
+          "percent_of_arrival": 15.692523557538077,
+          "first_pin": "U4798/Y",
+          "last_pin": "U3194/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "startpoint": "table_i/addresses_reg[7]",
+      "endpoint": "cmd_wdata[6]",
+      "arrival_ns": 2.100949,
+      "required_ns": 1.9,
+      "slack_ns": -0.200949,
+      "cell_arcs": 76,
+      "combinational_cell_arcs": 75,
+      "stages": [
+        {
+          "stage": "clock_to_q",
+          "description": "Launch clock-to-Q",
+          "cells_on_path": 1,
+          "start_ns": 0.0,
+          "end_ns": 0.113487,
+          "delay_ns": 0.113487,
+          "percent_of_arrival": 5.401701802375975,
+          "first_pin": "table_i/addresses_reg[7]/Q",
+          "last_pin": "table_i/addresses_reg[7]/Q",
+          "max_reported_fanout": 3,
+          "max_reported_capacitance_ff": 13.056
+        },
+        {
+          "stage": "address_preprocessing",
+          "description": "Shared address comparison / buffering",
+          "cells_on_path": 7,
+          "start_ns": 0.113487,
+          "end_ns": 0.347688,
+          "delay_ns": 0.234201,
+          "percent_of_arrival": 11.147391012347276,
+          "first_pin": "U5289/Y",
+          "last_pin": "U4264/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 66.863
+        },
+        {
+          "stage": "bank_candidates",
+          "description": "Dependency filtering + bank candidate selection / encoding",
+          "cells_on_path": 28,
+          "start_ns": 0.347688,
+          "end_ns": 1.074954,
+          "delay_ns": 0.727266,
+          "percent_of_arrival": 34.61607111833747,
+          "first_pin": "candidates_i/U2140/Y",
+          "last_pin": "candidates_i/U1483/Y",
+          "max_reported_fanout": 13,
+          "max_reported_capacitance_ff": 25.493
+        },
+        {
+          "stage": "scheduler",
+          "description": "FR-FCFS / aging arbitration + slot encoding",
+          "cells_on_path": 28,
+          "start_ns": 1.074954,
+          "end_ns": 1.771322,
+          "delay_ns": 0.696368,
+          "percent_of_arrival": 33.14540238720693,
+          "first_pin": "frfcfs.scheduler_i/U850/Y",
+          "last_pin": "frfcfs.scheduler_i/U441/Y",
+          "max_reported_fanout": 4,
+          "max_reported_capacitance_ff": 9.435
+        },
+        {
+          "stage": "output_selection",
+          "description": "Slot decode + command output selection / buffering",
+          "cells_on_path": 12,
+          "start_ns": 1.771322,
+          "end_ns": 2.100949,
+          "delay_ns": 0.329627,
+          "percent_of_arrival": 15.689433679732346,
+          "first_pin": "U4798/Y",
+          "last_pin": "U2456/Y",
+          "max_reported_fanout": 9,
+          "max_reported_capacitance_ff": 29.924
+        }
+      ]
+    }
+  ],
+  "highest_fanout_nets": [
+    {
+      "net": "n7748",
+      "driver": "U5289/Y",
+      "stage": "address_preprocessing",
+      "fanout": 13,
+      "capacitance_ff": 66.863,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 0.1547,
+      "edge": "r"
+    },
+    {
+      "net": "candidates_i/n2698",
+      "driver": "candidates_i/U2068/Y",
+      "stage": "bank_candidates",
+      "fanout": 13,
+      "capacitance_ff": 25.493,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 0.69309,
+      "edge": "r"
+    },
+    {
+      "net": "n3709",
+      "driver": "U3778/Y",
+      "stage": "output_selection",
+      "fanout": 9,
+      "capacitance_ff": 21.285,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 1.934026,
+      "edge": "r"
+    },
+    {
+      "net": "n3713",
+      "driver": "U5302/Y",
+      "stage": "output_selection",
+      "fanout": 8,
+      "capacitance_ff": 29.924,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 1.91552,
+      "edge": "f"
+    },
+    {
+      "net": "frfcfs.scheduler_i/n543",
+      "driver": "frfcfs.scheduler_i/U823/Y",
+      "stage": "scheduler",
+      "fanout": 4,
+      "capacitance_ff": 9.435,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 1.156677,
+      "edge": "r"
+    },
+    {
+      "net": "frfcfs.scheduler_i/select_slot[1]",
+      "driver": "frfcfs.scheduler_i/U441/Y",
+      "stage": "scheduler",
+      "fanout": 4,
+      "capacitance_ff": 6.686,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 1.771322,
+      "edge": "r"
+    },
+    {
+      "net": "table_i/addresses[7]",
+      "driver": "table_i/addresses_reg[7]/Q",
+      "stage": "clock_to_q",
+      "fanout": 3,
+      "capacitance_ff": 13.056,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 0.113487,
+      "edge": "f"
+    },
+    {
+      "net": "n3136",
+      "driver": "U4804/Y",
+      "stage": "output_selection",
+      "fanout": 3,
+      "capacitance_ff": 8.044,
+      "net_delay_ns": 0.0,
+      "arrival_ns": 1.864147,
+      "edge": "f"
+    }
+  ],
+  "largest_combinational_arcs": [
+    {
+      "stage": "output_selection",
+      "pin": "U773/Y",
+      "cell": "MUX2X1",
+      "transition_ns": 0.077554,
+      "increment_ns": 0.07369,
+      "arrival_ns": 2.101311,
+      "edge": "r"
+    },
+    {
+      "stage": "bank_candidates",
+      "pin": "candidates_i/U3058/Y",
+      "cell": "NOR3X1",
+      "transition_ns": 0.039349,
+      "increment_ns": 0.05075,
+      "arrival_ns": 0.656079,
+      "edge": "f"
+    },
+    {
+      "stage": "bank_candidates",
+      "pin": "candidates_i/U3299/Y",
+      "cell": "OAI21X1",
+      "transition_ns": 0.045292,
+      "increment_ns": 0.046132,
+      "arrival_ns": 1.038589,
+      "edge": "r"
+    },
+    {
+      "stage": "scheduler",
+      "pin": "frfcfs.scheduler_i/U823/Y",
+      "cell": "AND2X2",
+      "transition_ns": 0.026575,
+      "increment_ns": 0.043367,
+      "arrival_ns": 1.156677,
+      "edge": "r"
+    },
+    {
+      "stage": "bank_candidates",
+      "pin": "candidates_i/U3168/Y",
+      "cell": "AOI22X1",
+      "transition_ns": 0.047677,
+      "increment_ns": 0.042209,
+      "arrival_ns": 0.824316,
+      "edge": "r"
+    },
+    {
+      "stage": "scheduler",
+      "pin": "frfcfs.scheduler_i/U1480/Y",
+      "cell": "AND2X2",
+      "transition_ns": 0.002616,
+      "increment_ns": 0.041987,
+      "arrival_ns": 1.216913,
+      "edge": "f"
+    },
+    {
+      "stage": "address_preprocessing",
+      "pin": "U4263/Y",
+      "cell": "OR2X2",
+      "transition_ns": 0.013425,
+      "increment_ns": 0.041268,
+      "arrival_ns": 0.329731,
+      "edge": "r"
+    },
+    {
+      "stage": "address_preprocessing",
+      "pin": "U5289/Y",
+      "cell": "INVX8",
+      "transition_ns": 0.041892,
+      "increment_ns": 0.041213,
+      "arrival_ns": 0.1547,
+      "edge": "r"
+    }
+  ],
+  "methodology": "Stages use consecutive mapped hierarchy boundaries and cumulative arrival differences. Cell counts include inverters/buffers, not RTL operator depth. Increment sums are checked within printed rounding precision. Capacitance converts pF to fF; alias rows are not summed.",
+  "limits": "Original top-10 paths plus 100 mapped-DDC paths and focused class queries; all 51 setup violations covered. Not an exhaustive path/sensitization analysis. No new synthesis, physical extraction, power, or signoff. Zero net delay in these reports does not imply zero physical wire delay. Hold and library max-cap violations remain.",
+  "analysis_script_sha256": "4145946c855f522d04249b090aff2ecc5eb0af99797f0632b40d2fa1061e194e"
+}

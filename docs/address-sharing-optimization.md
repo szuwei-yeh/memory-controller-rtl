@@ -1,5 +1,9 @@
 # Shared address-comparison optimization
 
+This report describes checkpoint `12db399`. Current RTL continues with the
+[candidate-mask experiment](candidate-mask-optimization.md); the measurements and
+encoded-interface reproduction commands below belong to this checkpoint.
+
 The controller computes one address-equality matrix in `mc_top` and shares it
 between command dependency filtering and response arbitration. Relative to the
 [candidate-decode revision](scheduler-optimization.md), full-controller mapped
@@ -80,7 +84,9 @@ At 3 ns the worst path still begins at a transaction-table address register and
 ends at `cmd_wdata` after dependency filtering, candidate selection, arbitration
 and command output selection. Sharing the address comparisons removes repeated
 logic but does not shorten that complete decision chain. Any subsequent timing
-optimization should be measured against this path and preserve command legality.
+optimization should be measured against this path and preserve command legality. See
+[the detailed 3 ns path analysis](critical-path-3ns.md) for stage delays, fanout,
+near-critical alternatives and read-only STA queries on this mapped design.
 
 Hold slack remains negative: Q16/5 and Q16/4 are −0.002538 ns, Q16/3 is
 −0.006960 ns, and Q32/5 is −0.000833 ns. Inherited zero-limit max-capacitance
@@ -120,6 +126,9 @@ CI runs the six Q=1/3 checks across all policies; the full twelve configurations
 are available through `make formal-address`.
 
 ## Reproduction and artifacts
+
+Use a separate checkout at `12db399` for these historical commands. The current
+interface uses `make formal-command-mask` and `make compare-command-mask`.
 
 ```sh
 make lint test

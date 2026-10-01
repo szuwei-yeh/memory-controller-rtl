@@ -29,6 +29,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--depths', type=int, nargs='+', default=[1, 3, 16, 32])
     args = parser.parse_args()
+    if 'candidate_mask' in (ROOT/'rtl/mc_scheduler_frfcfs.sv').read_text():
+        parser.error('This encoded-interface checkpoint is archived at 27f522c; use make formal-command-mask for current RTL.')
     if any(q < 1 for q in args.depths):
         parser.error('Queue depths must be positive')
     baseline_source()

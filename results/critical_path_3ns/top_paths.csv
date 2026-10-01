@@ -1,0 +1,11 @@
+rank,startpoint,endpoint,arrival_ns,required_ns,slack_ns,cell_arcs,combinational_cell_arcs
+1,table_i/addresses_reg[7],cmd_wdata[21],2.101311,1.9,-0.201311,76,75
+2,table_i/addresses_reg[7],cmd_wdata[29],2.101209,1.9,-0.201209,76,75
+3,table_i/addresses_reg[7],cmd_wdata[9],2.101167,1.9,-0.201167,76,75
+4,table_i/addresses_reg[7],cmd_wdata[8],2.101125,1.9,-0.201125,76,75
+5,table_i/addresses_reg[7],cmd_wdata[17],2.101091,1.9,-0.201091,76,75
+6,table_i/addresses_reg[7],cmd_wdata[12],2.10109,1.9,-0.20109,76,75
+7,table_i/addresses_reg[32],cmd_wdata[30],2.101065,1.9,-0.201065,76,75
+8,table_i/addresses_reg[7],cmd_wdata[5],2.101026,1.9,-0.201026,76,75
+9,table_i/addresses_reg[7],cmd_wdata[3],2.101026,1.9,-0.201026,76,75
+10,table_i/addresses_reg[7],cmd_wdata[6],2.100949,1.9,-0.200949,76,75

@@ -1,0 +1,18 @@
+{
+  "raw": {
+    "area.rpt": "036ecfb2a3f3ff9771e6329e15bd438aa42eeb5f681c5a697d1eedc3854af192",
+    "timing.rpt": "b6f22fc8a712ca8d362b0025a1548af8caf0fbff2ff4295e7e670b18b56dedf0",
+    "hold.rpt": "6f2822d46ab692751c36dc24697ee84d20b10151b075c805ff1c57d6c7336b85",
+    "qor.rpt": "34f4a68e21cab652ef486615c1d97be326c8dcf5f33d13f326ee2f33b7503d47",
+    "check_design.rpt": "dc38affb2855e1e978fe7cdd1cf2318bef333068512980fa2a78c734120c4692",
+    "check_timing.rpt": "f6cffa490ffdf5fb049368de73240bdfdc97ceecec5b93d7d7e4946c30525d33"
+  },
+  "public": {
+    "area.rpt": "9bc443e6225644b8acbe3b4ea6f8e8d5bc65f2bab2043a0b05f4cd67e6e6060f",
+    "timing.rpt": "c87fedd2dca77a7a89ac6117b56368e09ebccb8e1340693ffc2f07dcd0efa162",
+    "hold.rpt": "6fadc795b6279be7297a6f46add5e2db362a3e8d70de980bb472f413a15ad9de",
+    "qor.rpt": "4af2b938da330ec834be765fcd90a782af389511352287b2d403b306897dbed9",
+    "check_design.rpt": "44acd6b4093a53d2e81c1c51574c26cfc9a6cbac63bf9b5934d1548fb248c235",
+    "check_timing.rpt": "f6cffa490ffdf5fb049368de73240bdfdc97ceecec5b93d7d7e4946c30525d33"
+  }
+}

@@ -2,7 +2,12 @@
 
 These measurements retain the original v1.1 RTL. Subsequent implementation
 measurements are recorded in [scheduler optimization](scheduler-optimization.md)
-and [shared address comparisons](address-sharing-optimization.md).
+and [shared address comparisons](address-sharing-optimization.md), followed by
+the [candidate-mask timing experiment](candidate-mask-optimization.md).
+The subsequent [storage timing study](storage-timing-experiment.md) reports
+focused internal setup/reset hold diagnosis and two RTL alternatives.
+Current selected RTL and its measurements are in
+[command-mask plus storage optimization](command-mask-optimization.md).
 
 All **30 distinct Design Compiler runs** completed; **25/30** meet their target setup constraint. RTL, architecture, library, and SDC were not changed. A setup pass does not waive hold or capacitance violations.
 

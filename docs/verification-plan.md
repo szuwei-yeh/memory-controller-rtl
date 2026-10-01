@@ -61,6 +61,31 @@ event in Strict-FCFS or Q=1, where some events are structurally impossible.
 
 ## Formal
 
+The current `make formal-command-mask` checks whole-controller equivalence
+against the frozen compact candidate-mask snapshot at Q=1/3/16 across all three
+policies (nine checks; CI uses Q=1/3). Three original modules are frozen and
+hash-checked, with four identical modules on both sides. Flattening includes the
+actual command-mask wiring and fixed-slot table updates; memory mapping and identical
+cell merging precede matched-node SAT checks. Every equivalence cell must be
+proved. The state shares the same synchronous reset. This is implementation
+equivalence, not an independent arbitrary-functionality proof. An isolated Q3
+idle-payload mask mutation is rejected with 50 unproved cells.
+
+`make compare-command-mask` adds 120 complete byte-identical old/new event-trace
+pairs at Q=16 using three policies, ten workloads, seeds 1/42, and ready 100%/30%.
+See [command-mask evidence](command-mask-optimization.md) for the measured
+source hashes, validation scope, and remaining timing violations.
+
+The preceding `formal-candidate-mask` / `compare-candidate-mask` checks require
+the compact snapshot reconstructed from `12db399` plus the three published files
+in `results/candidate_mask/variants/compact_mask/rtl/`. Their baseline is the
+shared-address checkpoint, and their evidence remains in `results/candidate_mask/`.
+
+The following encoded-interface studies are historical. Reproduce address
+sharing at checkpoint `12db399` and candidate decoding at `27f522c`, in separate
+checkouts. Their frozen evidence remains valid for those revisions; their
+commands and `formal/scheduler_equiv.sby` do not target the current mask interface.
+
 `make formal-address` compares the shared-address controller against three frozen,
 hash-checked pre-sharing modules, with the other four modules identical on both
 sides. It flattens the actual top wiring, maps memories, merges identical cells,
@@ -76,7 +101,7 @@ using three policies, ten workloads, seeds 1/42 and ready 100%/30%. Every pair m
 match byte-for-byte. See [the experiment](address-sharing-optimization.md) for
 source provenance, measured PPA and proof scope.
 
-`make formal-scheduler` additionally compares the current scheduler with the frozen
+`make formal-scheduler` compares the candidate-decode checkpoint with the frozen
 v1.1 reference using Yosys SAT and matched internal signals at Q=1/3/16/32, aging
 off/on, and default address/age parameters. Every equivalence cell must be proved.
 Both implementations have the same synchronous reset and state-update structure.

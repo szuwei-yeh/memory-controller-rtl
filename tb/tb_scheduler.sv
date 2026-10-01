@@ -11,7 +11,15 @@ module tb_scheduler;
     reg [5:0] ages=0;
     reg [3:0] candidate_valid=0, owner_valid=0;
     reg [7:0] candidate_slots=0, owners=0;
+    wire [2:0] candidate_mask;
+    for (genvar i=0;i<3;i=i+1) begin : slot_mask
+        assign candidate_mask[i]=(candidate_valid[0] && candidate_slots[0+:2]==2'(i)) ||
+                                 (candidate_valid[1] && candidate_slots[2+:2]==2'(i)) ||
+                                 (candidate_valid[2] && candidate_slots[4+:2]==2'(i)) ||
+                                 (candidate_valid[3] && candidate_slots[6+:2]==2'(i));
+    end
     wire select_valid, protection_active;
+    wire [2:0] select_mask;
     wire [1:0] select_slot, protection_slot;
     mc_scheduler_frfcfs #(.Q_DEPTH(3),.ADDR_W(4),.AGE_LIMIT(2)) dut (.*);
     task automatic check(input bit valid, input reg [1:0] slot);

@@ -1,10 +1,13 @@
 # Frozen v1 architecture — response-refill amendment
 
-The candidate-decode and shared-address optimizations preserve this protocol and
+The candidate-decode, shared-address, and candidate-mask optimizations preserve this protocol and
 cycle-level policy. Their measured implementation changes are documented in
 [scheduler optimization](scheduler-optimization.md) and
-[address sharing](address-sharing-optimization.md); the v1.1 measurements remain
+[address sharing](address-sharing-optimization.md), and
+[candidate masks](candidate-mask-optimization.md); the v1.1 measurements remain
 separate from the current RTL's mapping results.
+The current [command-mask and storage optimization](command-mask-optimization.md)
+also preserves the protocol and cycle behavior.
 
 ## Goals and boundaries
 
@@ -82,6 +85,9 @@ Slot lifecycle: `FREE -> PENDING -> READ_INFLIGHT -> DONE -> FREE`, or
 `FREE -> PENDING -> DONE -> FREE` for WRITE. Occupied slots reserve completion
 capacity even if the host stops accepting responses. Free-slot allocation uses
 pre-edge state: a retiring transaction slot is not reused on the same edge.
+Completion bits and read-result data now use fixed-slot update decodes, preserving
+the original priority when events coincide: retirement, allocation, write issue,
+then read return. All other table state retains its implementation.
 
 The response holding register can be consumed and refilled on the same edge.
 Arbitration chooses the oldest pre-edge response-eligible slot other than the
@@ -129,6 +135,23 @@ open-row hit, else oldest eligible request. Pending hits retain their open row
 even while timing-blocked. Globally choose oldest legal READ/WRITE, else oldest
 legal ACT/PRE, else idle. A blocked candidate does not prevent another bank's
 legal candidate. PRE is demand-driven, with no speculative closure.
+
+The current candidate/scheduler interface uses a Q-bit mask instead of four
+encoded slot indices. Each bank marks its winner, with a highest-slot-index
+fallback if multiple incomparable winners exist, then the four masks are ORed.
+The scheduler qualifies mask bits with legality, uses each slot's address bank
+for aging suppression, and retains its global column-first/oldest-first choice.
+The mask changes combinational representation without changing the ordering of
+candidate selection and legality checks or adding state.
+
+FR-FCFS also exports a final command payload mask directly from its winning
+choices. `mc_top` selects operation, address, and write data with masked ORs over
+fixed slot slices; the encoded slot still drives transaction and bank-owner
+updates. The mask preserves highest-index fallback and aging service override.
+With no winner it selects slot zero, retaining the original invalid-cycle
+payload; it is not a valid-command flag and is not gated by reset. Strict-FCFS
+decodes its existing selected slot into the payload mask, preserving blocked-oldest
+payloads even while command valid is low.
 
 ## Aging and bounded service
 

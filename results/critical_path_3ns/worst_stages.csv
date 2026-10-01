@@ -1,0 +1,6 @@
+stage,description,cells_on_path,start_ns,end_ns,delay_ns,percent_of_arrival,first_pin,last_pin,max_reported_fanout,max_reported_capacitance_ff
+clock_to_q,Launch clock-to-Q,1,0.0,0.113487,0.113487,5.400771232816085,table_i/addresses_reg[7]/Q,table_i/addresses_reg[7]/Q,3,13.056
+address_preprocessing,Shared address comparison / buffering,7,0.113487,0.347688,0.234201,11.145470613345667,U5289/Y,U4264/Y,13,66.863
+bank_candidates,Dependency filtering + bank candidate selection / encoding,28,0.347688,1.074954,0.727266,34.610107689913576,candidates_i/U2140/Y,candidates_i/U1483/Y,13,25.493
+scheduler,FR-FCFS / aging arbitration + slot encoding,28,1.074954,1.771322,0.696368,33.13969231589232,frfcfs.scheduler_i/U850/Y,frfcfs.scheduler_i/U441/Y,4,9.435
+output_selection,Slot decode + command output selection / buffering,12,1.771322,2.101311,0.329989,15.70395814803234,U4798/Y,U773/Y,9,29.924

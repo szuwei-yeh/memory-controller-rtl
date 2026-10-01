@@ -1,0 +1,7 @@
+port,violating_endpoints,worst_slack_ns,best_violating_slack_ns
+cmd_wdata,32,-0.201311,-0.192994
+cmd_row,8,-0.196941,-0.190127
+cmd_col,6,-0.198089,-0.198089
+cmd_bank,2,-0.198398,-0.194964
+cmd_op,2,-0.199411,-0.193868
+cmd_valid,1,-0.058517,-0.058517

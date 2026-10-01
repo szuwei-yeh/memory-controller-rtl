@@ -1,0 +1,20 @@
+{
+  "raw": {
+    "area.rpt": "2ac0473e901dfaf89534b1bdbf017e8d197d54d37232c4daa387adda7458d1de",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "clocks.rpt": "9bb89b88dd5f9aad2e5f303d0a62e5bbbff4242aef1ada871b62f5397d530954",
+    "read_data_setup.rpt": "235fccf93ddaef1d51cb75c183262b8e403e21986d4673d3e17512bd7cccbb3e",
+    "done_setup.rpt": "1a7871b4b4971b19d50629049d88f70e6209e8fd2b1e148fa26aa74c8b608e8c",
+    "register_to_register.rpt": "351b5dd281f42d23c9133767d449386ff26a2e23619cb13da7816c311b7a5fc4",
+    "hold.rpt": "31187b8613ca6a7b85e88ec15172425f9ea632ad80f6ddd326f4fcab5cd515c9"
+  },
+  "public": {
+    "area.rpt": "84cf3f08de6e055c79f55db489b74cdd7366027474182789b60b463ff976779b",
+    "check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+    "clocks.rpt": "37f28e903fcbf3c65b4d68104c7a2525d27aa43e90cd54133a2b72ac3300bcbb",
+    "read_data_setup.rpt": "e4463059ff809b96c010f4757bdb4029e08afde0bf955d48ffcaa2cecba8f088",
+    "done_setup.rpt": "68769d2fb6a8b42f1bae9c8ee72cd877135bb5865091c2c2e0840dd272ace6a2",
+    "register_to_register.rpt": "417e7d3fbcd598b9eeade0a8738058f945db00e2efce8542f9fcbea06094c6ac",
+    "hold.rpt": "b2a0d39194f6c0a5af890b5ea38b2fcc03f5d1a91019fa20e0b2de37821dc959"
+  }
+}

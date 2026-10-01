@@ -1,0 +1,9 @@
+variant,clock_ns,area_um2,setup_worst_slack_ns,setup_tns_ns,setup_violation_count,internal_setup_violation_count,worst_hold_slack_ns,hold_violation_count
+compact_baseline,3,73105.205957,-0.116465,-5.655077,84,34,-0.002538,17
+compact_baseline,4,67729.843772,0.000518,0,0,0,-0.050676,39
+direct_mask,3,71259.449079,-0.098674,-5.782456,66,16,-0.002538,23
+direct_mask,4,65884.556214,0.001552,0,0,0,-0.002538,10
+folded_default,3,71404.932087,-0.08696,-5.395905,76,25,-0.003357,24
+folded_default,4,65471.572219,4.8e-05,0,0,0,-0.002538,9
+mask_and_storage,3,71720.770984,-0.068773,-3.396384,50,0,-0.000661,8
+mask_and_storage,4,65996.718912,0.000109,0,0,0,-0.000659,2

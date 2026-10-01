@@ -1,0 +1,5 @@
+path_class,reported_paths,unique_endpoints,worst_slack_ns,startpoint,endpoint,report
+register-to-output,51,51,-0.201311,table_i/addresses_reg_7_,cmd_wdata[21],results/critical_path_3ns/reports/timing.rpt
+register-to-register,10,10,0.0015,table_i/occupied_reg_0_,table_i/writes_reg_4_,results/critical_path_3ns/reports/register_to_register.rpt
+input-to-register,10,10,0.475024,rst,table_i/ages_reg_112_,results/critical_path_3ns/reports/input_to_register.rpt
+input-to-output,3,3,0.60427,rst,req_ready,results/critical_path_3ns/reports/input_to_output.rpt
