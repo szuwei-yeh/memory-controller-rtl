@@ -1,0 +1,22 @@
+# Optimization experiments
+
+The current RTL adopts [parallel command-class arbitration](parallel-arbitration-experiment.md).
+Earlier documents retain the measurements and source revisions for their own
+experiments; their results do not automatically apply to the current RTL.
+
+Read the following in order to follow the optimization history:
+
+| Step | Document | Evidence directory |
+|---|---|---|
+| 1 | [Candidate decoding](scheduler-optimization.md) | [`scheduler_optimization`](../../results/scheduler_optimization/) |
+| 2 | [Shared address comparisons](address-sharing-optimization.md) | [`address_sharing`](../../results/address_sharing/) |
+| 3 | [3 ns critical-path diagnosis](critical-path-3ns.md) | [`critical_path_3ns`](../../results/critical_path_3ns/) |
+| 4 | [Candidate masks](candidate-mask-optimization.md) | [`candidate_mask`](../../results/candidate_mask/) |
+| 5 | [Storage timing and free-slot experiments](storage-timing-experiment.md) | [`storage_timing`](../../results/storage_timing/) |
+| 6 | [Command masks and storage](command-mask-optimization.md) | [`command_mask`](../../results/command_mask/) |
+| 7 | [Remaining command-output paths](command-path-3ns.md) | [`command_path_3ns`](../../results/command_path_3ns/) |
+| 8 | [Parallel command-class arbitration](parallel-arbitration-experiment.md) | [`parallel_arbitration`](../../results/parallel_arbitration/) |
+
+See the [documentation guide](../README.md) for design contracts and published
+baseline results, or the [script guide](../../scripts/README.md) for verification
+and report tools.

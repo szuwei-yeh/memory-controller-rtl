@@ -101,7 +101,7 @@ def main():
                     unproven_cells=int(counts[2]) if counts else None, elapsed_s=time.monotonic()-started))
                 print(name, report['results'][-1]['status'], flush=True)
                 if not passed:
-                    raise RuntimeError('Equivalence failed: '+name)
+                    raise RuntimeError('Equivalence failed: '+name+'\n'+text[-6000:])
         assert hashes == {p: hashlib.sha256((trial/p).read_bytes()).hexdigest() for p in files}
         report['status'] = 'PASS'
     finally:

@@ -23,7 +23,7 @@ DC R-2020.09-SP4 reads the existing Q16/FR-FCFS+aging/3 ns DDC and links the sam
 GSCL45nm typical library (1.1 V, 27°C). There is no compile, RTL change, SDC reload,
 or timing exception. Area remains 71,720.770984 µm² with 1,974 sequential cells.
 Library, configuration, SDC, query script, DDC, and RTL hashes are retained in
-the [analysis summary](../results/command_path_3ns/summary.json).
+the [analysis summary](../../results/command_path_3ns/summary.json).
 
 The query reports 60 distinct setup endpoints, including every one of the 50
 failing command outputs. Original and reloaded `report_constraint` setup/hold
@@ -158,12 +158,12 @@ query. To audit and publish those raw reports:
 python3 scripts/command_path_report.py --source build/command_path_3ns
 ```
 
-- [Top 20 endpoint paths and stage times](../results/command_path_3ns/top20.csv)
-- [Detailed arcs for all 50 failing paths](../results/command_path_3ns/failing_path_details.json)
-- [Summary, provenance, class margins, shared pins and net loads](../results/command_path_3ns/summary.json)
-- [Raw/public report hashes](../results/command_path_3ns/reports/hashes.json)
-- [Timing report](../results/command_path_3ns/reports/timing.rpt) and
-  [mask connections](../results/command_path_3ns/reports/command_mask_nets.rpt)
+- [Top 20 endpoint paths and stage times](../../results/command_path_3ns/top20.csv)
+- [Detailed arcs for all 50 failing paths](../../results/command_path_3ns/failing_path_details.json)
+- [Summary, provenance, class margins, shared pins and net loads](../../results/command_path_3ns/summary.json)
+- [Raw/public report hashes](../../results/command_path_3ns/reports/hashes.json)
+- [Timing report](../../results/command_path_3ns/reports/timing.rpt) and
+  [mask connections](../../results/command_path_3ns/reports/command_mask_nets.rpt)
 
 These are typical-corner pre-layout measurements with an ideal clock. They do
 not establish routed timing, exact Fmax, power, or signoff closure.

@@ -144,7 +144,7 @@ def main():
            '|---|---:|---:|---:|---:|---:|---:|---:|']
     for r in rows:
         table.append(f"| {r['variant']} | {r['clock_ns']} | {r['area_um2']:,.2f} | {r['setup_worst_slack_ns']:+.6f} | {r['setup_tns_ns']:.6f} | {r['setup_violation_count']} | {r['worst_hold_slack_ns']:+.6f} | {r['hold_violation_count']} |")
-    doc=ROOT/'docs/candidate-mask-optimization.md'
+    doc=ROOT/'docs/experiments/candidate-mask-optimization.md'
     text=doc.read_text();start,end='<!-- measured-table -->','<!-- /measured-table -->'
     assert text.count(start)==text.count(end)==1
     prefix,rest=text.split(start);_,suffix=rest.split(end)

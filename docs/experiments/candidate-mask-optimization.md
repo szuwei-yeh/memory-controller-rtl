@@ -165,10 +165,10 @@ publishing results. It requires those experiment manifests; a fresh checkout
 alone does not contain private run directories or the licensed technology library.
 Public reports redact the private library path and preserve raw/public hashes.
 
-- [Metrics CSV](../results/candidate_mask/summary.csv)
-- [Sources, validation scope, violations, and complete metrics](../results/candidate_mask/summary.json)
-- [Mapped reports](../results/candidate_mask/reports/)
-- [Both measured RTL variants](../results/candidate_mask/variants/)
+- [Metrics CSV](../../results/candidate_mask/summary.csv)
+- [Sources, validation scope, violations, and complete metrics](../../results/candidate_mask/summary.json)
+- [Mapped reports](../../results/candidate_mask/reports/)
+- [Both measured RTL variants](../../results/candidate_mask/variants/)
 
 Earlier encoded-interface equivalence commands are historical: use checkpoint
 `27f522c` for the candidate-decode study and `12db399` for address sharing. Their

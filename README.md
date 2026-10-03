@@ -1,143 +1,122 @@
-# memory-controller-rtl
+# DRAM Memory Controller RTL
 
-A synthesizable SystemVerilog controller for a **simplified, single-channel,
-four-bank DRAM command protocol**. This portfolio explores bank parallelism,
-timing enforcement, scheduling, starvation protection, ordering, verification,
-and ASIC implementation tradeoffs. It is not a DDR PHY or JEDEC-compliant device
-controller.
+A synthesizable **SystemVerilog controller for a simplified, single-channel,
+four-bank DRAM command protocol**, with configurable queue depth and three
+scheduling policies. The project covers request ordering, bank timing,
+backpressure, starvation protection, and measured ASIC area/timing tradeoffs.
 
-Start with the [five-minute design review](docs/portfolio-review.md) for the
-architecture, critical-path change and PPA tradeoffs, or
-[reproduce the current snapshot](docs/reproduce.md) to inspect and run it.
+[Five-minute design review](docs/portfolio-review.md) ·
+[Architecture](docs/architecture.md) ·
+[Verification](docs/verification-plan.md) ·
+[Reproduce](docs/reproduce.md)
 
-## Current ASIC optimization
+![Controller architecture: host requests enter the transaction table, bank candidates feed a selectable scheduler and command issue, and read returns feed an ordered response path. Bank timing controls legality; the behavioral DRAM model is simulation only.](docs/figures/controller-architecture.svg)
 
-Parallel column/PRE-ACT arbitration changes Q=16/3 ns setup slack from
-**−0.068773 to +0.000038 ns**, removing all **50 setup violations** relative to
-the selected command-mask plus storage revision. Mapped area decreases
-**1.89% at 3 ns** and **0.44% at 4 ns**. The 4 ns setup margin increases from
-+0.000109 to +0.001984 ns. No pipeline, storage or command latency is added.
-See the [parallel-arbitration experiment](docs/parallel-arbitration-experiment.md)
-for matched measurements, verification and adoption criteria.
-The measured RTL passes nine whole-controller equivalence configurations,
-120 complete trace pairs, 42 directed/corner simulations, five formal tasks,
-and 300 regression runs with 3,003,000 accepted transactions.
+*Requests keep their transaction slots until the host consumes the response.
+Bank timing legality and scheduling policy are separate blocks.*
 
-**3 ns setup passes with only 0.038 ps margin; hold still fails at both targets**
-(eight endpoints at 3 ns, two at 4 ns). These typical-corner, ideal-clock,
-pre-layout results are not timing closure or a routed-frequency claim.
-The preceding [command-mask experiment](docs/command-mask-optimization.md)
-retains its three alternatives and source-matched evidence. The earlier
-[address-sharing experiment](docs/address-sharing-optimization.md) achieved
-16.71% area reduction at Q=16/5 ns and 24.19% at Q=32/5 ns; those measurements
-belong to that earlier revision, not the current mask RTL.
-The [candidate-mask](docs/candidate-mask-optimization.md) and standalone
-[storage timing](docs/storage-timing-experiment.md) studies retain their historical
-measurements. The latter rejected fixed-slot writes alone; the new combined
-implementation was independently measured before the parallel-arbitration change.
+## Results at a glance
 
-## Published v1.1 results
+| Study | Measured result | Evidence |
+|---|---|---|
+| **Current RTL: parallel arbitration** | Q=16 / 3 ns setup slack **−0.068773 → +0.000038 ns**; **50 → 0 setup violations**, with **1.89% lower mapped area** and no added cycle latency | [Matched experiment](docs/experiments/parallel-arbitration-experiment.md) |
+| **Earlier address-sharing revision** | **16.71% lower mapped area** at Q=16 / 5 ns; **24.19% lower** at Q=32 / 5 ns | [Separate before/after measurements](docs/experiments/address-sharing-optimization.md) |
+| **Frozen v1.1 scheduling study** | Always-ready random traffic: **0.146 → 0.419 responses/cycle**, Strict-FCFS → FR-FCFS, averaged across 20 seeds | [Multi-seed results](docs/performance-stability.md) |
+| **Frozen v1.1 aging tradeoff** | Hot/cold p99 latency **333 → 137 cycles**; throughput **0.481 → 0.462 responses/cycle** | [Workload and metric definitions](docs/results.md#performance) |
+| **Current RTL verification** | **300 regression runs**, **3,003,000 accepted transactions**, and **42 directed/workload/reset/corner simulations**, plus unit checks | [Source-matched validation](results/parallel_arbitration/validation_summary.json) |
 
-- **Verification:** 3,003,000 accepted transactions across 300 randomized regression
-  runs; 42 directed/workload/reset/corner simulations plus model, scheduler, and
-  response unit checks. Five formal tasks pass: three depth-12 controller BMC
-  checks and two focused unbounded control proofs in reduced configurations.
-- **Scheduling:** in the 20-seed always-ready random study, FR-FCFS averaged
-  0.419 responses/cycle versus 0.146 for Strict-FCFS. On hot/cold traffic,
-  aging reduced p99 latency from 333 to 137 cycles, with throughput falling
-  from 0.481 to 0.462 responses/cycle. Aging protects command service;
-  response consumption still requires host readiness.
-- **Response path:** the isolated tCCD=1 row-hit experiment sustains **1 response/cycle**
-  (previously 0.5). Default tCCD=2 still limits column issue to 0.5/cycle.
-  The paired random/50%-ready study found a systematic p99 increase of 8.8 cycles
-  across 20 seeds, alongside 28.6% higher throughput and 23.1% lower mean latency.
-- **ASIC:** 30 Synopsys Design Compiler runs using the inherited GSCL45nm typical
-  library and fixed medium mapping effort; 25 tested setup targets pass.
-  At Q=16 and 5 ns, mapped areas are 76,534 / 78,520 / 80,975 µm² for
-  Strict-FCFS / FR-FCFS / FR-FCFS+aging. Doubling Q from 16 to 32 costs roughly
-  3× area. The **fastest tested setup-passing targets** at Q=16 are respectively
-  **3 ns (333.33 MHz), 4 ns (250 MHz), and 4 ns (250 MHz)**, not exact maximum frequencies.
+ASIC measurements use Synopsys Design Compiler and the GSCL45nm typical library,
+with ideal clocks and pre-layout mapping. The current 3 ns setup margin is only
+**0.038 ps**; hold and the library's zero-limit capacitance violations remain.
+These results establish an RTL optimization, not physical timing signoff.
+Each study above has its own baseline; the historical area and performance
+measurements are not new measurements of the current RTL.
 
-These are simplified-protocol simulations and **pre-layout** mapped ASIC results,
-not JEDEC compliance, post-layout timing, or physical DDR bandwidth. Hold violations
-remain. The inherited library's zero allowed-load/max-capacitance constraints also
-remain violated and are not waived. Setup passes do not imply timing signoff.
-See [local evidence](docs/results.md), [multi-seed stability](docs/performance-stability.md),
-and [ASIC evidence](docs/asic-results.md) for methodology and limitations.
+## Architecture and design choices
 
-## Run locally
+- **Separate legality from policy.** Per-bank timing and preparation ownership
+  determine which commands can issue. Strict-FCFS provides a head-of-line
+  baseline; FR-FCFS prefers ready columns; aging protects the oldest aged
+  request's command service, at a measured throughput cost.
+- **Preserve ordering where required.** Same-address operations and host
+  responses follow acceptance order; independent addresses may bypass. An
+  explicit older-than matrix avoids sequence-number wraparound but costs
+  quadratic storage/logic as queue depth grows.
+- **Handle backpressure without losing completion capacity.** Requests retain
+  their slots until response consumption. The response register holds stalled
+  payloads stable and can consume/refill from an already-eligible independent
+  completion on the same edge. The isolated tCCD=1 study sustains one response
+  per cycle; default tCCD=2 still limits column issue to 0.5/cycle.
+- **Optimize a measured dependency.** Critical-path analysis led to computing
+  column and PRE/ACT oldest winners in parallel, then selecting the command
+  class. This removes a serial arbitration dependency without adding pipeline
+  stages or state. A deliberately wrong class selector is rejected by equivalence.
 
-Requires Python 3.10+, Verilator with `--binary --timing --assert`, a C++ compiler,
-and make; equivalence also requires Yosys. See the
-[tested setup and fresh-checkout audit](docs/reproduce.md) and
-[workloads](docs/results.md#workloads). Run commands sequentially.
-The clean-checkout audit passes local tests, all nine equivalence configurations,
-120 trace pairs and five property tasks; its regression portion is a 15-run sample.
+![Arbitration before and after: the baseline selects the command class before oldest-winner arbitration; current RTL computes column and PRE/ACT winners in parallel, then selects using column presence.](docs/figures/parallel-arbitration.svg)
+
+*The change moves class selection after parallel winner computation. This is an
+RTL dependency sketch; box sizes do not represent measured delays. See the
+[matched timing experiment](docs/experiments/parallel-arbitration-experiment.md).*
+
+Default RTL: 16 outstanding slots, 32-bit words, 256 rows × 64 columns per bank,
+three-cycle read latency, and FR-FCFS with aging. Timing parameters are illustrative
+cycle counts. The interface supports full-word requests and tagged responses;
+PHY, refresh, training, bursts, ECC and JEDEC compliance are outside this project.
+See the [protocol contract](docs/protocol-and-timing.md) for ordering and reset.
+
+## Verification and reproducibility
+
+The current optimization is checked with **nine whole-controller equivalence
+configurations** (Q=1/3/16 × three policies) and **120 complete baseline/current
+cycle-trace pairs**, in addition to the simulations above. Property checks include
+three depth-12 controller BMC tasks with symbolic data and two focused unbounded
+control proofs in reduced configurations. This is not an all-parameter unbounded
+proof of data correctness. See [proof scope](docs/verification-plan.md).
+
+Published evidence retains source/report hashes and matched synthesis conditions.
+A [fresh-checkout audit](docs/reproduce.md#fresh-checkout-audit) reproduces local
+checks, equivalence, traces and properties; its regression portion is a 15-run
+sample. The full 300-run result is recorded separately.
+
+Start from the repository root with the evidence audit, which needs only Python
+and Git. Simulation needs Python 3.10+, Verilator supporting
+`--binary --timing --assert`, a C++ compiler and make. Run commands sequentially:
 
 ```sh
-make check-evidence                      # audit committed source/report hashes and numbers
+make check-evidence                      # inspect published hashes and measurements
 make lint
 make smoke
 make test
-make regress SEEDS=5 N=1000 JOBS=2        # quick 15-run sample
-make formal-parallel                    # nine baseline/current equivalence checks
-make compare-parallel                   # 120 complete cycle-trace pairs
+make regress SEEDS=5 N=1000 JOBS=2        # 15-run regression sample
 ```
 
-`build/` contains build logs, simulation event traces, commands, and machine-readable
-results. Builds are cached by RTL/testbench content, parameters, and Verilator version.
-Use `make regress` for the full 300-run regression and `make formal` for the
-five property tasks after installing SymbiYosys as documented. Optional generic
-synthesis, workload studies and lab packaging are described in the reproduction
-guide. `make report` is a historical publisher that overwrites frozen public
-reports; it is not part of the current quickstart.
-Earlier encoded-interface checks are reproduced at their recorded checkpoints:
-`27f522c` for candidate decoding and `12db399` for address sharing.
-The compact candidate-mask snapshot is preserved under `results/candidate_mask/variants/`.
+For equivalence and traces, install Yosys, then run:
 
-## Architecture
+```sh
+make formal-parallel                    # all nine equivalence configurations
+make compare-parallel                   # 120 complete trace pairs
+```
 
-Requests occupy transaction-table slots through response consumption. Same-address
-memory operations **and host responses** preserve acceptance order; independent
-addresses may bypass. There is no global in-order retirement buffer.
-The response register can consume and refill in the same cycle from another
-already-eligible independent completion, sustaining one response per cycle when
-such completions are available. Stalled payloads remain stable; same-address
-successors retain the conservative pre-edge eligibility rule.
+`make formal` runs the five property tasks with SymbiYosys. The
+[reproduction guide](docs/reproduce.md) documents tested tools, full regression,
+historical checkpoints and optional synthesis. New mapped PPA requires licensed
+Synopsys tools and the matching library. `make report` republishes historical
+artifacts and can overwrite frozen evidence; it is not part of the quickstart.
 
-| Policy identifier | Behavior |
+## Repository guide
+
+| Location | Contents |
 |---|---|
-| `strict_fcfs` | Strict Request FCFS / Strict-FCFS (HOL baseline): a blocked oldest pending request stalls all command issue |
-| `frfcfs` | Bank-aware ready-column-first, oldest-first arbitration with open-row preference |
-| `frfcfs_aging` | FR-FCFS plus bounded emergency protection for the oldest aged request |
+| `rtl/`, `tb/` | Current controller RTL, simulation testbenches and DRAM model |
+| `formal/` | Property harnesses, task configurations and historical reference RTL |
+| `synth/` | RTL manifest, constraints and DC / PrimeTime flows |
+| [`scripts/`](scripts/README.md) | Daily checks, synthesis tools and historical report publishers |
+| [`docs/`](docs/README.md) | Design contracts, verification, reproduction and result explanations |
+| [`docs/experiments/`](docs/experiments/README.md) | Optimization history, timing diagnoses and rejected alternatives |
+| [`results/`](results/README.md) | Published summaries, selected reports and frozen source snapshots |
+| `build/`, `.tools/`, `local_notes/` | Ignored working outputs, local dependencies and private notes |
 
-ACT/READ/WRITE/PRE use independent bank state and tRCD/tRP/tRAS/tWR counters;
-tCCD is channel-wide. A preparation owner reserves a bank through its column
-command. Aging protection drains an existing owner before the protected request
-and prevents unrelated column commands from consuming its next tCCD opportunity.
-
-Read values snapshot at READ issue and return after fixed latency. Writes commit
-with their command. Requests are full-word transfers; there are no bursts or byte masks.
-
-## Design and evidence
-
-- [Five-minute design review and interview walkthrough](docs/portfolio-review.md)
-- [Reproduction guide and clean-checkout audit](docs/reproduce.md)
-- [Architecture](docs/architecture.md)
-- [Interface, timing, ordering, and reset](docs/protocol-and-timing.md)
-- [Verification strategy and proof scope](docs/verification-plan.md)
-- [Performance, response throughput, workloads, and reproduction](docs/results.md)
-- [Multi-seed performance stability](docs/performance-stability.md)
-- [ASIC area/timing tradeoffs and synthesis setup](docs/asic-results.md)
-- [Candidate-decode optimization and paired ASIC evidence](docs/scheduler-optimization.md)
-- [Shared address comparisons and matched ASIC evidence](docs/address-sharing-optimization.md)
-- [3 ns critical-path breakdown and next experiment](docs/critical-path-3ns.md)
-- [Candidate-mask timing experiment and remaining violations](docs/candidate-mask-optimization.md)
-- [Storage timing diagnosis and free-slot experiments](docs/storage-timing-experiment.md)
-- [Direct command-mask and storage optimization](docs/command-mask-optimization.md)
-- [Remaining 68.8 ps: selected command-path analysis](docs/command-path-3ns.md)
-- [Parallel command-class arbitration and 3 ns setup pass](docs/parallel-arbitration-experiment.md)
-- [Annotated command traces](docs/traces.md)
-
-ASIC evidence uses Synopsys Design Compiler and the GSCL45nm typical library.
-Local generic Yosys counts are synthesizability evidence, not mapped ASIC area or frequency.
+For a technical review, start with the [five-minute walkthrough](docs/portfolio-review.md),
+then inspect the [current experiment](docs/experiments/parallel-arbitration-experiment.md)
+and its linked reports. The [experiment index](docs/experiments/README.md) preserves
+both adopted changes and rejected alternatives, including their tradeoffs.

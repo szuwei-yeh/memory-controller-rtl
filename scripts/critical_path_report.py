@@ -223,7 +223,7 @@ def main():
              '|---|---:|---:|---:|---:|']
     for stage in worst['stages']:
         table.append(f"| {stage['description']} | {stage['delay_ns']:.6f} | {stage['end_ns']:.6f} | {stage['percent_of_arrival']:.2f}% | {stage['cells_on_path']} |")
-    document = ROOT/'docs/critical-path-3ns.md'
+    document = ROOT/'docs/experiments/critical-path-3ns.md'
     text = document.read_text()
     start,end = '<!-- stage-table -->','<!-- /stage-table -->'
     assert text.count(start) == text.count(end) == 1

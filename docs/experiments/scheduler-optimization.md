@@ -3,7 +3,7 @@
 The FR-FCFS scheduler now constructs its candidate mask with fixed slot accesses.
 It preserves scheduling policy, aging, ordering, interface timing, and all state
 registers. This is a combinational implementation change, with separate evidence
-from the [frozen v1.1 ASIC sweep](asic-results.md).
+from the [frozen v1.1 ASIC sweep](../asic-results.md).
 
 ## Change and hypothesis
 
@@ -135,9 +135,9 @@ The collector also reads the retained experiment manifests `baseline.json`,
 `lab_session.json` (for the library hash), and `mutation.json` in that local
 directory. These contain run provenance and are not part of the public artifact.
 
-- [Paired metrics CSV](../results/scheduler_optimization/summary.csv)
-- [Metrics, verification scope and source hashes](../results/scheduler_optimization/summary.json)
-- [Selected mapped reports](../results/scheduler_optimization/reports/)
+- [Paired metrics CSV](../../results/scheduler_optimization/summary.csv)
+- [Metrics, verification scope and source hashes](../../results/scheduler_optimization/summary.json)
+- [Selected mapped reports](../../results/scheduler_optimization/reports/)
 
 Published report copies replace the private library path with `${TECH_LIBRARY_DIR}`;
 both raw and sanitized report hashes are recorded. Licensed libraries, full tool

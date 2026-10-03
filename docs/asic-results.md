@@ -1,14 +1,14 @@
 # Frozen v1.1 ASIC comparison sweep
 
 These measurements retain the original v1.1 RTL. Subsequent implementation
-measurements are recorded in [scheduler optimization](scheduler-optimization.md)
-and [shared address comparisons](address-sharing-optimization.md), followed by
-the [candidate-mask timing experiment](candidate-mask-optimization.md).
-The subsequent [storage timing study](storage-timing-experiment.md) reports
+measurements are recorded in [scheduler optimization](experiments/scheduler-optimization.md)
+and [shared address comparisons](experiments/address-sharing-optimization.md), followed by
+the [candidate-mask timing experiment](experiments/candidate-mask-optimization.md).
+The subsequent [storage timing study](experiments/storage-timing-experiment.md) reports
 focused internal setup/reset hold diagnosis and two RTL alternatives.
-The [command-mask plus storage optimization](command-mask-optimization.md)
+The [command-mask plus storage optimization](experiments/command-mask-optimization.md)
 provides the baseline for the current
-[parallel-arbitration implementation](parallel-arbitration-experiment.md), which
+[parallel-arbitration implementation](experiments/parallel-arbitration-experiment.md), which
 passes 3 ns setup with +0.000038 ns slack; hold remains failing.
 
 All **30 distinct Design Compiler runs** completed; **25/30** meet their target setup constraint. RTL, architecture, library, and SDC were not changed. A setup pass does not waive hold or capacitance violations.

@@ -104,7 +104,7 @@ their published reports can be inspected without rerunning those collectors.
 New mapped PPA requires licensed Synopsys DC and the matching GSCL45nm library
 configuration. Neither the library nor mapped DDCs are redistributed. See
 [ASIC setup](asic-results.md) and the
-[final experiment](parallel-arbitration-experiment.md) for flow, source hashes,
+[final experiment](experiments/parallel-arbitration-experiment.md) for flow, source hashes,
 corner and constraint details. This closeout does not rerun DC, PrimeTime or a
 physical-design flow. Current results retain failing hold and library
 capacitance constraints; the +0.038 ps 3 ns setup margin is not robust signoff.

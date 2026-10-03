@@ -179,11 +179,11 @@ and applies the predeclared screen. Raw logs, mapped netlists, site configuratio
 and licensed library files remain private. Public reports redact the technology
 library path and retain both raw and public report hashes.
 
-- [Metrics CSV](../results/storage_timing/summary.csv)
-- [Source hashes, adoption checks, proof scope, and complete metrics](../results/storage_timing/summary.json)
-- [Focused baseline path queries](../results/storage_timing/analysis/)
-- [Both trial RTL files](../results/storage_timing/variants/)
-- [Mapped trial reports](../results/storage_timing/reports/)
+- [Metrics CSV](../../results/storage_timing/summary.csv)
+- [Source hashes, adoption checks, proof scope, and complete metrics](../../results/storage_timing/summary.json)
+- [Focused baseline path queries](../../results/storage_timing/analysis/)
+- [Both trial RTL files](../../results/storage_timing/variants/)
+- [Mapped trial reports](../../results/storage_timing/reports/)
 
 All results remain typical-corner pre-layout measurements with ideal clocks and
 no extracted interconnect. Hold and inherited zero-limit max-capacitance

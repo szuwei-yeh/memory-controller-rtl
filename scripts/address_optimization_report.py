@@ -140,7 +140,7 @@ def main():
         before, after = [r for r in rows if (r['queue_depth'],r['clock_ns']) == (q,period)]
         delta = 100*(after['area_um2']/before['area_um2']-1)
         table.append(f"| {q} | {period} | {before['area_um2']:,.2f} | {after['area_um2']:,.2f} | {delta:+.2f}% | {before['setup_worst_slack_ns']:+.6f} → {after['setup_worst_slack_ns']:+.6f} |")
-    document = ROOT/'docs/address-sharing-optimization.md'
+    document = ROOT/'docs/experiments/address-sharing-optimization.md'
     start, end = '<!-- paired-table -->', '<!-- /paired-table -->'
     text = document.read_text()
     assert text.count(start) == text.count(end) == 1

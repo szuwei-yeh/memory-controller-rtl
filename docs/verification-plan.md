@@ -68,7 +68,7 @@ are hash-checked, and the reference scheduler is stored in
 `formal/reference/parallel_arbitration/`. `make compare-parallel` compares
 120 complete baseline/current event-trace pairs. A wrong class selector
 (`column_winners != 0`) is rejected with three unproven cells. See
-[parallel-arbitration evidence](parallel-arbitration-experiment.md) for source
+[parallel-arbitration evidence](experiments/parallel-arbitration-experiment.md) for source
 hashes, the matched-node proof scope, and measured timing.
 
 The preceding `make formal-command-mask` checks whole-controller equivalence
@@ -83,7 +83,7 @@ idle-payload mask mutation is rejected with 50 unproved cells.
 
 `make compare-command-mask` adds 120 complete byte-identical old/new event-trace
 pairs at Q=16 using three policies, ten workloads, seeds 1/42, and ready 100%/30%.
-See [command-mask evidence](command-mask-optimization.md) for the measured
+See [command-mask evidence](experiments/command-mask-optimization.md) for the measured
 source hashes, validation scope, and remaining timing violations.
 
 The preceding `formal-candidate-mask` / `compare-candidate-mask` checks require
@@ -108,7 +108,7 @@ address-pair comparison is rejected by the same checker.
 
 `make compare-address` adds 120 complete before/after event-trace pairs at Q=16
 using three policies, ten workloads, seeds 1/42 and ready 100%/30%. Every pair must
-match byte-for-byte. See [the experiment](address-sharing-optimization.md) for
+match byte-for-byte. See [the experiment](experiments/address-sharing-optimization.md) for
 source provenance, measured PPA and proof scope.
 
 `make formal-scheduler` compares the candidate-decode checkpoint with the frozen

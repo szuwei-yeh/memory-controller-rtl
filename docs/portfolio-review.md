@@ -117,12 +117,12 @@ is complete as a reproducible RTL and pre-layout optimization study.
 ## Evidence to open during a review
 
 - [Interface, timing and ordering contract](protocol-and-timing.md)
-- [Pre-change critical-path diagnosis](command-path-3ns.md)
-- [Final experiment, adoption criteria and limitations](parallel-arbitration-experiment.md)
+- [Pre-change critical-path diagnosis](experiments/command-path-3ns.md)
+- [Final experiment, adoption criteria and limitations](experiments/parallel-arbitration-experiment.md)
 - [Current machine-readable evidence](../results/parallel_arbitration/summary.json)
 - [Verification scope](verification-plan.md) and [reproduction commands](reproduce.md)
-- [Rejected direct-mask alternatives](command-mask-optimization.md) and
-  [storage study](storage-timing-experiment.md)
+- [Rejected direct-mask alternatives](experiments/command-mask-optimization.md) and
+  [storage study](experiments/storage-timing-experiment.md)
 
 An accurate resume description is: “Designed and verified a four-bank DRAM
 command scheduler with FR-FCFS and aging; parallelized command-class arbitration

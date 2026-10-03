@@ -157,7 +157,7 @@ def main():
         table.append(f"| {r['variant']} | {r['clock_ns']} | {r['area_um2']:,.2f} | "
                      f"{r['setup_worst_slack_ns']:+.6f} | {r['setup_violation_count']} | "
                      f"{r['internal_setup_violation_count']} | {r['worst_hold_slack_ns']:+.6f} | {r['hold_violation_count']} |")
-    doc = ROOT/'docs/storage-timing-experiment.md'
+    doc = ROOT/'docs/experiments/storage-timing-experiment.md'
     text = doc.read_text()
     start, end = '<!-- measured-table -->', '<!-- /measured-table -->'
     assert text.count(start) == text.count(end) == 1

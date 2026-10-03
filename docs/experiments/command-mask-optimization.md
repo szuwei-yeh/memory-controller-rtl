@@ -226,10 +226,10 @@ publishing results. A fresh checkout lacks private run directories and the
 licensed technology library. Public report copies redact the private library
 path and retain both raw and public hashes.
 
-- [Metrics CSV](../results/command_mask/summary.csv)
-- [Source hashes, adoption checks, proof scope, and full metrics](../results/command_mask/summary.json)
-- [All measured RTL variants](../results/command_mask/variants/)
-- [Mapped reports](../results/command_mask/reports/)
+- [Metrics CSV](../../results/command_mask/summary.csv)
+- [Source hashes, adoption checks, proof scope, and full metrics](../../results/command_mask/summary.json)
+- [All measured RTL variants](../../results/command_mask/variants/)
+- [Mapped reports](../../results/command_mask/reports/)
 
 These are typical-corner pre-layout measurements with ideal clocks and no
 extracted interconnect. Remaining hold and inherited zero-limit max-capacitance

@@ -124,7 +124,7 @@ def main():
         after=next(r for r in rows if (r['variant'],r['queue_depth'],r['clock_ns'])==('decode_trial',q,period))
         delta=100*(after['area_um2']/before['area_um2']-1)
         table.append(f"| {q} | {period} | {before['area_um2']:,.2f} | {after['area_um2']:,.2f} | {delta:+.2f}% | {before['setup_worst_slack_ns']:+.6f} → {after['setup_worst_slack_ns']:+.6f} |")
-    document=ROOT/'docs/scheduler-optimization.md'
+    document=ROOT/'docs/experiments/scheduler-optimization.md'
     start,end='<!-- paired-table -->','<!-- /paired-table -->'
     text=document.read_text()
     assert text.count(start)==text.count(end)==1

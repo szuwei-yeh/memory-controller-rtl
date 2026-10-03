@@ -191,13 +191,13 @@ Set `MC_LAB_CONFIG`, `MC_MAPPED_DDC`, `MC_ANALYSIS_TOP` and `MC_ANALYSIS_OUT`, t
 run `dc_shell -f synth/dc/analyze_paths.tcl`. The script performs no `compile`,
 retiming, constraint relaxation or DDC rewrite.
 
-- [Machine-readable analysis](../results/critical_path_3ns/summary.json)
-- [Worst-path stages](../results/critical_path_3ns/worst_stages.csv)
-- [All worst-path cell arcs](../results/critical_path_3ns/worst_arcs.csv)
-- [Worst-path nets, fanout and load](../results/critical_path_3ns/worst_nets.csv)
-- [Original ten path endpoints](../results/critical_path_3ns/top_paths.csv)
-- [Violating output groups](../results/critical_path_3ns/violating_endpoints.csv)
-- [Expanded paths](../results/critical_path_3ns/expanded_paths.csv)
-- [Path-class comparison](../results/critical_path_3ns/path_classes.csv)
-- [Supplementary STA reports and provenance](../results/critical_path_3ns/reports/)
-- [Original full timing report](../results/address_sharing/reports/q16_3ns/timing.rpt)
+- [Machine-readable analysis](../../results/critical_path_3ns/summary.json)
+- [Worst-path stages](../../results/critical_path_3ns/worst_stages.csv)
+- [All worst-path cell arcs](../../results/critical_path_3ns/worst_arcs.csv)
+- [Worst-path nets, fanout and load](../../results/critical_path_3ns/worst_nets.csv)
+- [Original ten path endpoints](../../results/critical_path_3ns/top_paths.csv)
+- [Violating output groups](../../results/critical_path_3ns/violating_endpoints.csv)
+- [Expanded paths](../../results/critical_path_3ns/expanded_paths.csv)
+- [Path-class comparison](../../results/critical_path_3ns/path_classes.csv)
+- [Supplementary STA reports and provenance](../../results/critical_path_3ns/reports/)
+- [Original full timing report](../../results/address_sharing/reports/q16_3ns/timing.rpt)
