@@ -33,6 +33,9 @@ with ideal clocks and pre-layout mapping. The latest mapped 3 ns setup margin is
 hold pass at the two tested Q16 FR-FCFS+aging clock points; the library's zero-limit
 capacitance violations remain. Physical timing signoff
 and timing across corners remain future work.
+A [capacitance diagnosis](docs/experiments/capacitance-diagnosis.md) traces every
+violation to explicit source/DB zero limits and also identifies loads below the
+associated Liberty source's delay-table grid; these are supplied-library results.
 Each study above has its own baseline; the historical area and performance
 measurements are not new measurements of the current RTL.
 

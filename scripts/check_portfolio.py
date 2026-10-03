@@ -147,6 +147,7 @@ def check_setup_margin(previous):
         assert all(summary['adoption_checks'][str(period)].values())
         print(f"After setup-margin mapping Q16/{period} ns: area={after['area_um2']:.6f} um^2, "
               f"setup={after['setup_worst_slack_ns']:+.6f} ns, hold={after['worst_hold_slack_ns']:+.6f} ns / 0 endpoints")
+    return summary
 
 
 def main():
@@ -208,7 +209,8 @@ def main():
         assert row['setup_pass'] and row['hold_violation_count'] > 0
         print(f"Before hold repair Q16/{row['clock_ns']} ns: area={area:.6f} um^2, setup={row['setup_worst_slack_ns']:+.6f} ns, "
               f"hold={row['worst_hold_slack_ns']:+.6f} ns / {row['hold_violation_count']} endpoints")
-    check_setup_margin(check_hold_repair(summary))
+    from capacitance_report import check_published
+    check_published(ROOT/'results/capacitance_diagnosis', check_setup_margin(check_hold_repair(summary)))
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
     assert not any(p.startswith('local_notes/') for p in tracked)
     assert not any(p.endswith(('.db', '.ddc', '.lib')) for p in tracked if p)

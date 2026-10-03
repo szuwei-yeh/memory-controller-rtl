@@ -1,0 +1,171 @@
+{
+  "status": "DIAGNOSIS_COMPLETE_NO_REPAIR",
+  "measured_date": "2026-10-03",
+  "baseline_evidence": "results/setup_margin/summary.json",
+  "current_rtl_sha256": {
+    "rtl/mc_transaction_table.sv": "f7f44870a8e1e9b192c6571a26791ddc746d6deecae36e76979254abe232c991",
+    "rtl/mc_bank_tracker.sv": "741e658a9d2b8c689ff2d601055bb846a8f67c73d2dbf7c0c2513b1283fbc7c0",
+    "rtl/mc_candidates.sv": "f71176cbcabf6ffd41a6505fe2349c933248e7be4afe944ec137c5f88e0efd5e",
+    "rtl/mc_scheduler_strict_fcfs.sv": "a0227af2be484403dce915f27310d78468bb9944b8d3b5c6fe14754d2bd03ccb",
+    "rtl/mc_scheduler_frfcfs.sv": "58f3cdd9a07c94d5e1990b4e2233e544460ef9bcc7523f25efc9f7e867e090a1",
+    "rtl/mc_response.sv": "6529334e9b51e6a2194d225019334f4d193c91bbefa05013c4b779d5b52037da",
+    "rtl/mc_top.sv": "d60ff508d5ff6adec7de561e066e7de997ab8c87f95d0d195a4a6540f0a4fdbe"
+  },
+  "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+  "library_metadata_sha256": "3cd999060fbe67d22680ab3a2c23ee49b99ace8262cd0c300fb6fd530f492213",
+  "script_sha256": "f4befd6022a9ba240ef550f906f63656a87a75bf08547be602d0de600b53eae9",
+  "publisher_sha256": "892835271a590faf11dbc74e5f67af35e76ab0da56adc969d313423cbed65d8a",
+  "zero_limit_library_outputs": [
+    "AOI21X1/Y",
+    "AOI22X1/Y",
+    "DFFSR/Q",
+    "NAND2X1/Y",
+    "NAND3X1/Y",
+    "NOR2X1/Y",
+    "TBUFX1/Y"
+  ],
+  "runs": [
+    {
+      "clock_ns": 3,
+      "queue_depth": 16,
+      "policy": "frfcfs_aging",
+      "observed": {
+        "setup_violation_count": 0,
+        "hold_violation_count": 0,
+        "max_capacitance_violation_count": 5504,
+        "max_transition_violation_count": 0,
+        "area_um2": 70925.776764,
+        "setup_worst_slack_ns": 0.050054,
+        "worst_hold_slack_ns": 0.008031,
+        "sequential_cells": 1974,
+        "leaf_cells": 23753,
+        "buffer_cells": 970,
+        "unconstrained_endpoint_count": 0,
+        "zero_allowed_load_violation_count": 5504
+      },
+      "original_sdc_unchanged": true,
+      "load_statistics": {
+        "violating_nets": 5504,
+        "driver_reference_counts": {
+          "AOI21X1": 328,
+          "AOI22X1": 1553,
+          "NAND2X1": 1330,
+          "NAND3X1": 1745,
+          "NOR2X1": 548
+        },
+        "sink_count_histogram": {
+          "1": 5184,
+          "2": 300,
+          "3": 18,
+          "4": 2
+        },
+        "nominal_load_min_pf": 0.00153896,
+        "nominal_load_max_pf": 0.0101035,
+        "wire_capacitance_nonzero_count": 0,
+        "below_delay_load_grid_count": 5504
+      },
+      "report_path": "results/capacitance_diagnosis/reports/q16_3ns",
+      "derived_sha256": {
+        "load_accounting.csv": "85f6ff2d76f2ed0956b96fd45b450b1db9bfd94cd543de884949721e6cd643bd",
+        "examples.rpt": "c5fff99808af50399c6997b9cda5b5b57bb95017f13a5e3eedf436a0c4b7236b"
+      },
+      "provenance": {
+        "ddc_sha256": "31bba09d2e011ae6adf944b6038c1da0cc47f3ab5d6b9428b2c8474db6b0de3e",
+        "config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+        "liberty_sha256": "69c0641df1dc737e5c8dbd3950f2daf3b52c6e7767aa081e35e9b0739bf62d6f",
+        "exit_code": 0,
+        "report_sha256": {
+          "zero_nets.rpt": "e3b7ba37c5887cd87a8d7911afadecd1a4ee67d745b884397ac6d09be739e2c7",
+          "query.sdc": "9d4c7a8bbff5d463e3995ffd9efd760950c7d84fbad1875ce1cdb0cf4d635d80",
+          "SUCCESS": "63d369dcc71ad1f9ce39a8f92ef7a9af8a46ec8efc2a202b61a7c13e4b16666a",
+          "audit_check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+          "db_limits.tsv": "b5af304c8ba79b969002b834b62b3a736e74e678ae16a77e5ad872040a5b85b8",
+          "zero_drivers.tsv": "8fd07ab8e2714f414f2506393543b8361a0251dc835f71404d819ec8d51d97c6",
+          "audit_setup.rpt": "77554d78d439d3bf59fd584c4466a0fec52041831dd9b85c993947bca77242a6",
+          "audit_check_design.rpt": "ad734222ed0473e3afa396d74dd7dfcdcdc7c4d116603315a83d040e4beb50e1",
+          "audit_design.rpt": "ed3d8cf1aa868717078d247f0ae0157bb8f96f18c94e5d875a5df5a3129bb03c",
+          "audit_hold.rpt": "b6a671650e4bbdcbbbf38070496d5ac4b826f356dc88b354ab64ae8988e74fa8",
+          "audit_qor.rpt": "f2d0ba987d2385baa4edc98af7ac2f9ecfb7232cbf14b49928545c348d500a9c",
+          "environment.rpt": "d8fc4d06d77323b8988b4cf06a4d7659446569bac6b3385e493f5ab6d7a225ea",
+          "audit_area.rpt": "555f0388f474ef862f77d2c1bcfd0d5e1ddad46ae91c8dc1acf4edff05ef4c61",
+          "tool.log": "6fbe39a9dd2dcaac3658ee306ce7ed2ad793e379d1c2c479cdcd961c67ec297c",
+          "audit_constraints.rpt": "5dc5e20512c4622a8796c876ebf25ddf99b0cd594f899a9b7a173bcd87fed562",
+          "audit_references.rpt": "81e23041aa77c50f1b5dd1f26e80498cd0e17cab026d0c5997c52ca372028cb4"
+        }
+      }
+    },
+    {
+      "clock_ns": 4,
+      "queue_depth": 16,
+      "policy": "frfcfs_aging",
+      "observed": {
+        "setup_violation_count": 0,
+        "hold_violation_count": 0,
+        "max_capacitance_violation_count": 5334,
+        "max_transition_violation_count": 0,
+        "area_um2": 65735.788116,
+        "setup_worst_slack_ns": 0.055773,
+        "worst_hold_slack_ns": 0.008031,
+        "sequential_cells": 1974,
+        "leaf_cells": 21321,
+        "buffer_cells": 837,
+        "unconstrained_endpoint_count": 0,
+        "zero_allowed_load_violation_count": 5334
+      },
+      "original_sdc_unchanged": true,
+      "load_statistics": {
+        "violating_nets": 5334,
+        "driver_reference_counts": {
+          "AOI21X1": 337,
+          "AOI22X1": 2049,
+          "NAND2X1": 1145,
+          "NAND3X1": 1753,
+          "NOR2X1": 50
+        },
+        "sink_count_histogram": {
+          "1": 5214,
+          "2": 120
+        },
+        "nominal_load_min_pf": 0.00153896,
+        "nominal_load_max_pf": 0.005058689999999999,
+        "wire_capacitance_nonzero_count": 0,
+        "below_delay_load_grid_count": 5334
+      },
+      "report_path": "results/capacitance_diagnosis/reports/q16_4ns",
+      "derived_sha256": {
+        "load_accounting.csv": "e4c2e89f38d23f2b8bee4c11e3e4de1f9199e1b70755a105724a734e165288c6",
+        "examples.rpt": "668e82a84580f07536d1b874df4ff496e910a9e5e6f51ea44cbc663ddab167d6"
+      },
+      "provenance": {
+        "ddc_sha256": "bbae8d6b46e2494ef5db5bb98bd47b9ee4cdcab370a4f8c58d015d2eba5be725",
+        "config_sha256": "af7e80120e197d378bdb5485787c3cefd8a6418cfd315615745ea50c7c16f727",
+        "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+        "liberty_sha256": "69c0641df1dc737e5c8dbd3950f2daf3b52c6e7767aa081e35e9b0739bf62d6f",
+        "exit_code": 0,
+        "report_sha256": {
+          "zero_nets.rpt": "a3c32c40ff9207dad70a07b42814232ab726cc4b7883baeae5b72c093cad634e",
+          "query.sdc": "79e9104b485dc9fb337338698ebc5ef658ea5813d71b432015611f1f13647912",
+          "SUCCESS": "63d369dcc71ad1f9ce39a8f92ef7a9af8a46ec8efc2a202b61a7c13e4b16666a",
+          "audit_check_timing.rpt": "94bf7675a38cf2f7e109edbc8dc51e1112bf6d2b3427362c2e14197d434eaf38",
+          "db_limits.tsv": "b5af304c8ba79b969002b834b62b3a736e74e678ae16a77e5ad872040a5b85b8",
+          "zero_drivers.tsv": "3bd19600aefdbfcfffd23ead46c0886a3c0e0ac33f747b13ffcaf1c88ed71ddb",
+          "audit_setup.rpt": "32bc6c01b5ef9f21ad929056d087d00cf8d5ee7cf6f6aed4d327069d230db53e",
+          "audit_check_design.rpt": "f481ed299b1d4a6ff1d12fd682f5bce0c5afb35a6a5f1f3d75188866d4d8d9bf",
+          "audit_design.rpt": "df747811d4458ba0e84b3b3d5a56e743e3e2a9a5f57f274411e21a0d3aca3ab9",
+          "audit_hold.rpt": "cf4dbea2d2269dca86b37ad2f2c494f8fb4409f98ea08f24e3c1e4e919956c44",
+          "audit_qor.rpt": "c009132ff29eb94c325140a82114a7f294ce00bf1a93ac5ded4ddf325e3e278c",
+          "environment.rpt": "d8fc4d06d77323b8988b4cf06a4d7659446569bac6b3385e493f5ab6d7a225ea",
+          "audit_area.rpt": "af9598520068a1d3265c55494d00974ab8c47e2d3677ea6af3f8694bdc3bd2dd",
+          "tool.log": "0f0ed9defde5e36eb680608ec2769bf92ebfa12384e1f799e01536b19ac45864",
+          "audit_constraints.rpt": "a8a109976347490d4241660dc597f763ebe504c5616a9dd58047d1d8ed49b980",
+          "audit_references.rpt": "e6acc97f0aa2f1cb759a5a16b2db3546ef48ecf2c39dff87f251a025f73e5e87"
+        }
+      }
+    }
+  ],
+  "load_accounting_tolerance_pf": 5e-08,
+  "constraint_rounding_tolerance_pf": 5.1e-07,
+  "finding": "Explicit source-library zero output limits match the loaded DB and constraint reports; every violation has positive cell-input capacitance and zero modeled wire capacitance. All affected loads are below the supplied cell-delay load-table grid.",
+  "limits": "Read-only diagnosis of two retained Q16 typical ideal-clock pre-layout mappings. No library correction, remapping, waiver, parasitic extraction, physical or multicorner signoff."
+}

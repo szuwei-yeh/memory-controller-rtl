@@ -18,6 +18,8 @@ Expected output includes a final `PASS`, the original eight/two hold endpoints,
 zero endpoints after mapped hold repair, and latest setup slacks of
 **+0.050054 / +0.055773 ns at 3/4 ns** with zero hold failures. Historical
 +0.000038 ns setup at 3 ns remains in the before/hold-repaired rows.
+The capacitance diagnosis accounts for all 5,504 / 5,334 zero-limit driver nets,
+their positive pin loads and zero modeled wire capacitance; it claims no repair.
 A source edit should invalidate
 the snapshot check until corresponding evidence is produced.
 
@@ -115,6 +117,8 @@ PrimeTime or a physical-design flow. The repaired Q16/3 ns and 4 ns mappings pas
 setup and hold; latest incremental mapping increases their setup margins to
 50.054 / 55.773 ps. Library capacitance violations remain; typical-corner
 pre-layout measurements do not establish physical or multicorner signoff.
+The [capacitance diagnosis](experiments/capacitance-diagnosis.md) also documents
+associated source-grid limitations and the available physical/library views.
 
 ## Fresh-checkout audit
 

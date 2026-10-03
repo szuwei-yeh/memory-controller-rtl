@@ -9,6 +9,8 @@ remaining hold failures at Q16/3 ns and 4 ns while preserving setup slack.
 The subsequent [setup-margin mapping](setup-margin-experiment.md) increases
 setup margins to 50.054 / 55.773 ps while preserving zero setup/hold failures
 and inherited capacitance violation counts.
+The [capacitance diagnosis](capacitance-diagnosis.md) then traces every remaining
+violation to source/DB zero limits and positive pin loads; it does not claim repair.
 
 Read the following in order to follow the optimization history:
 
@@ -24,6 +26,7 @@ Read the following in order to follow the optimization history:
 | 8 | [Parallel command-class arbitration](parallel-arbitration-experiment.md) | [`parallel_arbitration`](../../results/parallel_arbitration/) |
 | 9 | [Mapped hold repair](hold-repair-experiment.md) | [`hold_repair`](../../results/hold_repair/) |
 | 10 | [Mapped setup-margin improvement](setup-margin-experiment.md) | [`setup_margin`](../../results/setup_margin/) |
+| 11 | [Capacitance and library diagnosis](capacitance-diagnosis.md) | [`capacitance_diagnosis`](../../results/capacitance_diagnosis/) |
 
 See the [documentation guide](../README.md) for design contracts and published
 baseline results, or the [script guide](../../scripts/README.md) for verification

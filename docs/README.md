@@ -28,6 +28,8 @@ The current implementation's experiment is
 [parallel command-class arbitration](experiments/parallel-arbitration-experiment.md),
 followed by [mapped hold repair](experiments/hold-repair-experiment.md) and
 [setup-margin improvement](experiments/setup-margin-experiment.md).
+The latest [capacitance diagnosis](experiments/capacitance-diagnosis.md) explains
+the remaining electrical constraints, load accounting and library limitations.
 Machine-readable summaries, reports and source snapshots live in
 [`results/`](../results/README.md). Command-line tools are listed in
 [`scripts/`](../scripts/README.md).

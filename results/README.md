@@ -13,6 +13,9 @@ Preserve recorded reports, manifests and source snapshots when organizing files.
 - [`setup_margin/`](setup_margin/): latest paired incremental mappings at Q16/3 ns
   and 4 ns, original constraints, unchanged DRC counts, complete state/clock/output
   comparison and rejected negative controls. Exploratory screens are recorded separately.
+- [`capacitance_diagnosis/`](capacitance_diagnosis/): read-only source/DB limit
+  comparison, all-net load accounting, selected native examples and bounded
+  library/physical-view inventory. Existing timing/area reproduce exactly; no repair.
 - [`portfolio_audit/summary.json`](portfolio_audit/summary.json): recorded
   fresh-checkout audit; see [reproduction](../docs/reproduce.md) for its scope.
 - Run `make check-evidence` to compare current RTL with published source hashes,

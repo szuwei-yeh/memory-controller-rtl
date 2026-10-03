@@ -1,0 +1,730 @@
+{
+  "liberty_sha256": "69c0641df1dc737e5c8dbd3950f2daf3b52c6e7767aa081e35e9b0739bf62d6f",
+  "library": "gscl45nm",
+  "capacitance_unit_pf": 1.0,
+  "capacitance_unit_fF": 1000.0,
+  "time_unit_ns": 1.0,
+  "cells": [
+    "AND2X1",
+    "AND2X2",
+    "AOI21X1",
+    "AOI22X1",
+    "BUFX2",
+    "BUFX4",
+    "CLKBUF1",
+    "CLKBUF2",
+    "CLKBUF3",
+    "DFFNEGX1",
+    "DFFPOSX1",
+    "DFFSR",
+    "FAX1",
+    "HAX1",
+    "INVX1",
+    "INVX2",
+    "INVX4",
+    "INVX8",
+    "LATCH",
+    "MUX2X1",
+    "NAND2X1",
+    "NAND3X1",
+    "NOR2X1",
+    "NOR3X1",
+    "OAI21X1",
+    "OR2X1",
+    "OR2X2",
+    "TBUFX1",
+    "TBUFX2",
+    "XNOR2X1",
+    "XOR2X1"
+  ],
+  "inputs": {
+    "AND2X1/A": {
+      "capacitance": 0.00229149,
+      "rise_capacitance": 0.00229149,
+      "fall_capacitance": 0.00187144
+    },
+    "AND2X1/B": {
+      "capacitance": 0.00234289,
+      "rise_capacitance": 0.00234289,
+      "fall_capacitance": 0.00182664
+    },
+    "AND2X2/A": {
+      "capacitance": 0.00179784,
+      "rise_capacitance": 0.00179784,
+      "fall_capacitance": 0.00176278
+    },
+    "AND2X2/B": {
+      "capacitance": 0.00186944,
+      "rise_capacitance": 0.00186944,
+      "fall_capacitance": 0.00182011
+    },
+    "AOI21X1/A": {
+      "capacitance": 0.00274129,
+      "rise_capacitance": 0.00274129,
+      "fall_capacitance": 0.00256559
+    },
+    "AOI21X1/B": {
+      "capacitance": 0.00272419,
+      "rise_capacitance": 0.00272419,
+      "fall_capacitance": 0.00267874
+    },
+    "AOI21X1/C": {
+      "capacitance": 0.00238603,
+      "rise_capacitance": 0.00238603,
+      "fall_capacitance": 0.00231224
+    },
+    "AOI22X1/A": {
+      "capacitance": 0.00281659,
+      "rise_capacitance": 0.00281659,
+      "fall_capacitance": 0.00265821
+    },
+    "AOI22X1/B": {
+      "capacitance": 0.00276444,
+      "rise_capacitance": 0.00276444,
+      "fall_capacitance": 0.00272615
+    },
+    "AOI22X1/C": {
+      "capacitance": 0.00287763,
+      "rise_capacitance": 0.00287763,
+      "fall_capacitance": 0.00266968
+    },
+    "AOI22X1/D": {
+      "capacitance": 0.00290653,
+      "rise_capacitance": 0.00290653,
+      "fall_capacitance": 0.00282572
+    },
+    "BUFX2/A": {
+      "capacitance": 0.00153896,
+      "rise_capacitance": 0.00153896,
+      "fall_capacitance": 0.00150415
+    },
+    "BUFX4/A": {
+      "capacitance": 0.0039795,
+      "rise_capacitance": 0.0039795,
+      "fall_capacitance": 0.003854
+    },
+    "CLKBUF1/A": {
+      "capacitance": 0.00539775,
+      "rise_capacitance": 0.00539775,
+      "fall_capacitance": 0.00519021
+    },
+    "CLKBUF2/A": {
+      "capacitance": 0.00546037,
+      "rise_capacitance": 0.00546037,
+      "fall_capacitance": 0.00527344
+    },
+    "CLKBUF3/A": {
+      "capacitance": 0.00543838,
+      "rise_capacitance": 0.00543838,
+      "fall_capacitance": 0.00529382
+    },
+    "DFFNEGX1/CLK": {
+      "capacitance": 0.00646193,
+      "rise_capacitance": 0.00646193,
+      "fall_capacitance": 0.00477771
+    },
+    "DFFNEGX1/D": {
+      "capacitance": 0.00180099,
+      "rise_capacitance": 0.00180099,
+      "fall_capacitance": 0.00128286
+    },
+    "DFFPOSX1/CLK": {
+      "capacitance": 0.00822349,
+      "rise_capacitance": 0.00822349,
+      "fall_capacitance": 0.00813588
+    },
+    "DFFPOSX1/D": {
+      "capacitance": 0.00181554,
+      "rise_capacitance": 0.00181554,
+      "fall_capacitance": 0.00129019
+    },
+    "DFFSR/CLK": {
+      "capacitance": 0.00172596,
+      "rise_capacitance": 0.00172596,
+      "fall_capacitance": 0.00148522
+    },
+    "DFFSR/D": {
+      "capacitance": 0.00199559,
+      "rise_capacitance": 0.00199559,
+      "fall_capacitance": 0.0015328
+    },
+    "DFFSR/R": {
+      "capacitance": 0.00497023,
+      "rise_capacitance": 0.00497023,
+      "fall_capacitance": 0.00363509
+    },
+    "DFFSR/S": {
+      "capacitance": 0.00405188,
+      "rise_capacitance": 0.00277146,
+      "fall_capacitance": 0.00405188
+    },
+    "FAX1/A": {
+      "capacitance": 0.0126653,
+      "rise_capacitance": 0.0126653,
+      "fall_capacitance": 0.0108512
+    },
+    "FAX1/B": {
+      "capacitance": 0.0103049,
+      "rise_capacitance": 0.0103049,
+      "fall_capacitance": 0.00882394
+    },
+    "FAX1/C": {
+      "capacitance": 0.00821878,
+      "rise_capacitance": 0.00821878,
+      "fall_capacitance": 0.00706451
+    },
+    "HAX1/A": {
+      "capacitance": 0.00458382,
+      "rise_capacitance": 0.00458382,
+      "fall_capacitance": 0.0039615
+    },
+    "HAX1/B": {
+      "capacitance": 0.00383094,
+      "rise_capacitance": 0.00383094,
+      "fall_capacitance": 0.00337165
+    },
+    "INVX1/A": {
+      "capacitance": 0.00155103,
+      "rise_capacitance": 0.00155103,
+      "fall_capacitance": 0.00147616
+    },
+    "INVX2/A": {
+      "capacitance": 0.00267266,
+      "rise_capacitance": 0.00265521,
+      "fall_capacitance": 0.00267266
+    },
+    "INVX4/A": {
+      "capacitance": 0.0050916,
+      "rise_capacitance": 0.00508038,
+      "fall_capacitance": 0.0050916
+    },
+    "INVX8/A": {
+      "capacitance": 0.0101035,
+      "rise_capacitance": 0.0100827,
+      "fall_capacitance": 0.0101035
+    },
+    "LATCH/CLK": {
+      "capacitance": 0.00391661,
+      "rise_capacitance": 0.00391661,
+      "fall_capacitance": 0.00385631
+    },
+    "LATCH/D": {
+      "capacitance": 0.00143159,
+      "rise_capacitance": 0.00143159,
+      "fall_capacitance": 0.0013384
+    },
+    "MUX2X1/A": {
+      "capacitance": 0.00279798,
+      "rise_capacitance": 0.00279798,
+      "fall_capacitance": 0.00262321
+    },
+    "MUX2X1/B": {
+      "capacitance": 0.00274447,
+      "rise_capacitance": 0.00274447,
+      "fall_capacitance": 0.00256937
+    },
+    "MUX2X1/S": {
+      "capacitance": 0.00411954,
+      "rise_capacitance": 0.00411954,
+      "fall_capacitance": 0.00385221
+    },
+    "NAND2X1/A": {
+      "capacitance": 0.00211057,
+      "rise_capacitance": 0.00211057,
+      "fall_capacitance": 0.00188435
+    },
+    "NAND2X1/B": {
+      "capacitance": 0.00202749,
+      "rise_capacitance": 0.00202749,
+      "fall_capacitance": 0.00194421
+    },
+    "NAND3X1/A": {
+      "capacitance": 0.00254759,
+      "rise_capacitance": 0.00254759,
+      "fall_capacitance": 0.00220852
+    },
+    "NAND3X1/B": {
+      "capacitance": 0.00283213,
+      "rise_capacitance": 0.00283213,
+      "fall_capacitance": 0.00259978
+    },
+    "NAND3X1/C": {
+      "capacitance": 0.00296109,
+      "rise_capacitance": 0.00296109,
+      "fall_capacitance": 0.0028316
+    },
+    "NOR2X1/A": {
+      "capacitance": 0.00224248,
+      "rise_capacitance": 0.00224248,
+      "fall_capacitance": 0.00220861
+    },
+    "NOR2X1/B": {
+      "capacitance": 0.00236501,
+      "rise_capacitance": 0.00236501,
+      "fall_capacitance": 0.00229711
+    },
+    "NOR3X1/A": {
+      "capacitance": 0.00302113,
+      "rise_capacitance": 0.00302113,
+      "fall_capacitance": 0.00301081
+    },
+    "NOR3X1/B": {
+      "capacitance": 0.003067,
+      "rise_capacitance": 0.00306333,
+      "fall_capacitance": 0.003067
+    },
+    "NOR3X1/C": {
+      "capacitance": 0.00328822,
+      "rise_capacitance": 0.00328822,
+      "fall_capacitance": 0.00322576
+    },
+    "OAI21X1/A": {
+      "capacitance": 0.00274222,
+      "rise_capacitance": 0.00274222,
+      "fall_capacitance": 0.00257258
+    },
+    "OAI21X1/B": {
+      "capacitance": 0.00283226,
+      "rise_capacitance": 0.00283226,
+      "fall_capacitance": 0.00263248
+    },
+    "OAI21X1/C": {
+      "capacitance": 0.00200991,
+      "rise_capacitance": 0.00200991,
+      "fall_capacitance": 0.0019239
+    },
+    "OR2X1/A": {
+      "capacitance": 0.00252527,
+      "rise_capacitance": 0.00252527,
+      "fall_capacitance": 0.00231339
+    },
+    "OR2X1/B": {
+      "capacitance": 0.00242378,
+      "rise_capacitance": 0.00242378,
+      "fall_capacitance": 0.00224721
+    },
+    "OR2X2/A": {
+      "capacitance": 0.00230117,
+      "rise_capacitance": 0.00229176,
+      "fall_capacitance": 0.00230117
+    },
+    "OR2X2/B": {
+      "capacitance": 0.00234214,
+      "rise_capacitance": 0.00228252,
+      "fall_capacitance": 0.00234214
+    },
+    "TBUFX1/A": {
+      "capacitance": 0.00279129,
+      "rise_capacitance": 0.00279129,
+      "fall_capacitance": 0.00260888
+    },
+    "TBUFX1/EN": {
+      "capacitance": 0.00232552,
+      "rise_capacitance": 0.00232552,
+      "fall_capacitance": 0.00208892
+    },
+    "TBUFX2/A": {
+      "capacitance": 0.00545016,
+      "rise_capacitance": 0.00536334,
+      "fall_capacitance": 0.00545016
+    },
+    "TBUFX2/EN": {
+      "capacitance": 0.00373915,
+      "rise_capacitance": 0.00373915,
+      "fall_capacitance": 0.00369354
+    },
+    "XNOR2X1/A": {
+      "capacitance": 0.00500113,
+      "rise_capacitance": 0.00500113,
+      "fall_capacitance": 0.00461621
+    },
+    "XNOR2X1/B": {
+      "capacitance": 0.00558933,
+      "rise_capacitance": 0.00558933,
+      "fall_capacitance": 0.00500383
+    },
+    "XOR2X1/A": {
+      "capacitance": 0.00539601,
+      "rise_capacitance": 0.00539601,
+      "fall_capacitance": 0.00499683
+    },
+    "XOR2X1/B": {
+      "capacitance": 0.005666,
+      "rise_capacitance": 0.005666,
+      "fall_capacitance": 0.00508055
+    }
+  },
+  "outputs": {
+    "AND2X1/Y": {
+      "max_capacitance_pf": 0.137429,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "AND2X2/Y": {
+      "max_capacitance_pf": 0.505125,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.02,
+          0.2
+        ]
+      ]
+    },
+    "AOI21X1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "AOI22X1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "BUFX2/Y": {
+      "max_capacitance_pf": 0.518678,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.02,
+          0.2
+        ]
+      ]
+    },
+    "BUFX4/Y": {
+      "max_capacitance_pf": 0.999277,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.04,
+          0.4
+        ]
+      ]
+    },
+    "CLKBUF1/Y": {
+      "max_capacitance_pf": 1.01751,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "CLKBUF2/Y": {
+      "max_capacitance_pf": 0.949224,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "CLKBUF3/Y": {
+      "max_capacitance_pf": 0.923974,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "DFFNEGX1/Q": {
+      "max_capacitance_pf": 0.49931,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "DFFPOSX1/Q": {
+      "max_capacitance_pf": 0.490882,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "DFFSR/Q": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "FAX1/YC": {
+      "max_capacitance_pf": 0.175491,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "FAX1/YS": {
+      "max_capacitance_pf": 0.106625,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "HAX1/YC": {
+      "max_capacitance_pf": 0.222356,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "HAX1/YS": {
+      "max_capacitance_pf": 0.14661,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "INVX1/Y": {
+      "max_capacitance_pf": 0.238796,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "INVX2/Y": {
+      "max_capacitance_pf": 0.518681,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.02,
+          0.2
+        ]
+      ]
+    },
+    "INVX4/Y": {
+      "max_capacitance_pf": 1.04105,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.04,
+          0.4
+        ]
+      ]
+    },
+    "INVX8/Y": {
+      "max_capacitance_pf": 2.08199,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.08,
+          0.8
+        ]
+      ]
+    },
+    "LATCH/Q": {
+      "max_capacitance_pf": 0.485757,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "MUX2X1/Y": {
+      "max_capacitance_pf": 0.0750776,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "NAND2X1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "NAND3X1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "NOR2X1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "NOR3X1/Y": {
+      "max_capacitance_pf": 0.0968987,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "OAI21X1/Y": {
+      "max_capacitance_pf": 0.229396,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "OR2X1/Y": {
+      "max_capacitance_pf": 0.0700296,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "OR2X2/Y": {
+      "max_capacitance_pf": 0.519729,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.02,
+          0.2
+        ]
+      ]
+    },
+    "TBUFX1/Y": {
+      "max_capacitance_pf": 0.0,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.103178,
+          5.00318
+        ],
+        [
+          0.103246,
+          5.00325
+        ]
+      ]
+    },
+    "TBUFX2/Y": {
+      "max_capacitance_pf": 0.48912,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.0260942,
+          0.206094
+        ],
+        [
+          0.0262778,
+          0.206278
+        ]
+      ]
+    },
+    "XNOR2X1/Y": {
+      "max_capacitance_pf": 0.228324,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    },
+    "XOR2X1/Y": {
+      "max_capacitance_pf": 0.223282,
+      "explicitly_defined": true,
+      "dynamic_max_cap_group": false,
+      "delay_load_axis_bounds_pf": [
+        [
+          0.1,
+          5.0
+        ]
+      ]
+    }
+  }
+}

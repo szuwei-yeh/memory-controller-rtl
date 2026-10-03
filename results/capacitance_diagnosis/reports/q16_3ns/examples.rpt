@@ -1,0 +1,62 @@
+Selected native connection-report blocks; full raw report digest is retained in summary.json.
+
+net 'banks_i/n126':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.00150415    max:0.00153896
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.00150415    max:0.00153896
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'banks_i/n126':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    banks_i/U148/Y      Output Pin (NAND3X1) 0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    banks_i/U192/A      Input Pin (BUFX2)   0.00153896
+
+net 'candidates_i/n1034':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.0100827    max:0.0101035
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.0100827    max:0.0101035
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    1
+    number of pins:     2
+
+Connections for net 'candidates_i/n1034':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    candidates_i/U1652/Y Output Pin (NAND2X1) 0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    candidates_i/U1852/A Input Pin (INVX8)  0.0101035
+
+net 'candidates_i/n3987':
+    dont_touch:         FALSE
+    pin capacitance:    min:0.0038183    max:0.00383355
+    wire capacitance:   min:0    max:0
+    total capacitance:  min:0.0038183    max:0.00383355
+    wire resistance:    NA
+    number of drivers:  1
+    number of loads:    2
+    number of pins:     3
+
+Connections for net 'candidates_i/n3987':
+
+    Driver Pins         Type                Pin Cap
+    ------------        ----------------    --------
+    candidates_i/U3517/Y Output Pin (NAND3X1) 0
+
+    Load Pins           Type                Pin Cap
+    ------------        ----------------    --------
+    candidates_i/U290/B Input Pin (OR2X2)   0.00234214
+    candidates_i/U2173/A Input Pin (INVX1)  0.00155103

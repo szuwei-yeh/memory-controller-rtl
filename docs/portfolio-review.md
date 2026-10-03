@@ -132,11 +132,14 @@ their percentage improvements cannot be added together.
   state/input; deliberately replacing an inverter with a buffer is rejected.
   Final exported constraints match the baselines.
 - **Boundary:** latest 3 ns setup margin is 50.054 ps; zero-limit library
-  capacitance violations remain. No placement/routing, power, PHY, refresh,
+  capacitance violations remain. A [read-only diagnosis](experiments/capacitance-diagnosis.md)
+  matches every violation to explicit source/DB zero limits and positive pin
+  loads, and finds affected loads below the associated source's delay-table grid.
+  These are supplied-library timing results. No placement/routing, power, PHY, refresh,
   JEDEC compliance, or production-frequency claim is made.
 
-The next engineering phase would address the library capacitance issue and,
-with a suitable physical flow, evaluate timing across
+The next engineering phase would obtain validated library limits and low-load
+characterization, then evaluate timing with a suitable physical flow across
 corners and after placement/routing.
 
 ## Evidence to open during a review
@@ -147,6 +150,7 @@ corners and after placement/routing.
 - [Current machine-readable evidence](../results/parallel_arbitration/summary.json)
 - [Mapped hold repair and proofs](experiments/hold-repair-experiment.md)
 - [Latest setup-margin mapping and proofs](experiments/setup-margin-experiment.md)
+- [Capacitance source, load accounting and characterization diagnosis](experiments/capacitance-diagnosis.md)
 - [Verification scope](verification-plan.md) and [reproduction commands](reproduce.md)
 - [Rejected direct-mask alternatives](experiments/command-mask-optimization.md) and
   [storage study](experiments/storage-timing-experiment.md)

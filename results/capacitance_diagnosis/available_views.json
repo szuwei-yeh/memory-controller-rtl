@@ -1,0 +1,50 @@
+{
+  "scope": "Bounded read-only inventory of the installed OSU bundle; filenames and available PATH commands do not establish physical-flow readiness or license availability.",
+  "alternate_timing_view": {
+    "relative_bundle_path": "source/signalstorm/files/gscl45nm.lib",
+    "sha256": "21d51d1fc16d55890dddd16577421dc60c2ead2678231198de18f7862d76e7ae",
+    "cell_count": 32,
+    "zero_output_limits": [
+      "AOI21X1/Y",
+      "AOI22X1/Y",
+      "DFFSR/Q",
+      "NAND2X1/Y",
+      "NAND3X1/Y",
+      "NOR2X1/Y",
+      "OAI22X1/Y",
+      "TBUFX1/Y"
+    ],
+    "nominal_voltage_V": 1.1,
+    "nominal_temperature_C": 27,
+    "conclusion": "Same nominal corner and all five affected zero limits remain; not a capacitance fix or a new corner."
+  },
+  "cell_lef": {
+    "relative_bundle_path": "files/gscl45nm.lef",
+    "sha256": "491a1784f428792543ab26f610898d35340979b289145d4fa797c6eddd2825d2",
+    "macro_count": 33,
+    "routing_layer_definitions": 10,
+    "layer_resistance_statements": 10,
+    "layer_capacitance_statements": 0,
+    "current_library_cells_missing_macros": []
+  },
+  "cadabra_view": {
+    "relative_bundle_path": "source/cadabra/gscl45nm_final.lib",
+    "sha256": "74394e8a8d35fde537fab0a26991b3047230c8cbc7140cbd3d86cbdec987c07e",
+    "format": "Gzip-compressed Cadabra native layout-library data; not Liberty timing text."
+  },
+  "tool_path_check": {
+    "available": [
+      "dc_shell"
+    ],
+    "not_found": [
+      "icc_shell",
+      "icc2_shell",
+      "pt_shell",
+      "lc_shell",
+      "openroad"
+    ],
+    "scope": "Current authenticated remote shell PATH only; no claim tools are absent from all installations."
+  },
+  "multicorner_or_extracted_rc": "Not established by the bounded bundle inventory; no confirmed replacement timing corner or RC extraction setup.",
+  "observed_date": "2026-10-03"
+}

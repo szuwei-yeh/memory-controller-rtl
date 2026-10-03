@@ -1,0 +1,5 @@
+library=gscl45nm
+time_unit_name=ns
+capacitive_load_units_fF=1000.000000
+config_time_unit_ns=1.0
+config_capacitance_unit_fF=1000.0
