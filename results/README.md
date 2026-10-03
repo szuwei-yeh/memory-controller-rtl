@@ -8,13 +8,16 @@ Preserve recorded reports, manifests and source snapshots when organizing files.
 
 - [`parallel_arbitration/`](parallel_arbitration/): current experiment summary,
   validation, paired traces, mapped reports and scheduler snapshot.
+- [`hold_repair/`](hold_repair/): paired mapped hold repair at Q16/3 ns and 4 ns,
+  unchanged constraints/setup, and mapped equivalence with negative controls.
 - [`portfolio_audit/summary.json`](portfolio_audit/summary.json): recorded
   fresh-checkout audit; see [reproduction](../docs/reproduce.md) for its scope.
 - Run `make check-evidence` to compare current RTL with published source hashes,
   report hashes, verification summaries and mapped measurements.
 
 The [parallel-arbitration document](../docs/experiments/parallel-arbitration-experiment.md)
-explains the current measurements and remaining limitations.
+explains the RTL optimization; [mapped hold repair](../docs/experiments/hold-repair-experiment.md)
+records the subsequent setup/hold result and remaining limitations.
 
 ## Frozen baseline and earlier studies
 

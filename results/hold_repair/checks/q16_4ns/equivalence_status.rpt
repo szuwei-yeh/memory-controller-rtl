@@ -1,0 +1,5 @@
+Yosys EQUIV_STATUS excerpt
+
+Found 19962 $equiv cells in equiv:
+  Of those cells 19962 are proven and 0 are unproven.
+  Equivalence successfully proven!

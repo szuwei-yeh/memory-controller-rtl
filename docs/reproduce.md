@@ -15,7 +15,8 @@ This uses Python's standard library and Git. It checks current RTL hashes,
 published report hashes, measured area/setup/hold numbers and verification
 summaries. It reads committed evidence; **it does not rerun EDA tools**.
 Expected output includes a final `PASS`, +0.000038 ns setup at 3 ns, and the
-remaining eight/two hold endpoints at 3/4 ns. A source edit should invalidate
+the original eight/two hold endpoints and zero endpoints after mapped hold repair
+at 3/4 ns. A source edit should invalidate
 the snapshot check until corresponding evidence is produced.
 
 ## Simulate and check equivalence
@@ -104,10 +105,12 @@ their published reports can be inspected without rerunning those collectors.
 New mapped PPA requires licensed Synopsys DC and the matching GSCL45nm library
 configuration. Neither the library nor mapped DDCs are redistributed. See
 [ASIC setup](asic-results.md) and the
-[final experiment](experiments/parallel-arbitration-experiment.md) for flow, source hashes,
-corner and constraint details. This closeout does not rerun DC, PrimeTime or a
-physical-design flow. Current results retain failing hold and library
-capacitance constraints; the +0.038 ps 3 ns setup margin is not robust signoff.
+[RTL experiment](experiments/parallel-arbitration-experiment.md) and
+[mapped hold repair](experiments/hold-repair-experiment.md) for flow, source hashes,
+corner and constraint details. The local reproduction commands do not rerun DC,
+PrimeTime or a physical-design flow. The repaired Q16/3 ns and 4 ns mappings pass
+setup and hold; library capacitance violations remain, and the +0.038 ps 3 ns
+setup margin is not robust signoff.
 
 ## Fresh-checkout audit
 

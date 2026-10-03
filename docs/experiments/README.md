@@ -4,6 +4,9 @@ The current RTL adopts [parallel command-class arbitration](parallel-arbitration
 Earlier documents retain the measurements and source revisions for their own
 experiments; their results do not automatically apply to the current RTL.
 
+The follow-up [mapped hold repair](hold-repair-experiment.md) eliminates the
+remaining hold failures at Q16/3 ns and 4 ns while preserving setup slack.
+
 Read the following in order to follow the optimization history:
 
 | Step | Document | Evidence directory |
@@ -16,6 +19,7 @@ Read the following in order to follow the optimization history:
 | 6 | [Command masks and storage](command-mask-optimization.md) | [`command_mask`](../../results/command_mask/) |
 | 7 | [Remaining command-output paths](command-path-3ns.md) | [`command_path_3ns`](../../results/command_path_3ns/) |
 | 8 | [Parallel command-class arbitration](parallel-arbitration-experiment.md) | [`parallel_arbitration`](../../results/parallel_arbitration/) |
+| 9 | [Mapped hold repair](hold-repair-experiment.md) | [`hold_repair`](../../results/hold_repair/) |
 
 See the [documentation guide](../README.md) for design contracts and published
 baseline results, or the [script guide](../../scripts/README.md) for verification

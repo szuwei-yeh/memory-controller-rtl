@@ -1,0 +1,2093 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Sat Oct  3 14:19:20 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/addresses_reg_175_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_op[1] (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg_175_/CLK (DFFPOSX1)                     0.000000  0.000000 # 0.000000 r
+  table_i/addresses_reg_175_/Q (DFFPOSX1)                       0.022383  0.104836   0.104836 f
+  table_i/addresses[175] (net)                  3     0.004428            0.000000   0.104836 f
+  table_i/addresses[175] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.104836 f
+  addresses[175] (net)                                0.004428            0.000000   0.104836 f
+  U3048/A (INVX1)                                               0.022383  0.000000   0.104836 f
+  U3048/Y (INVX1)                                               0.000000  0.014547   0.119383 r
+  n1810 (net)                                   1     0.005080            0.000000   0.119383 r
+  U1794/A (INVX4)                                               0.000000  0.000000   0.119383 r
+  U1794/Y (INVX4)                                               0.016511  0.033581   0.152964 f
+  n3184 (net)                                   8     0.036346            0.000000   0.152964 f
+  U5884/B (XOR2X1)                                              0.016511  0.000000   0.152964 f
+  U5884/Y (XOR2X1)                                              0.043194  0.049987   0.202951 r
+  n5444 (net)                                   1     0.002343            0.000000   0.202951 r
+  U1030/B (AND2X1)                                              0.043194  0.000000   0.202951 r
+  U1030/Y (AND2X1)                                              0.026339  0.038142   0.241092 r
+  n5451 (net)                                   1     0.001551            0.000000   0.241092 r
+  U4024/A (INVX1)                                               0.026339  0.000000   0.241092 r
+  U4024/Y (INVX1)                                               0.013161  0.021933   0.263026 f
+  n2676 (net)                                   1     0.003067            0.000000   0.263026 f
+  U5890/B (NOR3X1)                                              0.013161  0.000000   0.263026 f
+  U5890/Y (NOR3X1)                                              0.053520  0.040741   0.303767 r
+  n5455 (net)                                   1     0.002961            0.000000   0.303767 r
+  U5893/C (NAND3X1)                                             0.053520  0.000000   0.303767 r
+  U5893/Y (NAND3X1)                                             0.014567  0.019054   0.322821 f
+  n5456 (net)                                   1     0.001476            0.000000   0.322821 f
+  U3511/A (INVX1)                                               0.014567  0.000000   0.322821 f
+  U3511/Y (INVX1)                                               0.000000  0.008799   0.331620 r
+  n2164 (net)                                   2     0.004161            0.000000   0.331620 r
+  U3359/B (AND2X2)                                              0.000000  0.000000   0.331620 r
+  U3359/Y (AND2X2)                                              0.024277  0.040256   0.371876 r
+  n2047 (net)                                   3     0.007950            0.000000   0.371876 r
+  candidates_i/same_address[122] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)  0.000000   0.371876 r
+  candidates_i/same_address[122] (net)                0.007950            0.000000   0.371876 r
+  candidates_i/U1600/B (NAND2X1)                                0.024277  0.000000   0.371876 r
+  candidates_i/U1600/Y (NAND2X1)                                0.020304  0.017746   0.389621 f
+  candidates_i/n2119 (net)                      1     0.001820            0.000000   0.389621 f
+  candidates_i/U1178/B (AND2X2)                                 0.020304  0.000000   0.389621 f
+  candidates_i/U1178/Y (AND2X2)                                 0.000466  0.040481   0.430102 f
+  candidates_i/n2120 (net)                      1     0.002832            0.000000   0.430102 f
+  candidates_i/U2713/C (NAND3X1)                                0.000466  0.000000   0.430102 f
+  candidates_i/U2713/Y (NAND3X1)                                0.033614  0.025379   0.455481 r
+  candidates_i/n2129 (net)                      1     0.001551            0.000000   0.455481 r
+  candidates_i/U1363/A (INVX1)                                  0.033614  0.000000   0.455481 r
+  candidates_i/U1363/Y (INVX1)                                  0.012309  0.023667   0.479147 f
+  candidates_i/n856 (net)                       2     0.002952            0.000000   0.479147 f
+  candidates_i/U1364/A (INVX1)                                  0.012309  0.000000   0.479147 f
+  candidates_i/U1364/Y (INVX1)                                  0.000000  0.002176   0.481323 r
+  candidates_i/n857 (net)                       1     0.002365            0.000000   0.481323 r
+  candidates_i/U1662/B (NOR2X1)                                 0.000000  0.000000   0.481323 r
+  candidates_i/U1662/Y (NOR2X1)                                 0.000257  0.008200   0.489523 f
+  candidates_i/n2732 (net)                      1     0.001763            0.000000   0.489523 f
+  candidates_i/U486/A (AND2X2)                                  0.000257  0.000000   0.489523 f
+  candidates_i/U486/Y (AND2X2)                                  0.000000  0.030086   0.519609 f
+  candidates_i/n257 (net)                       1     0.001763            0.000000   0.519609 f
+  candidates_i/U490/A (AND2X2)                                  0.000000  0.000000   0.519609 f
+  candidates_i/U490/Y (AND2X2)                                  0.005797  0.033883   0.553492 f
+  candidates_i/n3595 (net)                      2     0.005384            0.000000   0.553492 f
+  candidates_i/U3896/A (AOI22X1)                                0.005797  0.000000   0.553492 f
+  candidates_i/U3896/Y (AOI22X1)                                0.047944  0.046688   0.600179 r
+  candidates_i/n3604 (net)                      1     0.002548            0.000000   0.600179 r
+  candidates_i/U3901/A (NAND3X1)                                0.047944  0.000000   0.600179 r
+  candidates_i/U3901/Y (NAND3X1)                                0.015980  0.022949   0.623128 f
+  candidates_i/n3605 (net)                      1     0.002297            0.000000   0.623128 f
+  candidates_i/U1530/B (NOR2X1)                                 0.015980  0.000000   0.623128 f
+  candidates_i/U1530/Y (NOR2X1)                                 0.036467  0.036071   0.659199 r
+  candidates_i/n954 (net)                       2     0.004206            0.000000   0.659199 r
+  candidates_i/U678/A (INVX2)                                   0.036467  0.000000   0.659199 r
+  candidates_i/U678/Y (INVX2)                                   0.031496  0.037660   0.696859 f
+  candidates_i/n393 (net)                       9     0.020698            0.000000   0.696859 f
+  candidates_i/U3931/A (AOI21X1)                                0.031496  0.000000   0.696859 f
+  candidates_i/U3931/Y (AOI21X1)                                0.026651  0.041065   0.737923 r
+  candidates_i/n3649 (net)                      1     0.002111            0.000000   0.737923 r
+  candidates_i/U1590/A (NAND2X1)                                0.026651  0.000000   0.737923 r
+  candidates_i/U1590/Y (NAND2X1)                                0.019563  0.014590   0.752513 f
+  candidates_i/n995 (net)                       1     0.001476            0.000000   0.752513 f
+  candidates_i/U870/A (INVX1)                                   0.019563  0.000000   0.752513 f
+  candidates_i/U870/Y (INVX1)                                   0.000000  0.007139   0.759652 r
+  candidates_i/n546 (net)                       2     0.003102            0.000000   0.759652 r
+  candidates_i/U871/A (INVX1)                                   0.000000  0.000000   0.759652 r
+  candidates_i/U871/Y (INVX1)                                   0.013828  0.013999   0.773650 f
+  candidates_i/n547 (net)                       1     0.002673            0.000000   0.773650 f
+  candidates_i/U113/A (INVX2)                                   0.013828  0.000000   0.773650 f
+  candidates_i/U113/Y (INVX2)                                   0.046130  0.043068   0.816719 r
+  candidates_i/n1487 (net)                      8     0.022899            0.000000   0.816719 r
+  candidates_i/U3988/C (AOI22X1)                                0.046130  0.000000   0.816719 r
+  candidates_i/U3988/Y (AOI22X1)                                0.034210  0.024661   0.841379 f
+  candidates_i/n3705 (net)                      1     0.001820            0.000000   0.841379 f
+  candidates_i/U3989/B (AND2X2)                                 0.034210  0.000000   0.841379 f
+  candidates_i/U3989/Y (AND2X2)                                 0.004678  0.044293   0.885672 f
+  candidates_i/n3707 (net)                      1     0.002832            0.000000   0.885672 f
+  candidates_i/U3990/C (NAND3X1)                                0.004678  0.000000   0.885672 f
+  candidates_i/U3990/Y (NAND3X1)                                0.036639  0.028724   0.914397 r
+  candidates_i/n3718 (net)                      1     0.002292            0.000000   0.914397 r
+  candidates_i/U3998/A (OR2X2)                                  0.036639  0.000000   0.914397 r
+  candidates_i/U3998/Y (OR2X2)                                  0.019116  0.045160   0.959556 r
+  candidates_i/n4107 (net)                      3     0.005692            0.000000   0.959556 r
+  candidates_i/U2171/A (AND2X2)                                 0.019116  0.000000   0.959556 r
+  candidates_i/U2171/Y (AND2X2)                                 0.013820  0.036362   0.995918 r
+  candidates_i/n1420 (net)                      2     0.004319            0.000000   0.995918 r
+  candidates_i/U4026/B (NAND2X1)                                0.013820  0.000000   0.995918 r
+  candidates_i/U4026/Y (NAND2X1)                                0.024788  0.017888   1.013806 f
+  candidates_i/n4021 (net)                      1     0.003226            0.000000   1.013806 f
+  candidates_i/U4069/C (NOR3X1)                                 0.024788  0.000000   1.013806 f
+  candidates_i/U4069/Y (NOR3X1)                                 0.048712  0.025730   1.039536 r
+  candidates_i/n3804 (net)                      1     0.001869            0.000000   1.039536 r
+  candidates_i/U4083/B (AND2X2)                                 0.048712  0.000000   1.039536 r
+  candidates_i/U4083/Y (AND2X2)                                 0.031841  0.048136   1.087673 r
+  candidates_i/n3998 (net)                      5     0.011591            0.000000   1.087673 r
+  candidates_i/U1141/B (NAND2X1)                                0.031841  0.000000   1.087673 r
+  candidates_i/U1141/Y (NAND2X1)                                0.020470  0.020079   1.107752 f
+  candidates_i/n3984 (net)                      1     0.002209            0.000000   1.107752 f
+  candidates_i/U1142/A (NOR2X1)                                 0.020470  0.000000   1.107752 f
+  candidates_i/U1142/Y (NOR2X1)                                 0.027242  0.031371   1.139123 r
+  candidates_i/n3990 (net)                      1     0.002242            0.000000   1.139123 r
+  candidates_i/U4170/A (NOR2X1)                                 0.027242  0.000000   1.139123 r
+  candidates_i/U4170/Y (NOR2X1)                                 0.004315  0.019678   1.158801 f
+  candidates_i/n3991 (net)                      1     0.002832            0.000000   1.158801 f
+  candidates_i/U4171/C (NAND3X1)                                0.004315  0.000000   1.158801 f
+  candidates_i/U4171/Y (NAND3X1)                                0.040361  0.030684   1.189486 r
+  candidates_i/candidate_mask[6] (net)          1     0.002961            0.000000   1.189486 r
+  candidates_i/candidate_mask[6] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)  0.000000   1.189486 r
+  candidate_mask[6] (net)                             0.002961            0.000000   1.189486 r
+  frfcfs_scheduler_i/candidate_mask[6] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                                          0.000000   1.189486 r
+  frfcfs_scheduler_i/candidate_mask[6] (net)          0.002961            0.000000   1.189486 r
+  frfcfs_scheduler_i/U1347/C (NAND3X1)                          0.040361  0.000000   1.189486 r
+  frfcfs_scheduler_i/U1347/Y (NAND3X1)                          0.014109  0.015982   1.205467 f
+  frfcfs_scheduler_i/n1530 (net)                1     0.001476            0.000000   1.205467 f
+  frfcfs_scheduler_i/U584/A (INVX1)                             0.014109  0.000000   1.205467 f
+  frfcfs_scheduler_i/U584/Y (INVX1)                             0.000000  0.006004   1.211471 r
+  frfcfs_scheduler_i/n262 (net)                 2     0.003349            0.000000   1.211471 r
+  frfcfs_scheduler_i/U578/A (AND2X2)                            0.000000  0.000000   1.211471 r
+  frfcfs_scheduler_i/U578/Y (AND2X2)                            0.006381  0.031204   1.242676 r
+  frfcfs_scheduler_i/n460 (net)                 1     0.001551            0.000000   1.242676 r
+  frfcfs_scheduler_i/U334/A (INVX1)                             0.006381  0.000000   1.242676 r
+  frfcfs_scheduler_i/U334/Y (INVX1)                             0.021147  0.021061   1.263736 f
+  frfcfs_scheduler_i/n1514 (net)                2     0.005272            0.000000   1.263736 f
+  frfcfs_scheduler_i/U1414/B (NAND3X1)                          0.021147  0.000000   1.263736 f
+  frfcfs_scheduler_i/U1414/Y (NAND3X1)                          0.041783  0.039009   1.302746 r
+  frfcfs_scheduler_i/n959 (net)                 1     0.003288            0.000000   1.302746 r
+  frfcfs_scheduler_i/U1417/C (NOR3X1)                           0.041783  0.000000   1.302746 r
+  frfcfs_scheduler_i/U1417/Y (NOR3X1)                           0.027767  0.028640   1.331386 f
+  frfcfs_scheduler_i/n960 (net)                 1     0.002600            0.000000   1.331386 f
+  frfcfs_scheduler_i/U1418/B (NAND3X1)                          0.027767  0.000000   1.331386 f
+  frfcfs_scheduler_i/U1418/Y (NAND3X1)                          0.033370  0.035696   1.367082 r
+  frfcfs_scheduler_i/n1855 (net)                1     0.001539            0.000000   1.367082 r
+  frfcfs_scheduler_i/U312/A (BUFX2)                             0.033370  0.000000   1.367082 r
+  frfcfs_scheduler_i/U312/Y (BUFX2)                             0.025635  0.045654   1.412736 r
+  frfcfs_scheduler_i/n515 (net)                 6     0.009306            0.000000   1.412736 r
+  frfcfs_scheduler_i/U1147/A (INVX1)                            0.025635  0.000000   1.412736 r
+  frfcfs_scheduler_i/U1147/Y (INVX1)                            0.014926  0.022918   1.435654 f
+  frfcfs_scheduler_i/n1107 (net)                2     0.003640            0.000000   1.435654 f
+  frfcfs_scheduler_i/U1140/B (AND2X2)                           0.014926  0.000000   1.435654 f
+  frfcfs_scheduler_i/U1140/Y (AND2X2)                           0.000000  0.039006   1.474660 f
+  frfcfs_scheduler_i/n1120 (net)                1     0.002832            0.000000   1.474660 f
+  frfcfs_scheduler_i/U1552/C (NAND3X1)                          0.000000  0.000000   1.474660 f
+  frfcfs_scheduler_i/U1552/Y (NAND3X1)                          0.036416  0.026720   1.501381 r
+  frfcfs_scheduler_i/n1122 (net)                1     0.002027            0.000000   1.501381 r
+  frfcfs_scheduler_i/U522/B (NAND2X1)                           0.036416  0.000000   1.501381 r
+  frfcfs_scheduler_i/U522/Y (NAND2X1)                           0.021814  0.022376   1.523757 f
+  frfcfs_scheduler_i/n231 (net)                 2     0.002952            0.000000   1.523757 f
+  frfcfs_scheduler_i/U475/A (INVX1)                             0.021814  0.000000   1.523757 f
+  frfcfs_scheduler_i/U475/Y (INVX1)                             0.000000  0.004725   1.528481 r
+  frfcfs_scheduler_i/n197 (net)                 1     0.002111            0.000000   1.528481 r
+  frfcfs_scheduler_i/U571/A (NAND2X1)                           0.000000  0.000000   1.528481 r
+  frfcfs_scheduler_i/U571/Y (NAND2X1)                           0.021982  0.008881   1.537363 f
+  frfcfs_scheduler_i/n252 (net)                 1     0.001476            0.000000   1.537363 f
+  frfcfs_scheduler_i/U573/A (INVX1)                             0.021982  0.000000   1.537363 f
+  frfcfs_scheduler_i/U573/Y (INVX1)                             0.000000  0.010340   1.547703 r
+  frfcfs_scheduler_i/n253 (net)                 2     0.003825            0.000000   1.547703 r
+  frfcfs_scheduler_i/U572/B (NAND2X1)                           0.000000  0.000000   1.547703 r
+  frfcfs_scheduler_i/U572/Y (NAND2X1)                           0.025816  0.014578   1.562281 f
+  frfcfs_scheduler_i/n1964 (net)                1     0.003067            0.000000   1.562281 f
+  frfcfs_scheduler_i/U2057/B (NOR3X1)                           0.025816  0.000000   1.562281 f
+  frfcfs_scheduler_i/U2057/Y (NOR3X1)                           0.056509  0.046113   1.608394 r
+  frfcfs_scheduler_i/n1914 (net)                2     0.003596            0.000000   1.608394 r
+  frfcfs_scheduler_i/U2061/A (AND2X2)                           0.056509  0.000000   1.608394 r
+  frfcfs_scheduler_i/U2061/Y (AND2X2)                           0.017350  0.038947   1.647341 r
+  frfcfs_scheduler_i/n1961 (net)                2     0.004989            0.000000   1.647341 r
+  frfcfs_scheduler_i/U2062/C (NAND3X1)                          0.017350  0.000000   1.647341 r
+  frfcfs_scheduler_i/U2062/Y (NAND3X1)                          0.019565  0.013909   1.661250 f
+  frfcfs_scheduler_i/n1953 (net)                2     0.003448            0.000000   1.661250 f
+  frfcfs_scheduler_i/U481/B (NAND2X1)                           0.019565  0.000000   1.661250 f
+  frfcfs_scheduler_i/U481/Y (NAND2X1)                           0.036387  0.016938   1.678188 r
+  frfcfs_scheduler_i/select_mask[0] (net)       1     0.002655            0.000000   1.678188 r
+  frfcfs_scheduler_i/select_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                                          0.000000   1.678188 r
+  select_mask[0] (net)                                0.002655            0.000000   1.678188 r
+  U3621/A (INVX2)                                               0.036387  0.000000   1.678188 r
+  U3621/Y (INVX2)                                               0.025796  0.032772   1.710960 f
+  n3348 (net)                                   2     0.015195            0.000000   1.710960 f
+  U4256/A (INVX8)                                               0.025796  0.000000   1.710960 f
+  U4256/Y (INVX8)                                               0.059151  0.050953   1.761913 r
+  n3347 (net)                                  37     0.101031            0.000000   1.761913 r
+  U1506/A (INVX1)                                               0.059151  0.000000   1.761913 r
+  U1506/Y (INVX1)                                               0.006090  0.027555   1.789468 f
+  n915 (net)                                    1     0.001476            0.000000   1.789468 f
+  U1507/A (INVX1)                                               0.006090  0.000000   1.789468 f
+  U1507/Y (INVX1)                                               0.000000  0.001134   1.790602 r
+  n916 (net)                                    1     0.002724            0.000000   1.790602 r
+  U6528/B (AOI21X1)                                             0.000000  0.000000   1.790602 r
+  U6528/Y (AOI21X1)                                             0.018696  0.022927   1.813529 f
+  n6352 (net)                                   1     0.002832            0.000000   1.813529 f
+  U6529/C (NAND3X1)                                             0.018696  0.000000   1.813529 f
+  U6529/Y (NAND3X1)                                             0.036633  0.032302   1.845831 r
+  n6355 (net)                                   1     0.002292            0.000000   1.845831 r
+  U6530/A (OR2X2)                                               0.036633  0.000000   1.845831 r
+  U6530/Y (OR2X2)                                               0.032203  0.054132   1.899962 r
+  cmd_op[1] (net)                               2     0.011539            0.000000   1.899962 r
+  cmd_op[1] (out)                                               0.032203  0.000000   1.899962 r
+  data arrival time                                                                  1.899962
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  output external delay                                                   -1.000000  1.900000
+  data required time                                                                 1.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 1.900000
+  data arrival time                                                                  -1.899962
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000038
+
+
+  Startpoint: table_i/addresses_reg_212_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[24]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/addresses_reg_212_/CLK (DFFPOSX1)                     0.000000  0.000000 # 0.000000 r
+  table_i/addresses_reg_212_/Q (DFFPOSX1)                       0.022010  0.104555   0.104555 f
+  table_i/addresses[212] (net)                  2     0.004149            0.000000   0.104555 f
+  table_i/addresses[212] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                                          0.000000   0.104555 f
+  addresses[212] (net)                                0.004149            0.000000   0.104555 f
+  U1266/A (INVX2)                                               0.022010  0.000000   0.104555 f
+  U1266/Y (INVX2)                                               0.031463  0.035578   0.140133 r
+  n3259 (net)                                   3     0.015557            0.000000   0.140133 r
+  U2782/A (INVX4)                                               0.031463  0.000000   0.140133 r
+  U2782/Y (INVX4)                                               0.029717  0.036687   0.176821 f
+  n3261 (net)                                   8     0.038150            0.000000   0.176821 f
+  U5360/B (XOR2X1)                                              0.029717  0.000000   0.176821 f
+  U5360/Y (XOR2X1)                                              0.043892  0.051837   0.228657 r
+  n4617 (net)                                   1     0.002525            0.000000   0.228657 r
+  U1236/A (OR2X1)                                               0.043892  0.000000   0.228657 r
+  U1236/Y (OR2X1)                                               0.016705  0.036885   0.265543 r
+  n4619 (net)                                   1     0.001551            0.000000   0.265543 r
+  U3889/A (INVX1)                                               0.016705  0.000000   0.265543 r
+  U3889/Y (INVX1)                                               0.012439  0.018369   0.283912 f
+  n2564 (net)                                   1     0.002600            0.000000   0.283912 f
+  U5363/B (NAND3X1)                                             0.012439  0.000000   0.283912 f
+  U5363/Y (NAND3X1)                                             0.044369  0.037764   0.321676 r
+  n4640 (net)                                   2     0.003781            0.000000   0.321676 r
+  U2728/A (NOR2X1)                                              0.044369  0.000000   0.321676 r
+  U2728/Y (NOR2X1)                                              0.005120  0.025348   0.347024 f
+  n1589 (net)                                   2     0.003008            0.000000   0.347024 f
+  candidates_i/same_address[211] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)  0.000000   0.347024 f
+  candidates_i/same_address[211] (net)                0.003008            0.000000   0.347024 f
+  candidates_i/U800/A (BUFX2)                                   0.005120  0.000000   0.347024 f
+  candidates_i/U800/Y (BUFX2)                                   0.000703  0.031819   0.378843 f
+  candidates_i/n494 (net)                       1     0.002209            0.000000   0.378843 f
+  candidates_i/U3069/A (NAND3X1)                                0.000703  0.000000   0.378843 f
+  candidates_i/U3069/Y (NAND3X1)                                0.034101  0.032944   0.411787 r
+  candidates_i/n2637 (net)                      1     0.002111            0.000000   0.411787 r
+  candidates_i/U3070/A (NAND2X1)                                0.034101  0.000000   0.411787 r
+  candidates_i/U3070/Y (NAND2X1)                                0.022377  0.019014   0.430801 f
+  candidates_i/n2642 (net)                      1     0.003067            0.000000   0.430801 f
+  candidates_i/U3074/B (NOR3X1)                                 0.022377  0.000000   0.430801 f
+  candidates_i/U3074/Y (NOR3X1)                                 0.061155  0.048124   0.478925 r
+  candidates_i/n2688 (net)                      2     0.004453            0.000000   0.478925 r
+  candidates_i/U229/A (INVX2)                                   0.061155  0.000000   0.478925 r
+  candidates_i/U229/Y (INVX2)                                   0.026221  0.024773   0.503698 f
+  candidates_i/n833 (net)                       2     0.006452            0.000000   0.503698 f
+  candidates_i/U683/C (NOR3X1)                                  0.026221  0.000000   0.503698 f
+  candidates_i/U683/Y (NOR3X1)                                  0.052820  0.029480   0.533178 r
+  candidates_i/n395 (net)                       1     0.002907            0.000000   0.533178 r
+  candidates_i/U3097/D (AOI22X1)                                0.052820  0.000000   0.533178 r
+  candidates_i/U3097/Y (AOI22X1)                                0.034631  0.025747   0.558925 f
+  candidates_i/n2679 (net)                      1     0.001820            0.000000   0.558925 f
+  candidates_i/U3098/B (AND2X2)                                 0.034631  0.000000   0.558925 f
+  candidates_i/U3098/Y (AND2X2)                                 0.004806  0.044409   0.603333 f
+  candidates_i/n2681 (net)                      1     0.002832            0.000000   0.603333 f
+  candidates_i/U3099/C (NAND3X1)                                0.004806  0.000000   0.603333 f
+  candidates_i/U3099/Y (NAND3X1)                                0.047382  0.035785   0.639119 r
+  candidates_i/n2684 (net)                      2     0.004584            0.000000   0.639119 r
+  candidates_i/U707/A (OR2X2)                                   0.047382  0.000000   0.639119 r
+  candidates_i/U707/Y (OR2X2)                                   0.050639  0.067106   0.706225 r
+  candidates_i/n413 (net)                       8     0.019307            0.000000   0.706225 r
+  candidates_i/U3140/A (NAND2X1)                                0.050639  0.000000   0.706225 r
+  candidates_i/U3140/Y (NAND2X1)                                0.022933  0.022137   0.728362 f
+  candidates_i/n2741 (net)                      1     0.002832            0.000000   0.728362 f
+  candidates_i/U3141/C (NAND3X1)                                0.022933  0.000000   0.728362 f
+  candidates_i/U3141/Y (NAND3X1)                                0.033721  0.031067   0.759429 r
+  candidates_i/n4004 (net)                      1     0.001539            0.000000   0.759429 r
+  candidates_i/U725/A (BUFX2)                                   0.033721  0.000000   0.759429 r
+  candidates_i/U725/Y (BUFX2)                                   0.019432  0.041553   0.800983 r
+  candidates_i/n1058 (net)                      2     0.006631            0.000000   0.800983 r
+  candidates_i/U595/A (INVX4)                                   0.019432  0.000000   0.800983 r
+  candidates_i/U595/Y (INVX4)                                   0.013118  0.027053   0.828035 f
+  candidates_i/n2965 (net)                      6     0.014977            0.000000   0.828035 f
+  candidates_i/U3245/A (AOI22X1)                                0.013118  0.000000   0.828035 f
+  candidates_i/U3245/Y (AOI22X1)                                0.048797  0.049489   0.877524 r
+  candidates_i/n2851 (net)                      1     0.002832            0.000000   0.877524 r
+  candidates_i/U3249/B (NAND3X1)                                0.048797  0.000000   0.877524 r
+  candidates_i/U3249/Y (NAND3X1)                                0.015991  0.022606   0.900131 f
+  candidates_i/n2853 (net)                      1     0.002342            0.000000   0.900131 f
+  candidates_i/U3250/B (OR2X2)                                  0.015991  0.000000   0.900131 f
+  candidates_i/U3250/Y (OR2X2)                                  0.007333  0.048379   0.948510 f
+  candidates_i/n4111 (net)                      2     0.003239            0.000000   0.948510 f
+  candidates_i/U495/A (INVX1)                                   0.007333  0.000000   0.948510 f
+  candidates_i/U495/Y (INVX1)                                   0.000000  -0.002230  0.946280 r
+  candidates_i/n264 (net)                       1     0.001551            0.000000   0.946280 r
+  candidates_i/U496/A (INVX1)                                   0.000000  0.000000   0.946280 r
+  candidates_i/U496/Y (INVX1)                                   0.015773  0.015336   0.961616 f
+  candidates_i/n265 (net)                       2     0.003324            0.000000   0.961616 f
+  candidates_i/U1102/B (AND2X2)                                 0.015773  0.000000   0.961616 f
+  candidates_i/U1102/Y (AND2X2)                                 0.005153  0.043448   1.005064 f
+  candidates_i/n698 (net)                       3     0.006797            0.000000   1.005064 f
+  candidates_i/U1026/A (AND2X2)                                 0.005153  0.000000   1.005064 f
+  candidates_i/U1026/Y (AND2X2)                                 0.000000  0.031311   1.036375 f
+  candidates_i/n656 (net)                       1     0.001763            0.000000   1.036375 f
+  candidates_i/U2133/A (AND2X2)                                 0.000000  0.000000   1.036375 f
+  candidates_i/U2133/Y (AND2X2)                                 0.003674  0.035243   1.071618 f
+  candidates_i/n1415 (net)                      3     0.006660            0.000000   1.071618 f
+  candidates_i/U4176/C (NAND3X1)                                0.003674  0.000000   1.071618 f
+  candidates_i/U4176/Y (NAND3X1)                                0.045004  0.033449   1.105067 r
+  candidates_i/n4030 (net)                      2     0.003916            0.000000   1.105067 r
+  candidates_i/U2175/A (INVX1)                                  0.045004  0.000000   1.105067 r
+  candidates_i/U2175/Y (INVX1)                                  0.010691  0.026188   1.131255 f
+  candidates_i/n4013 (net)                      1     0.002679            0.000000   1.131255 f
+  candidates_i/U4178/B (AOI21X1)                                0.010691  0.000000   1.131255 f
+  candidates_i/U4178/Y (AOI21X1)                                0.025054  0.028745   1.160000 r
+  candidates_i/n4029 (net)                      1     0.001798            0.000000   1.160000 r
+  candidates_i/U503/A (AND2X2)                                  0.025054  0.000000   1.160000 r
+  candidates_i/U503/Y (AND2X2)                                  0.009610  0.033192   1.193192 r
+  candidates_i/n267 (net)                       1     0.002111            0.000000   1.193192 r
+  candidates_i/U969/A (NAND2X1)                                 0.009610  0.000000   1.193192 r
+  candidates_i/U969/Y (NAND2X1)                                 0.021003  0.012938   1.206130 f
+  candidates_i/candidate_mask[8] (net)          1     0.002600            0.000000   1.206130 f
+  candidates_i/candidate_mask[8] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)  0.000000   1.206130 f
+  candidate_mask[8] (net)                             0.002600            0.000000   1.206130 f
+  frfcfs_scheduler_i/candidate_mask[8] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                                          0.000000   1.206130 f
+  frfcfs_scheduler_i/candidate_mask[8] (net)          0.002600            0.000000   1.206130 f
+  frfcfs_scheduler_i/U1365/B (NAND3X1)                          0.021003  0.000000   1.206130 f
+  frfcfs_scheduler_i/U1365/Y (NAND3X1)                          0.033642  0.033578   1.239708 r
+  frfcfs_scheduler_i/n1240 (net)                1     0.001551            0.000000   1.239708 r
+  frfcfs_scheduler_i/U809/A (INVX1)                             0.033642  0.000000   1.239708 r
+  frfcfs_scheduler_i/U809/Y (INVX1)                             0.013165  0.024261   1.263969 f
+  frfcfs_scheduler_i/n1862 (net)                2     0.003239            0.000000   1.263969 f
+  frfcfs_scheduler_i/U498/A (AND2X2)                            0.013165  0.000000   1.263969 f
+  frfcfs_scheduler_i/U498/Y (AND2X2)                            0.000000  0.033008   1.296978 f
+  frfcfs_scheduler_i/n968 (net)                 1     0.001476            0.000000   1.296978 f
+  frfcfs_scheduler_i/U808/A (INVX1)                             0.000000  0.000000   1.296978 f
+  frfcfs_scheduler_i/U808/Y (INVX1)                             0.000000  0.005600   1.302577 r
+  frfcfs_scheduler_i/n444 (net)                 2     0.004766            0.000000   1.302577 r
+  frfcfs_scheduler_i/U1410/A (NAND2X1)                          0.000000  0.000000   1.302577 r
+  frfcfs_scheduler_i/U1410/Y (NAND2X1)                          0.022990  0.011711   1.314288 f
+  frfcfs_scheduler_i/n940 (net)                 1     0.003067            0.000000   1.314288 f
+  frfcfs_scheduler_i/U1411/B (NOR3X1)                           0.022990  0.000000   1.314288 f
+  frfcfs_scheduler_i/U1411/Y (NOR3X1)                           0.054524  0.043253   1.357541 r
+  frfcfs_scheduler_i/n961 (net)                 1     0.002961            0.000000   1.357541 r
+  frfcfs_scheduler_i/U1418/C (NAND3X1)                          0.054524  0.000000   1.357541 r
+  frfcfs_scheduler_i/U1418/Y (NAND3X1)                          0.013924  0.019336   1.376877 f
+  frfcfs_scheduler_i/n1855 (net)                1     0.001504            0.000000   1.376877 f
+  frfcfs_scheduler_i/U312/A (BUFX2)                             0.013924  0.000000   1.376877 f
+  frfcfs_scheduler_i/U312/Y (BUFX2)                             0.011775  0.040534   1.417410 f
+  frfcfs_scheduler_i/n515 (net)                 6     0.008857            0.000000   1.417410 f
+  frfcfs_scheduler_i/U1147/A (INVX1)                            0.011775  0.000000   1.417410 f
+  frfcfs_scheduler_i/U1147/Y (INVX1)                            0.000000  0.006441   1.423851 r
+  frfcfs_scheduler_i/n1107 (net)                2     0.003739            0.000000   1.423851 r
+  frfcfs_scheduler_i/U1140/B (AND2X2)                           0.000000  0.000000   1.423851 r
+  frfcfs_scheduler_i/U1140/Y (AND2X2)                           0.009664  0.032579   1.456430 r
+  frfcfs_scheduler_i/n1120 (net)                1     0.002961            0.000000   1.456430 r
+  frfcfs_scheduler_i/U1552/C (NAND3X1)                          0.009664  0.000000   1.456430 r
+  frfcfs_scheduler_i/U1552/Y (NAND3X1)                          0.015757  0.009597   1.466028 f
+  frfcfs_scheduler_i/n1122 (net)                1     0.001944            0.000000   1.466028 f
+  frfcfs_scheduler_i/U522/B (NAND2X1)                           0.015757  0.000000   1.466028 f
+  frfcfs_scheduler_i/U522/Y (NAND2X1)                           0.038761  0.017103   1.483131 r
+  frfcfs_scheduler_i/n231 (net)                 2     0.003102            0.000000   1.483131 r
+  frfcfs_scheduler_i/U475/A (INVX1)                             0.038761  0.000000   1.483131 r
+  frfcfs_scheduler_i/U475/Y (INVX1)                             0.008749  0.022871   1.506002 f
+  frfcfs_scheduler_i/n197 (net)                 1     0.001884            0.000000   1.506002 f
+  frfcfs_scheduler_i/U571/A (NAND2X1)                           0.008749  0.000000   1.506002 f
+  frfcfs_scheduler_i/U571/Y (NAND2X1)                           0.031540  0.023709   1.529711 r
+  frfcfs_scheduler_i/n252 (net)                 1     0.001551            0.000000   1.529711 r
+  frfcfs_scheduler_i/U573/A (INVX1)                             0.031540  0.000000   1.529711 r
+  frfcfs_scheduler_i/U573/Y (INVX1)                             0.014714  0.024652   1.554363 f
+  frfcfs_scheduler_i/n253 (net)                 2     0.003707            0.000000   1.554363 f
+  frfcfs_scheduler_i/U340/A (AND2X2)                            0.014714  0.000000   1.554363 f
+  frfcfs_scheduler_i/U340/Y (AND2X2)                            0.001278  0.034844   1.589207 f
+  frfcfs_scheduler_i/n96 (net)                  1     0.002832            0.000000   1.589207 f
+  frfcfs_scheduler_i/U2103/C (NAND3X1)                          0.001278  0.000000   1.589207 f
+  frfcfs_scheduler_i/U2103/Y (NAND3X1)                          0.044459  0.032460   1.621667 r
+  frfcfs_scheduler_i/n1974 (net)                2     0.003794            0.000000   1.621667 r
+  frfcfs_scheduler_i/U832/A (INVX1)                             0.044459  0.000000   1.621667 r
+  frfcfs_scheduler_i/U832/Y (INVX1)                             0.014355  0.028517   1.650184 f
+  frfcfs_scheduler_i/n1978 (net)                2     0.003888            0.000000   1.650184 f
+  frfcfs_scheduler_i/U1143/B (NAND2X1)                          0.014355  0.000000   1.650184 f
+  frfcfs_scheduler_i/U1143/Y (NAND2X1)                          0.033681  0.013222   1.663406 r
+  frfcfs_scheduler_i/n1976 (net)                1     0.002010            0.000000   1.663406 r
+  frfcfs_scheduler_i/U2107/C (OAI21X1)                          0.033681  0.000000   1.663406 r
+  frfcfs_scheduler_i/U2107/Y (OAI21X1)                          0.002538  0.018767   1.682173 f
+  frfcfs_scheduler_i/select_mask[5] (net)       1     0.001476            0.000000   1.682173 f
+  frfcfs_scheduler_i/select_mask[5] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                                          0.000000   1.682173 f
+  select_mask[5] (net)                                0.001476            0.000000   1.682173 f
+  U4250/A (INVX1)                                               0.002538  0.000000   1.682173 f
+  U4250/Y (INVX1)                                               0.000000  0.001100   1.683273 r
+  n3367 (net)                                   2     0.003102            0.000000   1.683273 r
+  U4249/A (INVX1)                                               0.000000  0.000000   1.683273 r
+  U4249/Y (INVX1)                                               0.021050  0.018965   1.702238 f
+  n2863 (net)                                   1     0.005092            0.000000   1.702238 f
+  U1503/A (INVX4)                                               0.021050  0.000000   1.702238 f
+  U1503/Y (INVX4)                                               0.023778  0.029621   1.731858 r
+  n2434 (net)                                   6     0.022696            0.000000   1.731858 r
+  U1504/B (OR2X2)                                               0.023778  0.000000   1.731858 r
+  U1504/Y (OR2X2)                                               0.005108  0.044373   1.776231 r
+  n2271 (net)                                   1     0.001798            0.000000   1.776231 r
+  U3663/A (AND2X2)                                              0.005108  0.000000   1.776231 r
+  U3663/Y (AND2X2)                                              0.008726  0.031820   1.808051 r
+  n6653 (net)                                   1     0.001798            0.000000   1.808051 r
+  U6853/A (AND2X2)                                              0.008726  0.000000   1.808051 r
+  U6853/Y (AND2X2)                                              0.012045  0.033801   1.841852 r
+  n6654 (net)                                   1     0.002961            0.000000   1.841852 r
+  U6854/C (NAND3X1)                                             0.012045  0.000000   1.841852 r
+  U6854/Y (NAND3X1)                                             0.016517  0.010751   1.852603 f
+  n6657 (net)                                   1     0.002301            0.000000   1.852603 f
+  U6855/A (OR2X2)                                               0.016517  0.000000   1.852603 f
+  U6855/Y (OR2X2)                                               0.017123  0.047218   1.899821 f
+  cmd_wdata[24] (net)                           1     0.010000            0.000000   1.899821 f
+  cmd_wdata[24] (out)                                           0.017123  0.000000   1.899821 f
+  data arrival time                                                                  1.899821
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  output external delay                                                   -1.000000  1.900000
+  data required time                                                                 1.900000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 1.900000
+  data arrival time                                                                  -1.899821
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000179
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_240_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U3262/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U3262/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n4005 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/write_data_reg_240_/D (DFFPOSX1)                      0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_240_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_236_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U3254/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U3254/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n4001 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/write_data_reg_236_/D (DFFPOSX1)                      0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_236_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_233_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U3248/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U3248/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3998 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/write_data_reg_233_/D (DFFPOSX1)                      0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_233_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_232_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U3246/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U3246/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3997 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/write_data_reg_232_/D (DFFPOSX1)                      0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_232_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_231_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U3244/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U3244/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3996 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/write_data_reg_231_/D (DFFPOSX1)                      0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/write_data_reg_231_/CLK (DFFPOSX1)                              0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/tags_reg_60_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U2638/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U2638/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3697 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/tags_reg_60_/D (DFFPOSX1)                             0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/tags_reg_60_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/tags_reg_58_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U2634/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U2634/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3695 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/tags_reg_58_/D (DFFPOSX1)                             0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/tags_reg_58_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/tags_reg_56_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)                        0.000000  0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                          0.076301  0.145385   0.145385 f
+  table_i/occupied[0] (net)                    18     0.044865            0.000000   0.145385 f
+  table_i/U5177/A (INVX1)                                       0.076301  0.000000   0.145385 f
+  table_i/U5177/Y (INVX1)                                       0.001408  0.033918   0.179304 r
+  table_i/n6562 (net)                           2     0.005166            0.000000   0.179304 r
+  table_i/U4669/B (OR2X1)                                       0.001408  0.000000   0.179304 r
+  table_i/U4669/Y (OR2X1)                                       0.018783  0.046779   0.226083 r
+  table_i/n2831 (net)                           1     0.001551            0.000000   0.226083 r
+  table_i/U4670/A (INVX1)                                       0.018783  0.000000   0.226083 r
+  table_i/U4670/Y (INVX1)                                       0.039568  0.037635   0.263718 f
+  table_i/n5011 (net)                           5     0.011720            0.000000   0.263718 f
+  table_i/U4321/A (AND2X1)                                      0.039568  0.000000   0.263718 f
+  table_i/U4321/Y (AND2X1)                                      0.015151  0.035072   0.298790 f
+  table_i/n2836 (net)                           1     0.001476            0.000000   0.298790 f
+  table_i/U4322/A (INVX1)                                       0.015151  0.000000   0.298790 f
+  table_i/U4322/Y (INVX1)                                       0.000000  0.011204   0.309994 r
+  table_i/n4875 (net)                           2     0.004839            0.000000   0.309994 r
+  table_i/U4591/A (NAND3X1)                                     0.000000  0.000000   0.309994 r
+  table_i/U4591/Y (NAND3X1)                                     0.015678  0.015351   0.325344 f
+  table_i/n2820 (net)                           1     0.001504            0.000000   0.325344 f
+  table_i/U3483/A (BUFX2)                                       0.015678  0.000000   0.325344 f
+  table_i/U3483/Y (BUFX2)                                       0.004887  0.035469   0.360813 f
+  table_i/n2643 (net)                           2     0.003653            0.000000   0.360813 f
+  table_i/U2637/B (AND2X1)                                      0.004887  0.000000   0.360813 f
+  table_i/U2637/Y (AND2X1)                                      0.040568  0.059743   0.420556 f
+  table_i/n2805 (net)                           4     0.010472            0.000000   0.420556 f
+  table_i/U4590/C (NAND3X1)                                     0.040568  0.000000   0.420556 f
+  table_i/U4590/Y (NAND3X1)                                     0.033834  0.035561   0.456117 r
+  table_i/n2833 (net)                           1     0.001539            0.000000   0.456117 r
+  table_i/U2635/A (BUFX2)                                       0.033834  0.000000   0.456117 r
+  table_i/U2635/Y (BUFX2)                                       0.015926  0.039236   0.495353 r
+  table_i/n1663 (net)                           2     0.005124            0.000000   0.495353 r
+  table_i/U4589/B (NAND3X1)                                     0.015926  0.000000   0.495353 r
+  table_i/U4589/Y (NAND3X1)                                     0.015178  0.013641   0.508994 f
+  table_i/n2835 (net)                           1     0.001476            0.000000   0.508994 f
+  table_i/U4870/A (INVX1)                                       0.015178  0.000000   0.508994 f
+  table_i/U4870/Y (INVX1)                                       0.004292  0.020148   0.529143 r
+  table_i/n6561 (net)                           3     0.007595            0.000000   0.529143 r
+  table_i/U4341/A (AND2X1)                                      0.004292  0.000000   0.529143 r
+  table_i/U4341/Y (AND2X1)                                      0.030895  0.028467   0.557610 r
+  table_i/n2819 (net)                           1     0.001551            0.000000   0.557610 r
+  table_i/U4342/A (INVX1)                                       0.030895  0.000000   0.557610 r
+  table_i/U4342/Y (INVX1)                                       0.027956  0.033512   0.591121 f
+  table_i/n4885 (net)                           4     0.008115            0.000000   0.591121 f
+  table_i/U4587/A (NAND3X1)                                     0.027956  0.000000   0.591121 f
+  table_i/U4587/Y (NAND3X1)                                     0.033834  0.039700   0.630821 r
+  table_i/n2810 (net)                           1     0.001539            0.000000   0.630821 r
+  table_i/U3497/A (BUFX2)                                       0.033834  0.000000   0.630821 r
+  table_i/U3497/Y (BUFX2)                                       0.021395  0.042852   0.673673 r
+  table_i/n2649 (net)                           3     0.007467            0.000000   0.673673 r
+  table_i/U2006/A (AND2X1)                                      0.021395  0.000000   0.673673 r
+  table_i/U2006/Y (AND2X1)                                      0.037301  0.032706   0.706378 r
+  table_i/n2834 (net)                           1     0.002961            0.000000   0.706378 r
+  table_i/U4586/C (NAND3X1)                                     0.037301  0.000000   0.706378 r
+  table_i/U4586/Y (NAND3X1)                                     0.015678  0.015314   0.721692 f
+  table_i/n2809 (net)                           1     0.001504            0.000000   0.721692 f
+  table_i/U4110/A (BUFX2)                                       0.015678  0.000000   0.721692 f
+  table_i/U4110/Y (BUFX2)                                       0.009083  0.038625   0.760317 f
+  table_i/n4757 (net)                           3     0.006680            0.000000   0.760317 f
+  table_i/U4585/A (NAND3X1)                                     0.009083  0.000000   0.760317 f
+  table_i/U4585/Y (NAND3X1)                                     0.033980  0.033799   0.794117 r
+  table_i/n2812 (net)                           1     0.001539            0.000000   0.794117 r
+  table_i/U2356/A (BUFX2)                                       0.033980  0.000000   0.794117 r
+  table_i/U2356/Y (BUFX2)                                       0.014658  0.038397   0.832514 r
+  table_i/n1471 (net)                           2     0.004572            0.000000   0.832514 r
+  table_i/U4869/A (INVX1)                                       0.014658  0.000000   0.832514 r
+  table_i/U4869/Y (INVX1)                                       0.013275  0.018291   0.850805 f
+  table_i/n6560 (net)                           1     0.002832            0.000000   0.850805 f
+  table_i/U4584/C (NAND3X1)                                     0.013275  0.000000   0.850805 f
+  table_i/U4584/Y (NAND3X1)                                     0.032996  0.028606   0.879411 r
+  table_i/n2829 (net)                           1     0.001539            0.000000   0.879411 r
+  table_i/U3871/A (BUFX2)                                       0.032996  0.000000   0.879411 r
+  table_i/U3871/Y (BUFX2)                                       0.021587  0.042979   0.922390 r
+  table_i/n4612 (net)                           3     0.007593            0.000000   0.922390 r
+  table_i/U4786/A (INVX1)                                       0.021587  0.000000   0.922390 r
+  table_i/U4786/Y (INVX1)                                       0.023891  0.027775   0.950164 f
+  table_i/n6559 (net)                           3     0.006543            0.000000   0.950164 f
+  table_i/U4583/A (NAND2X1)                                     0.023891  0.000000   0.950164 f
+  table_i/U4583/Y (NAND2X1)                                     0.045310  0.037379   0.987544 r
+  table_i/n2830 (net)                           2     0.004417            0.000000   0.987544 r
+  table_i/U4582/A (NAND3X1)                                     0.045310  0.000000   0.987544 r
+  table_i/U4582/Y (NAND3X1)                                     0.022781  0.026427   1.013970 f
+  table_i/n2818 (net)                           2     0.004594            0.000000   1.013970 f
+  table_i/U4337/A (AND2X2)                                      0.022781  0.000000   1.013970 f
+  table_i/U4337/Y (AND2X2)                                      0.000854  0.035413   1.049384 f
+  table_i/n2825 (net)                           1     0.001476            0.000000   1.049384 f
+  table_i/U4338/A (INVX1)                                       0.000854  0.000000   1.049384 f
+  table_i/U4338/Y (INVX1)                                       0.008648  0.019216   1.068600 r
+  table_i/n4883 (net)                           3     0.008868            0.000000   1.068600 r
+  table_i/U4580/C (NOR3X1)                                      0.008648  0.000000   1.068600 r
+  table_i/U4580/Y (NOR3X1)                                      0.046086  0.033406   1.102006 f
+  table_i/n2808 (net)                           3     0.009201            0.000000   1.102006 f
+  table_i/U4579/B (NOR3X1)                                      0.046086  0.000000   1.102006 f
+  table_i/U4579/Y (NOR3X1)                                      0.080078  0.066831   1.168837 r
+  table_i/n2828 (net)                           3     0.008214            0.000000   1.168837 r
+  table_i/U4659/A (AND2X1)                                      0.080078  0.000000   1.168837 r
+  table_i/U4659/Y (AND2X1)                                      0.061057  0.047437   1.216274 r
+  table_i/n2822 (net)                           3     0.007860            0.000000   1.216274 r
+  table_i/U4660/A (INVX1)                                       0.061057  0.000000   1.216274 r
+  table_i/U4660/Y (INVX1)                                       0.021442  0.038625   1.254898 f
+  table_i/n5006 (net)                           3     0.006635            0.000000   1.254898 f
+  table_i/U4577/A (NAND3X1)                                     0.021442  0.000000   1.254898 f
+  table_i/U4577/Y (NAND3X1)                                     0.051844  0.049533   1.304431 r
+  table_i/n2826 (net)                           2     0.005380            0.000000   1.304431 r
+  table_i/U4576/A (NAND3X1)                                     0.051844  0.000000   1.304431 r
+  table_i/U4576/Y (NAND3X1)                                     0.015477  0.022093   1.326524 f
+  table_i/n2827 (net)                           1     0.001476            0.000000   1.326524 f
+  table_i/U4872/A (INVX1)                                       0.015477  0.000000   1.326524 f
+  table_i/U4872/Y (INVX1)                                       0.000000  0.012660   1.339184 r
+  table_i/n6557 (net)                           2     0.005253            0.000000   1.339184 r
+  table_i/U4333/A (AND2X1)                                      0.000000  0.000000   1.339184 r
+  table_i/U4333/Y (AND2X1)                                      0.030945  0.028508   1.367692 r
+  table_i/n2821 (net)                           1     0.001551            0.000000   1.367692 r
+  table_i/U4334/A (INVX1)                                       0.030945  0.000000   1.367692 r
+  table_i/U4334/Y (INVX1)                                       0.022484  0.029781   1.397474 f
+  table_i/n4881 (net)                           3     0.006288            0.000000   1.397474 f
+  table_i/U4573/A (NAND3X1)                                     0.022484  0.000000   1.397474 f
+  table_i/U4573/Y (NAND3X1)                                     0.052421  0.050449   1.447923 r
+  table_i/n2813 (net)                           2     0.005571            0.000000   1.447923 r
+  table_i/U281/B (OR2X2)                                        0.052421  0.000000   1.447923 r
+  table_i/U281/Y (OR2X2)                                        0.013380  0.050178   1.498101 r
+  table_i/n2824 (net)                           1     0.003288            0.000000   1.498101 r
+  table_i/U4572/C (NOR3X1)                                      0.013380  0.000000   1.498101 r
+  table_i/U4572/Y (NOR3X1)                                      0.032190  0.023471   1.521572 f
+  table_i/n2823 (net)                           2     0.003743            0.000000   1.521572 f
+  table_i/U4871/A (AND2X1)                                      0.032190  0.000000   1.521572 f
+  table_i/U4871/Y (AND2X1)                                      0.022968  0.040315   1.561886 f
+  table_i/n2803 (net)                           2     0.004550            0.000000   1.561886 f
+  table_i/U4655/A (AND2X1)                                      0.022968  0.000000   1.561886 f
+  table_i/U4655/Y (AND2X1)                                      0.030156  0.043675   1.605562 f
+  table_i/n2802 (net)                           3     0.006855            0.000000   1.605562 f
+  table_i/U4656/A (INVX1)                                       0.030156  0.000000   1.605562 f
+  table_i/U4656/Y (INVX1)                                       0.002941  0.023133   1.628694 r
+  table_i/n5005 (net)                           3     0.006882            0.000000   1.628694 r
+  table_i/U277/A (AND2X2)                                       0.002941  0.000000   1.628694 r
+  table_i/U277/Y (AND2X2)                                       0.011371  0.032901   1.661595 r
+  table_i/n2804 (net)                           1     0.002548            0.000000   1.661595 r
+  table_i/U4562/A (NAND3X1)                                     0.011371  0.000000   1.661595 r
+  table_i/U4562/Y (NAND3X1)                                     0.013087  0.016840   1.678435 f
+  table_i/n1380 (net)                           1     0.001504            0.000000   1.678435 f
+  table_i/U3065/A (BUFX2)                                       0.013087  0.000000   1.678435 f
+  table_i/U3065/Y (BUFX2)                                       0.022628  0.048583   1.727018 f
+  table_i/n2520 (net)                           7     0.016752            0.000000   1.727018 f
+  table_i/U4875/A (INVX1)                                       0.022628  0.000000   1.727018 f
+  table_i/U4875/Y (INVX1)                                       0.047553  0.049508   1.776526 r
+  table_i/n6556 (net)                           6     0.015846            0.000000   1.776526 r
+  table_i/U3517/A (OR2X1)                                       0.047553  0.000000   1.776526 r
+  table_i/U3517/Y (OR2X1)                                       0.016439  0.036931   1.813457 r
+  table_i/n1419 (net)                           1     0.001551            0.000000   1.813457 r
+  table_i/U3519/A (INVX1)                                       0.016439  0.000000   1.813457 r
+  table_i/U3519/Y (INVX1)                                       0.058703  0.050021   1.863478 f
+  table_i/n2656 (net)                           8     0.018066            0.000000   1.863478 f
+  table_i/U559/A (AND2X1)                                       0.058703  0.000000   1.863478 f
+  table_i/U559/Y (AND2X1)                                       0.026797  0.047465   1.910943 f
+  table_i/n5926 (net)                           3     0.005980            0.000000   1.910943 f
+  table_i/U3875/A (AND2X1)                                      0.026797  0.000000   1.910943 f
+  table_i/U3875/Y (AND2X1)                                      0.165048  0.146402   2.057345 f
+  table_i/n1404 (net)                          20     0.055783            0.000000   2.057345 f
+  table_i/U3876/A (INVX1)                                       0.165048  0.000000   2.057345 f
+  table_i/U3876/Y (INVX1)                                       0.035350  0.078493   2.135838 r
+  table_i/n4615 (net)                           4     0.009274            0.000000   2.135838 r
+  table_i/U4675/A (AND2X2)                                      0.035350  0.000000   2.135838 r
+  table_i/U4675/Y (AND2X2)                                      0.074735  0.076375   2.212214 r
+  table_i/n5923 (net)                          12     0.029898            0.000000   2.212214 r
+  table_i/U4676/A (INVX1)                                       0.074735  0.000000   2.212214 r
+  table_i/U4676/Y (INVX1)                                       0.056710  0.066946   2.279159 f
+  table_i/n5014 (net)                           9     0.018683            0.000000   2.279159 f
+  table_i/U4723/A (INVX1)                                       0.056710  0.000000   2.279159 f
+  table_i/U4723/Y (INVX1)                                       0.591981  0.406417   2.685576 r
+  table_i/n5312 (net)                          39     0.122635            0.000000   2.685576 r
+  table_i/U2630/A (OAI21X1)                                     0.591981  0.000000   2.685576 r
+  table_i/U2630/Y (OAI21X1)                                     0.115508  0.135486   2.821062 f
+  table_i/n3693 (net)                           1     0.001290            0.000000   2.821062 f
+  table_i/tags_reg_56_/D (DFFPOSX1)                             0.115508  0.000000   2.821062 f
+  data arrival time                                                                  2.821062
+
+  clock core_clk (rise edge)                                              3.000000   3.000000
+  clock network delay (ideal)                                             0.000000   3.000000
+  clock uncertainty                                                       -0.100000  2.900000
+  table_i/tags_reg_56_/CLK (DFFPOSX1)                                     0.000000   2.900000 r
+  library setup time                                                      -0.078752  2.821248
+  data required time                                                                 2.821248
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 2.821248
+  data arrival time                                                                  -2.821062
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        0.000186
+
+
+1

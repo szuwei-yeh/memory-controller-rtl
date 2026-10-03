@@ -25,7 +25,8 @@ identity and limitations when comparing it with current RTL.
 | [Optimization experiments](experiments/README.md) | Later implementation changes, measurements and rejected alternatives |
 
 The current implementation's experiment is
-[parallel command-class arbitration](experiments/parallel-arbitration-experiment.md).
+[parallel command-class arbitration](experiments/parallel-arbitration-experiment.md),
+followed by [mapped hold repair](experiments/hold-repair-experiment.md).
 Machine-readable summaries, reports and source snapshots live in
 [`results/`](../results/README.md). Command-line tools are listed in
 [`scripts/`](../scripts/README.md).

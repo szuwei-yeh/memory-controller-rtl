@@ -3,8 +3,9 @@
 **Outcome:** a verified simplified DRAM controller with three scheduling policies
 and a measured RTL optimization that removes 50 Q16/3 ns setup violations.
 The current implementation passes pre-layout setup at 3 ns with only 0.038 ps
-margin. Hold remains failing; this is an RTL and synthesis study, not a signed-off
-DDR controller. Start with [reproduction](reproduce.md) to inspect or run it.
+margin. A follow-up mapped repair eliminates the remaining hold failures at
+3 ns and 4 ns with unchanged setup slack. This remains a typical-corner
+pre-layout study. Start with [reproduction](reproduce.md) to inspect or run it.
 
 ## 1. Architecture and the design decisions
 
@@ -89,6 +90,13 @@ target has its own netlist. Source/library/flow hashes and full violation lists
 are retained. The smaller internal setup margin is a real tradeoff, even though
 it satisfies the predeclared requirement of zero internal setup failures.
 
+The subsequent [mapped hold repair](experiments/hold-repair-experiment.md)
+inserts eight/two buffers at 3/4 ns, eliminating all eight/two hold failures.
+Worst hold slack becomes +0.008031 ns at both points, while setup slack stays
+unchanged. Area rises by 0.02668%/0.00714%. The paired mapped netlists pass
+equivalence, and deliberately inverted hold buffers are rejected. The table
+above retains the original RTL experiment's measurements before that repair.
+
 I also kept rejected experiments. The earlier direct-mask-only trial improved
 worst setup but worsened TNS and hold count; a folded-default-mask trial worsened
 hold. Fixed-slot storage alone failed its earlier screen, while a separately
@@ -106,13 +114,16 @@ their percentage improvements cannot be added together.
 - **Properties:** three depth-12 controller BMC tasks with symbolic data, plus
   reduced unbounded bank/progress control proofs. The reduced progress proof
   is not a general unbounded data-correctness or all-parameter proof.
-- **Boundary:** 3 ns setup passes by only 0.038 ps; hold and zero-limit library
+- **Mapped repair:** before/after equivalence has zero unproven cells at both
+  clock points, using associated GSCL45nm Liberty models; buffer-inversion
+  negative controls are rejected. Exported timing constraints match.
+- **Boundary:** 3 ns setup passes by only 0.038 ps; zero-limit library
   capacitance violations remain. No placement/routing, power, PHY, refresh,
   JEDEC compliance, or production-frequency claim is made.
 
-The next engineering phase would address hold, increase setup margin and, with
-a suitable physical flow, evaluate placed/routed timing. This portfolio phase
-is complete as a reproducible RTL and pre-layout optimization study.
+The next engineering phase would increase setup margin, address the library
+capacitance issue and, with a suitable physical flow, evaluate timing across
+corners and after placement/routing.
 
 ## Evidence to open during a review
 
@@ -120,6 +131,7 @@ is complete as a reproducible RTL and pre-layout optimization study.
 - [Pre-change critical-path diagnosis](experiments/command-path-3ns.md)
 - [Final experiment, adoption criteria and limitations](experiments/parallel-arbitration-experiment.md)
 - [Current machine-readable evidence](../results/parallel_arbitration/summary.json)
+- [Mapped hold repair and proofs](experiments/hold-repair-experiment.md)
 - [Verification scope](verification-plan.md) and [reproduction commands](reproduce.md)
 - [Rejected direct-mask alternatives](experiments/command-mask-optimization.md) and
   [storage study](experiments/storage-timing-experiment.md)
@@ -128,5 +140,5 @@ An accurate resume description is: “Designed and verified a four-bank DRAM
 command scheduler with FR-FCFS and aging; parallelized command-class arbitration
 to eliminate 50 setup violations at a 3 ns pre-layout target while reducing
 mapped area 1.89%, supported by equivalence checks and 3.0M simulated transactions.”
-Keep the simplified-protocol, pre-layout and remaining-hold qualifications in
+Keep the simplified-protocol, pre-layout and limited-setup-margin qualifications in
 the project description and be ready to explain them.

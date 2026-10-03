@@ -19,7 +19,8 @@ Bank timing legality and scheduling policy are separate blocks.*
 
 | Study | Measured result | Evidence |
 |---|---|---|
-| **Current RTL: parallel arbitration** | Q=16 / 3 ns setup slack **−0.068773 → +0.000038 ns**; **50 → 0 setup violations**, with **1.89% lower mapped area** and no added cycle latency | [Matched experiment](docs/experiments/parallel-arbitration-experiment.md) |
+| **Current RTL: parallel arbitration** | Q=16 / 3 ns setup slack **−0.068773 → +0.000038 ns**; **50 → 0 setup violations**, with **1.89% lower mapped area** and no added cycle latency | [Matched RTL experiment](docs/experiments/parallel-arbitration-experiment.md) |
+| **Mapped hold repair** | Q=16 / 3 ns and 4 ns: **8 / 2 → 0 hold violations**, with **zero setup violations** and unchanged setup slack. Eight/two added buffers cost **0.02668% / 0.00714% area**; mapped equivalence passes | [Paired repair and proofs](docs/experiments/hold-repair-experiment.md) |
 | **Earlier address-sharing revision** | **16.71% lower mapped area** at Q=16 / 5 ns; **24.19% lower** at Q=32 / 5 ns | [Separate before/after measurements](docs/experiments/address-sharing-optimization.md) |
 | **Frozen v1.1 scheduling study** | Always-ready random traffic: **0.146 → 0.419 responses/cycle**, Strict-FCFS → FR-FCFS, averaged across 20 seeds | [Multi-seed results](docs/performance-stability.md) |
 | **Frozen v1.1 aging tradeoff** | Hot/cold p99 latency **333 → 137 cycles**; throughput **0.481 → 0.462 responses/cycle** | [Workload and metric definitions](docs/results.md#performance) |
@@ -27,8 +28,9 @@ Bank timing legality and scheduling policy are separate blocks.*
 
 ASIC measurements use Synopsys Design Compiler and the GSCL45nm typical library,
 with ideal clocks and pre-layout mapping. The current 3 ns setup margin is only
-**0.038 ps**; hold and the library's zero-limit capacitance violations remain.
-These results establish an RTL optimization, not physical timing signoff.
+**0.038 ps**. Hold repair passes setup and hold at the two tested Q16 clock points;
+the library's zero-limit capacitance violations remain. Physical timing signoff
+and timing across corners remain future work.
 Each study above has its own baseline; the historical area and performance
 measurements are not new measurements of the current RTL.
 
@@ -118,5 +120,6 @@ artifacts and can overwrite frozen evidence; it is not part of the quickstart.
 
 For a technical review, start with the [five-minute walkthrough](docs/portfolio-review.md),
 then inspect the [current experiment](docs/experiments/parallel-arbitration-experiment.md)
-and its linked reports. The [experiment index](docs/experiments/README.md) preserves
+and [mapped hold repair](docs/experiments/hold-repair-experiment.md).
+The [experiment index](docs/experiments/README.md) preserves
 both adopted changes and rejected alternatives, including their tradeoffs.
