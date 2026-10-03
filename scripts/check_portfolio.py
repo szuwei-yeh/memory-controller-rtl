@@ -62,6 +62,91 @@ def check_hold_repair(previous):
             assert counts and [int(counts[i]) for i in [1, 2]] == [proof[label]['proven_cells'], proof[label]['unproven_cells']]
         print(f"After hold repair Q16/{period} ns: area={after['area_um2']:.6f} um^2, "
               f"setup={after['setup_worst_slack_ns']:+.6f} ns, hold={after['worst_hold_slack_ns']:+.6f} ns / 0 endpoints")
+    return summary
+
+
+def check_setup_margin(previous):
+    folder = ROOT/'results/setup_margin'
+    summary = read(folder/'summary.json')
+    digest = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+    assert summary['status'] == 'EXPERIMENT_COMPLETE'
+    assert summary['baseline_evidence'] == 'results/hold_repair/summary.json'
+    assert summary['current_rtl_sha256'] == previous['current_rtl_sha256']
+    assert summary['library_sha256'] == previous['library_sha256']
+    assert summary['setup_script_sha256'] == digest(ROOT/'synth/dc/improve_setup_margin.tcl')
+    assert summary['publisher_sha256'] == digest(ROOT/'scripts/setup_margin_report.py')
+    assert summary['setup_mode'] == 'preserve_zero_caps' and summary['setup_guard_ns'] == 0.05
+    criteria = summary['predeclared_criteria']
+    assert criteria['three_ns_setup_slack_at_least_ns'] == 0.020
+    assert criteria['area_increase_at_most_percent'] == 5
+    assert all(value is True for key, value in criteria.items() if key not in
+               ['three_ns_setup_slack_at_least_ns', 'area_increase_at_most_percent'])
+    for manifest in folder.glob('**/hashes.json'):
+        for name, value in read(manifest)['public'].items():
+            assert digest(manifest.parent/name) == value
+    assert [r['clock_ns'] for r in summary['runs']] == [3, 4]
+    for row in summary['runs']:
+        period = row['clock_ns']
+        assert row['queue_depth'] == 16 and row['policy'] == 'frfcfs_aging'
+        old = next(r for r in previous['runs'] if r['clock_ns'] == period)
+        reports = ROOT/row['report_path']
+        before, after = [measured(reports, prefix) for prefix in ['before', 'after']]
+        assert before == row['before'] == old['after'] and after == row['after']
+        assert before['sequential_cells'] == after['sequential_cells'] == 1974
+        assert after['setup_violation_count'] == after['hold_violation_count'] == 0
+        assert after['setup_worst_slack_ns'] >= (0.020 if period == 3 else before['setup_worst_slack_ns'])
+        assert after['worst_hold_slack_ns'] >= 0 and after['unconstrained_endpoint_count'] == 0
+        assert after['area_um2'] <= 1.05*before['area_um2']
+        assert row['area_increase_percent'] == 100*(after['area_um2']/before['area_um2']-1)
+        for key in ['max_capacitance_violation_count', 'zero_allowed_load_violation_count',
+                    'max_transition_violation_count']:
+            assert after[key] <= before[key]
+        assert sdc_commands(reports/'before.sdc') == sdc_commands(reports/'after.sdc')
+        assert row['constraints_identical_excluding_comments']
+        target = (reports/'optimization_target.sdc').read_text()
+        assert re.search(r'set_clock_uncertainty -setup 0\.15\s+\[get_clocks core_clk\]', target)
+        assert re.search(r'set_clock_uncertainty -hold 0\.1\s+\[get_clocks core_clk\]', target)
+        restricted = (reports/'restricted_cells.rpt').read_text()
+        assert set(re.findall(r'gscl45nm/(\w+)/Y max_capacitance=0\.000000', restricted)) == {
+            'AOI21X1', 'AOI22X1', 'NAND2X1', 'NAND3X1', 'NOR2X1'}
+        for prefix in ['before', 'after']:
+            path = paths((reports/f'{prefix}_internal_setup.rpt').read_text())[0]
+            assert path == row['register_to_register_setup'][prefix]
+            assert path['classification'] == 'register-to-register' and path['slack_ns'] >= 0
+        point = row['provenance']
+        assert point['exit_code'] == 0 and point['point_qualifies']
+        assert point['ddc_sha256'] == old['provenance']['report_sha256']['after.ddc']
+        for key in ['config_sha256', 'sdc_sha256', 'library_sha256']:
+            assert point[key] == old['provenance'][key]
+        assert read(reports/'hashes.json')['raw'].items() <= point['report_sha256'].items()
+        proof = summary['mapped_equivalence'][str(period)]
+        assert proof['status'] == proof['equivalence']['status'] == 'PASS'
+        assert proof['checker_sha256'] == digest(ROOT/'scripts/setup_margin_check.py')
+        assert proof['shared_checker_sha256'] == digest(ROOT/'scripts/hold_repair_check.py')
+        assert proof['liberty_sha256'] == previous['mapped_equivalence'][str(period)]['liberty_sha256']
+        assert len(proof['registers']) == len(set(proof['registers'])) == 1974
+        assert proof['equivalence']['port_maps_identical'] and proof['negative_control']['port_maps_identical']
+        ports = proof['models']['before']['original_ports']
+        assert all(direction in ['input', 'output'] and width > 0 for direction, width in ports.values())
+        checks = folder/'checks'/reports.name
+        for label in ['before', 'after', 'mutated']:
+            model = proof['models'][label]
+            assert model['original_ports'] == ports and model['latch_count'] == 0
+            assert model['input_bits'] == 1974 + sum(n for d, n in ports.values() if d == 'input')
+            assert model['output_bits'] == 3948 + sum(n for d, n in ports.values() if d == 'output')
+            assert digest(checks/f'{label}.map') == model['port_map_sha256']
+            assert model['port_map_sha256'] == proof['models']['before']['port_map_sha256']
+        for label in ['before', 'after']:
+            assert proof['models'][label]['netlist_sha256'] == point['report_sha256'][f'{label}.v']
+        assert proof['negative_control']['status'] == 'REJECTED'
+        assert proof['equivalence']['exit_code'] == proof['negative_control']['exit_code'] == 0
+        assert re.search(r'^Networks are equivalent(?:\.| after structural hashing\.)',
+                         (checks/'equivalence.log').read_text(), re.M)
+        assert digest(checks/'equivalence.log') == proof['equivalence']['log_sha256']
+        assert 'Networks are NOT EQUIVALENT.' in (checks/'negative_control_status.rpt').read_text()
+        assert all(summary['adoption_checks'][str(period)].values())
+        print(f"After setup-margin mapping Q16/{period} ns: area={after['area_um2']:.6f} um^2, "
+              f"setup={after['setup_worst_slack_ns']:+.6f} ns, hold={after['worst_hold_slack_ns']:+.6f} ns / 0 endpoints")
 
 
 def main():
@@ -123,7 +208,7 @@ def main():
         assert row['setup_pass'] and row['hold_violation_count'] > 0
         print(f"Before hold repair Q16/{row['clock_ns']} ns: area={area:.6f} um^2, setup={row['setup_worst_slack_ns']:+.6f} ns, "
               f"hold={row['worst_hold_slack_ns']:+.6f} ns / {row['hold_violation_count']} endpoints")
-    check_hold_repair(summary)
+    check_setup_margin(check_hold_repair(summary))
     tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
     assert not any(p.startswith('local_notes/') for p in tracked)
     assert not any(p.endswith(('.db', '.ddc', '.lib')) for p in tracked if p)

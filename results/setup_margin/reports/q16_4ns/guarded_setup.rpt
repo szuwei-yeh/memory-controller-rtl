@@ -1,0 +1,1079 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Sat Oct  3 14:57:43 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[18]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U503/Y (AOI22X1)                                    0.066440   2.724179 f
+  U190/Y (AND2X2)                                     0.039555   2.763734 f
+  U501/Y (NAND3X1)                                    0.028719   2.792454 r
+  U188/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[18] (out)                                 0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[16]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U523/Y (AOI22X1)                                    0.066440   2.724179 f
+  U196/Y (AND2X2)                                     0.039555   2.763734 f
+  U521/Y (NAND3X1)                                    0.028719   2.792454 r
+  U194/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[16] (out)                                 0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[14]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U543/Y (AOI22X1)                                    0.066440   2.724179 f
+  U202/Y (AND2X2)                                     0.039555   2.763734 f
+  U541/Y (NAND3X1)                                    0.028719   2.792454 r
+  U200/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[14] (out)                                 0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[13]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U553/Y (AOI22X1)                                    0.066440   2.724179 f
+  U205/Y (AND2X2)                                     0.039555   2.763734 f
+  U551/Y (NAND3X1)                                    0.028719   2.792454 r
+  U203/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[13] (out)                                 0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[12]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U563/Y (AOI22X1)                                    0.066440   2.724179 f
+  U208/Y (AND2X2)                                     0.039555   2.763734 f
+  U561/Y (NAND3X1)                                    0.028719   2.792454 r
+  U206/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[12] (out)                                 0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[1]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U483/Y (AOI22X1)                                    0.066440   2.724179 f
+  U184/Y (AND2X2)                                     0.039555   2.763734 f
+  U481/Y (NAND3X1)                                    0.028719   2.792454 r
+  U182/Y (OR2X2)                                      0.051774   2.844227 r
+  cmd_wdata[1] (out)                                  0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[9]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U283/Y (AOI22X1)                                    0.066440   2.724179 f
+  U124/Y (AND2X2)                                     0.039555   2.763734 f
+  U281/Y (NAND3X1)                                    0.028719   2.792454 r
+  U122/Y (OR2X2)                                      0.051773   2.844227 r
+  cmd_wdata[9] (out)                                  0.000000   2.844227 r
+  data arrival time                                              2.844227
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844227
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005773
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[15]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U533/Y (AOI22X1)                                    0.066440   2.724179 f
+  U199/Y (AND2X2)                                     0.039555   2.763734 f
+  U531/Y (NAND3X1)                                    0.028719   2.792454 r
+  U197/Y (OR2X2)                                      0.051770   2.844224 r
+  cmd_wdata[15] (out)                                 0.000000   2.844224 r
+  data arrival time                                              2.844224
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844224
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005776
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[11]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U573/Y (AOI22X1)                                    0.066440   2.724179 f
+  U211/Y (AND2X2)                                     0.039555   2.763734 f
+  U571/Y (NAND3X1)                                    0.028719   2.792454 r
+  U209/Y (OR2X2)                                      0.051770   2.844224 r
+  cmd_wdata[11] (out)                                 0.000000   2.844224 r
+  data arrival time                                              2.844224
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844224
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005776
+
+
+  Startpoint: table_i/addresses_reg_225_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: cmd_wdata[0]
+            (output port clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/addresses_reg_225_/CLK (DFFPOSX1)           0.000000 # 0.000000 r
+  table_i/addresses_reg_225_/Q (DFFPOSX1)             0.162004   0.162004 f
+  table_i/addresses[225] (mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128)
+                                                      0.000000   0.162004 f
+  candidates_i/addresses[225] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   0.162004 f
+  candidates_i/U2958/Y (OR2X1)                        0.056735   0.218739 f
+  candidates_i/U289/Y (INVX1)                         0.144407   0.363147 r
+  candidates_i/U4101/Y (AOI22X1)                      0.075274   0.438421 f
+  candidates_i/U2361/Y (BUFX2)                        0.037018   0.475439 f
+  candidates_i/U81/Y (AND2X1)                         0.041557   0.516996 f
+  candidates_i/U2359/Y (INVX1)                        0.010907   0.527903 r
+  candidates_i/U172/Y (OR2X1)                         0.054667   0.582570 r
+  candidates_i/U3711/Y (NAND2X1)                      0.020782   0.603352 f
+  candidates_i/U3715/Y (AOI22X1)                      0.052159   0.655511 r
+  candidates_i/U3716/Y (NAND3X1)                      0.020556   0.676067 f
+  candidates_i/U3721/Y (NOR3X1)                       0.049672   0.725739 r
+  candidates_i/U398/Y (AND2X1)                        0.088188   0.813927 r
+  candidates_i/U1166/Y (NAND3X1)                      0.035628   0.849554 f
+  candidates_i/U1163/Y (NAND3X1)                      0.036104   0.885658 r
+  candidates_i/U1156/Y (NOR3X1)                       0.040892   0.926550 f
+  candidates_i/U3008/Y (AND2X2)                       0.039954   0.966504 f
+  candidates_i/U3007/Y (INVX4)                        0.032604   0.999108 r
+  candidates_i/U165/Y (AND2X1)                        0.039047   1.038155 r
+  candidates_i/U2873/Y (INVX1)                        0.021335   1.059490 f
+  candidates_i/U1141/Y (NAND3X1)                      0.030566   1.090056 r
+  candidates_i/U2872/Y (BUFX2)                        0.037409   1.127465 r
+  candidates_i/U3039/Y (INVX1)                        0.015163   1.142627 f
+  candidates_i/U2973/Y (BUFX2)                        0.071935   1.214562 f
+  candidates_i/U955/Y (AOI22X1)                       0.057975   1.272537 r
+  candidates_i/U129/Y (AND2X2)                        0.034652   1.307189 r
+  candidates_i/U954/Y (NAND3X1)                       0.010801   1.317990 f
+  candidates_i/U1718/Y (OR2X2)                        0.046480   1.364470 f
+  candidates_i/U1747/Y (INVX1)                        0.008999   1.373469 r
+  candidates_i/U941/Y (AOI21X1)                       0.011935   1.385404 f
+  candidates_i/U2031/Y (BUFX2)                        0.039399   1.424803 f
+  candidates_i/U940/Y (NAND3X1)                       0.027838   1.452640 r
+  candidates_i/U754/Y (BUFX2)                         0.038802   1.491442 r
+  candidates_i/U939/Y (NOR3X1)                        0.032887   1.524329 f
+  candidates_i/U938/Y (NAND3X1)                       0.036163   1.560492 r
+  candidates_i/U3202/Y (INVX1)                        0.034284   1.594776 f
+  candidates_i/U937/Y (NAND3X1)                       0.032311   1.627088 r
+  candidates_i/U3203/Y (INVX1)                        0.034284   1.661371 f
+  candidates_i/U936/Y (NAND3X1)                       0.032311   1.693683 r
+  candidates_i/U3201/Y (INVX1)                        0.034284   1.727967 f
+  candidates_i/U935/Y (NAND3X1)                       0.032311   1.760278 r
+  candidates_i/U3204/Y (INVX1)                        0.027680   1.787958 f
+  candidates_i/U933/Y (NAND3X1)                       0.039145   1.827104 r
+  candidates_i/U932/Y (NOR2X1)                        0.019484   1.846588 f
+  candidates_i/U653/Y (AOI22X1)                       0.044703   1.891291 r
+  candidates_i/U652/Y (NAND2X1)                       0.023156   1.914447 f
+  candidates_i/candidate_mask[0] (mc_candidates_Q_DEPTH16_ROW_W8_COL_W6)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/candidate_mask[0] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   1.914447 f
+  frfcfs_scheduler_i/U744/Y (NAND3X1)                 0.044027   1.958474 r
+  frfcfs_scheduler_i/U1164/Y (OR2X2)                  0.042062   2.000535 r
+  frfcfs_scheduler_i/U1212/Y (INVX1)                  0.016955   2.017490 f
+  frfcfs_scheduler_i/U735/Y (NOR2X1)                  0.031606   2.049096 r
+  frfcfs_scheduler_i/U734/Y (NAND3X1)                 0.015328   2.064425 f
+  frfcfs_scheduler_i/U729/Y (NOR3X1)                  0.051896   2.116321 r
+  frfcfs_scheduler_i/U728/Y (NAND3X1)                 0.019133   2.135453 f
+  frfcfs_scheduler_i/U1170/Y (INVX1)                  0.041368   2.176821 r
+  frfcfs_scheduler_i/U1162/Y (INVX1)                  0.029330   2.206151 f
+  frfcfs_scheduler_i/U1153/Y (INVX4)                  0.032598   2.238750 r
+  frfcfs_scheduler_i/U726/Y (NAND3X1)                 0.022034   2.260784 f
+  frfcfs_scheduler_i/U725/Y (NOR3X1)                  0.025806   2.286590 r
+  frfcfs_scheduler_i/U198/Y (OR2X1)                   0.036983   2.323573 r
+  frfcfs_scheduler_i/U199/Y (INVX1)                   0.030777   2.354350 f
+  frfcfs_scheduler_i/U1217/Y (INVX1)                  0.030061   2.384411 r
+  frfcfs_scheduler_i/U245/Y (NAND3X1)                 0.013841   2.398252 f
+  frfcfs_scheduler_i/U244/Y (OAI21X1)                 0.099810   2.498062 r
+  frfcfs_scheduler_i/select_mask[11] (mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1)
+                                                      0.000000   2.498062 r
+  U1982/Y (INVX2)                                     0.022360   2.520422 f
+  U1952/Y (INVX1)                                     0.137317   2.657739 r
+  U593/Y (AOI22X1)                                    0.066440   2.724179 f
+  U217/Y (AND2X2)                                     0.039555   2.763734 f
+  U591/Y (NAND3X1)                                    0.028719   2.792454 r
+  U215/Y (OR2X2)                                      0.051770   2.844224 r
+  cmd_wdata[0] (out)                                  0.000000   2.844224 r
+  data arrival time                                              2.844224
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.150000  3.850000
+  output external delay                               -1.000000  2.850000
+  data required time                                             2.850000
+  --------------------------------------------------------------------------
+  data required time                                             2.850000
+  data arrival time                                              -2.844224
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.005776
+
+
+1

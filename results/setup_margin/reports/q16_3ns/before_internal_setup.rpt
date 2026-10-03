@@ -1,0 +1,103 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Sat Oct  3 14:56:54 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/write_data_reg_254_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)              0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                0.145385   0.145385 f
+  table_i/U5177/Y (INVX1)                             0.033918   0.179304 r
+  table_i/U4669/Y (OR2X1)                             0.046779   0.226083 r
+  table_i/U4670/Y (INVX1)                             0.037635   0.263718 f
+  table_i/U4321/Y (AND2X1)                            0.035072   0.298790 f
+  table_i/U4322/Y (INVX1)                             0.011204   0.309994 r
+  table_i/U4591/Y (NAND3X1)                           0.015351   0.325344 f
+  table_i/U3483/Y (BUFX2)                             0.035469   0.360813 f
+  table_i/U2637/Y (AND2X1)                            0.059743   0.420556 f
+  table_i/U4590/Y (NAND3X1)                           0.035561   0.456117 r
+  table_i/U2635/Y (BUFX2)                             0.039236   0.495353 r
+  table_i/U4589/Y (NAND3X1)                           0.013641   0.508994 f
+  table_i/U4870/Y (INVX1)                             0.020148   0.529143 r
+  table_i/U4341/Y (AND2X1)                            0.028467   0.557610 r
+  table_i/U4342/Y (INVX1)                             0.033512   0.591121 f
+  table_i/U4587/Y (NAND3X1)                           0.039700   0.630821 r
+  table_i/U3497/Y (BUFX2)                             0.042852   0.673673 r
+  table_i/U2006/Y (AND2X1)                            0.032706   0.706378 r
+  table_i/U4586/Y (NAND3X1)                           0.015314   0.721692 f
+  table_i/U4110/Y (BUFX2)                             0.038625   0.760317 f
+  table_i/U4585/Y (NAND3X1)                           0.033799   0.794117 r
+  table_i/U2356/Y (BUFX2)                             0.038397   0.832514 r
+  table_i/U4869/Y (INVX1)                             0.018291   0.850805 f
+  table_i/U4584/Y (NAND3X1)                           0.028606   0.879411 r
+  table_i/U3871/Y (BUFX2)                             0.042979   0.922390 r
+  table_i/U4786/Y (INVX1)                             0.027775   0.950164 f
+  table_i/U4583/Y (NAND2X1)                           0.037379   0.987544 r
+  table_i/U4582/Y (NAND3X1)                           0.026427   1.013970 f
+  table_i/U4337/Y (AND2X2)                            0.035413   1.049384 f
+  table_i/U4338/Y (INVX1)                             0.019216   1.068600 r
+  table_i/U4580/Y (NOR3X1)                            0.033406   1.102006 f
+  table_i/U4579/Y (NOR3X1)                            0.066831   1.168837 r
+  table_i/U4659/Y (AND2X1)                            0.047437   1.216274 r
+  table_i/U4660/Y (INVX1)                             0.038625   1.254898 f
+  table_i/U4577/Y (NAND3X1)                           0.049533   1.304431 r
+  table_i/U4576/Y (NAND3X1)                           0.022093   1.326524 f
+  table_i/U4872/Y (INVX1)                             0.012660   1.339184 r
+  table_i/U4333/Y (AND2X1)                            0.028508   1.367692 r
+  table_i/U4334/Y (INVX1)                             0.029781   1.397474 f
+  table_i/U4573/Y (NAND3X1)                           0.050449   1.447923 r
+  table_i/U281/Y (OR2X2)                              0.050178   1.498101 r
+  table_i/U4572/Y (NOR3X1)                            0.023471   1.521572 f
+  table_i/U4871/Y (AND2X1)                            0.040315   1.561886 f
+  table_i/U4655/Y (AND2X1)                            0.043675   1.605562 f
+  table_i/U4656/Y (INVX1)                             0.023133   1.628694 r
+  table_i/U277/Y (AND2X2)                             0.032901   1.661595 r
+  table_i/U4562/Y (NAND3X1)                           0.016840   1.678435 f
+  table_i/U3065/Y (BUFX2)                             0.048583   1.727018 f
+  table_i/U4875/Y (INVX1)                             0.049508   1.776526 r
+  table_i/U3517/Y (OR2X1)                             0.036931   1.813457 r
+  table_i/U3519/Y (INVX1)                             0.050021   1.863478 f
+  table_i/U559/Y (AND2X1)                             0.047465   1.910943 f
+  table_i/U3875/Y (AND2X1)                            0.146402   2.057345 f
+  table_i/U3876/Y (INVX1)                             0.078493   2.135838 r
+  table_i/U4675/Y (AND2X2)                            0.076375   2.212214 r
+  table_i/U4676/Y (INVX1)                             0.066946   2.279159 f
+  table_i/U4723/Y (INVX1)                             0.406417   2.685576 r
+  table_i/U3290/Y (OAI21X1)                           0.135486   2.821062 f
+  table_i/write_data_reg_254_/D (DFFPOSX1)            0.000000   2.821062 f
+  data arrival time                                              2.821062
+
+  clock core_clk (rise edge)                          3.000000   3.000000
+  clock network delay (ideal)                         0.000000   3.000000
+  clock uncertainty                                   -0.100000  2.900000
+  table_i/write_data_reg_254_/CLK (DFFPOSX1)          0.000000   2.900000 r
+  library setup time                                  -0.078752  2.821248
+  data required time                                             2.821248
+  --------------------------------------------------------------------------
+  data required time                                             2.821248
+  data arrival time                                              -2.821062
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.000186
+
+
+1

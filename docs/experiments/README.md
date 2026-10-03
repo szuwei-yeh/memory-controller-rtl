@@ -6,6 +6,9 @@ experiments; their results do not automatically apply to the current RTL.
 
 The follow-up [mapped hold repair](hold-repair-experiment.md) eliminates the
 remaining hold failures at Q16/3 ns and 4 ns while preserving setup slack.
+The subsequent [setup-margin mapping](setup-margin-experiment.md) increases
+setup margins to 50.054 / 55.773 ps while preserving zero setup/hold failures
+and inherited capacitance violation counts.
 
 Read the following in order to follow the optimization history:
 
@@ -20,6 +23,7 @@ Read the following in order to follow the optimization history:
 | 7 | [Remaining command-output paths](command-path-3ns.md) | [`command_path_3ns`](../../results/command_path_3ns/) |
 | 8 | [Parallel command-class arbitration](parallel-arbitration-experiment.md) | [`parallel_arbitration`](../../results/parallel_arbitration/) |
 | 9 | [Mapped hold repair](hold-repair-experiment.md) | [`hold_repair`](../../results/hold_repair/) |
+| 10 | [Mapped setup-margin improvement](setup-margin-experiment.md) | [`setup_margin`](../../results/setup_margin/) |
 
 See the [documentation guide](../README.md) for design contracts and published
 baseline results, or the [script guide](../../scripts/README.md) for verification

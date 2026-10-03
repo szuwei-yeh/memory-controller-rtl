@@ -17,6 +17,7 @@ recorded verification paths.
 | [`formal.py`](formal.py) | `make formal`: controller property tasks |
 | [`parallel_arbitration_check.py`](parallel_arbitration_check.py) | `make formal-parallel`, `make compare-parallel`: current equivalence and traces |
 | [`hold_repair_check.py`](hold_repair_check.py) | Paired mapped-netlist equivalence and buffer-inversion negative control; requires private cell models |
+| [`setup_margin_check.py`](setup_margin_check.py) | Complete mapped next-state/clock/output ABC CEC and inverter-removal negative control; requires private netlists/cell models |
 
 ## Synthesis and lab transfers
 
@@ -63,6 +64,7 @@ inputs and source revision before running its publisher.
 | [`command_path_report.py`](command_path_report.py) | Command-output path analysis |
 | [`parallel_arbitration_report.py`](parallel_arbitration_report.py) | Current parallel-arbitration evidence publication |
 | [`hold_repair_report.py`](hold_repair_report.py) | Paired hold-repair reports and proof publication; requires a new output directory |
+| [`setup_margin_report.py`](setup_margin_report.py) | Paired setup-margin reports, acceptance checks and proof publication; requires retained raw provenance and a new output directory |
 | [`dc_sweep_report.py`](dc_sweep_report.py) | Shared mapped-report parsers and sweep summaries |
 | [`log_experiment.py`](log_experiment.py) | Append to the ignored local experiment journal |
 | [`requirements-plot.txt`](requirements-plot.txt) | Optional plotting dependencies |

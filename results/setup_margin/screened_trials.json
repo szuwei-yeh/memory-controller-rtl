@@ -1,0 +1,67 @@
+{
+  "scope": "Frozen exploratory 3 ns screens. Raw report digests refer to retained private runs; these are not qualified or proven mappings.",
+  "trials": [
+    {
+      "trial": "guard_50ps",
+      "status": "REJECTED_SCREEN",
+      "reason": "3 ns capacitance violation count increased by 126; initial pilot also had an internal-path report diagnostic.",
+      "clock_ns": 3,
+      "area_um2": 70900.434572,
+      "setup_worst_slack_ns": 0.05003,
+      "max_capacitance_violation_count": 5630,
+      "script_sha256": "0469580d5e37b6e87f5195a8b66910a1d835c27e299b9eb8e3155d7e77d1f7e4",
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "raw_report_sha256": {
+        "after_area.rpt": "a93f752f9f1c5727b19d1329311d3fe89634c33386ff673240112e2748ed5c2e",
+        "after_setup.rpt": "30a93e9b6cd37ed541cfde784e1059bbf5f4fc796a419c2b3025844cf32df15b",
+        "after_constraints.rpt": "9cc406daf6d731a32c4d5bd6e470b59d3660d3b2f03067965e0b1c2deeb7d1e6"
+      },
+      "mapped_equivalence": "NOT_RUN",
+      "qualification": "Not adopted; not complete functional/timing signoff."
+    },
+    {
+      "trial": "size_only_50ps",
+      "status": "REJECTED_SCREEN",
+      "reason": "3 ns setup margin 6.769 ps failed the predeclared minimum of 20 ps.",
+      "clock_ns": 3,
+      "area_um2": 70725.85496,
+      "setup_worst_slack_ns": 0.006769,
+      "max_capacitance_violation_count": 5504,
+      "script_sha256": "8a81f9beb4ee8ff9567e337643151a94326db398c27c1bba388327315028e773",
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "raw_report_sha256": {
+        "after_area.rpt": "594cbc03498e7bd700fa58da79c2828fea7bfbccea4a43d1a424dfb51d2a1b72",
+        "after_setup.rpt": "7f884fde2c4ecd05aa17feeb0b4146ebf030e2ab8acdc6ab67fb00f4d59ff3aa",
+        "after_constraints.rpt": "8001c4813f5b765919787c2fb6521e92f76190ee5a7493f7eb319a4cbeb8cf83"
+      },
+      "mapped_equivalence": "NOT_RUN",
+      "qualification": "Not adopted; not complete functional/timing signoff."
+    },
+    {
+      "trial": "preserve_nand2_50ps",
+      "status": "REJECTED_SCREEN",
+      "reason": "3 ns capacitance violation count increased by 57; 4 ns was not run after the failed screen.",
+      "clock_ns": 3,
+      "area_um2": 70979.746263,
+      "setup_worst_slack_ns": 0.050001,
+      "max_capacitance_violation_count": 5561,
+      "script_sha256": "bd35638acb1cf5330cf3eb9873a02423137c8b6c131bc52b3ae112ef74217d98",
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "raw_report_sha256": {
+        "after_area.rpt": "23349afe09b60b16b0e466e58b10ae2191513261f622748c4cc8aa1f7a8c45d7",
+        "after_setup.rpt": "d4d4da33a1b05f6b9c3760129227b679ce427fa3c94930371ce23d6ce538272e",
+        "after_constraints.rpt": "bcce3b358e3bd64e37388db1ee5786f2f56083e96a4e5922209c1afd1236a4bd"
+      },
+      "mapped_equivalence": "NOT_RUN",
+      "qualification": "Not adopted; not complete functional/timing signoff."
+    },
+    {
+      "status": "CANCELLED_UNPROMISING",
+      "reason": "Stopped during optimization due to large transient area growth; no final PPA claim.",
+      "script_sha256": "4759d74367c10b77af8ffd3c5b88ed801ecb540f5a92580332021737a8f7d7c9",
+      "library_sha256": "4968d1dba7ff9911cc51dfac7d8ea8b94fbab59d2f862f0531d7c774fb0a5791",
+      "trial": "exclude_nand2_without_preserving_existing",
+      "final_ppa": "NOT_MEASURED"
+    }
+  ]
+}

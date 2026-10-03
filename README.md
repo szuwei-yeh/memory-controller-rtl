@@ -19,6 +19,7 @@ Bank timing legality and scheduling policy are separate blocks.*
 
 | Study | Measured result | Evidence |
 |---|---|---|
+| **Latest mapped setup margin** | Q=16 / 3 ns: **0.038 → 50.054 ps**; 4 ns: **1.984 → 55.773 ps**. **Zero setup/hold violations**, unchanged capacitance counts, **0.77% / 0.033% area cost** versus hold-repaired baselines | [Paired mapping and proofs](docs/experiments/setup-margin-experiment.md) |
 | **Current RTL: parallel arbitration** | Q=16 / 3 ns setup slack **−0.068773 → +0.000038 ns**; **50 → 0 setup violations**, with **1.89% lower mapped area** and no added cycle latency | [Matched RTL experiment](docs/experiments/parallel-arbitration-experiment.md) |
 | **Mapped hold repair** | Q=16 / 3 ns and 4 ns: **8 / 2 → 0 hold violations**, with **zero setup violations** and unchanged setup slack. Eight/two added buffers cost **0.02668% / 0.00714% area**; mapped equivalence passes | [Paired repair and proofs](docs/experiments/hold-repair-experiment.md) |
 | **Earlier address-sharing revision** | **16.71% lower mapped area** at Q=16 / 5 ns; **24.19% lower** at Q=32 / 5 ns | [Separate before/after measurements](docs/experiments/address-sharing-optimization.md) |
@@ -27,9 +28,10 @@ Bank timing legality and scheduling policy are separate blocks.*
 | **Current RTL verification** | **300 regression runs**, **3,003,000 accepted transactions**, and **42 directed/workload/reset/corner simulations**, plus unit checks | [Source-matched validation](results/parallel_arbitration/validation_summary.json) |
 
 ASIC measurements use Synopsys Design Compiler and the GSCL45nm typical library,
-with ideal clocks and pre-layout mapping. The current 3 ns setup margin is only
-**0.038 ps**. Hold repair passes setup and hold at the two tested Q16 clock points;
-the library's zero-limit capacitance violations remain. Physical timing signoff
+with ideal clocks and pre-layout mapping. The latest mapped 3 ns setup margin is
+**50.054 ps**, following hold repair and guarded incremental mapping. Setup and
+hold pass at the two tested Q16 FR-FCFS+aging clock points; the library's zero-limit
+capacitance violations remain. Physical timing signoff
 and timing across corners remain future work.
 Each study above has its own baseline; the historical area and performance
 measurements are not new measurements of the current RTL.
@@ -74,6 +76,11 @@ cycle-trace pairs**, in addition to the simulations above. Property checks inclu
 three depth-12 controller BMC tasks with symbolic data and two focused unbounded
 control proofs in reduced configurations. This is not an all-parameter unbounded
 proof of data correctness. See [proof scope](docs/verification-plan.md).
+
+The latest two mapped changes also have paired functional checks and rejected
+negative controls. Setup-margin mapping compares every physical register's
+next-state and clock functions plus all original outputs, without assuming
+numbered combinational wires remain equivalent.
 
 Published evidence retains source/report hashes and matched synthesis conditions.
 A [fresh-checkout audit](docs/reproduce.md#fresh-checkout-audit) reproduces local
@@ -120,6 +127,6 @@ artifacts and can overwrite frozen evidence; it is not part of the quickstart.
 
 For a technical review, start with the [five-minute walkthrough](docs/portfolio-review.md),
 then inspect the [current experiment](docs/experiments/parallel-arbitration-experiment.md)
-and [mapped hold repair](docs/experiments/hold-repair-experiment.md).
+and [latest mapped setup-margin result](docs/experiments/setup-margin-experiment.md).
 The [experiment index](docs/experiments/README.md) preserves
 both adopted changes and rejected alternatives, including their tradeoffs.

@@ -1,0 +1,109 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Sat Oct  3 14:57:35 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: table_i/occupied_reg_0_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: table_i/writes_reg_11_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  table_i/occupied_reg_0_/CLK (DFFPOSX1)              0.000000 # 0.000000 r
+  table_i/occupied_reg_0_/Q (DFFPOSX1)                0.134415   0.134415 r
+  table_i/U6409/Y (INVX1)                             0.051010   0.185425 f
+  table_i/U5846/Y (OR2X1)                             0.047109   0.232534 f
+  table_i/U5847/Y (INVX1)                             0.036703   0.269237 r
+  table_i/U5566/Y (AND2X1)                            0.028200   0.297438 r
+  table_i/U5567/Y (INVX1)                             0.025247   0.322685 f
+  table_i/U4591/Y (NAND3X1)                           0.035923   0.358607 r
+  table_i/U3800/Y (BUFX2)                             0.037829   0.396437 r
+  table_i/U2575/Y (AND2X1)                            0.070341   0.466778 r
+  table_i/U4590/Y (NAND3X1)                           0.024367   0.491144 f
+  table_i/U4215/Y (BUFX2)                             0.036322   0.527466 f
+  table_i/U4589/Y (NAND3X1)                           0.028803   0.556269 r
+  table_i/U6041/Y (INVX1)                             0.031133   0.587402 f
+  table_i/U5589/Y (AND2X1)                            0.032445   0.619847 f
+  table_i/U5590/Y (INVX1)                             0.025458   0.645305 r
+  table_i/U4587/Y (NAND3X1)                           0.017011   0.662316 f
+  table_i/U4632/Y (BUFX2)                             0.038227   0.700543 f
+  table_i/U2969/Y (AND2X1)                            0.032994   0.733537 f
+  table_i/U4586/Y (NAND3X1)                           0.029868   0.763404 r
+  table_i/U5309/Y (BUFX2)                             0.043167   0.806572 r
+  table_i/U4585/Y (NAND3X1)                           0.018215   0.824787 f
+  table_i/U3804/Y (BUFX2)                             0.036209   0.860996 f
+  table_i/U6039/Y (INVX1)                             0.001841   0.862837 r
+  table_i/U4584/Y (NAND3X1)                           0.006604   0.869441 f
+  table_i/U5069/Y (BUFX2)                             0.039268   0.908709 f
+  table_i/U5961/Y (INVX1)                             0.018326   0.927035 r
+  table_i/U104/Y (AND2X1)                             0.028475   0.955510 r
+  table_i/U105/Y (INVX1)                              0.025150   0.980660 f
+  table_i/U4582/Y (NAND3X1)                           0.035874   1.016534 r
+  table_i/U106/Y (BUFX2)                              0.038673   1.055207 r
+  table_i/U5585/Y (AND2X2)                            0.031879   1.087087 r
+  table_i/U5586/Y (INVX1)                             0.028229   1.115315 f
+  table_i/U4580/Y (NOR3X1)                            0.051515   1.166830 r
+  table_i/U4579/Y (NOR3X1)                            0.057052   1.223882 f
+  table_i/U5840/Y (AND2X1)                            0.048331   1.272213 f
+  table_i/U5841/Y (INVX1)                             0.026700   1.298913 r
+  table_i/U4577/Y (NAND3X1)                           0.016344   1.315257 f
+  table_i/U81/Y (BUFX2)                               0.035505   1.350762 f
+  table_i/U4576/Y (NAND3X1)                           0.032540   1.383302 r
+  table_i/U6040/Y (INVX1)                             0.027258   1.410560 f
+  table_i/U5580/Y (AND2X1)                            0.036418   1.446978 f
+  table_i/U5581/Y (INVX1)                             0.013494   1.460471 r
+  table_i/U4574/Y (NAND3X1)                           0.018339   1.478810 f
+  table_i/U107/Y (INVX1)                              0.005357   1.484167 r
+  table_i/U64/Y (OR2X1)                               0.039048   1.523215 r
+  table_i/U65/Y (OR2X1)                               0.060705   1.583920 r
+  table_i/U14/Y (OR2X1)                               0.053857   1.637777 r
+  table_i/U4572/Y (NOR3X1)                            0.027151   1.664928 f
+  table_i/U6042/Y (AND2X1)                            0.040315   1.705243 f
+  table_i/U5838/Y (AND2X1)                            0.043676   1.748919 f
+  table_i/U5839/Y (INVX1)                             0.023133   1.772051 r
+  table_i/U4560/Y (AOI21X1)                           0.012640   1.784692 f
+  table_i/U5584/Y (BUFX2)                             0.043790   1.828482 f
+  table_i/U80/Y (AND2X1)                              0.042803   1.871285 f
+  table_i/U6268/Y (INVX1)                             0.143745   2.015029 r
+  table_i/U6174/Y (INVX1)                             0.132600   2.147629 f
+  table_i/U5874/Y (AND2X1)                            0.052686   2.200316 f
+  table_i/U5875/Y (INVX1)                             0.083290   2.283605 r
+  table_i/U5288/Y (AND2X1)                            0.449188   2.732793 r
+  table_i/U5289/Y (INVX1)                             0.174080   2.906873 f
+  table_i/U5930/Y (INVX1)                             0.348843   3.255716 r
+  table_i/U5929/Y (INVX1)                             0.126613   3.382329 f
+  table_i/U5898/Y (INVX1)                             0.325312   3.707641 r
+  table_i/U4388/Y (OAI21X1)                           0.120055   3.827696 f
+  table_i/writes_reg_11_/D (DFFPOSX1)                 0.000000   3.827696 f
+  data arrival time                                              3.827696
+
+  clock core_clk (rise edge)                          4.000000   4.000000
+  clock network delay (ideal)                         0.000000   4.000000
+  clock uncertainty                                   -0.100000  3.900000
+  table_i/writes_reg_11_/CLK (DFFPOSX1)               0.000000   3.900000 r
+  library setup time                                  -0.070320  3.829680
+  data required time                                             3.829680
+  --------------------------------------------------------------------------
+  data required time                                             3.829680
+  data arrival time                                              -3.827696
+  --------------------------------------------------------------------------
+  slack (MET)                                                    0.001984
+
+
+1

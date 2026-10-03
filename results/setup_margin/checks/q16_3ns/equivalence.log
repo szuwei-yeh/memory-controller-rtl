@@ -1,0 +1,2 @@
+======== ABC command line "cec -T 300 -C 1000000 before.aig after.aig"
+Networks are equivalent.  Time =     0.52 sec

@@ -26,7 +26,8 @@ identity and limitations when comparing it with current RTL.
 
 The current implementation's experiment is
 [parallel command-class arbitration](experiments/parallel-arbitration-experiment.md),
-followed by [mapped hold repair](experiments/hold-repair-experiment.md).
+followed by [mapped hold repair](experiments/hold-repair-experiment.md) and
+[setup-margin improvement](experiments/setup-margin-experiment.md).
 Machine-readable summaries, reports and source snapshots live in
 [`results/`](../results/README.md). Command-line tools are listed in
 [`scripts/`](../scripts/README.md).

@@ -1,0 +1,16 @@
+{
+  "raw": {
+    "equivalence.log": "b6dd17b5b527c05f00e7356b51e9d41f5b6a4829a24231dbe746c7e24ddfa68d",
+    "negative_control_status.rpt": "2e8331df8e23b93df63046e1f8dc65aa38694db20f113361cc0b52df62265ffd",
+    "before.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844",
+    "after.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844",
+    "mutated.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844"
+  },
+  "public": {
+    "equivalence.log": "b6dd17b5b527c05f00e7356b51e9d41f5b6a4829a24231dbe746c7e24ddfa68d",
+    "negative_control_status.rpt": "2e8331df8e23b93df63046e1f8dc65aa38694db20f113361cc0b52df62265ffd",
+    "before.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844",
+    "after.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844",
+    "mutated.map": "24a30ebde14464f2868ee59dfd35099278a287b67ee7893f513a143df484b844"
+  }
+}

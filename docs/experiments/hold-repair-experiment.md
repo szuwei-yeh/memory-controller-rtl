@@ -1,5 +1,9 @@
 # Mapped hold repair at 3 ns and 4 ns
 
+This records the hold-only repair before the subsequent
+[setup-margin experiment](setup-margin-experiment.md). Its paired numbers remain
+frozen; the later mapping increases setup margin while preserving zero hold failures.
+
 **Result:** the Q16 FR-FCFS+aging mappings now have **zero setup and hold
 violations** at both tested clock periods. Hold-only Design Compiler repair
 inserts eight buffers at 3 ns and two at 4 ns, preserves setup slack, and passes
@@ -113,9 +117,11 @@ collector, not a replacement for running licensed synthesis.
 ## Limits and next work
 
 This resolves the measured hold failures for **two Q16, FR-FCFS+aging,
-ideal-clock, typical-corner pre-layout mappings**. The 3 ns setup margin remains
-only **0.038 ps**. Inherited zero-limit capacitance violations remain unchanged;
-this experiment does not waive or repair them. Increasing setup margin,
-resolving the library/implementation capacitance issue and evaluating timing
+ideal-clock, typical-corner pre-layout mappings**. Immediately after this hold-only
+repair, the 3 ns setup margin was only **0.038 ps**; the subsequent
+[setup-margin experiment](setup-margin-experiment.md) raises it to 50.054 ps.
+Inherited zero-limit capacitance violations remain unchanged;
+this experiment does not waive or repair them. Resolving the
+library/implementation capacitance issue and evaluating timing
 across corners and physical implementation remain separate engineering work.
 This is not physical timing signoff or an all-configuration timing claim.

@@ -14,9 +14,11 @@ make check-evidence
 This uses Python's standard library and Git. It checks current RTL hashes,
 published report hashes, measured area/setup/hold numbers and verification
 summaries. It reads committed evidence; **it does not rerun EDA tools**.
-Expected output includes a final `PASS`, +0.000038 ns setup at 3 ns, and the
-the original eight/two hold endpoints and zero endpoints after mapped hold repair
-at 3/4 ns. A source edit should invalidate
+Expected output includes a final `PASS`, the original eight/two hold endpoints,
+zero endpoints after mapped hold repair, and latest setup slacks of
+**+0.050054 / +0.055773 ns at 3/4 ns** with zero hold failures. Historical
++0.000038 ns setup at 3 ns remains in the before/hold-repaired rows.
+A source edit should invalidate
 the snapshot check until corresponding evidence is produced.
 
 ## Simulate and check equivalence
@@ -106,11 +108,13 @@ New mapped PPA requires licensed Synopsys DC and the matching GSCL45nm library
 configuration. Neither the library nor mapped DDCs are redistributed. See
 [ASIC setup](asic-results.md) and the
 [RTL experiment](experiments/parallel-arbitration-experiment.md) and
-[mapped hold repair](experiments/hold-repair-experiment.md) for flow, source hashes,
+[mapped hold repair](experiments/hold-repair-experiment.md) and
+[setup-margin mapping](experiments/setup-margin-experiment.md) for flow, source hashes,
 corner and constraint details. The local reproduction commands do not rerun DC,
 PrimeTime or a physical-design flow. The repaired Q16/3 ns and 4 ns mappings pass
-setup and hold; library capacitance violations remain, and the +0.038 ps 3 ns
-setup margin is not robust signoff.
+setup and hold; latest incremental mapping increases their setup margins to
+50.054 / 55.773 ps. Library capacitance violations remain; typical-corner
+pre-layout measurements do not establish physical or multicorner signoff.
 
 ## Fresh-checkout audit
 

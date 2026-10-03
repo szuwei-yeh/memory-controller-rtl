@@ -1,0 +1,10 @@
+Warning: Attribute 'dont_use' does not exist on lib_cell 'gscl45nm/AOI21X1'. (UID-101)
+gscl45nm/AOI21X1/Y max_capacitance=0.000000; original dont_use=
+Warning: Attribute 'dont_use' does not exist on lib_cell 'gscl45nm/AOI22X1'. (UID-101)
+gscl45nm/AOI22X1/Y max_capacitance=0.000000; original dont_use=
+Warning: Attribute 'dont_use' does not exist on lib_cell 'gscl45nm/NAND2X1'. (UID-101)
+gscl45nm/NAND2X1/Y max_capacitance=0.000000; original dont_use=
+Warning: Attribute 'dont_use' does not exist on lib_cell 'gscl45nm/NAND3X1'. (UID-101)
+gscl45nm/NAND3X1/Y max_capacitance=0.000000; original dont_use=
+Warning: Attribute 'dont_use' does not exist on lib_cell 'gscl45nm/NOR2X1'. (UID-101)
+gscl45nm/NOR2X1/Y max_capacitance=0.000000; original dont_use=

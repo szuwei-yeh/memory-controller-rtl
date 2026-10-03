@@ -1,0 +1,5 @@
+Selected ABC status/counterexample lines; full raw log hash is retained in summary.json.
+Networks are NOT EQUIVALENT.  Time =     0.06 sec
+Verification failed for at least 1 outputs:  state_d_0382
+Output state_d_0382: Value in Network1 = 1. Value in Network2 = 0.
+Input pattern:  state_q_0382=0 rst=0 req_valid=0 state_q_0503=0 state_q_0510=0 state_q_0511=0 state_q_0512=0 state_q_0513=0 state_q_0515=0 state_q_0514=0 state_q_0516=0 state_q_0504=0 state_q_0517=0 state_q_0518=0 state_q_0505=0 state_q_0506=0 state_q_0507=0 state_q_0508=0 state_q_0509=0 state_q_0389=0 state_q_0781=1

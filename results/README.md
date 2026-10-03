@@ -10,6 +10,9 @@ Preserve recorded reports, manifests and source snapshots when organizing files.
   validation, paired traces, mapped reports and scheduler snapshot.
 - [`hold_repair/`](hold_repair/): paired mapped hold repair at Q16/3 ns and 4 ns,
   unchanged constraints/setup, and mapped equivalence with negative controls.
+- [`setup_margin/`](setup_margin/): latest paired incremental mappings at Q16/3 ns
+  and 4 ns, original constraints, unchanged DRC counts, complete state/clock/output
+  comparison and rejected negative controls. Exploratory screens are recorded separately.
 - [`portfolio_audit/summary.json`](portfolio_audit/summary.json): recorded
   fresh-checkout audit; see [reproduction](../docs/reproduce.md) for its scope.
 - Run `make check-evidence` to compare current RTL with published source hashes,
@@ -17,7 +20,8 @@ Preserve recorded reports, manifests and source snapshots when organizing files.
 
 The [parallel-arbitration document](../docs/experiments/parallel-arbitration-experiment.md)
 explains the RTL optimization; [mapped hold repair](../docs/experiments/hold-repair-experiment.md)
-records the subsequent setup/hold result and remaining limitations.
+records the subsequent hold result, followed by the latest
+[setup-margin mapping](../docs/experiments/setup-margin-experiment.md).
 
 ## Frozen baseline and earlier studies
 

@@ -1,0 +1,379 @@
+
+****************************************
+Report : reference
+Design : mc_top_Q_DEPTH16_SCHED_POLICY1_AGING_ENABLE1
+Version: R-2020.09-SP4
+Date   : Sat Oct  3 14:57:49 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500     391    917.481469
+AND2X2             gscl45nm       2.815800     125    351.974994
+AOI22X1            gscl45nm       3.285100     520   1708.251991
+BUFX4              gscl45nm       2.815800       2      5.631600
+INVX1              gscl45nm       1.407900     401    564.567890
+INVX2              gscl45nm       1.877200       6     11.263200
+INVX4              gscl45nm       3.285100       2      6.570200
+INVX8              gscl45nm       3.285100       6     19.710600
+NAND2X1            gscl45nm       1.877200     653   1225.811605
+NAND3X1            gscl45nm       2.346500     340    797.809973
+NOR2X1             gscl45nm       2.346500       1      2.346500
+NOR3X1             gscl45nm       2.815800     360   1013.687983
+OR2X1              gscl45nm       2.346500      98    229.956992
+OR2X2              gscl45nm       2.815800      84    236.527196
+XNOR2X1            gscl45nm       4.693000    1177   5523.660811
+XOR2X1             gscl45nm       4.693000     504   2365.271919
+mc_bank_tracker_ROW_W8_SLOT_W4_T_RCD3_T_RP3_T_RAS6_T_CCD2_T_WR3
+                               1585.295365       1   1585.295365  h, n
+mc_candidates_Q_DEPTH16_ROW_W8_COL_W6
+                              10459.758204       1  10459.758204  h
+mc_response_Q_DEPTH16_DATA_W32_TAG_W8
+                               4402.033900       1   4402.033900  h, n
+mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1
+                               4123.269724       1   4123.269724  h, n
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128
+                              30184.906000       1  30184.906000  h, n
+-----------------------------------------------------------------------------
+Total 21 references                                 65735.788116
+
+****************************************
+Design: mc_bank_tracker_ROW_W8_SLOT_W4_T_RCD3_T_RP3_T_RAS6_T_CCD2_T_WR3
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500      55    129.057496
+AND2X2             gscl45nm       2.815800       1      2.815800
+AOI21X1            gscl45nm       2.815800      16     45.052799
+BUFX2              gscl45nm       2.346500      20     46.929998
+DFFPOSX1           gscl45nm       7.978100      93    741.963284  n
+INVX1              gscl45nm       1.407900      96    135.158398
+NAND2X1            gscl45nm       1.877200      36     67.579200
+NAND3X1            gscl45nm       2.346500      20     46.929998
+NOR2X1             gscl45nm       2.346500       1      2.346500
+NOR3X1             gscl45nm       2.815800      25     70.394999
+OAI21X1            gscl45nm       2.815800      78    219.632396
+OR2X1              gscl45nm       2.346500      33     77.434497
+-----------------------------------------------------------------------------
+Total 12 references                                  1585.295365
+
+****************************************
+Design: mc_candidates_Q_DEPTH16_ROW_W8_COL_W6
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500     383    898.709469
+AND2X2             gscl45nm       2.815800     204    574.423190
+AOI21X1            gscl45nm       2.815800     128    360.422394
+AOI22X1            gscl45nm       3.285100    1005   3301.525483
+BUFX2              gscl45nm       2.346500     471   1105.201462
+INVX1              gscl45nm       1.407900     555    781.384487
+INVX2              gscl45nm       1.877200      29     54.438800
+INVX4              gscl45nm       3.285100       5     16.425500
+INVX8              gscl45nm       3.285100       3      9.855300
+NAND2X1            gscl45nm       1.877200     320    600.704002
+NAND3X1            gscl45nm       2.346500     655   1536.957448
+NOR2X1             gscl45nm       2.346500      26     61.008998
+NOR3X1             gscl45nm       2.815800      67    188.658597
+OAI21X1            gscl45nm       2.815800      68    191.474397
+OR2X1              gscl45nm       2.346500      45    105.592496
+OR2X2              gscl45nm       2.815800      79    222.448196
+XNOR2X1            gscl45nm       4.693000      96    450.527985
+-----------------------------------------------------------------------------
+Total 17 references                                 10459.758204
+
+****************************************
+Design: mc_response_Q_DEPTH16_DATA_W32_TAG_W8
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500      71    166.601494
+AND2X2             gscl45nm       2.815800      45    126.710998
+AOI21X1            gscl45nm       2.815800      43    121.079398
+AOI22X1            gscl45nm       3.285100     108    354.790798
+BUFX2              gscl45nm       2.346500      17     39.890499
+DFFPOSX1           gscl45nm       7.978100       5     39.890499  n
+INVX1              gscl45nm       1.407900     119    167.540097
+MUX2X1             gscl45nm       3.754400      40    150.176001
+NAND2X1            gscl45nm       1.877200      48     90.105600
+NAND3X1            gscl45nm       2.346500     339    795.463473
+NOR2X1             gscl45nm       2.346500       1      2.346500
+NOR3X1             gscl45nm       2.815800     120    337.895994
+OAI21X1            gscl45nm       2.815800     357   1005.240583
+OR2X1              gscl45nm       2.346500     410    962.064967
+OR2X2              gscl45nm       2.815800      15     42.236999
+-----------------------------------------------------------------------------
+Total 15 references                                  4402.033900
+
+****************************************
+Design: mc_scheduler_frfcfs_Q_DEPTH16_ADDR_W16_AGE_LIMIT128_AGING_ENABLE1
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500      51    119.671496
+AND2X2             gscl45nm       2.815800      71    199.921797
+AOI21X1            gscl45nm       2.815800      83    233.711396
+AOI22X1            gscl45nm       3.285100     304    998.670395
+BUFX2              gscl45nm       2.346500      43    100.899497
+DFFPOSX1           gscl45nm       7.978100       5     39.890499  n
+INVX1              gscl45nm       1.407900     241    339.303894
+INVX2              gscl45nm       1.877200       5      9.386000
+INVX4              gscl45nm       3.285100       2      6.570200
+MUX2X1             gscl45nm       3.754400      20     75.088000
+NAND2X1            gscl45nm       1.877200      77    144.544401
+NAND3X1            gscl45nm       2.346500     161    377.786487
+NOR2X1             gscl45nm       2.346500      20     46.929998
+NOR3X1             gscl45nm       2.815800      76    214.000796
+OAI21X1            gscl45nm       2.815800     177    498.396591
+OR2X1              gscl45nm       2.346500     175    410.637486
+OR2X2              gscl45nm       2.815800      21     59.131799
+XNOR2X1            gscl45nm       4.693000      20     93.859997
+XOR2X1             gscl45nm       4.693000      33    154.868995
+-----------------------------------------------------------------------------
+Total 19 references                                  4123.269724
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500    2017   4732.890338
+AND2X2             gscl45nm       2.815800       9     25.342200
+AOI21X1            gscl45nm       2.815800      67    188.658597
+AOI22X1            gscl45nm       3.285100     112    367.931198
+BUFX2              gscl45nm       2.346500     281    659.366477
+BUFX4              gscl45nm       2.815800       3      8.447400
+DFFPOSX1           gscl45nm       7.978100    1871  14927.024769  n
+INVX1              gscl45nm       1.407900    2149   3025.577048
+INVX2              gscl45nm       1.877200       4      7.508800
+INVX4              gscl45nm       3.285100       2      6.570200
+INVX8              gscl45nm       3.285100       2      6.570200
+NAND2X1            gscl45nm       1.877200      11     20.649200
+NAND3X1            gscl45nm       2.346500     238    558.466981
+NOR2X1             gscl45nm       2.346500       1      2.346500
+NOR3X1             gscl45nm       2.815800      10     28.158000
+OAI21X1            gscl45nm       2.815800    1755   4941.728915
+OR2X1              gscl45nm       2.346500      54    126.710996
+OR2X2              gscl45nm       2.815800       1      2.815800
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_0
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_1
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_2
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_3
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_4
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_5
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_6
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_7
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_8
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_9
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_10
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_11
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_12
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_13
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_14
+                                 34.258899       1     34.258899  h
+mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_15
+                                 34.258899       1     34.258899  h
+-----------------------------------------------------------------------------
+Total 34 references                                 30184.906000
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_0
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_1
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_2
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_3
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_4
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_5
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_6
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_7
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_8
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_9
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_10
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_11
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_12
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_13
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_14
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+
+****************************************
+Design: mc_transaction_table_Q_DEPTH16_ADDR_W16_DATA_W32_TAG_W8_READ_LATENCY3_AGE_LIMIT128_DW01_inc_15
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+HAX1               gscl45nm       4.693000       6     28.157999  r
+INVX1              gscl45nm       1.407900       1      1.407900
+XOR2X1             gscl45nm       4.693000       1      4.693000
+-----------------------------------------------------------------------------
+Total 3 references                                     34.258899
+1
