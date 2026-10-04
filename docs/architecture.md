@@ -46,22 +46,7 @@ data width a positive multiple of eight, and all timing values positive.
 
 ## Data flow and decomposition
 
-```mermaid
-flowchart LR
-    H[Host requests] --> T[Transaction table]
-    T --> C[Dependencies and bank candidates]
-    B[Bank state and timing] --> C
-    C --> S[Scheduler]
-    S --> I[Command issue]
-    I --> B
-    I --> M[Behavioral DRAM]
-    M --> R[Read return capture]
-    R --> T
-    I --> T
-    T --> E[Same-address response eligibility]
-    E --> O[Registered response selection]
-    O --> H2[Host responses]
-```
+![Controller architecture: host requests enter the transaction table, bank candidates feed a selectable scheduler and command issue, and read returns update the table before same-address ordered responses retire slots. Bank timing controls legality; the behavioral DRAM model is simulation only.](figures/controller-architecture.png)
 
 | Block | Responsibility and tradeoff |
 |---|---|

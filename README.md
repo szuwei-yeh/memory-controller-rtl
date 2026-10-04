@@ -10,7 +10,7 @@ backpressure, starvation protection, and measured ASIC area/timing tradeoffs.
 [Verification](docs/verification-plan.md) ·
 [Reproduce](docs/reproduce.md)
 
-![Controller architecture: host requests enter the transaction table, bank candidates feed a selectable scheduler and command issue, and read returns feed an ordered response path. Bank timing controls legality; the behavioral DRAM model is simulation only.](docs/figures/controller-architecture.svg)
+![Controller architecture: host requests enter the transaction table, bank candidates feed a selectable scheduler and command issue, and read returns update the table before same-address ordered responses retire slots. Bank timing controls legality; the behavioral DRAM model is simulation only.](docs/figures/controller-architecture.png)
 
 *Requests keep their transaction slots until the host consumes the response.
 Bank timing legality and scheduling policy are separate blocks.*
@@ -19,25 +19,25 @@ Bank timing legality and scheduling policy are separate blocks.*
 
 | Study | Measured result | Evidence |
 |---|---|---|
-| **Latest mapped setup margin** | Q=16 / 3 ns: **0.038 → 50.054 ps**; 4 ns: **1.984 → 55.773 ps**. **Zero setup/hold violations**, unchanged capacitance counts, **0.77% / 0.033% area cost** versus hold-repaired baselines | [Paired mapping and proofs](docs/experiments/setup-margin-experiment.md) |
-| **Current RTL: parallel arbitration** | Q=16 / 3 ns setup slack **−0.068773 → +0.000038 ns**; **50 → 0 setup violations**, with **1.89% lower mapped area** and no added cycle latency | [Matched RTL experiment](docs/experiments/parallel-arbitration-experiment.md) |
-| **Mapped hold repair** | Q=16 / 3 ns and 4 ns: **8 / 2 → 0 hold violations**, with **zero setup violations** and unchanged setup slack. Eight/two added buffers cost **0.02668% / 0.00714% area**; mapped equivalence passes | [Paired repair and proofs](docs/experiments/hold-repair-experiment.md) |
-| **Earlier address-sharing revision** | **16.71% lower mapped area** at Q=16 / 5 ns; **24.19% lower** at Q=32 / 5 ns | [Separate before/after measurements](docs/experiments/address-sharing-optimization.md) |
 | **Frozen v1.1 scheduling study** | Always-ready random traffic: **0.146 → 0.419 responses/cycle**, Strict-FCFS → FR-FCFS, averaged across 20 seeds | [Multi-seed results](docs/performance-stability.md) |
 | **Frozen v1.1 aging tradeoff** | Hot/cold p99 latency **333 → 137 cycles**; throughput **0.481 → 0.462 responses/cycle** | [Workload and metric definitions](docs/results.md#performance) |
+| **Latest mapped timing** | Q=16 / 3 ns: **+50.054 ps setup slack**; 4 ns: **+55.773 ps**. **Zero setup/hold violations** at both points | [Paired mapping and proofs](docs/experiments/setup-margin-experiment.md) |
 | **Current RTL verification** | **300 regression runs**, **3,003,000 accepted transactions**, and **42 directed/workload/reset/corner simulations**, plus unit checks | [Source-matched validation](results/parallel_arbitration/validation_summary.json) |
 
-ASIC measurements use Synopsys Design Compiler and the GSCL45nm typical library,
-with ideal clocks and pre-layout mapping. The latest mapped 3 ns setup margin is
-**50.054 ps**, following hold repair and guarded incremental mapping. Setup and
-hold pass at the two tested Q16 FR-FCFS+aging clock points; the library's zero-limit
-capacitance violations remain. Physical timing signoff
-and timing across corners remain future work.
-A [capacitance diagnosis](docs/experiments/capacitance-diagnosis.md) traces every
-violation to explicit source/DB zero limits and also identifies loads below the
-associated Liberty source's delay-table grid; these are supplied-library results.
-Each study above has its own baseline; the historical area and performance
-measurements are not new measurements of the current RTL.
+Each study has its own baseline; the frozen v1.1 performance results are historical.
+The [experiment index](docs/experiments/README.md) retains earlier area improvements,
+hold-repair measurements and optimization tradeoffs.
+
+## Scope and limitations
+
+The latest ASIC timing uses Synopsys Design Compiler with the GSCL45nm typical library,
+ideal clocks and pre-layout mapping, at Q=16 / FR-FCFS+aging / 3 ns and 4 ns.
+Setup and hold pass at these two points, but capacitance violations remain:
+the [diagnosis](docs/experiments/capacitance-diagnosis.md) confirms explicit
+zero-capacitance limits in the source and loaded library, and loads below the
+associated Liberty source's delay-table grid. These supplied-library results
+require further low-load characterization; routed timing signoff and checks across
+corners remain future work.
 
 ## Architecture and design choices
 
@@ -45,8 +45,8 @@ measurements are not new measurements of the current RTL.
   determine which commands can issue. Strict-FCFS provides a head-of-line
   baseline; FR-FCFS prefers ready columns; aging protects the oldest aged
   request's command service, at a measured throughput cost.
-- **Preserve ordering where required.** Same-address operations and host
-  responses follow acceptance order; independent addresses may bypass. An
+- **Preserve ordering where required.** Commands and responses preserve
+  acceptance order for the same address; independent addresses may bypass. An
   explicit older-than matrix avoids sequence-number wraparound but costs
   quadratic storage/logic as queue depth grows.
 - **Handle backpressure without losing completion capacity.** Requests retain
